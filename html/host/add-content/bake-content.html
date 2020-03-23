@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bake Your Content &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Export Your Content" href="export-content.html" />
+    <link rel="prev" title="Build and Add Your Own Content" href="create-content.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-content.html">Build and Add Your Own Content</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bake Your Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export-content.html">Export Your Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="upload-content.html">Upload Content to Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="marketplace-environment.html">Get an Environment from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../host.html">Host</a> &raquo;</li>
+        
+          <li><a href="../add-content.html">Add Content to Your Domain</a> &raquo;</li>
+        
+      <li>Bake Your Content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/add-content/bake-content.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/add-content/bake-content.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bake-your-content">
+<h1><a class="toc-backref" href="#id1">Bake Your Content</a><a class="headerlink" href="#bake-your-content" title="Permalink to this headline">¶</a></h1>
+<p>Most content (avatars, entities, etc) in High Fidelity references external resources such as textures, models, scripts, and materials. When a user encounters any content in the domain, they need to download the content’s resources. Many of these resources are not optimized and can take a while to download. <em>Baking</em> is the process of optimizing these resources to make them easier to transmit, store, and render, reducing load time significantly.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#bake-your-content" id="id1">Bake Your Content</a></p>
+<ul>
+<li><p><a class="reference internal" href="#the-oven" id="id2">The Oven</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="the-oven">
+<h2><a class="toc-backref" href="#id2">The Oven</a><a class="headerlink" href="#the-oven" title="Permalink to this headline">¶</a></h2>
+<p>The Oven is a standalone application that is packaged as part of High Fidelity <a class="reference external" href="https://www.highfidelity.com/download#sandbox">Client + Sandbox</a> installer. Once installed, locate <code class="docutils literal notranslate"><span class="pre">oven.exe</span></code> (Windows) or <code class="docutils literal notranslate"><span class="pre">oven.app</span></code> (Mac).</p>
+<p>With the oven, you can bake the following types of content:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Textures</p></td>
+<td><p>When you bake a texture, the resulting folder will contain a .texmeta.json file, various
+.ktx images, and the original texture. Baking might introduce some compression artifacts, but
+these are usually minor. Baking a texture produces mipmaps, which allow you to progressively
+load textures, and compresses the results. Baking large textures like skyboxes can take a while,
+but the benefits at runtime for everyone loading the skybox image will be significant. For the best
+experience, we recommend using PNG or JPEG (JPG) textures. However, we also support textures in following
+formats: TGA, TIF, and TIFF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Materials</p></td>
+<td><p>Baking a material will produce a .baked.json file and will also bake all of the textures in the
+material. Currently, we only support baking a <a class="reference external" href="../../create/entities/material-entity.html#generate-a-material-entity">material entity JSON file</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>3D Models</p></td>
+<td><p>Baking a model will produce a <a class="reference external" href="https://github.com/google/draco">Draco compressed</a> geometric mesh
+and will also bake all of the materials in the model. The mesh compression can slightly alter the
+geometry of the original model, but it is usually minor. Your output folder will contain a .baked.fst file,
+a .baked.fbx file (the original format of your model can be different), and a .baked.json file (materials).
+Because the baked materials JSON file references the baked texture files, all textures are removed from the
+.baked.fbx file. This JSON file is referenced in the <cite>materialMap</cite> field in the .baked.fst file. We support
+the following formats: FBX, OBJ, and FST (that points to a supported type).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Avatars</p></td>
+<td><p>As avatars are 3D models, you can bake avatars with the same results as above. Use the resulting .baked.fst
+file to <a class="reference external" href="../../create/avatars/package-avatar.html#host-your-avatar">host and wear your baked avatar</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Oven has two different interfaces: an application and a command line interface. Use the one that best fits your needs.</p>
+<div class="section" id="using-the-oven-application">
+<h3>Using the Oven Application<a class="headerlink" href="#using-the-oven-application" title="Permalink to this headline">¶</a></h3>
+<p>The Oven application has three baking options:</p>
+<ul class="simple">
+<li><p>Bake all assets in your domain</p></li>
+<li><p>Bake individual 3D models and avatars</p></li>
+<li><p>Bake skybox files</p></li>
+</ul>
+<p>After you choose what you would like to bake, you’ll need to fill in some information:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Baking Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Domain Name</p></td>
+<td><p>Domain</p></td>
+<td><p>Enter your domain’s name.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Entities File</p></td>
+<td><p>Domain</p></td>
+<td><p>Upload a .json or .json.gz of the assets in your
+domain. This can be done by <a class="reference external" href="export-content.html#export-entities-to-json">exporting your content
+to JSON</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Model File(s)</p></td>
+<td><p>Model</p></td>
+<td><p>Enter the file or URL path for your model file(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Skybox File(s)</p></td>
+<td><p>Skybox</p></td>
+<td><p>Enter the file or URL path for your skybox file(s).</p></td>
+</tr>
+<tr class="row-even"><td><p>Output
+Directory</p></td>
+<td><p>Domain, Model,
+Skybox</p></td>
+<td><p>This is where the baked content will be saved.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Destination
+URL Path</p></td>
+<td><p>Domain</p></td>
+<td><p>Enter the absolute paths of where your resources will
+be uploaded after baking. For example, if you store
+custom 3D models on a cloud hosting service, enter
+that URL here.</p></td>
+</tr>
+<tr class="row-even"><td><p>Re-bake
+Originals</p></td>
+<td><p>Domain</p></td>
+<td><p>Check if you want to re-bake any baked content that
+the oven finds in your content archive.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After baking a domain, don’t forget to upload all baked content (3D models, skyboxes, etc.) to the URL specified for ‘Destination URL Path’. This ensures that all content will load correctly when you <a class="reference internal" href="upload-content.html"><span class="doc">upload the baked content set</span></a> to your domain.</p>
+</div>
+</div>
+<div class="section" id="using-the-commmand-line-interface">
+<h3>Using the Commmand Line Interface<a class="headerlink" href="#using-the-commmand-line-interface" title="Permalink to this headline">¶</a></h3>
+<p>You can also use a command line interface instead of the GUI to bake single assets (not domains). We support the following attributes:</p>
+<ul class="simple">
+<li><p>i: Path to file that you would like to bake.</p></li>
+<li><p>o: Path to folder that will be used as the output directory.</p></li>
+<li><p>t: Type of asset. The value can be “model” (for any model type) and “material” (for a material JSON description). For textures, the values differ based on the type of texture you want to bake, such as default, strict, albedo, normal, bump, specular, metallic, roughness, gloss, emissive, cube (same as skybox), skybox, ambient, occlusion, scattering, and lightmap.</p></li>
+<li><p>disable-texture-compression: Disables texture compression for any type. Use this only if the texture compression is introducing too many artifacts.</p></li>
+</ul>
+<p>To bake a 3D model through the Oven’s command line interface:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="nx">oven</span><span class="p">.</span><span class="nx">exe</span> <span class="o">-</span><span class="nx">i</span> <span class="o">%</span><span class="nx">path</span> <span class="nx">to</span> <span class="nx">model</span><span class="o">%</span> <span class="o">-</span><span class="nx">o</span> <span class="o">%</span><span class="nx">output</span> <span class="nx">directory</span><span class="o">%</span> <span class="o">-</span><span class="nx">t</span> <span class="nx">model</span>
+</pre></div>
+</div>
+<p>To bake a material through the Oven’s command line interface:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="nx">oven</span><span class="p">.</span><span class="nx">exe</span> <span class="o">-</span><span class="nx">i</span> <span class="o">%</span><span class="nx">path</span> <span class="nx">to</span> <span class="nx">material</span> <span class="nx">json</span><span class="o">%</span> <span class="o">-</span><span class="nx">o</span> <span class="o">%</span><span class="nx">output</span> <span class="nx">directory</span><span class="o">%</span> <span class="o">-</span><span class="nx">t</span> <span class="nx">material</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="export-content.html" class="btn btn-neutral float-right" title="Export Your Content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create-content.html" class="btn btn-neutral float-left" title="Build and Add Your Own Content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

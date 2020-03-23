@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interface Scripts &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assignment Client Scripts" href="assignment-client-scripts.html" />
+    <link rel="prev" title="JavaScript Tips &amp; Tricks" href="js-tips.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js-tips.html">JavaScript Tips and Tricks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interface Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avatar-scripts.html">Avatar Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-entity-scripts.html">Server Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">Tutorial: Transfer Money and Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="midi-tutorial.html">Tutorial: Use MIDI to Control Your Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../script.html">Script</a> &raquo;</li>
+        
+      <li>Interface Scripts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/interface-scripts.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/interface-scripts.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface-scripts">
+<h1>Interface Scripts<a class="headerlink" href="#interface-scripts" title="Permalink to this headline">¶</a></h1>
+<p>Interface scripts run on your local machine, as long as you have Interface up and running. Each user has full control over when interface scripts are started and stopped. The results (such as when your script changes the color of a box) can be seen by everyone in your domain, but the script itself is running on your local machine. Your Interface will communicate that information to the Entity Server, which will communicate it to whoever is visiting the domain.</p>
+<p>With interface scripts, you can do things like add new menus to the Interface, add plug-ins, or add 3D overlays that you have control over.</p>
+<p><strong>On This Page</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#load-an-interface-script">Load an Interface Script</a></p></li>
+<li><p><a class="reference external" href="#example-of-an-interface-script">Example of an Interface Script</a></p></li>
+</ul>
+<div class="section" id="load-an-interface-script">
+<h2>Load an Interface Script<a class="headerlink" href="#load-an-interface-script" title="Permalink to this headline">¶</a></h2>
+<p>To load and run an interface script:</p>
+<ol class="simple">
+<li><p>In Interface, go to <strong>Edit &gt; Running Scripts</strong> or press <kbd class="keyboard">Ctrl</kbd> + <kbd class="keyboard">J</kbd> on your keyboard.</p></li>
+<li><p>For scripts hosted in the cloud, click ‘From URL’. Enter the URL of your script file and click ‘OK’.</p></li>
+<li><p>For scripts on your local computer, click ‘From Disk’. Browse to your script file and click ‘Open’.</p></li>
+</ol>
+</div>
+<div class="section" id="example-of-an-interface-script">
+<h2>Example of an Interface Script<a class="headerlink" href="#example-of-an-interface-script" title="Permalink to this headline">¶</a></h2>
+<p>The following script automatically enters a first person perspective when you enter VR mode with a HMD.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
+
+<span class="c1">// Automatically enter first person mode when entering HMD mode</span>
+<span class="nx">HMD</span><span class="p">.</span><span class="nx">displayModeChanged</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">isHMDMode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isHMDMode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Camera</span><span class="p">.</span><span class="nx">setModeString</span><span class="p">(</span><span class="s2">&quot;first person&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="p">}());</span> 
+</pre></div>
+</div>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assignment-client-scripts.html" class="btn btn-neutral float-right" title="Assignment Client Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="js-tips.html" class="btn btn-neutral float-left" title="JavaScript Tips &amp; Tricks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

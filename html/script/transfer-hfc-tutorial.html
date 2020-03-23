@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Transfer Money and Items &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial: Use MIDI to Control Your Environment" href="midi-tutorial.html" />
+    <link rel="prev" title="Server Entity Scripts" href="server-entity-scripts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js-tips.html">JavaScript Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface-scripts.html">Interface Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avatar-scripts.html">Avatar Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-entity-scripts.html">Server Entity Scripts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutorial: Transfer Money and Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="midi-tutorial.html">Tutorial: Use MIDI to Control Your Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../script.html">Script</a> &raquo;</li>
+        
+      <li>Tutorial: Transfer Money and Items</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/transfer-hfc-tutorial.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/transfer-hfc-tutorial.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-transfer-money-and-items">
+<h1>Tutorial: Transfer Money and Items<a class="headerlink" href="#tutorial-transfer-money-and-items" title="Permalink to this headline">¶</a></h1>
+<p>While you can <a class="reference external" href="../explore/socialize.html#give-and-receive-gifts">transfer money and items using the Inventory app</a>, sometimes you may want to use scripting to help automate your gifting process. This page will walk you through some examples that programmatically transfers money and items using the High Fidelity Commerce APIs.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>Experimental API Notice: The High Fidelity Commerce APIs introduced in this document are <strong>Experimental APIs</strong> and thus are subject to the following:</p>
+    <ol>
+        <li>Commerce APIs on the High Fidelity Metaverse may be modified or removed at any time <em>until Beta Release 81</em>;</li>
+        <li>The Commerce APIs referenced in this document and related examples are subject to change or removal without notice <em>until Beta Release 81</em>;</li>
+        <li>Upon release of Beta 81, changes to the High Fidelity Commerce APIs will be subject to the standard API deprecation process.</li>
+    </ol>
+</div><p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#transfer-money-to-someone">Transfer Money to Someone</a></p></li>
+<li><p><a class="reference external" href="#transfer-marketplace-items">Transfer Marketplace Items</a></p></li>
+<li><p><a class="reference external" href="#purchase-marketplace-items">Purchase Marketplace Items</a></p></li>
+<li><p><a class="reference external" href="#verify-your-inventory">Verify Your Inventory</a></p></li>
+<li><p><a class="reference external" href="#add-a-tip-jar">Add a Tip Jar</a></p></li>
+<li><p><a class="reference external" href="#create-a-vip-access-zone">Create a VIP Access Zone</a></p></li>
+<li><p><a class="reference external" href="#add-a-slot-machine-game">Add a Slot Machine Game</a></p></li>
+</ul>
+<div class="section" id="transfer-money-to-someone">
+<h2>Transfer Money to Someone<a class="headerlink" href="#transfer-money-to-someone" title="Permalink to this headline">¶</a></h2>
+<p>To transfer money to someone, you need to use an entity script or client script to open an end-user’s tablet to the “Send Money” screen. The script must specify a recipient and an amount of HFC. It can specify a message to the user if desired.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">tablet</span> <span class="o">=</span> <span class="nx">Tablet</span><span class="p">.</span><span class="nx">getTablet</span><span class="p">(</span><span class="s2">&quot;com.highfidelity.interface.tablet.system&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">loadQMLSource</span><span class="p">(</span><span class="s2">&quot;hifi/commerce/common/sendAsset/SendAsset.qml&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">sendToQml</span><span class="p">({</span><span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;updateSendAssetQML&#39;</span><span class="p">,</span>
+	<span class="nx">assetCertID</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nx">amount</span><span class="o">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="nx">username</span><span class="o">:</span> <span class="s2">&quot;steve&quot;</span><span class="p">,</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Pay me 10 HFC and I will unlock this door!&quot;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p><img alt="../_images/money-transfer.png" src="../_images/money-transfer.png" /></p>
+</div>
+<div class="section" id="transfer-marketplace-items">
+<h2>Transfer Marketplace Items<a class="headerlink" href="#transfer-marketplace-items" title="Permalink to this headline">¶</a></h2>
+<p>To transfer Marketplace items to someone, you need to use an entity script or client script to open an end-user’s tablet to the “Send Item” screen. The script must specify a recipient and an item’s Certificate ID. The user running the script must own the specified item Certificate ID. Optionally, the script can specify a message to the user if desired.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">tablet</span> <span class="o">=</span> <span class="nx">Tablet</span><span class="p">.</span><span class="nx">getTablet</span><span class="p">(</span><span class="s2">&quot;com.highfidelity.interface.tablet.system&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">loadQMLSource</span><span class="p">(</span><span class="s2">&quot;hifi/commerce/common/sendAsset/SendAsset.qml&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">sendToQml</span><span class="p">({</span><span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;updateSendAssetQML&#39;</span><span class="p">,</span>
+	<span class="nx">assetCertID</span><span class="o">:</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&quot;</span><span class="p">,</span> <span class="c1">// This is a fake Certificate ID!</span>
+    <span class="nx">amount</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="c1">// Amount will always be &quot;1&quot; regardless of what is specified here</span>
+    <span class="nx">username</span><span class="o">:</span> <span class="s2">&quot;steve&quot;</span><span class="p">,</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Send me the item you&#39;ve previously bought!&quot;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p><img alt="../_images/item-transfer.png" src="../_images/item-transfer.png" /></p>
+</div>
+<div class="section" id="purchase-marketplace-items">
+<h2>Purchase Marketplace Items<a class="headerlink" href="#purchase-marketplace-items" title="Permalink to this headline">¶</a></h2>
+<p>To purchase a Marketplace item for yourself, you need to use an entity script or client script to open an end-user’s tablet to the “Marketplace Checkout” screen. The script must specify the Marketplace Item ID.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">tablet</span> <span class="o">=</span> <span class="nx">Tablet</span><span class="p">.</span><span class="nx">getTablet</span><span class="p">(</span><span class="s2">&quot;com.highfidelity.interface.tablet.system&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">loadQMLSource</span><span class="p">(</span><span class="s2">&quot;hifi/commerce/checkout/Checkout.qml&quot;</span><span class="p">);</span>
+<span class="nx">tablet</span><span class="p">.</span><span class="nx">sendToQml</span><span class="p">({</span><span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;updateCheckoutQMLItemID&#39;</span><span class="p">,</span> <span class="nx">params</span><span class="o">:</span> <span class="p">{</span><span class="nx">itemId</span><span class="o">:</span> <span class="s2">&quot;399921f6-bf26-4bba-8654-75d1b30f9442&quot;</span><span class="p">}});</span>
+</pre></div>
+</div>
+<p><img alt="../_images/item-purchases.png" src="../_images/item-purchases.png" /></p>
+</div>
+<div class="section" id="verify-your-inventory">
+<h2>Verify Your Inventory<a class="headerlink" href="#verify-your-inventory" title="Permalink to this headline">¶</a></h2>
+<p>If a script has the proper credentials, it can check a user’s Recent Activity and Inventory on their behalf. You can use this to verify that another user has sent you money, sent you an item, or purchased your item from the Marketplace.</p>
+<p>This feature in used in the tutorial to <a class="reference external" href="#tutorial-create-a-vip-access-zone">create a VIP zone</a>.</p>
+</div>
+<div class="section" id="add-a-tip-jar">
+<h2>Add a Tip Jar<a class="headerlink" href="#add-a-tip-jar" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we walk through creating an entity that, when clicked, will prompt a user to send you 10 HFC. This tutorial uses a <a class="reference external" href="client-entity-scripts.html">client entity script</a> to transfer money.</p>
+<p>Here are the steps for this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#create-a-tip-jar-in-your-domain">Create a “Tip Jar” in Your Domain</a></p></li>
+<li><p><a class="reference external" href="#write-an-entity-script-for-the-tip-jar">Write an Entity Script for the Tip Jar</a></p></li>
+<li><p><a class="reference external" href="#add-the-entity-script-to-the-tip-jar">Add the Entity Script to the Tip Jar</a></p></li>
+</ul>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>To create this content, you'll need access to a High Fidelity domain that you own and where you have full permissions. Examples of such a domain include your private Sandbox or a DigitalOcean domain.</p>
+</div><div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="../create/entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-tip-jar-in-your-domain">
+<h3>Create a Tip Jar in Your Domain<a class="headerlink" href="#create-a-tip-jar-in-your-domain" title="Permalink to this headline">¶</a></h3>
+<p>You need a jar that accepts money. In this simple example, we will use a cube entity as our tip jar. Create your tip jar in the <strong>Create</strong> app:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the cube icon to create a cube entity.</p></li>
+<li><p>Move the Tip Jar to where you want it.</p></li>
+</ol>
+</div>
+<div class="section" id="write-an-entity-script-for-the-tip-jar">
+<h3>Write an Entity Script for the Tip Jar<a class="headerlink" href="#write-an-entity-script-for-the-tip-jar" title="Permalink to this headline">¶</a></h3>
+<p>We need to write a script to put on the Tip Jar entity or cube. When a user clicks the cube, a message will prompt them to pay a specified username (you) 10 HFC. The message will be, “Here’s a 10 HFC tip for doing a cool thing!”.</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/tipJar.js">Click here</a> to download a pre-made “Tip Jar” entity script. Follow along with the comments in the code to understand what it’s doing!</p>
+</div>
+<div class="section" id="add-the-entity-script-to-the-tip-jar">
+<h3>Add the Entity Script to the Tip Jar<a class="headerlink" href="#add-the-entity-script-to-the-tip-jar" title="Permalink to this headline">¶</a></h3>
+<p>You’ll have to add the <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/tipJar.js">entity script</a> to the Tip Jar cube entity.</p>
+<ol class="simple">
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">DESTINATION_USERNAME</span></code> variable in <code class="docutils literal notranslate"><span class="pre">tipJar.js</span></code> to match your username.</p></li>
+<li><p>Upload the <code class="docutils literal notranslate"><span class="pre">tipJar.js</span></code> script to your domain’s ATP server.</p>
+<ul class="simple">
+<li><p>In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>.</p></li>
+<li><p>Right-click the script file, then select ‘Copy URL’.</p></li>
+</ul>
+</li>
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>In the ‘Entity List’, select the Tip Jar cube entity.</p></li>
+<li><p>In the entity’s ‘Properties’, scroll down to ‘Script’ and paste the URL you copied, into the text box. Press Enter.</p></li>
+<li><p>Lock the entity so nobody can change its attributes.</p></li>
+</ol>
+<p>Close the <strong>Create</strong> app and click on the Tip Jar cube entity. A window pops up, prompting you to pay 10 HFC to the username specified in the script.</p>
+</div>
+</div>
+<div class="section" id="create-a-vip-access-zone">
+<h2>Create a VIP Access Zone<a class="headerlink" href="#create-a-vip-access-zone" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we walk through creating an exclusive VIP zone that is accessible only to paid VIPs. This tutorial uses a <a class="reference external" href="client-entity-scripts.html">client entity script</a> to transfer money and an <a class="reference external" href="assignment-client-scripts.html">assignment client script</a> to verify payments.</p>
+<p>Here are the steps for this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#place-a-vip-zone-in-your-domain">Place a VIP Zone in Your Domain</a></p></li>
+<li><p><a class="reference external" href="#write-an-entity-script-for-the-vip-zone">Write an Entity Script for the VIP Zone</a></p></li>
+<li><p><a class="reference external" href="#add-the-entity-script-to-the-vip-zone">Add the Entity Script to the VIP Zone</a></p></li>
+<li><p><a class="reference external" href="#obtain-the-auth-token">Obtain the Auth Token</a></p></li>
+<li><p><a class="reference external" href="#write-an-authenticated-ac-script">Write an Authenticated AC Script</a></p></li>
+<li><p><a class="reference external" href="#run-the-ac-script-in-your-domain">Run the AC Script in Your Domain</a></p></li>
+<li><p><a class="reference external" href="#optional-create-a-box-to-accept-payments">Optional: Create a Box to Accept Payments</a></p></li>
+</ul>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>To create this content, you'll need access to a High Fidelity domain that you own and where you have full permissions. Examples of such a domain include your private Sandbox or a DigitalOcean domain.</p>
+</div><div class="section" id="id1">
+<h3>Prerequisites<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="../create/entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+</ul>
+</div>
+<div class="section" id="place-a-vip-zone-in-your-domain">
+<h3>Place a VIP Zone in Your Domain<a class="headerlink" href="#place-a-vip-zone-in-your-domain" title="Permalink to this headline">¶</a></h3>
+<p>You need an area (or zone) in your domain that will be designated the “VIP Zone”. Only users who have paid you 10 HFC in the current server session have access to enter this zone. If the server restarts, users will have to pay for VIP status again.</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the ‘Zone’ icon to create a zone entity.</p></li>
+<li><p>Move the zone to where you want it.</p></li>
+</ol>
+</div>
+<div class="section" id="write-an-entity-script-for-the-vip-zone">
+<h3>Write an Entity Script for the VIP Zone<a class="headerlink" href="#write-an-entity-script-for-the-vip-zone" title="Permalink to this headline">¶</a></h3>
+<p>We need to write an entity script to put on the VIP Zone. This script will check to see whether the user entering the zone is a VIP or a domain admin. If they aren’t, the script will remove them from the zone. In addition, the script will change change a user’s status to VIP if they pay 10 HFC.</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/vipZoneEntityScript.js">Click here</a> to download a pre-made “VIP Zone” entity script. Follow along with the comments in the code to understand what it’s doing!</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>All users who load the VIP Zone entity will be individually running this script as if it were a client script.</p>
+</div> </div>
+<div class="section" id="add-the-entity-script-to-the-vip-zone">
+<h3>Add the Entity Script to the VIP Zone<a class="headerlink" href="#add-the-entity-script-to-the-vip-zone" title="Permalink to this headline">¶</a></h3>
+<p>To add the <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/vipZoneEntityScript.js">entity script</a> to the VIP zone:</p>
+<ol class="simple">
+<li><p>Upload the <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/vipZoneEntityScript.js"><code class="docutils literal notranslate"><span class="pre">vipZoneEntityScript.js</span></code></a> script to your domain’s ATP server.</p>
+<ul class="simple">
+<li><p>In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>.</p></li>
+<li><p>Right-click the script file, then click ‘Copy URL’.</p></li>
+</ul>
+</li>
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>In the ‘Entity List’, select the ‘VIP Zone’ entity.</p></li>
+<li><p>In the entity’s ‘Properties’, scroll down to ‘Script’ and paste the URL you copied into the text box. Press Enter.</p></li>
+<li><p>Lock the zone entity so nobody can change its attributes.</p></li>
+</ol>
+</div>
+<div class="section" id="obtain-the-auth-token">
+<h3>Obtain the Auth Token<a class="headerlink" href="#obtain-the-auth-token" title="Permalink to this headline">¶</a></h3>
+<p>You need to get a High Fidelity authentication token that has the <code class="docutils literal notranslate"><span class="pre">commerce</span></code> scope. You will use this token while writing an Assignment Client (AC) script to check your Recent Activity for recent transactions of 10 HFC made in your domain.</p>
+<p>To obtain this auth token:</p>
+<ol class="simple">
+<li><p>Go to https://highfidelity.com/user/tokens/new.</p></li>
+<li><p>Name the token something memorable.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">commerce</span></code> scope.</p></li>
+<li><p>Click ‘Create Token’.</p></li>
+<li><p>Copy and save the token.</p></li>
+</ol>
+</div>
+<div class="section" id="write-an-authenticated-ac-script">
+<h3>Write an Authenticated AC Script<a class="headerlink" href="#write-an-authenticated-ac-script" title="Permalink to this headline">¶</a></h3>
+<p>Now, write an <a class="reference external" href="assignment-client-scripts.html">Assignment Client (AC) script</a> containing the authentication token you copied and saved. This AC script checks your Recent Activity for recent transactions of 10 HFC made in your domain.</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/vipZoneACScript.js">Click here</a> to download a pre-made “VIP Zone” AC script. Follow along with the comments in the code to understand what it’s doing!</p>
+</div>
+<div class="section" id="run-the-ac-script-in-your-domain">
+<h3>Run the AC Script in Your Domain<a class="headerlink" href="#run-the-ac-script-in-your-domain" title="Permalink to this headline">¶</a></h3>
+<p>To run the above AC script in your domain from ATP:</p>
+<ol class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">HIFI_COMMERCE_TOKEN</span></code> to the token you saved in the <code class="docutils literal notranslate"><span class="pre">vipZoneACScript.js</span></code> script.</p></li>
+<li><p>Upload your <code class="docutils literal notranslate"><span class="pre">vipZoneACScript.js</span></code> script to your domain’s ATP server. In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>. Right-click and select ‘Copy URL’.</p></li>
+<li><p>Navigate to the Domain Settings page of your domain (for a local sandbox, this is http://localhost:40100/).</p></li>
+<li><p>Click ‘Content’ at the top of the page, then scroll to the ‘Scripts’ section.</p></li>
+<li><p>Under ‘Persistent Scripts’, click the <code class="docutils literal notranslate"><span class="pre">+</span></code> button on the right column.</p></li>
+<li><p>Under ‘Script URL’, paste the ATP URL you copied.</p></li>
+<li><p>Click ‘Save and restart’ at the top right of the page.</p></li>
+</ol>
+</div>
+<div class="section" id="optional-create-a-box-to-accept-payments">
+<h3>(Optional) Create a Box to Accept Payments<a class="headerlink" href="#optional-create-a-box-to-accept-payments" title="Permalink to this headline">¶</a></h3>
+<p>This step is optional as it doesn’t matter how a user sends you 10 HFC to earn VIP status. For example, if a user (in Interface) went to <strong>Inventory &gt; Send Money &gt; Nearby</strong> to send you 10 HFC while you were in your domain, they would still get “VIP status”.</p>
+<p>However, to make it easier to people to pay you, you can create an box that collects payment. Simply follow the directions to <a class="reference external" href="#create-a-tip-jar">create a tip jar</a> above. You should now have a working “VIP Zone” in your domain. Only users with VIP status can enter this “VIP Zone”. You should also have a “Tip Cube” in your domain that helps users pay you HFC to become VIPs.</p>
+</div>
+</div>
+<div class="section" id="add-a-slot-machine-game">
+<h2>Add a Slot Machine Game<a class="headerlink" href="#add-a-slot-machine-game" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we walk through creating a slot machine game that pays out HFC. Players will pay you (the domain owner) 1 HFC to start playing, and the slot machine will pay out 25 HFC if the payer wins. This tutorial uses <a class="reference external" href="../explore/socialize.html#create-a-coupon">coupons</a> to reserve HFC ahead of time, <a class="reference external" href="client-entity-scripts.html">client entity scripts</a> to control the mechanics of the slot machine, and an <a class="reference external" href="assignment-client-scripts.html">assignment client script</a> to handle the slot machine game logic.</p>
+<p>Here are the steps for this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#create-a-slot-machine-in-your-domain">Create a Slot Machine in Your Domain</a></p></li>
+<li><p><a class="reference external" href="#create-a-coupon-to-authorize-winnings">Create a Coupon to Authorize Winnings</a></p></li>
+<li><p><a class="reference external" href="#add-the-coupon-credentials-to-a-database">Add the Coupon Credentials to a Database</a></p></li>
+<li><p><a class="reference external" href="#allow-users-to-start-the-slot-machine">Allow Users to Start the Slot Machine</a></p></li>
+<li><p><a class="reference external" href="#add-the-entity-script-to-the-slot-machine">Add the Entity Script to the Slot Machine</a></p></li>
+<li><p><a class="reference external" href="#allow-users-to-pull-the-reels">Allow Users to Pull the Reels</a></p></li>
+<li><p><a class="reference external" href="#obtain-auth-token">Obtain Auth Token</a></p></li>
+<li><p><a class="reference external" href="#write-a-game-logic-ac-script">Write a Game Logic AC Script</a></p></li>
+<li><p><a class="reference external" href="#run-the-ac-script-on-your-domain">Run the AC Script on Your Domain</a></p></li>
+</ul>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>To create this content, you'll need access to a High Fidelity domain that you own and where you have full permissions. Examples of such a domain include your private Sandbox or a DigitalOcean domain. You will also need a <a href="https://www.google.com">Google</a> account for access to Google Sheets.</p>
+</div><div class="section" id="id2">
+<h3>Prerequisites<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="../create/entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-slot-machine-in-your-domain">
+<h3>Create a Slot Machine in Your Domain<a class="headerlink" href="#create-a-slot-machine-in-your-domain" title="Permalink to this headline">¶</a></h3>
+<p>You need a slot machine that your users can play. You can <a class="reference external" href="../create/entities/create-entities.html">create your own</a> or use the one that we created for you.</p>
+<p>To use the one that already exists:</p>
+<ol class="simple">
+<li><p>Download the following JSON: <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/basicSlotMachine_noScripts.json">basicSlotMachine_noScripts.json</a></p></li>
+<li><p>In Interface, pull up your tablet or HUD and go to <strong>Create</strong>.</p></li>
+<li><p>In the <strong>Create</strong> Tools app, click ‘Import Entities’. Browse to and select <code class="docutils literal notranslate"><span class="pre">basicSlotMachine_noScripts.json</span></code>.</p></li>
+</ol>
+<p>You should now see a slot machine entity in your domain. This example entity consists of:</p>
+<ul class="simple">
+<li><p>Three “reels” (red, green, and blue cubes).</p></li>
+<li><p>A “spin arm” that players will use to start the game.</p></li>
+<li><p>A “play text” text entity that will display the game status to players.</p></li>
+<li><p>A “pay-in text” text entity that will instruct users to add credits to the slot machine.</p></li>
+</ul>
+</div>
+<div class="section" id="create-a-coupon-to-authorize-winnings">
+<h3>Create a Coupon to Authorize Winnings<a class="headerlink" href="#create-a-coupon-to-authorize-winnings" title="Permalink to this headline">¶</a></h3>
+<p>By creating a coupon, you are authorizing High Fidelity to take out funds from your account even if you are not present in the domain. Follow these instructions to <a class="reference external" href="../explore/socialize.html#create-a-coupon">create a coupon</a>. Copy the Authorization ID and the Coupon ID.</p>
+</div>
+<div class="section" id="add-the-coupon-credentials-to-a-database">
+<h3>Add the Coupon Credentials to a Database<a class="headerlink" href="#add-the-coupon-credentials-to-a-database" title="Permalink to this headline">¶</a></h3>
+<p>Later, you will write an Assignment Client (AC) script for the Slot Machine game logic, including payout logic. When the Slot Machine pays out, it needs to know the Authorization IDs and Coupon IDs associated with your pre-authorized payout funds.</p>
+<p>In this step, you will put the “Authorization ID” and “Coupon ID” into some sort of database. Here, we use a Google Sheet to store the data, and a Google Script to access the data in the Sheet.</p>
+<p><strong>To create the Google sheet:</strong></p>
+<ol class="simple">
+<li><p>Log into <a class="reference external" href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a>, and create a new spreadsheet. Give it a filename you want, such as “Slot Machine Payouts”.</p></li>
+<li><p>Name the current sheet “Authorizations” using the arrow on the tab at the bottom left of the screen.</p></li>
+<li><p>Give the header row (the first row) the following labels in this order:</p>
+<ul class="simple">
+<li><p>Used</p></li>
+<li><p>HFC</p></li>
+<li><p>Authorization ID</p></li>
+<li><p>Coupon ID</p></li>
+</ul>
+</li>
+<li><p>In the second row, under the HFC column, put <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p></li>
+<li><p>In the second row, under the ‘Authorization ID’ column, paste your saved Authorization ID.</p></li>
+<li><p>In the second row, under the ‘Coupon ID’ column, paste your saved Coupon ID.</p></li>
+</ol>
+<p><strong>To create the Google script</strong></p>
+<ol class="simple">
+<li><p>At the top of the Google Sheets window, click <strong>Tools &gt; Script editor</strong>.</p></li>
+<li><p>Name your currently untitled project “Slot Machine Authorization Handler”.</p></li>
+<li><p>Copy and paste the contents of <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/slotMachineAuthHandler.gs.txt">this example GS script</a> into the Script Editor.</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">SPREADSHEET_ID</span></code> to match the Spreadsheet ID of your spreadsheet above.</p>
+<ul class="simple">
+<li><p>The Spreadsheet ID is embedded in the URL of the Google Sheets page and is visible in the following screenshot (part of the URL is blocked out for privacy purposes).
+<img alt="../_images/googleSheetURL.png" src="../_images/googleSheetURL.png" /></p></li>
+</ul>
+</li>
+<li><p>Save the script, using whatever filename you wish.</p></li>
+<li><p>Click ‘Publish’, then ‘Deploy as Web App…’</p></li>
+<li><p>Follow Google’s instructions to deploy your script as a web app. Ensure you set ‘Who has access to the app’ to ‘Anyone, even anonymous’. When finished, copy the URL you’re given at the end of the process and save it somewhere you’ll remember for later. The web app URL will look something like <code class="docutils literal notranslate"><span class="pre">https://script.google.com/macros/s/ABCDEFGHIJKLMNOP_QRSTUVWXYZ1984373/exec</span></code></p></li>
+</ol>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>Make sure you keep the web app URL and the Google Sheet URL <strong>private</strong>, or your authorization data will be visible to anyone with access to the sheet.</p>
+</div></div>
+<div class="section" id="allow-users-to-start-the-slot-machine">
+<h3>Allow Users to Start the Slot Machine<a class="headerlink" href="#allow-users-to-start-the-slot-machine" title="Permalink to this headline">¶</a></h3>
+<p>You need to provide your users with a way to add slot machine play credits. You can do this by adding a <a class="reference external" href="client-entity-scripts.html">client entity script</a> to the Slot Machine entity.</p>
+<p>This script will display a message “1 Slot Machine Play Credit” when they click the text or border around the text on the slot machine. They can pay the specified user (you) 1 HFC to play.</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/addCreditsButton.js">Click here</a> to download a pre-made “Add Credits” entity script. Follow along with the comments in the code to understand what it’s doing!</p>
+</div>
+<div class="section" id="add-the-entity-script-to-the-slot-machine">
+<h3>Add the Entity Script to the Slot Machine<a class="headerlink" href="#add-the-entity-script-to-the-slot-machine" title="Permalink to this headline">¶</a></h3>
+<p>To add the <a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/addCreditsButton.js">entity script</a> to the slot machine:</p>
+<ol class="simple">
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">DESTINATION_USERNAME</span></code> to your username in <code class="docutils literal notranslate"><span class="pre">addCreditsButton.js</span></code>.</p></li>
+<li><p>Upload the <code class="docutils literal notranslate"><span class="pre">addCreditsButton.js</span></code> script to your domain’s ATP server. In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>. Right-click the script file, then click ‘Copy URL’.</p></li>
+<li><p>In Interface, use the <strong>Create</strong> app to select the ‘Click Here to Add Credits’ text entity on the Slot Machine entity.</p></li>
+<li><p>In the entity’s ‘Properties’ tab, scroll down to ‘Script’ and paste the URL you copied in step 2 into the text box. Press Enter.</p></li>
+<li><p>Lock the entity so nobody can change its attributes.</p></li>
+<li><p>In Interface, use the <strong>Create</strong> app to select the border entity around the ‘Click Here to Add Credits’ button on the Slot Machine entity.</p></li>
+<li><p>In the entity’s ‘Properties’ tab, scroll down to ‘Script’ and paste the URL you copied in step 2  into the text box. Press Enter.</p></li>
+<li><p>Lock the entity so nobody can change its attributes.</p></li>
+</ol>
+</div>
+<div class="section" id="allow-users-to-pull-the-reels">
+<h3>Allow Users to Pull the Reels<a class="headerlink" href="#allow-users-to-pull-the-reels" title="Permalink to this headline">¶</a></h3>
+<p>Next, you need to provide your users with a way to start the slot machine’s reels. Here, we will write an entity script to put on the slot machine’s Spin Lever. This script will send a message to an Assignment Client (AC) script to kick off the rest of the game logic.</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/slotMachineSpinLever.js">Click here</a> to download a pre-made “Spin Lever” entity script. Follow along with the comments in the code to understand what it’s doing!</p>
+<p>To add the entity script to the reels:</p>
+<ol class="simple">
+<li><p>Upload the <code class="docutils literal notranslate"><span class="pre">slotMachineSpinLever.js</span></code> script to your domain’s ATP server. In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>. Right-click the script file, then click ‘Copy URL’.</p></li>
+<li><p>In Interface, use the <strong>Create</strong> app to select the red Spin Lever sphere entity on the Slot Machine entity.</p></li>
+<li><p>In the entity’s ‘Properties’ tab, scroll down to ‘Script’ and paste the URL from step 1 into the text box. Press Enter.</p></li>
+<li><p>Lock the entity so nobody can change its attributes.</p></li>
+</ol>
+</div>
+<div class="section" id="obtain-auth-token">
+<h3>Obtain Auth Token<a class="headerlink" href="#obtain-auth-token" title="Permalink to this headline">¶</a></h3>
+<p>You’ll have to get a High Fidelity authentication token that has the <code class="docutils literal notranslate"><span class="pre">commerce_ro</span></code> scope. You will use this token while writing an Assignment Client (AC) script to check your Recent Activity for recent transactions of 1 HFC made in your domain with a specific memo (“1 Slot Machine Play Credit”).</p>
+<p>To get this auth token:</p>
+<ol class="simple">
+<li><p>Go to https://highfidelity.com/user/tokens/new.</p></li>
+<li><p>Name the token something memorable.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">commerce_ro</span></code> scope.</p></li>
+<li><p>Click ‘Create Token’.</p></li>
+<li><p>Copy and save the token.</p></li>
+</ol>
+</div>
+<div class="section" id="write-a-game-logic-ac-script">
+<h3>Write a Game Logic AC Script<a class="headerlink" href="#write-a-game-logic-ac-script" title="Permalink to this headline">¶</a></h3>
+<p>Now, write an AC Script that will handle the slot machine game logic, including:</p>
+<ul class="simple">
+<li><p>Knowing when to start a new spin.</p></li>
+<li><p>Knowing whether a user who attempted to spin has paid.</p></li>
+<li><p>Changing the slot machine reel colors during a spin.</p></li>
+<li><p>Checking the end state of the reels to determine win/loss.</p></li>
+<li><p>Paying out pre-authorized funds.</p></li>
+</ul>
+<p><a class="reference external" href="https://s3.amazonaws.com/hifi-docs-scripts/slotMachineACScript.js">Click here</a> to download a pre-made “Slot Machine” entity server script. This script is quite long and is arguably the most important element of this project! Follow along with the comments in the code to understand what it’s doing.</p>
+</div>
+<div class="section" id="run-the-ac-script-on-your-domain">
+<h3>Run the AC Script on Your Domain<a class="headerlink" href="#run-the-ac-script-on-your-domain" title="Permalink to this headline">¶</a></h3>
+<p>To run the AC script on your domain from ATP:</p>
+<ol class="simple">
+<li><p>Change your <code class="docutils literal notranslate"><span class="pre">slotMachineACScript.js</span></code> as follows:</p>
+<ol class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">HIFI_COMMERCE_TOKEN</span></code> to your HiFi <code class="docutils literal notranslate"><span class="pre">commerce_ro</span></code> token.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">SLOT_MACHINE_REEL_1_ID</span></code> to the Entity ID of the leftmost slot machine reel.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">SLOT_MACHINE_REEL_2_ID</span></code> to the Entity ID of the middle slot machine reel.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">SLOT_MACHINE_REEL_3_ID</span></code> to the Entity ID of the rightmost slot machine reel.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">SLOT_MACHINE_PLAY_TEXT_ID</span></code> to the Entity ID of the “Play Text” text entity right below the slot machine reels.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">GOOGLE_SHEET_AUTH_SCRIPT</span></code> to the URL of the Google Script Web App created earlier.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">SLOT_MACHINE_AREA</span></code> to the coordinates around which the slot machine entity will be placed.
+<em>See the comments in the code for more details about why this is necessary.</em></p></li>
+</ol>
+</li>
+<li><p>Upload your <code class="docutils literal notranslate"><span class="pre">slotMachineACScript.js</span></code> script to your domain’s ATP server. In Interface, go to <strong>Edit &gt; Asset Browser &gt; Choose File</strong>. Right-click the script file, then click ‘Copy URL’.</p></li>
+<li><p>Navigate to the Domain Settings page of your domain (for a local sandbox, this is http://localhost:40100/).</p></li>
+<li><p>Click ‘Content’ at the top of the page, then scroll to the ‘Scripts’ section.</p></li>
+<li><p>Under ‘Persistent Scripts’, click the <code class="docutils literal notranslate"><span class="pre">+</span></code> button on the right column</p></li>
+<li><p>Under ‘Script URL’, paste the ATP URL from step 2.</p></li>
+<li><p>Click ‘Save and restart’ at the top right of the page</p></li>
+</ol>
+<p>You should now have a basic but fully working slot machine in your domain, that you and anyone else in your domain can play.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>In this example, a user could change the colors of the unlocked reels to match just before the game ends, and thus force a payout. This example does not cover anti-cheat or anti-tampering methods for securing your slot machine or funds!</p>
+</div><p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
+<li><p><a class="reference external" href="https://apidocs.highfidelity.com">API Reference</a></p></li>
+<li><p><a class="reference external" href="../explore/socialize.html#create-a-coupon">Create a Coupon</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="midi-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Use MIDI to Control Your Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="server-entity-scripts.html" class="btn btn-neutral float-left" title="Server Entity Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

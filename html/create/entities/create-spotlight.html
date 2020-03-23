@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Create a Gold Spotlight &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial: Create a Smoke Fountain" href="create-fountain.html" />
+    <link rel="prev" title="Entity Tutorials" href="tutorials.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create-fountain.html">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zone-tutorial.html">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portal-tutorial.html">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boombox-tutorial.html">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
+        
+      <li>Tutorial: Create a Gold Spotlight</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/create-spotlight.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/create-spotlight.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-create-a-gold-spotlight">
+<h1>Tutorial: Create a Gold Spotlight<a class="headerlink" href="#tutorial-create-a-gold-spotlight" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you will learn how light entities work by creating a gold spotlight that shines down a wall. A light entity behaves like a ball or a beam of light, and is used to add local lighting effects or spotlights to an area.</p>
+<p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#prerequisities">Prerequisites</a></p></li>
+<li><p><a class="reference external" href="#create-a-wall-to-shine-the-light-on">Create a Wall to Shine the Light On</a></p></li>
+<li><p><a class="reference external" href="#create-the-gold-spotlight">Create the Gold Spotlight</a></p></li>
+</ul>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-wall-to-shine-the-light-on">
+<h2>Create a Wall to Shine the Light On<a class="headerlink" href="#create-a-wall-to-shine-the-light-on" title="Permalink to this headline">¶</a></h2>
+<p>Your gold spotlight needs a surface to shine on. Create this surface or wall in the <strong>Create</strong> app:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the ‘Cube’ icon to create a cube entity.</p></li>
+<li><p>Go to the ‘Properties’ tab and make the following changes:</p>
+<ol class="simple">
+<li><p>Change the color of the cube to teal (Red = ‘0’, Green = ‘128’, Blue = ‘128’).</p></li>
+<li><p>Change the dimensions of the cube to make it bigger and look more like a wall. We’ve used the following local dimensions:</p>
+<ul class="simple">
+<li><p>X = ‘0.1300’</p></li>
+<li><p>Y = ‘2.4000’</p></li>
+<li><p>Z = ‘3.2000’</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>You’ve made your wall! <img alt="../../_images/teal-wall-prop.PNG" src="../../_images/teal-wall-prop.PNG" /></p>
+</div>
+<div class="section" id="create-the-gold-spotlight">
+<h2>Create the Gold Spotlight<a class="headerlink" href="#create-the-gold-spotlight" title="Permalink to this headline">¶</a></h2>
+<p>Create and edit the light entity to get a soft gold spotlight.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>The domain sun shines from one side, so one side of the wall is already bright. Light from the light entity won't show up on the bright side of the wall.</p>
+</div><ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the ‘Light’ icon to create the light entity.</p></li>
+<li><p>Grab and move the entity to the top and center of the wall. You’ll notice there is a white light shining on the wall. The light is small because of low brightness. This type of light is a point light and it emanates in all directions equally. It is meant for general area lighting as it has a bright point in the middle and fades as it radiates out.</p></li>
+<li><p>Go to the ‘Properties’ tab and modify the light entity to make a gold spotlight:</p>
+<ol class="simple">
+<li><p>Change the color of the light to gold (R = ‘255’, G = ‘215’, B = ‘0’).</p></li>
+<li><p>You can make the light entity brighter by changing its intensity. Change the ‘Intensity’ to ‘100’. You’ll see that the light is now covering a larger area and is much brighter.</p></li>
+<li><p>You can modify the light entity’s ‘Fall-off Radius’ so that the it dims gradually towards the edges. The ‘Fall-off Radius’ defines the shape of the light curve of a light. A larger radius will simulate a larger light, which will “fall-off”, or dim, more gradually. It is the distance from the light at which the intensity is reduced by ‘25%’. Change this value to ‘0.5’.</p></li>
+<li><p>Select the ‘Spotlight’ checkbox to convert the light entity to a spotlight.</p></li>
+<li><p>Change the ‘Spotlight Cut-off’ to ‘50’. This property determines the radius of the spotlight. A higher cut-off value corresponds with a larger spotlight radius. You should see the beam tighten get smaller.</p></li>
+<li><p>Change the ‘Spotlight Exponent’ to ‘5’. This property affects the softness of the beam. You should see the edge of the beam soften.</p></li>
+<li><p>Rotate the spotlight so that it’s facing down the wall by changing the ‘Local Rotation’s’ X value to ‘-90.0000’. A spotlight positioned like this can be used for a soft lighting effect over paintings or wall hangings in your world.
+<img alt="../../_images/spotlight-prop.PNG" src="../../_images/spotlight-prop.PNG" /></p></li>
+</ol>
+</li>
+</ol>
+<p>Congratulations! You’ve created a soft gold spotlight! You can experiment with different spotlight exponents, cutoff values, and intensity combinations for varied effects.</p>
+<p><img alt="../../_images/spotlight.PNG" src="../../_images/spotlight.PNG" /></p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+<li><p><a class="reference external" href="../tools.html">Creator Tools</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="create-fountain.html" class="btn btn-neutral float-right" title="Tutorial: Create a Smoke Fountain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorials.html" class="btn btn-neutral float-left" title="Entity Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

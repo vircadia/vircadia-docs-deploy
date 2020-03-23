@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Modify Materials and Textures Using Blender &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial: Add a Scattering Effect" href="scattering-tutorial.html" />
+    <link rel="prev" title="Tutorial: Rig Avatars in Mixamo" href="mixamo-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../avatars.html">Avatars</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-avatars.html">Create Your Own Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="find-avatars.html">Find and Use an Existing Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="package-avatar.html">Package and Host Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-flow.html">Add Flow to Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-animations.html">Customize Avatar Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fuse-tutorial.html">Tutorial: Create an Avatar with Fuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mixamo-tutorial.html">Tutorial: Rig Avatars in Mixamo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tutorial: Modify Materials and Textures with Blender</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scattering-tutorial.html">Tutorial: Add a Scattering Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../entities.html">Entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../avatars.html">Avatars</a> &raquo;</li>
+        
+      <li>Tutorial: Modify Materials and Textures Using Blender</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/blender-tutorial.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/blender-tutorial.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-modify-materials-and-textures-using-blender">
+<h1>Tutorial: Modify Materials and Textures Using Blender<a class="headerlink" href="#tutorial-modify-materials-and-textures-using-blender" title="Permalink to this headline">¶</a></h1>
+<p>Blender is an open-source 3D modeling tool that you can use to fine tune your avatar and ensure that the materials and textures render correctly in High Fidelity.</p>
+<p>In this tutorial, we will walk you through simple modifications you can make to your avatar using Blender. You will need to import an FBX file for your avatar. If you don’t have one, see our tutorials for <a class="reference external" href="fuse-tutorial.html">Fuse</a> and <a class="reference external" href="mixamo-tutorial.html">Mixamo</a>.</p>
+<ol>
+<li><p>In Blender, go to <strong>File &gt; Import &gt; FBX (.fbx)</strong>.</p></li>
+<li><p>Choose your avatar’s FBX file and click ‘Import FBX’. This will open your avatar in the main view. <img alt="../../_images/import-avatar.png" src="../../_images/import-avatar.png" /></p></li>
+<li><p>By default, you will not see the materials on your avatar. You can change your view using the toolbar at the bottom of the view. <img alt="../../_images/view-materials.png" src="../../_images/view-materials.png" /></p></li>
+<li><p>To get a better view of your avatar, change the lamp settings:</p>
+<ul class="simple">
+<li><p>From the Outliner, click the Lamp node in Blender.</p></li>
+<li><p>For ‘Type of Active Data to display and edit’, choose the ‘Data’ icon.</p></li>
+<li><p>Change the lamp to Sun.</p></li>
+<li><p>Rotate the Lamp to light up your avatar.<img alt="../../_images/lamp-settings.png" src="../../_images/lamp-settings.png" /></p></li>
+</ul>
+</li>
+<li><p>From the Outliner, open the ‘Armature’ tree and select the item you want to fine tune. You can also click on the item directly on your model.</p></li>
+<li><p>Using the toolbox below, you can change the materials and texture of each body part as desired. We’ve included an example below that <a class="reference external" href="#example-update-eyelashes-from-an-image">changes our avatar’s eyelashes</a>. You can follow similar steps for other avatar items.
+<img alt="../../_images/texture-material.png" src="../../_images/texture-material.png" /></p>
+ <div class="admonition note">
+     <p class="admonition-title">Note</p>
+     <p>To remove a metallic feel to your avatar in High Fidelity, we recommend changing the default Specular Intensity for each of the main body parts from 0.500 to 0.000.</p>
+ </div></li>
+<li><p>When you’re done changing your materials and textures, go to <strong>File &gt; Export &gt; FBX (.fbx)</strong>.</p></li>
+<li><p>Change the ‘Path Mode’ to ‘Copy’, then click the ‘Embed Textures’ icon. This makes sure that all of the textures are embedded into your model. <img alt="../../_images/blender-export.png" src="../../_images/blender-export.png" /></p></li>
+<li><p>Give your avatar a unique name.</p></li>
+<li><p>Click the ‘Export FBX’ button.</p></li>
+</ol>
+<p>Now, you are ready to bring your avatar into High Fidelity.</p>
+<div class="section" id="example-update-eyelashes-from-an-image">
+<h2>Example: Update Eyelashes from an Image<a class="headerlink" href="#example-update-eyelashes-from-an-image" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Save <a class="reference external" href="http://hifi-content.s3.amazonaws.com/DomainContent/Event%20/Images/mixamo_eyelashes.png">this texture</a> to a directory where you will remember.</p></li>
+<li><p>From the Outliner, open the ‘Armature’ tree and select ‘Eyelashes’.</p></li>
+<li><p>In the Toolbox below, click the ‘Materials’ icon. <img alt="../../_images/materials-tab.png" src="../../_images/materials-tab.png" /></p></li>
+<li><p>Click the ‘+’ button next to the material list to create a new material slot.</p></li>
+<li><p>Click ‘+ New’ to add a new material.</p></li>
+<li><p>Rename the new material to ‘lashes’.</p></li>
+<li><p>At the bottom of the Blender window, switch to ‘Edit Mode’. <img alt="../../_images/edit-mode.png" src="../../_images/edit-mode.png" /></p></li>
+<li><p>Under the material list, click ‘Assign’.</p></li>
+<li><p>Scroll to the ‘Transparency’ section. Check the Transparency box and change the ‘Alpha’ value to <code class="docutils literal notranslate"><span class="pre">0.00</span></code>. <img alt="../../_images/transparency-setting.png" src="../../_images/transparency-setting.png" /></p></li>
+<li><p>Scroll to the ‘Specular’ section. Set the specular color to black. <img alt="../../_images/specular-setting.png" src="../../_images/specular-setting.png" /></p></li>
+<li><p>Change to the ‘Textures’ view. <img alt="../../_images/texture-tab.png" src="../../_images/texture-tab.png" /></p></li>
+<li><p>Click ‘+ New’ to add a new texture.</p></li>
+<li><p>Scroll to the Image section. Click ‘Open’ and find the lashes texture named ‘mixamo_eyelashes’ you previously downloaded. Click ‘Open Image’. <img alt="../../_images/image-setting.png" src="../../_images/image-setting.png" /></p></li>
+<li><p>Check the ‘Alpha’ options in the following sections: Image, Preview, Texture, Influence</p></li>
+<li><p>Go to <strong>File &gt; External Data &gt; Pack All Into .blend</strong>. This will include the texture in your model.</p></li>
+</ol>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="fuse-tutorial.html">Tutorial: Create an Avatar with Fuse</a></p></li>
+<li><p><a class="reference external" href="mixamo-tutorial.html">Tutorial: Rig Your Avatar in Mixamo</a></p></li>
+<li><p><a class="reference external" href="create-avatars.html">Create Your Own Avatar</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scattering-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Add a Scattering Effect" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mixamo-tutorial.html" class="btn btn-neutral float-left" title="Tutorial: Rig Avatars in Mixamo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

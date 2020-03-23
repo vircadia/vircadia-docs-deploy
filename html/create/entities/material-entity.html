@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Add a Material Entity &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Add Sound to Entities" href="add-sounds.html" />
+    <link rel="prev" title="Apply Physics to Entities" href="entity-physics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Add a Material Entity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/material-entity.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/material-entity.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-a-material-entity">
+<h1>Add a Material Entity<a class="headerlink" href="#add-a-material-entity" title="Permalink to this headline">¶</a></h1>
+<p>You can add a material entity to an object in your domain. A material entity contains specific material data that determines the texture and shading of an object. For example, if you want to create a castle in your domain, you need your walls to look like they’re made of rough gray stone. You can do this by adding a castle wall material entity to your walls.</p>
+<p>Before adding a material entity, make sure you have created a material using the <a class="reference external" href="../3d-models/pbr-materials-guide.html">PBR Materials Guide</a>.</p>
+<p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#generate-a-material-entity">Generate a Material Entity</a></p></li>
+<li><p><a class="reference external" href="#add-a-material-entity">Add a Material Entity</a></p>
+<ul>
+<li><p><a class="reference external" href="#use-the-material-entity-json-file">Use the Material Entity JSON File</a></p></li>
+<li><p><a class="reference external" href="#use-the-materialdata-field">Use the materialData Field</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="generate-a-material-entity">
+<h2>Generate a Material Entity<a class="headerlink" href="#generate-a-material-entity" title="Permalink to this headline">¶</a></h2>
+<p>To add a material to your object in High Fidelity, you need to specify the material data in a JSON file or add the material directly into the <strong>Create</strong> app.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>We are aware of the difficulties involved in converting your material data to a JSON file and are working on making the process easier for our users. In the meantime, we recommend embedding your material data in your models as FBX files if you are facing difficulties generating a JSON file. </p>
+</div><p>This is what the JSON file for a sample <a class="reference external" href="https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall.hfm.json">castle wall material</a> looks like:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;materialVersion&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;materials&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;CastleWall&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_pbr&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;albedo&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="s2">&quot;albedoMap&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall_Base_Color.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;roughnessMap&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CCastleWall_Roughness.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;normalMap&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall_Normal.png&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This file contains all related material data, such as the color, roughness, and other texture and shading information. Note that you can edit this information programmatically with the <code class="docutils literal notranslate"><span class="pre">Material</span></code> <a class="reference external" href="https://apidocs.highfidelity.com/Entities.html#.EntityType">EntityType</a> in our API, and define its properties using <a class="reference external" href="https://apidocs.highfidelity.com/Entities.html#.EntityProperties-Material">EntityProperties-Material</a>.</p>
+</div>
+<div class="section" id="id1">
+<h2>Add a Material Entity<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-the-material-entity-json-file">
+<h3>Use the Material Entity JSON File<a class="headerlink" href="#use-the-material-entity-json-file" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>At this time, we have no way to automatically generate a JSON file with another tool, and you will need to write your own JSON file.
+</p>
+</div><p>Once you have your material entity JSON file, you can add it to an object in High Fidelity. Let’s add the <a class="reference external" href="https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall.hfm.json">castle wall material</a> to a box entity in your domain.</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Create a wall. Click the ‘Cube’ icon to add a box entity and change the dimensions to make it resemble a wall.</p></li>
+<li><p>Go to the <strong>Create</strong> tab and click on the ‘Material’ icon to add a material entity. Enter the material’s JSON file URL when prompted. You will see the material entity represented as a small sphere.</p></li>
+<li><p>Click and select the wall. Go to the ‘Properties’ tab and copy the parent ID under the ‘Name’ box.</p></li>
+<li><p>Click and select the material entity. Go to the ‘Properties’ tab and paste the copied parent ID in the ‘Parent’ box. You will see the material applied to the wall. In this step, you are parenting or applying a material to an entity.</p></li>
+</ol>
+<p><img alt="../../_images/material-entity.gif" src="../../_images/material-entity.gif" /></p>
+</div>
+<div class="section" id="use-the-materialdata-field">
+<h3>Use the materialData Field<a class="headerlink" href="#use-the-materialdata-field" title="Permalink to this headline">¶</a></h3>
+<p>To add a material entity directly into the <strong>Create</strong> Tools app:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Create a wall. Click the ‘Cube’ icon to add a box entity and change the dimensions to make it resemble a wall.</p></li>
+<li><p>Go to the <strong>Create</strong> tab and click on the ‘Material’ icon to add a material entity.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">materialData</span></code> when you’re prompted for a ‘Material URL’.</p></li>
+<li><p>Click and select the wall. Go to the ‘Properties’ tab and copy the parent ID under the ‘Name’ box.</p></li>
+<li><p>Click and select the material entity. Go to the ‘Properties’ tab and paste the copied parent ID in the ‘Parent’ box. In this step, you are parenting or applying a material to an entity.</p></li>
+<li><p>Scroll down to the ‘Material Data’ field. Click ‘Clear Material Data’ and then paste the following JSON data:</p></li>
+</ol>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+    <span class="nt">&quot;materialVersion&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;CastleWall&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;hifi_pbr&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;albedo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="nt">&quot;albedoMap&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall_Base_Color.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;roughnessMap&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CCastleWall_Roughness.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;normalMap&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hifi-public.s3.amazonaws.com/sam/MaterialExportGuide/MaterialEntities/MatOne/CastleWall/CastleWall_Normal.png&quot;</span>
+    <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="../../_images/material-data.gif" src="../../_images/material-data.gif" /></p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="../3d-models/pbr-materials-guide.html">PBR Materials Guide</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/js/js_json_intro.asp">Introduction to JSON</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="add-sounds.html" class="btn btn-neutral float-right" title="Add Sound to Entities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="entity-physics.html" class="btn btn-neutral float-left" title="Apply Physics to Entities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
