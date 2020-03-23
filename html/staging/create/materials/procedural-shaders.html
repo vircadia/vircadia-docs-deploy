@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Procedural Shaders for Models and Avatars &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3D Models" href="../3d-models.html" />
+    <link rel="prev" title="Materials" href="../materials.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../entities.html">Entities</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../materials.html">Materials</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Procedural Shaders for Models and Avatars</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../materials.html">Materials</a> &raquo;</li>
+        
+      <li>Procedural Shaders for Models and Avatars</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/materials/procedural-shaders.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/materials/procedural-shaders.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="procedural-shaders-for-models-and-avatars">
+<h1>Procedural Shaders for Models and Avatars<a class="headerlink" href="#procedural-shaders-for-models-and-avatars" title="Permalink to this headline">¶</a></h1>
+<p>You can attach shaders to material entities, which are then applied to shape, zone, or mesh entities. You may also do the same with avatars. This feature is currently an <strong>experimental feature</strong> and is under community testing. If you wish to try applying procedural materials to models or avatars <em>at your own risk</em>, read on for more information.</p>
+<div class="section" id="enabling-procedural-materials">
+<h2>Enabling Procedural Materials<a class="headerlink" href="#enabling-procedural-materials" title="Permalink to this headline">¶</a></h2>
+<p>To enable procedural materials for models and avatars:</p>
+<ul class="simple">
+<li><p>In Interface, enable <strong>Settings &gt; Developer Menu</strong> to show the Developer menu. Then, enable <strong>Developer &gt; Render &gt; Enable Procedural Materials</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="making-procedural-shaders">
+<h2>Making Procedural Shaders<a class="headerlink" href="#making-procedural-shaders" title="Permalink to this headline">¶</a></h2>
+<p>You probably know about materials and how they work. Fact is, all materials are shaders. But when we apply a vertex or fragment shader to the material, it gives us lower level access to customize its effects.</p>
+<p>Procedural shaders (or simply shaders) are textures that are created by mathematical and algorithmic means. It is a piece of code that is run on the GPU or graphics card. They can provide a range of effects such as making an object look cartoony or simulating a candle flame. If you’ve used programs like Blender or Substance Designer to create material images, then you’ve seen this in action. The difference is that these programs automatically generate the shader code for you. To make custom designs and effects, you will have to dive into the code yourself.</p>
+<p><a class="reference external" href="https://thebookofshaders.com/01">The Book of Shaders</a> expands on this with an analogy:</p>
+<blockquote>
+<div><p>If you already have experience making drawings with computers, you know that in that process you draw a circle, then a rectangle, a line, some triangles until you compose the image you want. That process is very similar to writing a letter or a book by hand - it is a set of instructions that do one task after another.</p>
+<p>Shaders are also a set of instructions, but the instructions are executed all at once for every single pixel on the screen. That means the code you write has to behave differently depending on the position of the pixel on the screen. Like a type press, your program will work as a function that receives a position and returns a color, and when it’s compiled it will run extraordinarily fast.</p>
+</div></blockquote>
+<p>Project Athena has support for vertex and fragment shaders on shape and material entities, and avatars. These shaders are based on the GLSL shader language, which uses the syntax and features of the C programming language. It does not have support for geometry, tessellation and evaluation, or compute shaders.</p>
+<p>This documentation is not intended to be a complete course on how to create a shader. This is an advanced topic that requires good math and programming skills. Many free books are available on the internet that can teach about shaders. <a class="reference external" href="https://thebookofshaders.com">The Book of Shaders</a> is one such book that is often cited.</p>
+<p>An understanding of how to use JavaScript and JSON with Project Athena is important before you dive into this topic. If you intend to create shaders yourself, knowing the C programming language will also be important.</p>
+<div class="section" id="differences-between-athena-and-glsl-shaders">
+<h3>Differences Between Athena and GLSL Shaders<a class="headerlink" href="#differences-between-athena-and-glsl-shaders" title="Permalink to this headline">¶</a></h3>
+<p>When exploring shaders online, you may have come across many shader examples. Or you might have seen websites and applications that allow you to experiment with shader code in a live environment. Most of the code from these sources will not work with Project Athena without modification.</p>
+<p>The first thing to be aware of is that there are a few shader languages. GLSL is one that is used by OpenGL, and Project Athena’s shaders are based on this language. Another common one is HLSL, which is used often for DirectX programs. Although these languages share a lot of similarities, you cannot use HLSL code in an OpenGL application without modification.</p>
+<p>Another consideration is that Project Athena does not expose the full range of what GLSL offers to scripters. Instead, users are offered a subset of GLSL, and a custom set of naming conventions for fragment or vertex components.</p>
+</div>
+<div class="section" id="basic-method-for-using-shaders">
+<h3>Basic Method for Using Shaders<a class="headerlink" href="#basic-method-for-using-shaders" title="Permalink to this headline">¶</a></h3>
+<p>Shaders’ code is stored as a file. Fragment shaders will typically have the file extension <strong>*.fs</strong> or <strong>*.frag</strong> and vertex shaders will usually have the <strong>*.vs</strong> or <strong>*.vert</strong> file extension.</p>
+<p>Shaders are applied to entities and avatars by way of attaching them to a material. That material is then attached to your entity or avatar, therefore applying the shader as intended.</p>
+<p>If you are unfamiliar with material entities, you can find more information <a class="reference external" href="https://docs.projectathena.dev/create/entities/material-entity.html">here</a>.</p>
+<p>Material entities have data that is stored in the JSON format, and they have a property called <code class="docutils literal notranslate"><span class="pre">materialData</span></code>. The <code class="docutils literal notranslate"><span class="pre">materialData</span></code> property requires <code class="docutils literal notranslate"><span class="pre">model</span></code> and <code class="docutils literal notranslate"><span class="pre">procedural</span></code> fields. Here is an example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;materials&quot;</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">materialData</span></code> JSON can be applied either via the Project Athena Interface’s edit tools or with a script. Here’s another example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Entities</span><span class="p">.</span><span class="nx">addEntity</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Material&quot;</span><span class="p">,</span>
+    <span class="nx">materialURL</span><span class="o">:</span> <span class="s2">&quot;materialData&quot;</span><span class="p">,</span>
+    <span class="nx">priority</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">materialData</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+            <span class="nx">materials</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span>
+                    <span class="p">}</span>
+            <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>You must specify the material’s <code class="docutils literal notranslate"><span class="pre">model</span></code> as <code class="docutils literal notranslate"><span class="pre">&quot;hifi_shader_simple&quot;</span></code> and provide a shader link. To provide a fragment shader, set <code class="docutils literal notranslate"><span class="pre">fragmentShaderURL</span></code> (or <code class="docutils literal notranslate"><span class="pre">shaderUrl</span></code>). To provide a vertex shader, set <code class="docutils literal notranslate"><span class="pre">vertexShaderURL</span></code>.</p>
+<p>To set the <code class="docutils literal notranslate"><span class="pre">materialData</span></code> using the edit tools, you will want to set <code class="docutils literal notranslate"><span class="pre">materialURL</span></code> equal to <code class="docutils literal notranslate"><span class="pre">&quot;materialData&quot;</span></code>. Then put in the JSON.stringify’d version of the materialData as shown above into the field.</p>
+</div>
+<div class="section" id="shader-template">
+<h3>Shader Template<a class="headerlink" href="#shader-template" title="Permalink to this headline">¶</a></h3>
+<p>When you learn about shaders for other applications, the shader may have a function like <code class="docutils literal notranslate"><span class="pre">main()</span></code> that is run first. By contrast, Project Athena has a specific function name that must be called. Which function is used depends on which version of the shader you use.</p>
+<p>As shaders were developed, features for them evolved a bit over time. As a result, there are several shader versions, and each version has a different call signature. <strong>Versions 1 and 2</strong> are the oldest, and will still work. <strong>Versions 3 and 4</strong> are the newest and expose more features. Version 4 provides for per-fragment positions, however it is also the most computationally expensive. Therefore it is recommended to use version 3 if that extra feature from version 4 is not needed.</p>
+<p>A shader consists of two primary pieces: <strong>the main function</strong> that is responsible for coloring the pixel, and any desired <strong>helper functions</strong> that assist in that processing logic (which must go above the main function).</p>
+<p>A basic template for a shader without helper functions looks something like this example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Helper functions go here.</span>
+
+<span class="c1">// version 3</span>
+<span class="kr">float</span> <span class="nx">getProceduralFragment</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralFragment</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">diffuse</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">occlusion</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">roughness</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">emissive</span> <span class="o">=</span> <span class="nx">_positionMS</span><span class="p">.</span><span class="nx">xyz</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// &quot;emissiveAmount&quot;, either &lt;=0 or &gt;0, suggest return 0 and use data.emissive</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">getProceduralFragment()</span></code> is the default main entry point for the fragment shader. Because shaders are always read by their compiler from top to bottom, this function must always be the last one in your shader code. You will also need to know what is available to you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> struct which is outlined in <a class="reference internal" href="#provided-methods-constants-and-structs"><span class="std std-ref">Provided Methods, Constants, and Structs</span></a>.</p>
+</div>
+<div class="section" id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the values provided by shader function arguments, there are a number of global variables that provide useful data when calculating procedural effects.</p>
+<p>The following global variables are provided:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">vec4</span> <span class="nx">iDate</span><span class="p">;</span> <span class="c1">// year, month (0 based to match shadertoy), day, seconds</span>
+<span class="nx">vec3</span> <span class="nx">iWorldPosition</span><span class="p">;</span> <span class="c1">// entity position</span>
+<span class="nx">mat3</span> <span class="nx">iWorldOrientation</span><span class="p">;</span> <span class="c1">// entity orientation</span>
+<span class="nx">vec3</span> <span class="nx">iWorldScale</span><span class="p">;</span> <span class="c1">// entity scale</span>
+<span class="kr">float</span> <span class="nx">iGlobalTime</span><span class="p">;</span> <span class="c1">// time since last shader recompilation</span>
+<span class="kr">float</span> <span class="nx">iLocalCreatedTime</span><span class="p">;</span> <span class="c1">// time since first shader compilation</span>
+<span class="kr">float</span> <span class="nx">iEntityTime</span><span class="p">;</span> <span class="c1">// time since entity creation</span>
+<span class="kr">int</span> <span class="nx">iFrameCount</span><span class="p">;</span> <span class="c1">// frames since last shader recompilation</span>
+<span class="nx">sampler2D</span> <span class="nx">iChannel0</span><span class="p">,</span> <span class="nx">iChannel1</span><span class="p">,</span> <span class="nx">iChannel2</span><span class="p">,</span> <span class="nx">iChannel3</span><span class="p">;</span> <span class="c1">// custom textures, if provided</span>
+<span class="nx">vec3</span> <span class="nx">iChannelResolution</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span> <span class="c1">// resolution of each custom texture, if provided</span>
+</pre></div>
+</div>
+<p>The following variables are defined but currently not implemented:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">vec3</span> <span class="nx">iResolution</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span> <span class="c1">// Resolution doesn’t make sense in the VR context</span>
+<span class="kr">const</span> <span class="nx">vec4</span> <span class="nx">iMouse</span> <span class="o">=</span> <span class="nx">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span> <span class="c1">// Mouse functions not enabled currently</span>
+<span class="kr">const</span> <span class="kr">float</span> <span class="nx">iSampleRate</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// No support for audio input</span>
+<span class="kr">const</span> <span class="nx">vec4</span> <span class="nx">iChannelTime</span> <span class="o">=</span> <span class="nx">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span> <span class="c1">// No support for video input</span>
+</pre></div>
+</div>
+<p>The following per-fragment uniforms are also provided in all shader versions:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">vec4</span> <span class="nx">_positionMS</span><span class="p">;</span> <span class="c1">// position in &quot;model space&quot; (relative to the center of the object); (equal to _position)</span>
+<span class="nx">vec4</span> <span class="nx">_positionES</span><span class="p">;</span> <span class="c1">// position in &quot;eye space&quot; (relative to the center of your eye); (equal to _eyePosition)</span>
+<span class="nx">vec3</span> <span class="nx">_normalMS</span><span class="p">;</span> <span class="c1">// direction the current face is pointing in &quot;model space&quot; (without any rotations); (equal to _modelNormal)</span>
+<span class="nx">vec3</span> <span class="nx">_normalWS</span><span class="p">;</span> <span class="c1">// direction the current face is pointing in &quot;world space&quot; (after rotations applied); (equal to _normal)</span>
+<span class="nx">vec4</span> <span class="nx">_color</span><span class="p">;</span> <span class="c1">// color of the object</span>
+<span class="nx">vec4</span> <span class="nx">_texCoord01</span> <span class="c1">// UV texture coordinates on this model (also split into vec2 _texCoord0 and vec2 _texCoord1)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="provided-methods-constants-and-structs">
+<h3>Provided Methods, Constants, and Structs<a class="headerlink" href="#provided-methods-constants-and-structs" title="Permalink to this headline">¶</a></h3>
+<p>Here is a full list of the provided methods, constants, and structs:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span> <span class="nx">mod289</span><span class="p">(</span><span class="kr">float</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">vec2</span> <span class="nx">mod289</span><span class="p">(</span><span class="nx">vec2</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">vec3</span> <span class="nx">mod289</span><span class="p">(</span><span class="nx">vec3</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">vec4</span> <span class="nx">mod289</span><span class="p">(</span><span class="nx">vec4</span> <span class="nx">x</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">permute</span><span class="p">(</span><span class="kr">float</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">vec3</span> <span class="nx">permute</span><span class="p">(</span><span class="nx">vec3</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">vec4</span> <span class="nx">permute</span><span class="p">(</span><span class="nx">vec4</span> <span class="nx">x</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">taylorInvSqrt</span><span class="p">(</span><span class="kr">float</span> <span class="nx">r</span><span class="p">);</span>
+<span class="nx">vec4</span> <span class="nx">taylorInvSqrt</span><span class="p">(</span><span class="nx">vec4</span> <span class="nx">r</span><span class="p">);</span>
+<span class="nx">vec4</span> <span class="nx">grad4</span><span class="p">(</span><span class="kr">float</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">vec4</span> <span class="nx">ip</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">F4</span> <span class="o">=</span> <span class="mf">0.309016994374947451</span>
+<span class="kr">float</span> <span class="nx">snoise</span><span class="p">(</span><span class="nx">vec4</span> <span class="nx">v</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">snoise</span><span class="p">(</span><span class="nx">vec3</span> <span class="nx">v</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">snoise</span><span class="p">(</span><span class="nx">vec2</span> <span class="nx">v</span><span class="p">);</span>
+
+<span class="c1">// https://www.shadertoy.com/view/lsfGRr</span>
+<span class="kr">float</span> <span class="nx">hifi_hash</span><span class="p">(</span><span class="kr">float</span> <span class="nx">n</span><span class="p">);</span>
+<span class="kr">float</span> <span class="nx">hifi_noise</span><span class="p">(</span><span class="k">in</span> <span class="nx">vec2</span> <span class="nx">x</span><span class="p">);</span>
+
+<span class="c1">// https://www.shadertoy.com/view/MdX3Rr</span>
+<span class="c1">// https://en.wikipedia.org/wiki/Fractional_Brownian_motion</span>
+<span class="kr">float</span> <span class="nx">hifi_fbm</span><span class="p">(</span><span class="k">in</span> <span class="nx">vec2</span> <span class="nx">p</span><span class="p">);</span>
+
+<span class="nx">TransformCamera</span> <span class="nx">getTransformCamera</span><span class="p">()</span>
+
+<span class="c1">// where a TransformCamera is:</span>
+<span class="nx">struct</span> <span class="nx">_TransformCamera</span> <span class="p">{</span>
+    <span class="nx">mat4</span> <span class="nx">_view</span><span class="p">;</span>
+    <span class="nx">mat4</span> <span class="nx">_viewInverse</span><span class="p">;</span>
+    <span class="nx">mat4</span> <span class="nx">_projectionViewUntranslated</span><span class="p">;</span>
+    <span class="nx">mat4</span> <span class="nx">_projection</span><span class="p">;</span>
+    <span class="nx">mat4</span> <span class="nx">_projectionInverse</span><span class="p">;</span>
+    <span class="nx">vec4</span> <span class="nx">_viewport</span><span class="p">;</span>
+    <span class="nx">vec4</span> <span class="nx">_stereoInfo</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kr">int</span> <span class="nx">gpu_InstanceID</span><span class="p">()</span>
+<span class="nx">vec3</span> <span class="nx">getEyeWorldPos</span><span class="p">()</span>
+<span class="nx">bool</span> <span class="nx">cam_isStereo</span><span class="p">()</span> <span class="c1">// is user wearing a VR headset (or a 3D monitor?)</span>
+<span class="kr">float</span> <span class="nx">cam_getStereoSide</span><span class="p">()</span> <span class="c1">// 1 for right eye in a stereo context, otherwise 0</span>
+<span class="kr">float</span> <span class="nx">isUnlitEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isEmissiveEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isLightmapEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isBackgroundEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isObscuranceEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isScatteringEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isDiffuseEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isSpecularEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isAlbedoEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isAmbientEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isDirectionalEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isPointEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isSpotEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isShowLightContour</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isWireframeEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isHazeEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isBloomEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isSkinningEnabled</span><span class="p">()</span>
+<span class="kr">float</span> <span class="nx">isBlendshapeEnabled</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="shader-version-1">
+<h4>Shader Version 1<a class="headerlink" href="#shader-version-1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Must implement. Always emissive, returns a single color.</span>
+<span class="nx">vec3</span> <span class="nx">getProceduralColor</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shader-version-2">
+<h4>Shader Version 2<a class="headerlink" href="#shader-version-2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Must implement.</span>
+<span class="kr">float</span> <span class="nx">getProceduralColors</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">vec3</span> <span class="nx">diffuse</span><span class="p">,</span> <span class="nx">inout</span> <span class="nx">vec3</span> <span class="nx">specular</span><span class="p">,</span> <span class="nx">inout</span> <span class="kr">float</span> <span class="nx">shininess</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The method can optionally set diffuse, specular, and shininess, but does not have to.
+The range for shininess goes from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">128</span></code>.
+The return value is <code class="docutils literal notranslate"><span class="pre">emissiveAmount</span></code>. If the returned value is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>, the object will be treated as emissive.</p>
+</div>
+<div class="section" id="shader-version-3">
+<h4>Shader Version 3<a class="headerlink" href="#shader-version-3" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Must implement.</span>
+<span class="kr">float</span> <span class="nx">getProceduralFragment</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralFragment</span> <span class="nx">proceduralData</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ProceduralFragment</span></code> <strong>struct</strong>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">struct</span> <span class="nx">ProceduralFragment</span> <span class="p">{</span>
+    <span class="nx">vec3</span> <span class="nx">normal</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">diffuse</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">specular</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">emissive</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">alpha</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">roughness</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">metallic</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">occlusion</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">scattering</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The default values for some of these are:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="kr">float</span> <span class="nx">DEFAULT_ROUGHNESS</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">;</span>
+<span class="kr">const</span> <span class="kr">float</span> <span class="nx">DEFAULT_SHININESS</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="kr">float</span> <span class="nx">DEFAULT_METALLIC</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">vec3</span> <span class="nx">DEFAULT_SPECULAR</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">vec3</span> <span class="nx">DEFAULT_EMISSIVE</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="kr">const</span> <span class="kr">float</span> <span class="nx">DEFAULT_OCCLUSION</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="kr">float</span> <span class="nx">DEFAULT_SCATTERING</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">vec3</span> <span class="nx">DEFAULT_FRESNEL</span> <span class="o">=</span> <span class="nx">DEFAULT_EMISSIVE</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The method can optionally set any of the values in the struct to affect the output.
+The return value is <code class="docutils literal notranslate"><span class="pre">emissiveAmount</span></code>. If the returned value is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>, the object will be treated as emissive.</p>
+</div>
+<div class="section" id="shader-version-4">
+<h4>Shader Version 4<a class="headerlink" href="#shader-version-4" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Must implement.</span>
+<span class="kr">float</span> <span class="nx">getProceduralFragmentWithPosition</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralFragmentWithPosition</span> <span class="nx">proceduralData</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ProceduralFragmentWithPosition</span></code> <strong>struct</strong>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">struct</span> <span class="nx">ProceduralFragmentWithPosition</span> <span class="p">{</span>
+    <span class="nx">vec3</span> <span class="nx">position</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">normal</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">diffuse</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">specular</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">emissive</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">alpha</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">roughness</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">metallic</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">occlusion</span><span class="p">;</span>
+    <span class="kr">float</span> <span class="nx">scattering</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>This is the same as shader version 3 but with per-fragment position. By modifying position, you can modify the per-fragment depth. This allows you to create things like ray-marched geometry that depth-tests properly and is dynamically lit by light entities. The trade-off is that this version is much more computationally expensive than version 3.</p>
+</div>
+</div>
+<div class="section" id="zone-entities">
+<h3>Zone Entities<a class="headerlink" href="#zone-entities" title="Permalink to this headline">¶</a></h3>
+<p>Zone entities operate slightly differently. They support the same global defines but not the provided methods or constants. They also provide the following inputs:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">vec3</span> <span class="nx">_normal</span><span class="p">;</span>
+<span class="nx">Skybox</span> <span class="nx">skybox</span><span class="p">;</span> <span class="c1">// a struct containing vec4 color</span>
+<span class="nx">samplerCube</span> <span class="nx">cubeMap</span><span class="p">;</span> <span class="c1">// the skybox texture</span>
+</pre></div>
+</div>
+<p>And must implement the following method, regardless of version:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">vec3</span> <span class="nx">getSkyboxColor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Zones also support custom uniforms and textures (currently only 2D textures).</p>
+</div>
+</div>
+<div class="section" id="vertex-shaders">
+<h2>Vertex Shaders<a class="headerlink" href="#vertex-shaders" title="Permalink to this headline">¶</a></h2>
+<p>A vertex shader must implement:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">void</span> <span class="nx">getProceduralVertex</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralVertexData</span> <span class="nx">proceduralData</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And will include this struct:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">struct</span> <span class="nx">ProceduralVertexData</span> <span class="p">{</span>
+    <span class="nx">vec4</span> <span class="nx">position</span><span class="p">;</span>
+    <span class="nx">vec4</span> <span class="nx">nonSkinnedPosition</span><span class="p">;</span> <span class="c1">// input only</span>
+    <span class="nx">vec3</span> <span class="nx">normal</span><span class="p">;</span>
+    <span class="nx">vec3</span> <span class="nx">nonSkinnedNormal</span><span class="p">;</span> <span class="c1">// input only</span>
+    <span class="nx">vec3</span> <span class="nx">tangent</span><span class="p">;</span> <span class="c1">// input only</span>
+    <span class="nx">vec3</span> <span class="nx">nonSkinnedTangent</span><span class="p">;</span> <span class="c1">// input only</span>
+    <span class="nx">vec4</span> <span class="nx">color</span><span class="p">;</span>
+    <span class="nx">vec2</span> <span class="nx">texCoord0</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-both-fragment-and-vertex-shaders">
+<h2>For Both Fragment and Vertex Shaders<a class="headerlink" href="#for-both-fragment-and-vertex-shaders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="custom-uniforms-and-textures">
+<h3>Custom Uniforms and Textures<a class="headerlink" href="#custom-uniforms-and-textures" title="Permalink to this headline">¶</a></h3>
+<p>Procedural materials also support up to 4 custom textures and many custom uniforms. These can be defined as follows:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">materials</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uniforms&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;_diffuse&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                    <span class="s2">&quot;_alpha&quot;</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                    <span class="s2">&quot;_emissive&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                    <span class="s2">&quot;_emissiveAmount&quot;</span><span class="o">:</span> <span class="mf">0.0</span>
+                <span class="p">}</span>
+                <span class="s2">&quot;channels&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;https://mario.nintendo.com/assets/img/home/intro/mario-pose2.png&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.mariowiki.com/images/thumb/e/e1/Luigi_New_Super_Mario_Bros_U_Deluxe.png/200px-Luigi_New_Super_Mario_Bros_U_Deluxe.png&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When texture URLs are provided, iChannel0 - iChannel3 will be populated, as well as iChannelResolution[0] - iChannelResolution[3].</p>
+<p>When you provide uniforms, you must also include them at the top of your shader file, with optional defaults:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">uniform</span> <span class="nx">vec3</span> <span class="nx">_diffuse</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="nx">uniform</span> <span class="kr">float</span> <span class="nx">_alpha</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="nx">uniform</span> <span class="nx">vec3</span> <span class="nx">_emissive</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="nx">uniform</span> <span class="kr">float</span> <span class="nx">_emissiveAmount</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Supported uniform types are: <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">vec2</span></code>, <code class="docutils literal notranslate"><span class="pre">vec3</span></code>, and <code class="docutils literal notranslate"><span class="pre">vec4</span></code>. (Multiple values are provided as arrays.)</p>
+</div>
+<div class="section" id="alpha-effects-transparency">
+<h3>Alpha Effects (Transparency)<a class="headerlink" href="#alpha-effects-transparency" title="Permalink to this headline">¶</a></h3>
+<p>Shaders that make use of the <code class="docutils literal notranslate"><span class="pre">proceduralData.alpha</span></code> value won’t display alpha on their own. In order for a shader’s alpha to be active, the entity it is applied to must first have either its alpha property less than <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, or a material property setting opacity to less than <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+</div>
+<div class="section" id="debugging-shaders">
+<h3>Debugging Shaders<a class="headerlink" href="#debugging-shaders" title="Permalink to this headline">¶</a></h3>
+<p>The only way to debug shaders at the moment is to look at Interface’s log file. Shader compilation errors will appear in this log, and can help with locating issues.</p>
+<p>Because a user created shader is ultimately embedded in a larger internal shader framework, you’ll notice that an error in a 20 line shader will be reported at a much higher line number, typically greater than 1000. As a result, you will need to locate the shader code that corresponds to your shader at the end of the larger internal shader context.</p>
+</div>
+<div class="section" id="shader-examples-by-version">
+<h3>Shader Examples by Version<a class="headerlink" href="#shader-examples-by-version" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// version 1</span>
+<span class="nx">vec3</span> <span class="nx">getProceduralColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">_positionMS</span><span class="p">.</span><span class="nx">xyz</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// version 2</span>
+<span class="kr">float</span> <span class="nx">getProceduralColors</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">vec3</span> <span class="nx">diffuse</span><span class="p">,</span> <span class="nx">inout</span> <span class="nx">vec3</span> <span class="nx">specular</span><span class="p">,</span> <span class="nx">inout</span> <span class="kr">float</span> <span class="nx">shininess</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// diffuse is from the texture, others are hardcoded to DEFAULT_SPECULAR and DEFAULT_SHININESS</span>
+    <span class="nx">diffuse</span> <span class="o">=</span> <span class="nx">_positionMS</span><span class="p">.</span><span class="nx">xyz</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// emissive, between 0.0 - 1.0</span>
+<span class="p">}</span>
+
+<span class="c1">// version 3</span>
+<span class="kr">float</span> <span class="nx">getProceduralFragment</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralFragment</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">diffuse</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">occlusion</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">roughness</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">emissive</span> <span class="o">=</span> <span class="nx">_positionMS</span><span class="p">.</span><span class="nx">xyz</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// &quot;emissiveAmount&quot;, either &lt;=0 or &gt;0, suggest return 0 and use data.emissive</span>
+<span class="p">}</span>
+
+<span class="c1">// version 4</span>
+    <span class="kr">float</span> <span class="nx">getProceduralFragmentWithPosition</span><span class="p">(</span><span class="nx">inout</span> <span class="nx">ProceduralFragmentWithPosition</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">diffuse</span> <span class="o">=</span> <span class="nx">vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">occlusion</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">roughness</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">emissive</span> <span class="o">=</span> <span class="nx">_positionMS</span><span class="p">.</span><span class="nx">xyz</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// &quot;emissiveAmount&quot;, either &lt;=0 or &gt;0, suggest return 0 and use data.emissive</span>
+<span class="p">}</span>
+
+<span class="c1">// skybox</span>
+<span class="nx">vec3</span> <span class="nx">getSkyboxColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">vec3</span> <span class="nx">normal</span> <span class="o">=</span> <span class="nx">normalize</span><span class="p">(</span><span class="nx">_normal</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">texture</span><span class="p">(</span><span class="nx">cubeMap</span><span class="p">,</span> <span class="nx">normal</span><span class="p">).</span><span class="nx">rgb</span><span class="p">;</span> <span class="c1">// this should return the same value that the skybox texture has</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For further details on each version, see <a class="reference internal" href="#provided-methods-constants-and-structs"><span class="std std-ref">Provided Methods, Constants, and Structs</span></a>.</p>
+</div>
+<div class="section" id="a-cautionary-note-on-shaders">
+<h3>A Cautionary Note on Shaders<a class="headerlink" href="#a-cautionary-note-on-shaders" title="Permalink to this headline">¶</a></h3>
+<p>Project Athena does not enable seeing procedural shaders by default. This is because currently, they are an experimental feature. Shaders are a very powerful tool, and when used incorrectly, can harm the user experience for everyone on the domain. A poorly written shader or a shader created by a bad actor can slow things down to a crawl or interfere with a user’s view of the virtual world.</p>
+<p>Shaders are best used as a very strong spice in a recipe. Attempt to keep them small and efficient. Shaders can produce marvelous and mind-blowing effects, but overuse can spoil the desired end effect. If you create a shader that has hundreds of lines of code, consider trimming it down if possible.</p>
+<p>If you find yourself in a position where a shader is causing trouble for you, remember that you can disable them in the Athena Interface.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../3d-models.html" class="btn btn-neutral float-right" title="3D Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../materials.html" class="btn btn-neutral float-left" title="Materials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

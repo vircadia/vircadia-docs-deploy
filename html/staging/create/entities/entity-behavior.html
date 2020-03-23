@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Define an Entity’s Behavior &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Apply Physics to Entities" href="entity-physics.html" />
+    <link rel="prev" title="Change How Entities Look" href="entity-appearance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Define an Entity’s Behavior</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-behavior.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-behavior.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="define-an-entity-s-behavior">
+<h1><a class="toc-backref" href="#id1">Define an Entity’s Behavior</a><a class="headerlink" href="#define-an-entity-s-behavior" title="Permalink to this headline">¶</a></h1>
+<p>An entity’s behavior controls its interactions with other entities and avatars in Project Athena. Can an entity be grabbed, does it collide with other entities and avatars, or can a change in the domain’s gravity affect it? You can check and change an entity’s behavior by editing its properties.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can select and edit multiple entities at once. The behavior will be different based on the type of property you’d like to set:</p>
+<ul class="simple">
+<li><p>Numbers: When using the slider, an offset will be applied to each of the original values. When typed in, the new value will replace the original values for the selected entities.</p></li>
+<li><p>All other field types (checkboxes, input fields, etc): The new value will replace the original values for the selected entities.</p></li>
+</ul>
+</div>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#define-an-entity-s-behavior" id="id1">Define an Entity’s Behavior</a></p>
+<ul>
+<li><p><a class="reference internal" href="#set-an-entity-to-respond-to-physics" id="id2">Set an Entity to Respond to Physics</a></p></li>
+<li><p><a class="reference internal" href="#set-entity-behavior-on-collision" id="id3">Set Entity Behavior on Collision</a></p></li>
+<li><p><a class="reference internal" href="#make-an-entity-grabbable" id="id4">Make an Entity Grabbable</a></p></li>
+<li><p><a class="reference internal" href="#set-an-entity-to-trigger-scripts" id="id5">Set an Entity to Trigger Scripts</a></p></li>
+<li><p><a class="reference internal" href="#make-an-entity-cloneable" id="id6">Make an Entity Cloneable</a></p></li>
+<li><p><a class="reference internal" href="#set-an-entity-to-cast-a-shadow" id="id7">Set an Entity to Cast a Shadow</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="set-an-entity-to-respond-to-physics">
+<h2><a class="toc-backref" href="#id2">Set an Entity to Respond to Physics</a><a class="headerlink" href="#set-an-entity-to-respond-to-physics" title="Permalink to this headline">¶</a></h2>
+<p>If you want an entity to <a class="reference internal" href="entity-physics.html"><span class="doc">respond to physics</span></a> or other entities and avatars, you need to make it dynamic. This allows a box to respond to gravity or a ball to bounce when it hits the floor. If an entity is not dynamic, it is static and has no gravity and no velocity. It can only be moved by a user.</p>
+<p>To make an entity dynamic:</p>
+<ol class="arabic simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select your entity on the ‘Entity List’ window or just click on it.</p></li>
+<li><p>Go to the ‘Properties’ tab, scroll down to ‘Collision’ and check ‘Dynamic’.</p></li>
+</ol>
+</div>
+<div class="section" id="set-entity-behavior-on-collision">
+<h2><a class="toc-backref" href="#id3">Set Entity Behavior on Collision</a><a class="headerlink" href="#set-entity-behavior-on-collision" title="Permalink to this headline">¶</a></h2>
+<p>When an entity has no collision properties, it moves through other entities and avatars like it’s not a solid object. For an entity to collide when it comes in contact with another entity or avatar, its collision properties need to be changed. With the entity selected, click on ‘Properties’ and scroll down to the ‘Collision’ settings.</p>
+<p>Here are the different collision settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Collides With</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Static Entities</p></td>
+<td><p>Your entity will collide with static entities. Keep in mind that if your
+entity is a static entity, it will not collide with another static entity.
+Only a dynamic entity can collide with a static entity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kinematic Entities</p></td>
+<td><p>Your entity will collide with kinematic entities. Kinematic entities have
+velocity, but are not dynamic. Their behavior is controlled by an external
+script.</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic Entities</p></td>
+<td><p>Your entity will collide with other dynamic entities.</p></td>
+</tr>
+<tr class="row-odd"><td><p>My avatar</p></td>
+<td><p>Your entity will <a class="reference internal" href="avatar-interactions.html"><span class="doc">collide with your avatar</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Other avatars</p></td>
+<td><p>Your entity will collide with other user’s avatars.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Collision Sound</p></td>
+<td><p>You can make your entity <a class="reference internal" href="add-sounds.html"><span class="doc">emit a sound</span></a> whenever it
+collides with other entities.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="make-an-entity-grabbable">
+<h2><a class="toc-backref" href="#id4">Make an Entity Grabbable</a><a class="headerlink" href="#make-an-entity-grabbable" title="Permalink to this headline">¶</a></h2>
+<p>Your entity’s grab properties determine how it behaves when you or another user interacts with it. By default, ‘Grabbable’ and ‘Follow Controller’ are checked.</p>
+<p>Here are the different grab settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Behavior</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Grabbable</p></td>
+<td><p>You or other users can grab this entity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Follow Controller</p></td>
+<td><p>Your entity will follow the movements of your hand controller instead of
+your avatar’s hands. If your avatar’s arms are shorter than your real arms,
+your entity will be grabbed where the controller is (at a distance from
+your avatar’s hands).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-an-entity-to-trigger-scripts">
+<h2><a class="toc-backref" href="#id5">Set an Entity to Trigger Scripts</a><a class="headerlink" href="#set-an-entity-to-trigger-scripts" title="Permalink to this headline">¶</a></h2>
+<p>If you want your entity to trigger a script when you, other users, or other entities come in contact with it, you can do so by editing its properties.</p>
+<p>Here are the different trigger settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Behavior</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Triggerable</p></td>
+<td><p>Your entity can trigger a script. For instance, you can trigger a cube entity
+to run a script asking for a tip every time you click it.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="make-an-entity-cloneable">
+<h2><a class="toc-backref" href="#id6">Make an Entity Cloneable</a><a class="headerlink" href="#make-an-entity-cloneable" title="Permalink to this headline">¶</a></h2>
+<p>You can clone your entity to create other entities with the same properties as yours. While creating clones, you can set how long they’ll exist, how many clones you can create, how the clone responds to physics, and if the clone is an avatar entity.</p>
+<p>Here are the different clone settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Behavior</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cloneable</p></td>
+<td><p>Your entity can be cloned. You can change the ‘Clone’ settings to manipulate
+your cloned entity’s behavior.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Cloneable</em> &gt;
+Clone Lifetime</p></td>
+<td><p>Select this option to set how long (in seconds) your clone will exist.</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Cloneable</em> &gt;</p>
+<p>Clone Limit</p>
+</td>
+<td><p>Select to set a limit to how many clones you can create. If you don’t want to
+have a limit, set the value to 0  .</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Cloneable</em> &gt;
+Clone Dynamic</p></td>
+<td><p>Select to make the clone entity a dynamic entity.</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Cloneable</em> &gt;
+Clone Avatar Entity</p></td>
+<td><p>Select to specify if a cloned entity is created as an avatar entity. An avatar
+entity doesn’t exist in the Entity Server. Instead, it is specific to a user’s
+Interface client. For instance, say a user comes to visit the coffee shop in
+your domain. The user grabs a coffee cup that’s been cloned. Once the user is
+done visiting, the cloned entity leaves with their avatar, ensuring there isn’t
+any clutter left behind. This feature ensures that your entity is cloned
+locally for each avatar.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A user does not need <a class="reference internal" href="../../host/configure-settings/permission-settings.html"><span class="doc">create permissions</span></a> to clone an entity or edit an unlocked entity.</p>
+</div>
+<p>To make entities cloneable in your domain (this can only be done with unlocked entities):</p>
+<ol class="arabic simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select the entity of your choice in the ‘Entity List’ window.</p></li>
+<li><p>Go to the ‘Properties’ tab, scroll down, and check ‘Cloneable’.</p></li>
+</ol>
+<p>Keep in mind that any user can now clone the entities that are cloneable. If you don’t want any users to clone your entity or any entities in your domain, you can do one of the following:</p>
+<ul class="simple">
+<li><p>Lock any entities you don’t want cloned, then <a class="reference internal" href="../../host/configure-settings/permission-settings.html"><span class="doc">restrict user ‘Lock’ permissions</span></a> to the users of your choice.</p></li>
+<li><p>Set entity filters to prevent users from editing entities in your domain.</p></li>
+</ul>
+</div>
+<div class="section" id="set-an-entity-to-cast-a-shadow">
+<h2><a class="toc-backref" href="#id7">Set an Entity to Cast a Shadow</a><a class="headerlink" href="#set-an-entity-to-cast-a-shadow" title="Permalink to this headline">¶</a></h2>
+<p>You can make your entity behave like a real world object by making it cast a shadow on other entities and avatars. In Project Athena, entities cast shadows only from the key light, not from the light entities. The key light is a parallel source of light, like the sun.</p>
+<p>Here are the different shadow settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Behavior</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cast Shadow</p></td>
+<td><p>Your entity will cast a shadow on other objects and avatars.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="entity-physics.html"><span class="doc">Apply Physics to Entities</span></a></p></li>
+<li><p><a class="reference internal" href="avatar-interactions.html"><span class="doc">Define Interactions with Avatars</span></a></p></li>
+<li><p><a class="reference internal" href="add-sounds.html"><span class="doc">Add Sound to Entities</span></a></p></li>
+<li><p><a class="reference internal" href="../../explore/interact.html"><span class="doc">Interact with Your Environment</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="entity-physics.html" class="btn btn-neutral float-right" title="Apply Physics to Entities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="entity-appearance.html" class="btn btn-neutral float-left" title="Change How Entities Look" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

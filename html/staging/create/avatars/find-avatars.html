@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Find and Use an Existing Avatar &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Package and Host Your Avatar" href="package-avatar.html" />
+    <link rel="prev" title="Avatar Standards Guide" href="avatar-standards.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../avatars.html">Avatars</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-avatars.html">Create Your Own Avatar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Find and Use an Existing Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="package-avatar.html">Package and Host Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-flow.html">Add Flow to Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-animations.html">Customize Avatar Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fuse-tutorial.html">Tutorial: Create an Avatar with Fuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mixamo-tutorial.html">Tutorial: Rig Avatars in Mixamo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blender-tutorial.html">Tutorial: Modify Materials and Textures with Blender</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scattering-tutorial.html">Tutorial: Add a Scattering Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../entities.html">Entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../avatars.html">Avatars</a> &raquo;</li>
+        
+      <li>Find and Use an Existing Avatar</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/find-avatars.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/find-avatars.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="find-and-use-an-existing-avatar">
+<h1><a class="toc-backref" href="#id2">Find and Use an Existing Avatar</a><a class="headerlink" href="#find-and-use-an-existing-avatar" title="Permalink to this headline">¶</a></h1>
+<p>You can download avatars for use from external sources such as TurboSquid or CGTrader. Once you get the avatar, you will need to process it in Unity using the Project Athena Avatar Exporter. This tool imports most avatars into Unity, maps their skeleton using Unity’s humanoid tool, and exports them as FST and FBX files to import in-world.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#find-and-use-an-existing-avatar" id="id2">Find and Use an Existing Avatar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#avatar-guidelines" id="id3">Avatar Guidelines</a></p></li>
+<li><p><a class="reference internal" href="#project-athena-avatar-exporter-for-unity" id="id4">Project Athena Avatar Exporter for Unity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#install-the-avatar-exporter" id="id5">Install the Avatar Exporter</a></p></li>
+<li><p><a class="reference internal" href="#create-an-avatar-package" id="id6">Create an Avatar Package</a></p></li>
+<li><p><a class="reference internal" href="#test-your-avatar" id="id7">Test Your Avatar</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-tips" id="id8">Troubleshooting Tips</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="avatar-guidelines">
+<h2><a class="toc-backref" href="#id3">Avatar Guidelines</a><a class="headerlink" href="#avatar-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>Many external sites like TurboSquid and CGTrader provide avatars that you can use. However, note that not all of the avatars you find may work in Project Athena. To improve the chances that your downloaded avatar is compatible with Project Athena, we’ve compiled a list of guidelines to help you “sanity check” it prior to use.</p>
+<p>You should ensure that:</p>
+<ul>
+<li><p>You downloaded a <a class="reference external" href="https://blog.turbosquid.com/real-time-models">real-time models</a> (rigged for run-time, not rigged for render).</p></li>
+<li><p>You have the correct downloaded files</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>An FBX model for your avatar. We do not support other 3D model formats.</p></li>
+<li><p>(Optional) One or more image files to give your avatar color and texture. Sometimes, these are already embedded in your FBX model and you won’t have any additional image files in your download.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Your avatar is rigged.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your avatar is not rigged, you can use <a class="reference internal" href="mixamo-tutorial.html"><span class="doc">Mixamo</span></a> to rig it. If you use Mixamo, you do not necessarily need to use Unity and the avatar exporter. Because Mixamo already uses a skeleton that we support, you can use our <a class="reference external" href="create-avatars.html#package-your-avatar">Avatar Packager</a> to import your avatar into Project Athena.</p>
+</div>
+</div>
+<div class="section" id="project-athena-avatar-exporter-for-unity">
+<h2><a class="toc-backref" href="#id4">Project Athena Avatar Exporter for Unity</a><a class="headerlink" href="#project-athena-avatar-exporter-for-unity" title="Permalink to this headline">¶</a></h2>
+<p>Project Athena supports only one standard type of rigging for avatars. Because many avatars do not match this skeleton, we created the Project Athena Avatar Exporter for Unity (also known as the “avatar exporter”) to convert human-like avatars with a humanoid bone structure (body, head, and limbs). The avatar exporter also automatically packages your avatar for use in Project Athena.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The avatar exporter was written to improve the process of rigging and mapping the skeleton rig. This will not affect the animations or materials in your avatar. To adjust the materials, you will need to use a 3D modeling tool such as Blender or Maya and make modifications to your avatar prior to using the avatar exporter in Unity.</p>
+</div>
+<p>You will need the following to use this tool:</p>
+<ul class="simple">
+<li><p>Unity (Recommended versions: 2017.4.17f1 - 2018.2.12f1)</p></li>
+<li><p>Project Athena (v0.77.0 or higher)</p></li>
+<li><p><a class="reference external" href="https://github.com/kasenvr/project-athena/blob/kasen/core/tools/unity-avatar-exporter/avatarExporter.unitypackage?raw=true">Project Athena Avatar Exporter for Unity</a> (v0.4.1)</p></li>
+</ul>
+<p>Please note that the recommended version of Unity is not the latest version. If you are using a newer version of Unity, we recommend that you apply a T-Pose to your avatar. To do so, go to the ‘Inspector’, and click ‘Pose’ near the bottom of the panel. Select ‘Enforce T-Pose’ from the drop-down. Click ‘Apply’ and ‘Done’. We recommend doing this after correcting any issues with remapping bones.</p>
+<div class="section" id="install-the-avatar-exporter">
+<h3><a class="toc-backref" href="#id5">Install the Avatar Exporter</a><a class="headerlink" href="#install-the-avatar-exporter" title="Permalink to this headline">¶</a></h3>
+<p>You need to install the extension for every Unity project that you have. Keep in mind, however, that you can import and export multiple avatars in a single Unity project.</p>
+<ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="https://github.com/kasenvr/project-athena/blob/kasen/core/tools/unity-avatar-exporter/avatarExporter.unitypackage?raw=true">avatar exporter</a> from Project Athena.</p></li>
+<li><p>In Unity, open the ‘Project’ window at the bottom.</p></li>
+</ol>
+<img alt="../../_images/project-window.png" src="../../_images/project-window.png" />
+<ol class="arabic simple" start="3">
+<li><p>Right-click the ‘Assets’ folder, then select <strong>Import Package &gt; Custom Package</strong>.</p></li>
+</ol>
+<img alt="../../_images/import-package.png" src="../../_images/import-package.png" />
+<ol class="arabic simple" start="4">
+<li><p>Navigate to the <cite>avatarExporter</cite> package (with a .unitypackage extension). Click ‘Open’. You can also double-click the package on your computer to import it automatically.</p></li>
+<li><p>In the ‘Importing Package’ window, review the list of files to be imported and check for conflicts with files already in your project. If a conflict exists, save any local changes somewhere outside of your project.</p></li>
+<li><p>Click ‘Import’. The package’s files are added to the Assets folder. You should now have a ‘High Fidelity’ menu in Unity.</p></li>
+</ol>
+<img alt="../../_images/hifi-menu.png" src="../../_images/hifi-menu.png" />
+</div>
+<div class="section" id="create-an-avatar-package">
+<h3><a class="toc-backref" href="#id6">Create an Avatar Package</a><a class="headerlink" href="#create-an-avatar-package" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>If you don’t already have your model open in Unity, you need to import your model. Use any of the following methods:</p>
+<ul class="simple">
+<li><p>Drag and drop the FBX file into the ‘Assets’ folder of your ‘Project’ window.</p></li>
+<li><p>In the ‘Project’ window, right-click the ‘Assets’ folder, then select <strong>Import Package &gt; Import New Asset</strong>. Navigate to the FBX file and click ‘Import’.</p></li>
+<li><p>In Unity, open the ‘Assets’ menu, then select <strong>Import Package &gt; Import New Asset</strong>. Navigate to the FBX file and click ‘Import’.</p></li>
+</ul>
+</li>
+<li><p>In the ‘Project’ window, select your avatar’s FBX file. In the ‘Inspector’, open ‘Rig’. For ‘Animation Type’, choose ‘Humanoid’ and then click ‘Apply’.</p></li>
+</ol>
+<img alt="../../_images/apply-humanoid-animation.png" src="../../_images/apply-humanoid-animation.png" />
+<a id="mesh"></a><ol class="arabic simple" start="3">
+<li><p>Click ‘Configure’ to investigate and tweak the mapping of your avatar.</p></li>
+</ol>
+<img alt="../../_images/configure-avatar.png" src="../../_images/configure-avatar.png" />
+<ol class="arabic simple" start="4">
+<li><p>All bones mapped in Unity are highlighted in green and can be selected. Check if anything is missing. Any errors will appear in red. The minimum required bones for mapping are Hips, Spine, Chest, and Head. If either of these are missing, you must manually add bones before continuing. You can do this by dragging the bones from the ‘Avatar Configuration’ panel to the ‘Inspector’ panel.</p></li>
+</ol>
+<img alt="../../_images/check-mesh.png" src="../../_images/check-mesh.png" />
+<img alt="../../_images/avatar-config.png" src="../../_images/avatar-config.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avatars in Project Athena must have a Chest bone. If your avatar does not have a chest bone, the avatar exporter may suggest a suitable alternative from the ‘Avatar Configuration’ panel. If the exporter doesn’t suggest an alternative and Humanoid doesn’t correctly map the Chest, then you will get an error and need to manually map a bone to the Chest from ‘Avatar Configuration’.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>If you made any changes, click ‘Done’.</p></li>
+<li><p>Click on the FBX file in the ‘Assets’ manager.</p></li>
+</ol>
+<img alt="../../_images/select-avatar-unity.png" src="../../_images/select-avatar-unity.png" />
+<ol class="arabic simple" start="7">
+<li><p>Make sure that you have the <a class="reference external" href="#install-the-avatar-exporter">avatar exporter installed</a>. Open the ‘High Fidelity’ menu in the top menu bar, then select ‘Export New Avatar’.</p></li>
+<li><p>Give your avatar project a name. The default project location is your local user’s <code class="docutils literal notranslate"><span class="pre">Documents\High</span> <span class="pre">Fidelity</span> <span class="pre">Projects</span></code> directory, which is created automatically for you. Though we recommend that you keep your avatars in this directory, you can change it to another location on your computer.</p></li>
+</ol>
+<img alt="../../_images/export-avatar.png" src="../../_images/export-avatar.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click ‘Export’.</p></li>
+</ol>
+<p>Your avatar package has been created! The File Explorer will open to your new avatar project.</p>
+<img alt="../../_images/exported-package.png" src="../../_images/exported-package.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using any external textures with your avatar model, copy those textures to your local user’s <code class="docutils literal notranslate"><span class="pre">Documents\High</span> <span class="pre">Fidelity</span> <span class="pre">Projects\avatar\&lt;project</span> <span class="pre">name&gt;\textures</span></code> directory. Otherwise, they may not show up on your avatar.</p>
+</div>
+</div>
+<div class="section" id="test-your-avatar">
+<h3><a class="toc-backref" href="#id7">Test Your Avatar</a><a class="headerlink" href="#test-your-avatar" title="Permalink to this headline">¶</a></h3>
+<p>We encourage you to “spot check” your avatar in Unity before exporting it with the <a class="reference external" href="https://github.com/kasenvr/project-athena/blob/kasen/core/tools/unity-avatar-exporter/avatarExporter.unitypackage?raw=true">Project Athena Avatar Exporter for Unity</a>. Check for the following:</p>
+<ul class="simple">
+<li><p>Confirm that there are no extraneous objects attached to your model. For example, this <a class="reference external" href="https://www.cgtrader.com/free-3d-models/character/sci-fi/low-poly-construction-mech">Mech avatar</a> has a ground blue object included in the model. All extraneous objects will be imported into Project Athena and may affect the rendering or animation of your avatar.</p></li>
+<li><p>Test your bone movements. In Unity’s ‘Inspector’, open ‘Rig’. For ‘Animation Type’, choose ‘Humanoid’ and then click ‘Apply’. Go to ‘Muscles &amp; Settings’ to test your avatar’s bone configuration and ensure that it works as expected.</p></li>
+</ul>
+<img alt="../../_images/muscle-adjustment.gif" src="../../_images/muscle-adjustment.gif" />
+<p>If everything looks good, you need to <a class="reference external" href="package-avatar.html#host-your-avatar">host your avatar</a> then <a class="reference external" href="../../explore/personalize/change-avatar.html#use-your-own-custom-avatar">change your avatar</a> to wear it.</p>
+</div>
+<div class="section" id="troubleshooting-tips">
+<h3><a class="toc-backref" href="#id8">Troubleshooting Tips</a><a class="headerlink" href="#troubleshooting-tips" title="Permalink to this headline">¶</a></h3>
+<p>Many of the errors you will encounter describe issues with the avatar’s skeleton. These are fully documented here: <a class="reference external" href="package-avatar.html#troubleshooting-with-the-avatar-packager">Troubleshooting with the Avatar Packager</a>. Here are some other issues you may encounter after using a downloaded avatar and using the avatar exporter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Issue</p></th>
+<th class="head"><p>Troubleshooting Tip</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>You receive a warning in Unity:</em></p>
+<p>“Character is not in T pose.”</p>
+</td>
+<td><p>Go to the ‘Inspector’, click ‘Configure’, and then select ‘Pose’ near the bottom of
+the panel. Select ‘Enforce T-Pose’ from the drop-down. Click ‘Apply’ and ‘Done’. We
+recommend doing this after correcting any issues with remapping bones.</p></td>
+</tr>
+<tr class="row-odd"><td><p>In Unity, your avatar is a solid
+color.</p></td>
+<td><p>This suggests that the materials or shaders you are using are not supported.</p>
+<ol class="arabic simple">
+<li><p>Click and drag your model into the ‘Scene’ window.</p></li>
+<li><p>Select all of the unsupported materials. These will be one solid color,
+such as pink.</p></li>
+<li><p>In the ‘Inspector’, change the ‘Shader’ to one of the ‘Standard’ options. All
+materials should now show up correctly.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><p>Your avatar is grey.</p></td>
+<td><p>One of the following issues could have occurred:</p>
+<ol class="arabic simple">
+<li><p>Make sure you copied your avatar’s textures into the project’s textures folder</p></li>
+<li><p>Verify that your textures are in a format that we support (PNG, JPEG, JPG, TGA,
+TIF, or TIFF).</p></li>
+<li><p>If your textures are embedded in your avatar: select the FBX file, go to
+‘Inspector’, and click ‘Extract Textures’. Extract your textures into your asset’s
+folder. You can do the same with Materials.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Your avatar is tied up into knots
+or laying down.</p></td>
+<td><p>This could mean that your skeleton is not right. Re-open your avatar in
+Unity and run through steps 2-5 of <a class="reference internal" href="#create-an-avatar-package">Create an Avatar Package</a>
+again. Update your project in Unity (go to Update Existing Avatar,
+then browse to your avatar package).</p>
+<p>If it still doesn’t work, ensure that you are testing the correct file that
+the avatar exporter created.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Your avatar’s skin doesn’t move
+properly with animations.</p></td>
+<td><p>The avatar exporter was written to improve the process of rigging and mapping
+the skeleton rig. This will not affect the animations in your avatar. To
+adjust the animations, you will need to use a 3D modeling tool such as Blender
+or Maya and fix the skin weighting on the avatar prior to using the avatar
+exporter in Unity.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="package-avatar.html"><span class="doc">Package and Host Your Avatar</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="package-avatar.html" class="btn btn-neutral float-right" title="Package and Host Your Avatar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="avatar-standards.html" class="btn btn-neutral float-left" title="Avatar Standards Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

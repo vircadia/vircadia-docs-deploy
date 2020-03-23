@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Change How Entities Look &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Define an Entity’s Behavior" href="entity-behavior.html" />
+    <link rel="prev" title="Create New Entities" href="create-entities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Change How Entities Look</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-appearance.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-appearance.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="change-how-entities-look">
+<h1><a class="toc-backref" href="#id1">Change How Entities Look</a><a class="headerlink" href="#change-how-entities-look" title="Permalink to this headline">¶</a></h1>
+<p>You can edit an entity’s size, color, position and rotation using your mouse or trackpad. To edit an entity, open the <a class="reference external" href="../tools.html#the-create-app">Create app</a> and either select the entity or find it in the Entity List.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can select and edit multiple entities at once. The behavior will be different based on the type of property you’d like to set:</p>
+<ul class="simple">
+<li><p>Numbers: When using the slider, an offset will be applied to each of the original values. When typed in, the new value will replace the original values for the selected entities.</p></li>
+<li><p>All other field types (checkboxes, input fields, etc): The new value will replace the original values for the selected entities.</p></li>
+</ul>
+</div>
+<img alt="../../_images/select-entity.PNG" src="../../_images/select-entity.PNG" />
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#change-how-entities-look" id="id1">Change How Entities Look</a></p>
+<ul>
+<li><p><a class="reference internal" href="#change-the-color-of-an-entity" id="id2">Change the Color of an Entity</a></p></li>
+<li><p><a class="reference internal" href="#set-the-size-of-an-entity" id="id3">Set the Size of an Entity</a></p></li>
+<li><p><a class="reference internal" href="#rotate-an-entity" id="id4">Rotate an Entity</a></p></li>
+<li><p><a class="reference internal" href="#move-an-entity" id="id5">Move an Entity</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="change-the-color-of-an-entity">
+<h2><a class="toc-backref" href="#id2">Change the Color of an Entity</a><a class="headerlink" href="#change-the-color-of-an-entity" title="Permalink to this headline">¶</a></h2>
+<p>You can manually change the color of most entity types in the <strong>Create</strong> app. With the entity selected, click on ‘Properties’ and scroll down to the ‘Color’ settings. Here are the different color settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 57%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported Entity Type(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Color</p></td>
+<td><p>The color of an entity.</p></td>
+<td><p>Cube, Sphere</p></td>
+</tr>
+<tr class="row-odd"><td><p>Light Color</p></td>
+<td><p>The color of the light.</p></td>
+<td><p>Light</p></td>
+</tr>
+<tr class="row-even"><td><p>Text Color</p></td>
+<td><p>The color of the text.</p></td>
+<td><p>Text</p></td>
+</tr>
+<tr class="row-odd"><td><p>Background Color</p></td>
+<td><p>The color of the background of the text.</p></td>
+<td><p>Text</p></td>
+</tr>
+<tr class="row-even"><td><p>Key Light</p></td>
+<td><p>The color of the lighting in the zone. Select ‘Inherit’ to keep
+the lighting of the domain, or ‘Off’ to remove all lighting.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sky Box</p></td>
+<td><p>The color of the ceiling in the zone. Select ‘Inherit’ to keep
+the color of the domain, or ‘Off’ to remove all color.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-even"><td><p>Ambient Light</p></td>
+<td><p>Configures the amount of ambient light in the zone. Ambient
+light reflects on content within your zone.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Haze</em> &gt; Haze Color</p></td>
+<td><p>When Haze is turned on, the color of the haze in the zone.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Haze</em> &gt; Glare Color</p></td>
+<td><p>When Haze is turned on, the color of the glare based on the key
+light.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bloom</p></td>
+<td><p>Configures how much the bright areas of the scene glow.</p></td>
+<td><p>Zone</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Color</em> &gt; Color</p></td>
+<td><p>As the particle moves, sets the color of the particle at the
+start, middle, and finish.</p></td>
+<td><p>Particle</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Color</em> &gt; Color Spread</p></td>
+<td><p>The spread of color that each particle is given, resulting in
+a variety of colors.</p></td>
+<td><p>Particle</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-the-size-of-an-entity">
+<h2><a class="toc-backref" href="#id3">Set the Size of an Entity</a><a class="headerlink" href="#set-the-size-of-an-entity" title="Permalink to this headline">¶</a></h2>
+<p>For cube, sphere, text, image and web entities, you can change its size directly in your environment by selecting and dragging the small boxes inside the object.</p>
+<img alt="../../_images/resize-entity.gif" src="../../_images/resize-entity.gif" />
+<p>For all entities, you can also set the size manually in the <strong>Create</strong> app. With the entity selected, click on ‘Properties’ and scroll down to the ‘Size’ settings. Here are the different size settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 58%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported Entity Type(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Spatial</em> &gt; Local
+Dimensions</p></td>
+<td><p>The size of the entity. If the entity is parented to an avatar,
+this value remains the original dimensions value while the avatar
+scale changes.</p></td>
+<td><p>All</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Spatial</em> &gt; Dimensions</p></td>
+<td><p>The size of the entity. If the entity is parented to an avatar,
+this value will change if the avatar scale changes</p></td>
+<td><p>All</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Spatial</em> &gt; Scale</p></td>
+<td><p>Sets the size of the entity as a percentage of its original size.</p></td>
+<td><p>All</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fall-Off Radius</p></td>
+<td><p>The distance from the light’s center where the intensity is
+reduced.</p></td>
+<td><p>Light</p></td>
+</tr>
+<tr class="row-even"><td><p>Spotlight Cut-Off</p></td>
+<td><p>Affects the size of the spotlight’s beam; the higher the value,
+the larger the beam.</p></td>
+<td><p>Light</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Height</p></td>
+<td><p>The height of each line of text.</p></td>
+<td><p>Text</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Emit</em> &gt; Dimensions</p></td>
+<td><p>The outer limit radius that particles can be emitted from.</p></td>
+<td><p>Particle</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Emit</em> &gt; Radius Start</p></td>
+<td><p>The inner limit radius that particles can start emitting from.</p></td>
+<td><p>Particle</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Size</em> &gt; Size</p></td>
+<td><p>The size of each individual particle in the entity.</p></td>
+<td><p>Particle</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Size</em> &gt; Size Spread</p></td>
+<td><p>How far apart a particle is from other particles.</p></td>
+<td><p>Particle</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rotate-an-entity">
+<h2><a class="toc-backref" href="#id4">Rotate an Entity</a><a class="headerlink" href="#rotate-an-entity" title="Permalink to this headline">¶</a></h2>
+<p>All entities can be rotated directly in your environment by selecting and dragging the circles around the object.</p>
+<img alt="../../_images/rotate-entity.gif" src="../../_images/rotate-entity.gif" />
+<p>You can also set the rotation manually in the <strong>Create</strong> app. With the entity selected, click on ‘Properties’ and scroll down to the ‘Rotation’ settings. Here are the different rotation settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 55%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported Entity Type(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Spatial</em> &gt; Local Rotation</p></td>
+<td><p>The orientation of the entity relative to its parent.</p></td>
+<td><p>All</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Spatial</em> &gt; Rotation</p></td>
+<td><p>The orientation of the entity with respect to world coordinates.</p></td>
+<td><p>All</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can switch between ‘Local’ and ‘World’ using the keyboard shortcut <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+</div>
+</div>
+<div class="section" id="move-an-entity">
+<h2><a class="toc-backref" href="#id5">Move an Entity</a><a class="headerlink" href="#move-an-entity" title="Permalink to this headline">¶</a></h2>
+<p>All entities can be moved directly in your environment by selecting and dragging the object to the correct location. Alternatively, you can use the arrows around the object to move it in only one direction.</p>
+<img alt="../../_images/move-entity.gif" src="../../_images/move-entity.gif" />
+<p>You can also set the position manually in the <strong>Create</strong> app. With the entity selected, click on ‘Properties’ and scroll down to the ‘Position’ settings. Here are the different position settings you can configure:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 54%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported Entity Type(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Spatial</em> &gt; Local Position</p></td>
+<td><p>The position of the entity relative to its parent.</p></td>
+<td><p>All</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Spatial</em> &gt; Position</p></td>
+<td><p>The position of the entity with respect to world coordinates.</p></td>
+<td><p>All</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can switch between ‘Local’ and ‘World’ using the keyboard shortcut <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+</div>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../explore/interact.html"><span class="doc">Interact with Your Environment</span></a></p></li>
+<li><p><a class="reference external" href="../tools.html#the-create-app">The Create App</a></p></li>
+<li><p><a class="reference internal" href="entity-behavior.html"><span class="doc">Define an Entity’s Behavior</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="entity-behavior.html" class="btn btn-neutral float-right" title="Define an Entity’s Behavior" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create-entities.html" class="btn btn-neutral float-left" title="Create New Entities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

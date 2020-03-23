@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Set Up a Place Name &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Custom User Groups" href="user-groups.html" />
+    <link rel="prev" title="Define Your Network Settings" href="network-settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="network-settings.html">Define Your Network Settings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Set Up a Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-groups.html">Create User Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permission-settings.html">Assign User Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authentication-setting.html">Secure Your Domain Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-filters.html">Protect Your Domain's Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio-settings.html">Define Your Audio Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../host.html">Host</a> &raquo;</li>
+        
+          <li><a href="../configure-settings.html">Configure Your Domain Settings</a> &raquo;</li>
+        
+      <li>Set Up a Place Name</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/configure-settings/place-setting.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/configure-settings/place-setting.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="set-up-a-place-name">
+<h1><a class="toc-backref" href="#id1">Set Up a Place Name</a><a class="headerlink" href="#set-up-a-place-name" title="Permalink to this headline">¶</a></h1>
+<p>While you can travel to a domain using its IP address, IP addresses are difficult to remember, often change depending on your network setup, and are not very attractive sounding. Telling a friend “Meet me in 20 minutes at IP address …” just doesn’t cut it in a fun, virtual environment.</p>
+<p>Place names, on the other hand, make it easy to travel to your domain. They’re memorable, and give context to visitors to remember your virtual world. Imagine someone saying “Wow, I had a great time at Deerhaven last night!” and you can smile knowing that they’re talking about your domain, Deerhaven.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#set-up-a-place-name" id="id1">Set Up a Place Name</a></p>
+<ul>
+<li><p><a class="reference internal" href="#purchase-a-place-name" id="id2">Purchase a Place Name</a></p></li>
+<li><p><a class="reference internal" href="#configure-your-place-name" id="id3">Configure Your Place Name</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="purchase-a-place-name">
+<h2><a class="toc-backref" href="#id2">Purchase a Place Name</a><a class="headerlink" href="#purchase-a-place-name" title="Permalink to this headline">¶</a></h2>
+<p>Place names are purchased from High Fidelity for $20/year. Once purchased, a place name can be transferred freely between any of your domains.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you would like to use HFC to purchase a place name, <a class="reference external" href="https://meetings.hubspot.com/highfidelity/high-fidelity-bank-appointment">schedule an appointment with the High Fidelity banker</a>. Here, you can purchase a coupon that can be used to purchase a place name using the process below.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://highfidelity.com/user/places">https://highfidelity.com/user/places</a> to purchase a place name. If you’re not logged in, you will be prompted to do so.</p></li>
+<li><p>Click ‘Create a Place Name’.</p></li>
+<li><p>Type in your new Place Name. Place Names must be 4-64 characters in length. Letters, numbers and hyphens are allowed. You can use any place name that has not been already purchases; however, please note that High Fidelity reserves the right to reject any registration we deem obscene, offensive, or a copyright violation, and refund the corresponding registration fees.</p></li>
+<li><p>Click ‘Checkout Now’.</p></li>
+<li><p>Enter your credit card number, PayPal account information or a coupon code to complete the purchase.</p></li>
+</ol>
+</div>
+<div class="section" id="configure-your-place-name">
+<h2><a class="toc-backref" href="#id3">Configure Your Place Name</a><a class="headerlink" href="#configure-your-place-name" title="Permalink to this headline">¶</a></h2>
+<p>A place name points to a specific coordinate in the metaverse. Not only does it point to a domain, but it also defines the exact position  in your domain where your visitors will spawn in. There are two different ways to configure your place name settings, and they achieve the same thing.</p>
+<p><strong>Method 1 - Use the Domain Settings</strong></p>
+<p>This sets up your place name directly from your domain settings.</p>
+<ol class="arabic">
+<li><p>Open your domain settings.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>For cloud hosted domains, go to <a class="reference external" href="https://metaverse.highfidelity.com/user/cloud_domains">https://metaverse.highfidelity.com/user/cloud_domains</a>. Click the “More Options” menu (3 dots on the right-side of the row), then click ‘Domain Server settings’. Log in when prompted.</p></li>
+<li><p>For local servers on Windows: Click on the High Fidelity icon in the system tray, then click ‘Settings’.</p></li>
+<li><p>For local servers on Mac: Right-click the High Fidelity icon on the top menu bar, then click ‘Settings’.</p></li>
+<li><p>For any OS: Open a browser and enter the URL <a class="reference external" href="http://localhost:40100/settings">http://localhost:40100/settings</a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Scroll to ‘Places’.</p></li>
+<li><p>In the grid, click the <code class="docutils literal notranslate"><span class="pre">+</span></code> icon to add a place name to this domain.</p></li>
+<li><p>Choose the place name you want to use from the dropdown list.</p></li>
+<li><p>For ‘Path or Viewpoint’, enter the coordinates where your visitors will spawn.</p></li>
+<li><p>Click ‘Save’.</p></li>
+</ol>
+<img alt="../../_images/places-dialog.png" src="../../_images/places-dialog.png" />
+<p><strong>Method 2 - Use ‘My Places’</strong></p>
+<p>This sets up your place name from your High Fidelity account. Before moving forward, make sure you have the <a class="reference external" href="network-settings.html#domain-id">domain ID</a> of your domain. You will need this to point your place name to your domain.</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://highfidelity.com/user/places">https://highfidelity.com/user/places</a>. If you’re not logged in, you will be prompted to do so.</p></li>
+<li><p>Click the ‘Edit’ icon next to the place name you want to configure.</p></li>
+<li><p>For ‘Points to’, enter the domain ID of your domain.</p></li>
+<li><p>For ‘Path’, enter the coordinates where your visitors will spawn.</p></li>
+<li><p>(Optional) Enter a description for your domain. This shows up when a user clicks the info icon if your domain is displayed in the GoTo app.</p></li>
+<li><p>(Optional) Upload a preview image of your domain. This shows up when your domain is displayed in the GoTo app.</p></li>
+<li><p>Click ‘Update Place’.</p></li>
+</ol>
+<img alt="../../_images/my-places.png" src="../../_images/my-places.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="user-groups.html" class="btn btn-neutral float-right" title="Custom User Groups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network-settings.html" class="btn btn-neutral float-left" title="Define Your Network Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

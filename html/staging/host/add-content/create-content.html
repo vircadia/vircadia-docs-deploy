@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build and Add Your Own Content &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bake Your Content" href="bake-content.html" />
+    <link rel="prev" title="Add Content to Your Domain" href="../add-content.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Build and Add Your Own Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bake-content.html">Bake Your Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export-content.html">Export Your Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="upload-content.html">Upload Content to Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="marketplace-environment.html">Get an Environment from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../host.html">Host</a> &raquo;</li>
+        
+          <li><a href="../add-content.html">Add Content to Your Domain</a> &raquo;</li>
+        
+      <li>Build and Add Your Own Content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/add-content/create-content.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/add-content/create-content.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-and-add-your-own-content">
+<h1><a class="toc-backref" href="#id1">Build and Add Your Own Content</a><a class="headerlink" href="#build-and-add-your-own-content" title="Permalink to this headline">¶</a></h1>
+<p>Maybe you’ve wandered around the metaverse, and you’re inspired by the creativity of others. Or maybe none of the other domains really fit the atmosphere of what you have in mind. Whatever the reason, you’re ready to branch out and build content of your own. If you don’t know where to begin, this is a great place to start.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#build-and-add-your-own-content" id="id1">Build and Add Your Own Content</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tools-for-creating-content" id="id2">Tools for Creating Content</a></p></li>
+<li><p><a class="reference internal" href="#techniques-for-creating-content-sets" id="id3">Techniques for Creating Content Sets</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="tools-for-creating-content">
+<h2><a class="toc-backref" href="#id2">Tools for Creating Content</a><a class="headerlink" href="#tools-for-creating-content" title="Permalink to this headline">¶</a></h2>
+<p>A content set is simply a collection of many different entities, models and scripts working together to form an interactive environment. Visit our <a class="reference internal" href="../../create.html"><span class="doc">Create</span></a> section to learn more about the available tools and examples of how to make your environment more alive:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../create/tools.html"><span class="doc">Create Tools</span></a></p></li>
+<li><p><a class="reference internal" href="../../create/entities.html"><span class="doc">All About Entities</span></a></p></li>
+<li><p><a class="reference internal" href="../../create/entities/add-sounds.html"><span class="doc">Add Sounds to Entities</span></a></p></li>
+<li><p><a class="reference internal" href="../../create/3d-models.html"><span class="doc">Build and Import 3D Models</span></a></p></li>
+<li><p><a class="reference internal" href="../../script.html"><span class="doc">Get Started with Scripting</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="techniques-for-creating-content-sets">
+<h2><a class="toc-backref" href="#id3">Techniques for Creating Content Sets</a><a class="headerlink" href="#techniques-for-creating-content-sets" title="Permalink to this headline">¶</a></h2>
+<p>Creating a content set can be complicated because you’re designing an entire environment, rather than one single item. Its like building an entire city, which is comprised of many buildings, trees and roads. Some artists want to share their progress, each step along the way. Others want to wait to show off their creation until the final build is complete.</p>
+<p>We let you choose how you want to build and deploy your content. The process for updating the content set on your domain will differ based on the approach you use to build your content. Choose the method that fits you best to learn more:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#make-live-updates">Make Live Updates</a></p></td>
+<td><p>As you make a change to your content, it will show up immediately in your domain in the metaverse.
+This means that any visitors in your domain will see the changes as they happen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#under-construction">Under Construction</a></p></td>
+<td><p>During the time that you’re constructing your content set, your domain is offline to outside
+visitors. Users will be unable to visit your domain while it is under construction.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#create-and-deploy">Create and Deploy</a></p></td>
+<td><p>Here, you prefer to create your content in an offline environment. Once it is completed, you will
+need to export your content set to an external file, then deploy it to your domain. Visitors can
+continue visiting your domain with any placeholder content while you design your custom content.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="make-live-updates">
+<h3>Make Live Updates<a class="headerlink" href="#make-live-updates" title="Permalink to this headline">¶</a></h3>
+<p>Live updates are made anytime you or any other user in your domain makes changes to the content. In order to make changes, a user must have the ‘Rez’ permission turned on.</p>
+<p>Before going this route, decide on who (if anyone) you would like to change your content set, and <a class="reference internal" href="../configure-settings/permission-settings.html"><span class="doc">verify that their rez permissions are set correctly</span></a>. If you’re going to be the one making changes, then ensure that you have rez rights. To update your content, all you need to is visit your domain and start making changes using the <a class="reference internal" href="../../create/tools.html"><span class="doc">Create Tools</span></a>.</p>
+<p>Your server makes regular archives of the content in your domain. Visit your Domain Settings to <a class="reference internal" href="../maintain-domain/backup-domain.html"><span class="doc">view and download the backups of your content sets</span></a> over time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Tip</strong>: It is possible to “lock down” content that you’ve created, so that visitors can create new content without modifying your custom content. For example, you can lock down the walls and floor of a room, but let your visitors create their own tables and chairs. To protect your own custom content set, lock the entities you created. When you configure your permissions for your visitors, deny them access to ‘Lock/Unlock’, but grant them permission to ‘Rez’. They will be able to create their own content in your domain, but not be able to change your domain’s content set.</p>
+</div>
+</div>
+<div class="section" id="under-construction">
+<h3>Under Construction<a class="headerlink" href="#under-construction" title="Permalink to this headline">¶</a></h3>
+<p>While you make changes to your content set, you can take down your domain temporarily and prevent users from visiting while it is under construction.</p>
+<p>To do this, simply the remove the ‘Connect’ permission for all users other than yourself (and any other co-creators working alongside you). When you are done, all you need to do is re-enable the ‘Connect’ permission.</p>
+<ol class="arabic">
+<li><p>Open your domain settings.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>For cloud hosted domains, go to <a class="reference external" href="https://metaverse.highfidelity.com/user/cloud_domains">https://metaverse.highfidelity.com/user/cloud_domains</a>. Click the “More Options” menu (3 dots on the right-side of the row), then click ‘Domain Server settings’. Log in when prompted.</p></li>
+<li><p>For local servers on Windows: Click on the High Fidelity icon in the system tray, then click ‘Settings’.</p></li>
+<li><p>For local servers on Mac: Right-click the High Fidelity icon on the top menu bar, then click ‘Settings’.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>On the top menu bar, select <strong>Settings &gt; Security</strong>.</p></li>
+<li><p>Scroll to ‘Standard Permissions’.</p></li>
+<li><p>For each Permissions group, uncheck the ‘Connect’ permission for all users and groups (except yourself and anyone else working on the content).</p></li>
+<li><p>Click ‘Save’ and close the Domain Settings page.</p></li>
+</ol>
+<p>Once you have set the permissions, visit your domain and begin building your content set using the <a class="reference internal" href="../../create/tools.html"><span class="doc">Create Tools</span></a>. We recommend locking all of your content so that it cannot be modified by visitors to your domain.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your server makes regular archives of the content in your domain. Visit your Domain Settings to <a class="reference internal" href="../maintain-domain/backup-domain.html"><span class="doc">view and download the backups of your content sets</span></a> over time.</p>
+</div>
+<p>When you’re done, follow the above steps to re-enable the Connect permission for your visitors. These users will be able to visit your domain again with the server’s IP address or place name.</p>
+</div>
+<div class="section" id="create-and-deploy">
+<h3>Create and Deploy<a class="headerlink" href="#create-and-deploy" title="Permalink to this headline">¶</a></h3>
+<p>The final technique for building a content set follows a basic development workflow:</p>
+<ul class="simple">
+<li><p>Build content in an offline environment</p></li>
+<li><p>(Optional) Build and test it</p></li>
+<li><p>Export the content set to a file</p></li>
+<li><p>Upload the exported content set to your domain</p></li>
+</ul>
+<p>We recommend using this method if you want to avoid interruption to your domain while you build your content, deploy your content set to multiple domains, or test your content before you deploy.</p>
+<ol class="arabic simple">
+<li><p>Install High Fidelity’s open source <a class="reference external" href="https://www.highfidelity.com/download#sandbox">Client + Sandbox</a> software on a computer that is _not_ running as a local server.</p></li>
+<li><p>Open a Sandbox not connected to a local server.</p></li>
+<li><p>Build your content set in the Sandbox.</p></li>
+<li><p><a class="reference external" href="export-content.html#export-entities-to-json">Export your content to JSON</a>.</p></li>
+<li><p>(Optional) To optimize your content set, <a class="reference internal" href="bake-content.html"><span class="doc">bake your content</span></a>.</p></li>
+<li><p>(Local servers only) Transfer the downloaded archive file or the baked JSON to your local server. Switch computers so you’re back on your local server.</p></li>
+<li><p>Log in to your server’s domain settings and <a class="reference internal" href="upload-content.html"><span class="doc">upload your exported or baked JSON to your domain</span></a>.</p></li>
+</ol>
+<p>Once your content is uploaded, your domain will automatically restart with your new custom content.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bake-content.html" class="btn btn-neutral float-right" title="Bake Your Content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../add-content.html" class="btn btn-neutral float-left" title="Add Content to Your Domain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

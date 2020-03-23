@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PBR Materials Guide &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Import Animations" href="import-animations.html" />
+    <link rel="prev" title="Import a 3D Model" href="import-model.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../entities.html">Entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../3d-models.html">3D Models</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="get-model.html">Get Your 3D Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-model.html">Import Your 3D Model</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PBR Materials Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/procedural-shaders.html">Procedural Shaders for Models and Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-animations.html">Import Animations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../3d-models.html">3D Models</a> &raquo;</li>
+        
+      <li>PBR Materials Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/3d-models/pbr-materials-guide.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/3d-models/pbr-materials-guide.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pbr-materials-guide">
+<h1><a class="toc-backref" href="#id1">PBR Materials Guide</a><a class="headerlink" href="#pbr-materials-guide" title="Permalink to this headline">¶</a></h1>
+<p>The appearance of a 3D model is controlled by its materials. The materials supported in Project Athena are physically-based rendering (PBR) materials. This means that a 3D model’s materials will reflect or absorb light like how they would (approximately) in real life.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pbr-materials-guide" id="id1">PBR Materials Guide</a></p>
+<ul>
+<li><p><a class="reference internal" href="#introduction-to-materials-textures-and-shading" id="id2">Introduction to Materials, Textures, and Shading</a></p></li>
+<li><p><a class="reference internal" href="#sample-materials-and-their-textures-and-shading" id="id3">Sample Materials and Their Textures and Shading</a></p></li>
+<li><p><a class="reference internal" href="#set-material-values-in-blender" id="id4">Set Material Values in Blender</a></p></li>
+<li><p><a class="reference internal" href="#set-material-values-in-maya" id="id5">Set Material Values in Maya</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction-to-materials-textures-and-shading">
+<h2><a class="toc-backref" href="#id2">Introduction to Materials, Textures, and Shading</a><a class="headerlink" href="#introduction-to-materials-textures-and-shading" title="Permalink to this headline">¶</a></h2>
+<p>A 3D model’s appearance is controlled by its materials. For example, a 3D model of a key will use a material that determines its color, how metallic it looks, and if its surface is bumpy or smooth. A 3D model of a brick wall will have material that determines its roughness and color.</p>
+<p>Athena supports physically-based rendering (PBR) materials. This means that your model will behave like a real world object when exposed to light. For example, the same 3D model of a key will shine and reflect any light that falls on it. The 3D model of a brick wall will not shine, but will reflect enough light for you to observe its colors and surface.</p>
+<p>A material contains texture and shading information.</p>
+<div class="section" id="textures">
+<h3>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<p>Textures are flat images that are applied to 3D models. These add detail on how a 3D model’s material looks. For example, a 3D model of a tree trunk will use a texture of bark to show what the surface looks like.</p>
+<p>Athena supports the use of the following texture formats:</p>
+<ul class="simple">
+<li><p>PNG (recommended)</p></li>
+<li><p>JPEG, JPG (recommended)</p></li>
+<li><p>TGA</p></li>
+<li><p>TIFF, TIF</p></li>
+</ul>
+<p>For best performance, we recommend <a class="reference internal" href="../../host/add-content/bake-content.html"><span class="doc">baking all 3D models</span></a> (including textures) before uploading it to Athena.</p>
+</div>
+<div class="section" id="shading">
+<h3>Shading<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h3>
+<p>Since Athena supports PBR materials, the shading used depicts an accurate representation of a how light interacts with different material surfaces. This means that your 3D model will not look the same under different light settings. The PBR shader has a set of material parameters or channels that can be modified to create different types of materials.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can combine shaders with material entities on shape and zone entities to apply shaders to models and avatars. This feature was released as an <strong>experimental feature</strong> and has not been thoroughly tested through our normal channels. If you wish to try applying procedural materials to models or avatars <em>at your own risk</em>, then you can find more information at <a class="reference internal" href="../materials/procedural-shaders.html"><span class="doc">Procedural Shaders for Models and Avatars</span></a>.</p>
+</div>
+<p><strong>Material Channels</strong></p>
+<p>Material channels determine various parameters such as the roughness or color of a material. You can determine the value of each channel in two ways:</p>
+<ul class="simple">
+<li><p><strong>Setting a Value:</strong> The value of a channel is a value set on a slider. Setting a value is like turning off or turning on a switch. For example, if you look at your phone, some parts of it are shiny and some are matte. When you use a value, the entire object reflects that value. If you want different parts of an object to reflect varied roughness, you’ll need to use a map.</p></li>
+<li><p><strong>Using a Map:</strong> The map is an image which you can import to define a property. You will use a map to apply a texture to your 3D model. For instance, your phone may have a case that is matte, but the rest of your phone is shiny. You can use a map to set the case as matte and the phone as shiny.</p></li>
+</ul>
+<p>All materials in Athena have the following channels that determine how they look:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 65%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Channel Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Map</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albedo</p></td>
+<td><p>This channel defines the material’s color. You can pick any color
+value of your choice.</p></td>
+<td><p>sRGB</p></td>
+<td><p>sRGB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Metallic</p></td>
+<td><p>This channel determines if the material is metallic or not. You cannot
+have a material that is half metallic, it is either metallic or it isn’t.</p></td>
+<td><p>[0,1]</p></td>
+<td><p>[0,1]</p></td>
+</tr>
+<tr class="row-even"><td><p>Roughness</p></td>
+<td><p>This determines how rough/matte or glossy/shiny an object is, using
+brightness levels.</p></td>
+<td><p>[0,1]</p></td>
+<td><p>[0,1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>Normal</p></td>
+<td><p>Normal is a channel that renders an object like there is actual geometry.
+For instance, normal would add bumps and other irregularities to a stone or
+ridges to a sea-shell.</p></td>
+<td><p>xyz</p></td>
+<td><p>bump</p></td>
+</tr>
+<tr class="row-even"><td><p>Opacity</p></td>
+<td><p>Opacity determines if an object is transparent or opaque.</p></td>
+<td><p>[0,1]</p></td>
+<td><p>mask, alpha</p></td>
+</tr>
+<tr class="row-odd"><td><p>Occlusion</p></td>
+<td><p>This property approximates the shading to be as natural as possible. This
+means that it will reproduce how objects interact with light.</p></td>
+<td><p>—</p></td>
+<td><p>[0,1]</p></td>
+</tr>
+<tr class="row-even"><td><p>Emissive</p></td>
+<td><p>This channel controls the amount of light being reflected from an object.</p></td>
+<td><p>sRGB</p></td>
+<td><p>sRGB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scattering</p></td>
+<td><p>Scattering determines how light will behave when it hits human skin. This
+channel details how light is reflected or absorbed by human bodies.</p></td>
+<td><p>[0,1]</p></td>
+<td><p>[0,1]</p></td>
+</tr>
+<tr class="row-even"><td><p>Material Type</p></td>
+<td><p>This channel decides if an object is lit or unlit.</p></td>
+<td><p>[lit, unlit]</p></td>
+<td><p>—</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ol class="arabic simple">
+<li><p>If you set transparency with a texture, the transparency (alpha) should be in the material’s albedo texture, as a PNG file with transparency and not as a separate transparency texture.</p></li>
+<li><p>Athena’s renderer can draw two different kinds of transparency: “alpha” (255 graduates steps of transparency, no shading on surface, casts no shadows,) and “mask” (binary transparency, full shading of opaque surface, whole surface casts shadow.)</p></li>
+<li><p>To determine whether a texture is treated as a mask or as alpha, the engine looks for alpha values between 2% and 98%. An easy way to create a mask texture is to save your image as a PNG-8 since it only supports binary transparency, while PNG-24 supports a range of transparency levels.</p></li>
+<li><p>We support using a second UV set with the following texture channels only: Light Map and Ambient Occlusion.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="sample-materials-and-their-textures-and-shading">
+<h2><a class="toc-backref" href="#id3">Sample Materials and Their Textures and Shading</a><a class="headerlink" href="#sample-materials-and-their-textures-and-shading" title="Permalink to this headline">¶</a></h2>
+<p>Athena supports different types of materials. We’ve created sample objects with each material type. You can download each object from <a class="reference external" href="https://github.com/highfidelity/hifi_tests/tree/master/assets/models/material_matrix_models/fbx/blender">this repository</a> on GitHub, or run <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi_tests/master/assets/models/material_matrix_models/material_matrix.js">this script</a> in Athena to upload all sample objects in your domain.</p>
+<p>We’ve listed all material information (including textures, shading, and channel values and maps) for these sample objects <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsPXURPsIYV_LeEz1A7IS-t44qdTMtbrq-gZ47BAoxhd0kLs_Yxh-i1G4Ukz-aunTj-nLVF7sjZd1n/pubhtml?gid=0&amp;single=true">here</a>.</p>
+</div>
+<div class="section" id="set-material-values-in-blender">
+<h2><a class="toc-backref" href="#id4">Set Material Values in Blender</a><a class="headerlink" href="#set-material-values-in-blender" title="Permalink to this headline">¶</a></h2>
+<p>When you create a model in Blender, you have to export it in the FBX format to use in Athena. Additionally, you have to modify material properties and textures in Blender to match the PBR material textures in Athena.</p>
+<p>Doing so ensures that your model appears like how you want it to.</p>
+<p>By default, any material property set with a texture will override a property set with a value. The only exception to this is in the case of the albedo color set with an RGB color value and a texture, in which case the albedo value and texture will multiplied together.</p>
+<p>We’ve included images where the fields corresponding to each supported PBR channel in Blender are highlighted, along with details about which values and colors correspond to the range corresponding with that channel.  It should be noted that all of the Blender material properties below only relate to exported FBX format models. Models exported as OBJ or other formats do not have full PBR material support in Athena yet.</p>
+<img alt="../../_images/material-textures-b.jpg" src="../../_images/material-textures-b.jpg" />
+<img alt="../../_images/material-values-b.jpg" src="../../_images/material-values-b.jpg" />
+</div>
+<div class="section" id="set-material-values-in-maya">
+<h2><a class="toc-backref" href="#id5">Set Material Values in Maya</a><a class="headerlink" href="#set-material-values-in-maya" title="Permalink to this headline">¶</a></h2>
+<p>Use the graphics below to set the right material values and textures in Maya.</p>
+<img alt="../../_images/material-values-m.jpg" src="../../_images/material-values-m.jpg" />
+<img alt="../../_images/material-textures-m.jpg" src="../../_images/material-textures-m.jpg" />
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../host/add-content/bake-content.html"><span class="doc">Bake Your Content Using the Oven</span></a></p></li>
+<li><p><a class="reference internal" href="../entities/material-entity.html"><span class="doc">Add a Material Entity</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="import-animations.html" class="btn btn-neutral float-right" title="Import Animations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="import-model.html" class="btn btn-neutral float-left" title="Import a 3D Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

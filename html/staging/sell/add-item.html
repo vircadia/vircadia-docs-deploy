@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Add Items to the Marketplace &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+      <li>Add Items to the Marketplace</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/sell/add-item.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/sell/add-item.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-items-to-the-marketplace">
+<h1><a class="toc-backref" href="#id1">Add Items to the Marketplace</a><a class="headerlink" href="#add-items-to-the-marketplace" title="Permalink to this headline">¶</a></h1>
+<p>Once you’ve created an avatar, wearable or entity, you have the option to sell it in the Marketplace. This guide walks you through the steps to upload it to the Marketplace so that you can start the process of having it reviewed and published.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prior to adding your item to the Marketplace, we recommend that you use the <a class="reference external" href="../create/tools.html#marketplace-item-tester">Marketplace Item Tester</a> to ensure that your item works the way you expected and does not have any script errors.</p>
+</div>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#add-items-to-the-marketplace" id="id1">Add Items to the Marketplace</a></p>
+<ul>
+<li><p><a class="reference internal" href="#limited-edition-items" id="id2">Limited Edition Items</a></p></li>
+<li><p><a class="reference internal" href="#unlimited-rezzing-of-your-item" id="id3">Unlimited Rezzing of Your Item</a></p></li>
+<li><p><a class="reference internal" href="#marketplace-categories" id="id4">Marketplace Categories</a></p></li>
+<li><p><a class="reference internal" href="#additional-notes" id="id5">Additional Notes</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>In This Section</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="add-item/upload-avatar.html">Add Your Avatar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-item/upload-model.html">Add Your 3D Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-item/upload-wearable.html">Add Your Wearable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-item/upload-environment.html">Upload Your Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-item/upload-audio.html">Add Your Audio</a></li>
+</ul>
+</div>
+<div class="section" id="limited-edition-items">
+<h2><a class="toc-backref" href="#id2">Limited Edition Items</a><a class="headerlink" href="#limited-edition-items" title="Permalink to this headline">¶</a></h2>
+<p>You can choose to create a “limited edition” item by setting the quantity available. This ensures that only a specific number of your item is available for purchase on a first-come, first-serve basis.</p>
+<p>To create a limited edition item, simply check the box “Item is a limited edition” when you fill out the form to submit your item to the Marketplace. Then, enter the number of items you want available for purchase. If you enter a number, say 25, you are saying that only 25 copies of your item will be available for purchase.</p>
+</div>
+<div class="section" id="unlimited-rezzing-of-your-item">
+<h2><a class="toc-backref" href="#id3">Unlimited Rezzing of Your Item</a><a class="headerlink" href="#unlimited-rezzing-of-your-item" title="Permalink to this headline">¶</a></h2>
+<p>When you submit your item to the Marketplace, you can allow users to rez your item multiple times within a single domain. This allows users to create forests from a single tree (that they purchased) or to rez multiple streetlights from a single item in their inventory.</p>
+<p>This setting is exposed in the item’s JSON file. To allow your item to be added multiple times within a domain, add <code class="docutils literal notranslate"><span class="pre">&quot;certificateType&quot;:</span> <span class="pre">&quot;domainUnlimited&quot;</span></code> to your item’s root JSON file prior to submitting your item.</p>
+</div>
+<div class="section" id="marketplace-categories">
+<h2><a class="toc-backref" href="#id4">Marketplace Categories</a><a class="headerlink" href="#marketplace-categories" title="Permalink to this headline">¶</a></h2>
+<p>All items submitted to the Marketplace must fall under one or more pre-defined categories. It’s important to correctly categorize your items as it helps other users find your content in the Marketplace.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our Marketplace team reviews each submission to ensure items are correctly labeled. Items may be declined if they are not accurately described or extraneous categories are marked.</p>
+</div>
+<p>Below, you’ll find descriptions of each Marketplace category and examples of items they include.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 59%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Category</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Animals</p></td>
+<td><p>Items depicting animals, including static 3D models
+of animals and functional content.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/c66bae25-8345-4fd6-86db-bcebdc441827">Fetch App</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/b86b3a26-8404-4526-9faf-f0a923f4c563">3D Animal Models</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Animations</p></td>
+<td><p>Scripts and apps that modify or add animations to
+avatars, including inverse kinetics and flow manipulation.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/9a99c95a-85b3-4a6d-9362-b56ad102ebe5">Dance App</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Apps,
+Scripts,
+Tools</p></td>
+<td><p>Items composed primarily of JavaScript that add or modify
+functionality to High Fidelity’s content and/or Interface.
+These can range from a single line of code that will change
+an entity’s color to a full application that enables your
+avatar to dance. Proper apps must include an app.json root file.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/7a1e051d-7974-4d8e-8756-21382e7397c7">Sit Point</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/568b183d-db87-4618-9e40-aba840ec3b26">TTS</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Architecture</p></td>
+<td><p>Structures or materials used to create structures including
+doors, walls, and flooring. This category does not include
+full environments like cities.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/2baddb8b-9ac5-47ed-b78c-5a1b2861b004">Apartment Building</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Audio</p></td>
+<td><p>Scripted items that produce sound effects and/or music.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/e9da3d33-b937-4e07-bdf8-29dde581dfd1">Boombox</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/4a29c38c-c091-434e-8085-025f7d299529">Looping Sound Emitter</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Avatars</p></td>
+<td><p>3D models that are specifically rigged to work as an avatar.
+Proper avatars must include a .fst avatar root file.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/e76946cc-c272-4adf-9bb6-02cde0a4b57d">Artemis</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/9515f437-f4e1-49a7-b6bf-0423873cd576">Mountain Ogre</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Education</p></td>
+<td><p>Used to promote educational materials for anything through
+the medium of Virtual Reality.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/3d0dd29f-dbe7-4f49-8fef-d95619a4b891">Laser Pointer Flashlight</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Environments</p></td>
+<td><p>A collection of items meant to fill a domain, providing a
+complete setting or a base to build a new setting from.
+Environments must be entity archives, as produced by backup
+files from High Fidelity domains.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/3b9eb431-564c-4d03-bf1c-4eff7eb93fe0">Desert Oasis</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Fun &amp; Games</p></td>
+<td><p>Interactive games and content, typically a scripted entity
+or app.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/91035a3b-947d-4d03-8226-60d091ae173e">Beach Ball</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/9868f622-0c6b-460b-ad25-94c5521c0b65">Holiday Blaster</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Furnishings</p></td>
+<td><p>Items used to decorate a space, usually furniture and other
+props for decoration.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/f9085148-02f3-401c-b823-1df9f616f362">Mirror</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/fbb76479-1663-4914-b8b2-3b657fade384">Chairs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Light
+Systems</p></td>
+<td><p>Items that emit light, including furnishings and other content.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/24629f85-ba4a-4311-9c50-b01c52371193">Lamp</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/8114c307-c949-43fd-8c4d-f7d6b1e5d446">Torch</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Materials
+and Shaders</p></td>
+<td><p>Items users can use to customize shading or materials,
+including color and texture, on other entities.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/9e72fe33-61ca-4ca1-b6a5-c76930250634">Materials Sets</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Misc</p></td>
+<td><p>Items that do not fit into any of the other categories. If marked
+Misc, items should not be marked with any other category.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/87706804-bcc0-4e75-ad16-6e30f2b63700">Particle Packs</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Nature</p></td>
+<td><p>Items relating to or depicting nature and the outdoors.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/e7a2f0ec-4dda-41d2-b17f-d4784ace27f6">Plants &amp; Pots</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Open Source</p></td>
+<td><p>Free content available for the community to use and build upon.
+Items in this category require a source code link.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/77f0eb70-beba-49df-9e26-da1740bf6c9a">Digital Picture Frame</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/658b506f-ff80-4f66-8dc3-578aa9bc1671">Drumset</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Pets &amp;
+Companions</p></td>
+<td><p>Items with scripted behavior or attachments that mimic a pet or
+companion. This category does not include static 3D models of
+animals commonly kept as pets.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/a63c58d9-a8b2-4da7-91d6-ae2f159d218c">Jimi the Snail</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/b86b3a26-8404-4526-9faf-f0a923f4c563">Spirit Cat</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Vehicles</p></td>
+<td><p>Items that are rideable and/or appear rideable through attachments
+or scripted functionality. This category does not include static
+3D models of vehicles.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/f6ab09e8-8e29-4def-a957-19d8ebeac64c">Skool Flyer</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>VR Only</p></td>
+<td><p>Items that require a VR headset and/or controllers to function
+properly and will not work with Interface in desktop-mode.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/87d3d0f7-58f6-4e66-b432-66bc91251560">Painting Set</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Weapons</p></td>
+<td><p>Items depicting any kind of weapon, usually attachable. Both deadly
+and fun-loving weapons are permitted.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/f03ab3f1-7e87-46ef-a3f0-e362f94a43ea">Bow</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/d87f440e-b561-4d67-99d3-f6c56c350ea7">Ping Pong Gun</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Wearables</p></td>
+<td><p>Items that attach to your avatar including hats, glasses, jewelry,
+and more.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/2e6a5418-e376-4bca-bfcd-712f9790913f">Cat Tail</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/908f8de2-2b9a-4abf-a8a1-9a888ae57a15">Backpack</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/f5c66f52-6f33-4303-ac74-6e03df0ab254">Friendship Bracelet</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Zones &amp;
+Skies</p></td>
+<td><p>Items primarily utilizing <a class="reference internal" href="../create/entities/zone-tutorial.html"><span class="doc">zone entities</span></a> in High Fidelity.</p></td>
+<td><p><a class="reference external" href="https://highfidelity.com/marketplace/items/208ba556-d457-4627-bdb1-2185591c7031">Constellation Skybox</a>,
+<a class="reference external" href="https://highfidelity.com/marketplace/items/a8666e3d-01fd-4719-850c-b9c2acc49a65">Moon Skybox</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="additional-notes">
+<h2><a class="toc-backref" href="#id5">Additional Notes</a><a class="headerlink" href="#additional-notes" title="Permalink to this headline">¶</a></h2>
+<p>Follow these guidelines when uploading content to the Marketplace:</p>
+<ol class="arabic simple">
+<li><p>Use only content which you are legally entitled to.</p></li>
+<li><p>Do not use a code obfuscator, our review team needs to be able to read your scripts.</p></li>
+<li><p>Audio should sound clean and be 16-bit uncompressed WAV or MP3 files.</p></li>
+<li><p>Items may not have .js root files. You should either make an app to run scripts, or attach scripts to entities that will be rezzed through a .json file.</p></li>
+<li><p>All entities must have a name, even if they are invisible or simple primitives.</p></li>
+<li><p>Please use English in your package description, support text, and code comments.</p></li>
+<li><p>If needed, you may use <a class="reference internal" href="markdown-guide.html"><span class="doc">Markdown syntax</span></a> in your description text.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

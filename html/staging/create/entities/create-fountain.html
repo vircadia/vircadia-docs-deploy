@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Create a Smoke Fountain &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial: Modify a Zone Entity" href="zone-tutorial.html" />
+    <link rel="prev" title="Tutorial: Create a Gold Spotlight" href="create-spotlight.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create-spotlight.html">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zone-tutorial.html">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portal-tutorial.html">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boombox-tutorial.html">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
+        
+      <li>Tutorial: Create a Smoke Fountain</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/create-fountain.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/create-fountain.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-create-a-smoke-fountain">
+<h1><a class="toc-backref" href="#id1">Tutorial: Create a Smoke Fountain</a><a class="headerlink" href="#tutorial-create-a-smoke-fountain" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you will learn how particle entities work by creating a smoke fountain that emits multiple colors. Particle entities are used to create effects made up of many small particles, such as smoke, confetti, or falling leaves.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tutorial-create-a-smoke-fountain" id="id1">Tutorial: Create a Smoke Fountain</a></p>
+<ul>
+<li><p><a class="reference internal" href="#prerequisites" id="id2">Prerequisites</a></p></li>
+<li><p><a class="reference internal" href="#create-a-smoke-fountain" id="id3">Create a Smoke Fountain</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="prerequisites">
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-smoke-fountain">
+<h2><a class="toc-backref" href="#id3">Create a Smoke Fountain</a><a class="headerlink" href="#create-a-smoke-fountain" title="Permalink to this headline">¶</a></h2>
+<p>Particle entities are used to create effects that are made up of smaller parts such as smoke, confetti, or falling leaves. The entity’s effect and appearance is defined by its texture. The default texture is a <a class="reference external" href="https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png">wispy smoke texture</a>, but you can replace this texture with your own to create your desired effect.</p>
+<p>To create your smoke fountain using a particle entity:</p>
+<ol class="arabic">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the ‘Particle’ icon to create the particle entity. By default, the particle entity emits smoke.</p></li>
+<li><p>Go to the ‘Properties’ tab, and set the following values:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 36%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lifespan</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1.20</span></code></p></td>
+<td><p>This property defines how long each particle lives, in seconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Max Particles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">356</span></code></p></td>
+<td><p>Max particles defines how many particles are rendered at one time.
+Older particles, whose lifespans are completed, are swapped out for
+newer ones. Increase this value to increase the number of particles
+for your effect.</p></td>
+</tr>
+<tr class="row-even"><td><p>Emit Rate</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">524</span></code></p></td>
+<td><p>The emit rate defines how many particles are emitted per second.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed Spread</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2.10</span></code></p></td>
+<td><p>This defines the range of speeds the particles will emit, which changes as
+per the Emit Speed. For example, if Emit Speed is <code class="docutils literal notranslate"><span class="pre">5</span></code> and Speed Spread is
+<code class="docutils literal notranslate"><span class="pre">1</span></code>, the particles will have speeds that range from <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Emit Dimensions</p></td>
+<td><p>x = <code class="docutils literal notranslate"><span class="pre">0.60</span></code>, y = <code class="docutils literal notranslate"><span class="pre">10.00</span></code>, z = <code class="docutils literal notranslate"><span class="pre">0.30</span></code></p></td>
+<td><p>Particles are emitted from a radius. This property defines the outer limit
+of that radius.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Size</p></td>
+<td><p>Start = <code class="docutils literal notranslate"><span class="pre">0.40</span></code>, Middle = <code class="docutils literal notranslate"><span class="pre">0.80</span></code>,
+Finish = <code class="docutils literal notranslate"><span class="pre">0.80</span></code></p></td>
+<td><p>This property determines the size of each particle and how it changes from
+emission to end of life. Here, it starts at <code class="docutils literal notranslate"><span class="pre">0.4</span></code> and when its life is
+completed, the particle has increased in size to <code class="docutils literal notranslate"><span class="pre">0.8</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Color</p></td>
+<td><p>Start = <code class="docutils literal notranslate"><span class="pre">#000000</span></code>, Middle = <code class="docutils literal notranslate"><span class="pre">#FFFFFF</span></code>,
+Finish = <code class="docutils literal notranslate"><span class="pre">#000000</span></code></p></td>
+<td><p>This determines the colors the particles will emit. Start, middle, and
+finish define the color spectrum to be emitted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Color Spread</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#FFFFFF</span></code></p></td>
+<td><p>This determines the color spectrum of the particles.</p></td>
+</tr>
+<tr class="row-even"><td><p>Emit Acceleration</p></td>
+<td><p>x = <code class="docutils literal notranslate"><span class="pre">0</span></code>, y = <code class="docutils literal notranslate"><span class="pre">-9.09</span></code>, z = <code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p>This is the acceleration of each particle during its lifetime.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Spread</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">147.40</span></code></p></td>
+<td><p>The spread in spins for the particle entity. Changing this value results
+in a variety of spins for different particles.</p></td>
+</tr>
+<tr class="row-even"><td><p>Horizontal Angle</p></td>
+<td><p>Start = <code class="docutils literal notranslate"><span class="pre">0</span></code>, Finish = <code class="docutils literal notranslate"><span class="pre">180</span></code></p></td>
+<td><p>This is the angle range in degrees at which the particles are emitted
+along the z axis and rotated around on the y axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vertical angle</p></td>
+<td><p>Start = <code class="docutils literal notranslate"><span class="pre">150</span></code>, Finish = <code class="docutils literal notranslate"><span class="pre">180.</span></code></p></td>
+<td><p>This is the angle range in degrees at which the particles are emitted
+along the x axis and rotated around on the z axis.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+<img alt="../../_images/smoke-fountain.gif" src="../../_images/smoke-fountain.gif" />
+<p>Congratulations! You’ve created a multi-colored smoke fountain! You can experiment with different settings to simulate particle movement, such as a waterfall, confetti gun, or falling leaves.</p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-entities.html"><span class="doc">Create New Entities</span></a></p></li>
+<li><p><a class="reference internal" href="entity-appearance.html"><span class="doc">Change How Entities Look</span></a></p></li>
+<li><p><a class="reference internal" href="../tools.html"><span class="doc">Create Tools</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zone-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Modify a Zone Entity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create-spotlight.html" class="btn btn-neutral float-left" title="Tutorial: Create a Gold Spotlight" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

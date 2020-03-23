@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Apply Physics to Entities &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Add a Material Entity" href="material-entity.html" />
+    <link rel="prev" title="Define an Entity’s Behavior" href="entity-behavior.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Apply Physics to Entities</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-physics.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/entity-physics.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="apply-physics-to-entities">
+<h1>Apply Physics to Entities<a class="headerlink" href="#apply-physics-to-entities" title="Permalink to this headline">¶</a></h1>
+<p>Your Project Athena VR experience is made realistic with the help of a <a class="reference external" href="https://pybullet.org/wordpress">physics engine</a>. Project Athena uses this engine to simulate an object’s behavior according to the Newtonian laws of physics. For example, if you hit a ball with a bat in Project Athena, the physics engine computes these movements and makes the ball spin away from the bat after collision. You can modify an entity’s physics behavior using the Create app.</p>
+<div class="admonition note">
+   <p class="admonition-title">Note</p>
+   <p>You can select and edit multiple entities at once. The behavior will be different based on the type of property you'd like to set:</p>
+    <ul>
+        <li>Numbers: When using the slider, an offset will be applied to each of the original values. When typed in, the new value will replace the original values for the selected entities. </li>
+        <li>All other field types (checkboxes, input fields, etc): The new value will replace the original values for the selected entities. </li>
+    </ul>
+</div><p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#apply-physics-to-an-entity">Apply Physics to an Entity</a></p></li>
+<li><p><a class="reference external" href="#change-an-entity-s-velocity">Change an Entity’s Velocity</a></p></li>
+<li><p><a class="reference external" href="#set-how-a-moving-entity-slows-down">Set How a Moving Entity Slows Down</a></p></li>
+<li><p><a class="reference external" href="#set-an-entity-s-friction-and-bounciness">Set an Entity’s Friction and Bounciness</a></p></li>
+<li><p><a class="reference external" href="#set-an-entity-s-density">Set an Entity’s Density</a></p></li>
+<li><p><a class="reference external" href="#set-how-an-entity-moves-in-a-gravitational-field">Set How an Entity Moves in a Gravitational Field</a></p></li>
+</ul>
+<div class="section" id="apply-physics-to-an-entity">
+<h2>Apply Physics to an Entity<a class="headerlink" href="#apply-physics-to-an-entity" title="Permalink to this headline">¶</a></h2>
+<p>To apply physics properties to an entity:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select or add any entity of your choice.</p></li>
+<li><p>In the ‘Properties’ tab, scroll down to the <strong>Physics</strong> section. When you first create an entity, the physics properties are set to the default values you can see in the image below. <img alt="../../_images/physics-prop.PNG" src="../../_images/physics-prop.PNG" /></p></li>
+</ol>
+</div>
+<div class="section" id="change-an-entity-s-velocity">
+<h2>Change an Entity’s Velocity<a class="headerlink" href="#change-an-entity-s-velocity" title="Permalink to this headline">¶</a></h2>
+<p>Velocity is the speed of an object in a certain direction. All entities that have a position and orientation in Project Athena will have linear and angular velocity. These velocities might be zero, but they still exist.</p>
+<div class="section" id="linear-velocity">
+<h3>Linear Velocity<a class="headerlink" href="#linear-velocity" title="Permalink to this headline">¶</a></h3>
+<p><strong>Type</strong>: 3D Vector<br />
+<strong>Unit:</strong> meters/second<br />
+<strong>Default Value:</strong> (0,0,0)</p>
+<p>You can choose to make an entity move in a specified direction by changing its linear velocity. The direction is determined using the x, y, or z coordinates in a 3D Cartesian coordinate system. The 3D Cartesian coordinate system helps you determine the position of your entity in space. Every time your entity moves, its x, y, and z coordinates change to show you the new position. To change an entity’s linear velocity:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to ‘Linear Velocity’ property. The default value is <code class="docutils literal notranslate"><span class="pre">0.0000</span></code>.</p></li>
+<li><p>Say you want to move a cube entity upwards in a straight line. Change the Y value for linear velocity to <code class="docutils literal notranslate"><span class="pre">0.1000</span></code> and see your cube start moving.</p></li>
+<li><p>If you want your cube to change direction, change the x and z values to <code class="docutils literal notranslate"><span class="pre">0.1000</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="angular-velocity">
+<h3>Angular Velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this headline">¶</a></h3>
+<p><strong>Type:</strong> 3D Vector<br />
+<strong>Unit:</strong> radians/second<br />
+<strong>Default Value:</strong> (0,0,0)</p>
+<p>Angular velocity is the speed at which an object is rotating in a certain direction. It is measured in radians/second. To change an entity’s angular velocity:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to the ‘Angular Velocity’ property. The default value is <code class="docutils literal notranslate"><span class="pre">0.0000</span></code>.</p></li>
+<li><p>Change the X value to see your cube entity start rotating around an axis.</p></li>
+<li><p>If you want your cube entity to change its angular velocity direction, change the Y and Z values.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="set-how-a-moving-entity-slows-down">
+<h2>Set How a Moving Entity Slows Down<a class="headerlink" href="#set-how-a-moving-entity-slows-down" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type</strong>: Scalar<br />
+<strong>Range:</strong> 0 - 1<br />
+<strong>Default Value:</strong> 0.00</p>
+<p>In Project Athena, damping represents how much of an entity’s linear or angular velocity is lost over time. All moving objects we see in the real world experience some friction with air, reducing their velocities over time. Damping is used to approximate this effect of the real world in Project Athena. So if the damping of an object is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>, it will not lose any velocity and it will not slow down. If the damping of an object is <code class="docutils literal notranslate"><span class="pre">1.00</span></code>, it will lose all its velocity and stop immediately. If you want to throw a ball and have it slow down over time, you can add a damping value to do so.</p>
+<p>To set the linear damping of an object:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to the ‘Linear Damping’ property. The default value is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>.</p></li>
+<li><p><a class="reference external" href="#linear-velocity">Change the linear velocity</a> of a cube to any value.</p></li>
+<li><p>Change the ‘Linear Damping’ value to <code class="docutils literal notranslate"><span class="pre">1.00</span></code> to make the cube stop moving. You can change this value to anything between <code class="docutils literal notranslate"><span class="pre">0.00</span></code> and <code class="docutils literal notranslate"><span class="pre">1.00</span></code> to make an entity slow down over time.</p></li>
+</ol>
+<p>To set the angular damping of an object:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to the ‘Angular Damping’ property. The default value is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>.</p></li>
+<li><p><a class="reference external" href="#angular-velocity">Change the angular velocity</a> of a cube to any value.</p></li>
+<li><p>Change the ‘Angular Damping’ value to <code class="docutils literal notranslate"><span class="pre">1.00</span></code> to make the cube stop moving. You can change this value to anything between <code class="docutils literal notranslate"><span class="pre">0.00</span></code> and <code class="docutils literal notranslate"><span class="pre">1.00</span></code> to make an entity slow down over time.</p></li>
+</ol>
+<p><img alt="../../_images/gif-1.gif" src="../../_images/gif-1.gif" /></p>
+</div>
+<div class="section" id="set-an-entity-s-friction-and-bounciness">
+<h2>Set an Entity’s Friction and Bounciness<a class="headerlink" href="#set-an-entity-s-friction-and-bounciness" title="Permalink to this headline">¶</a></h2>
+<p><strong>Range:</strong> 0 - 1<br />
+<strong>Default Value:</strong> 0.5000</p>
+<p>When a dynamic entity collides with another entity, it can react in a number of ways depending on its physics properties. The values you set for friction and bounciness determine this reaction. By default, both values are <code class="docutils literal notranslate"><span class="pre">0.5000</span></code>.</p>
+<p>Friction is a measure of how slippery an object is. When an entity with low friction collides against another object, it will slide a good distance before coming to a stop. On the other hand, an entity with high friction will slow down much faster. To set the friction of an entity:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to the ‘Friction’ property.</p></li>
+<li><p>Change the value to anything between <code class="docutils literal notranslate"><span class="pre">0.0000</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0000</span></code>. An entity with a friction of <code class="docutils literal notranslate"><span class="pre">0.0000</span></code> will be very slippery, while an entity with a friction of <code class="docutils literal notranslate"><span class="pre">1.0000</span></code> will have a coarse or sticky surface.</p></li>
+</ol>
+<p>Bounciness is the energy an entity conserves during collision. For example, a ball will conserve more energy and bounce more than a heavy cube. To set the bounciness:</p>
+<ol class="simple">
+<li><p>In the ‘Properties’ tab, scroll down to the ‘Bounciness’ property.</p></li>
+<li><p>Change the value to anything between <code class="docutils literal notranslate"><span class="pre">0.0000</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0000</span></code>. An entity with a bounciness of <code class="docutils literal notranslate"><span class="pre">0.0000</span></code> will conserve no energy, while an entity with a bounciness of <code class="docutils literal notranslate"><span class="pre">1.0000</span></code> will conserve all of its energy.</p></li>
+</ol>
+</div>
+<div class="section" id="set-an-entity-s-density">
+<h2>Set an Entity’s Density<a class="headerlink" href="#set-an-entity-s-density" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type</strong>: Scalar<br />
+<strong>Unit:</strong> kg/meter<sup>3</sup><br />
+<strong>Range:</strong> 100 - 10000<br />
+<strong>Default Value:</strong> 1000.0000</p>
+<p>An entity’s density is the ratio of its mass to its volume. For example, an entity with low density is made of light materials such as wood, while an entity with high density is made of dense materials such as iron.</p>
+<p>In Project Athena, the maximum (<code class="docutils literal notranslate"><span class="pre">10000</span></code>) and minimum (<code class="docutils literal notranslate"><span class="pre">100</span></code>) values of density were chosen for stability. It’s difficult to perform stable physics calculations between objects of very disparate masses (such as a light feather and an iron ball). To help keep the environment stable, we picked conservative density limits.</p>
+<p>To change this value, scroll down to the ‘Density’ property in the ‘Properties’ tab. Change it to the value of your choice.</p>
+</div>
+<div class="section" id="set-how-an-entity-moves-in-a-gravitational-field">
+<h2>Set How an Entity Moves in a Gravitational Field<a class="headerlink" href="#set-how-an-entity-moves-in-a-gravitational-field" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> 3D Vector<br />
+<strong>Unit:</strong> meters/second<sup>2</sup><br />
+<strong>Default Value:</strong> (0,0,0)</p>
+<p>In the <strong>Create</strong> app, ‘Gravity’ is the acceleration of the entity, as if it were in a uniform gravitational field. This property controls how an entity behaves when you change the gravity of a domain. For example, if a ball is floating in zero gravity, it will float downwards when you increase gravity downwards.</p>
+<p>To change this value, scroll down to the ‘Gravity’ property in the ‘Properties’ tab. Change it to the value of your choice.</p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
+<li><p><a class="reference external" href="../../explore/interact.html">Interact with Your Environment</a></p></li>
+<li><p><a class="reference external" href="avatar-interactions.html">Define Interactions with Avatars</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="material-entity.html" class="btn btn-neutral float-right" title="Add a Material Entity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="entity-behavior.html" class="btn btn-neutral float-left" title="Define an Entity’s Behavior" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

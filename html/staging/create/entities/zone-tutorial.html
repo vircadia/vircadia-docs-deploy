@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Modify a Zone Entity &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial: Display a YouTube Channel" href="display-youtube.html" />
+    <link rel="prev" title="Tutorial: Create a Smoke Fountain" href="create-fountain.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create-spotlight.html">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create-fountain.html">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portal-tutorial.html">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boombox-tutorial.html">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
+        
+      <li>Tutorial: Modify a Zone Entity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/zone-tutorial.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/zone-tutorial.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-modify-a-zone-entity">
+<h1>Tutorial: Modify a Zone Entity<a class="headerlink" href="#tutorial-modify-a-zone-entity" title="Permalink to this headline">¶</a></h1>
+<p>A zone entity is a 3D area where you can create custom lighting environments. You can define zone boundaries using shapes and customize the zone’s light properties such as its intensity, direction, and color to create different effects.</p>
+<p>The mini tutorials on this page show you how zone entities work and how you can edit their properties to create areas with different lighting effects.</p>
+<p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
+<li><p><a class="reference external" href="#create-a-zone-entity">Create a Zone Entity</a></p></li>
+<li><p><a class="reference external" href="#create-nested-zones-with-different-lighting">Create Nested Zones with Different Lighting</a></p></li>
+<li><p><a class="reference external" href="#change-a-zones-shape">Change a Zone’s Shape</a></p></li>
+<li><p><a class="reference external" href="#add-a-skybox-to-a-zone">Add a Skybox to a Zone</a></p></li>
+<li><p><a class="reference external" href="#add-ambient-light-to-a-zone">Add Ambient Light to a Zone</a></p></li>
+</ul>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-zone-entity">
+<h2>Create a Zone Entity<a class="headerlink" href="#create-a-zone-entity" title="Permalink to this headline">¶</a></h2>
+<p>To create a zone entity:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Click the ‘Zone’ icon to create a zone entity. You’ll see a wireframe shape showing the zone’s bounding box.</p></li>
+<li><p>If you are unable to view the zone’s bounding box, go to <strong>Edit &gt; Show Zones in Create mode</strong> and select the option. Your zone should now be visible.</p></li>
+<li><p>Go to the ‘Properties’ tab, and add a name ‘Zone-1’ for your zone.</p></li>
+</ol>
+</div>
+<div class="section" id="create-nested-zones-with-different-lighting">
+<h2>Create Nested Zones with Different Lighting<a class="headerlink" href="#create-nested-zones-with-different-lighting" title="Permalink to this headline">¶</a></h2>
+<p>Each zone entity you create can have different properties. When your avatar moves through different zones, you will experience each zone’s properties. In the case of nested or overlapping zones, you will experience the properties of the smallest zone you are currently inside.</p>
+<p>You can understand how an avatar experiences lighting in a zone using this mini tutorial:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-two-zone-entities">Create Two Zone Entities</a></p></li>
+<li><p><a class="reference external" href="#nest-one-zone-inside-the-other">Nest One Zone Inside the Other</a></p></li>
+<li><p><a class="reference external" href="#add-different-lighting-effects-to-each-zone">Add Different Lighting Effects to Each Zone</a></p></li>
+</ol>
+<div class="section" id="create-two-zone-entities">
+<h3>Create Two Zone Entities<a class="headerlink" href="#create-two-zone-entities" title="Permalink to this headline">¶</a></h3>
+<p>Follow the steps to <a class="reference external" href="#create-a-zone-entity">create a zone entity</a> to create two zone entities named ‘Zone-1’ and ‘Zone-2’.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>By default, zone entities are created at your current position, so to see the zone entities you just created, you may need to reposition your avatar.</p>
+</div></div>
+<div class="section" id="nest-one-zone-inside-the-other">
+<h3>Nest One Zone Inside the Other<a class="headerlink" href="#nest-one-zone-inside-the-other" title="Permalink to this headline">¶</a></h3>
+<p>To nest a zone, you have to resize one zone to make it smaller than the other, and change its position to bring it inside the larger zone.</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select ‘Zone-1’ either from the Entity List or directly in Interface.</p></li>
+<li><p>In the ‘Properties’ tab, change the dimensions of ‘Zone-1’ to <code class="docutils literal notranslate"><span class="pre">x=5,</span> <span class="pre">y=10,</span> <span class="pre">z=5</span></code>.</p></li>
+<li><p>If you created both zones without moving your avatar, you don’t need to change the zone’s position. ‘Zone-1’ will already be inside ‘Zone-2’. If you moved while creating the zones, select ‘Zone-1’ and move it inside ‘Zone-2’.</p></li>
+</ol>
+</div>
+<div class="section" id="add-different-lighting-effects-to-each-zone">
+<h3>Add Different Lighting Effects to Each Zone<a class="headerlink" href="#add-different-lighting-effects-to-each-zone" title="Permalink to this headline">¶</a></h3>
+<p>When you create a zone, it inherits the properties of the zone your avatar was standing in. This means that both zones inherit the lighting properties of your domain. You won’t notice when you are entering or leaving a zone.</p>
+<p>All lighting effects have three modes:</p>
+<ul class="simple">
+<li><p>Inherit: The property is inherited from the zone bounding the current zone.</p></li>
+<li><p>Off: The lighting effect is turned off.</p></li>
+<li><p>On: The lighting effect is turned on and can be changed to values of your choice.</p></li>
+</ul>
+<p>The keylight represents a parallel source of light, such as the sun. Let’s change the keylight properties for each zone:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select ‘Zone-1’ either from the Entity List or directly in Interface.</p></li>
+<li><p>In the ‘Properties’ tab, change the ‘Key Light’ property to ‘On’ from the drop-down.</p></li>
+<li><p>Click on ‘Key Light’ color, and add these RGB (<code class="docutils literal notranslate"><span class="pre">255,0,0</span></code>) values to add a red key light.</p></li>
+<li><p>Select ‘Zone-2’ either from the Entity List or directly in Interface.</p></li>
+<li><p>In the ‘Properties’ tab, change the ‘Key Light’ property by selecting ‘On’ from the drop-down.</p></li>
+<li><p>Click on ‘Key Light’ color, and add these RGB (<code class="docutils literal notranslate"><span class="pre">0,0,255</span></code>) values to add a blue key light.</p></li>
+</ol>
+<p>When your avatar walks from Zone-1 to Zone-2, you will see the lighting around change from red to blue.</p>
+</div>
+</div>
+<div class="section" id="change-a-zone-s-shape">
+<h2>Change a Zone’s Shape<a class="headerlink" href="#change-a-zone-s-shape" title="Permalink to this headline">¶</a></h2>
+<p>By default, a zone’s shape is a cube, like its bounding box. You can change a zone’s shape to the following:</p>
+<ul class="simple">
+<li><p>None: This will be the default shape (cube).</p></li>
+<li><p>Box: The zone’s shape will be a box.</p></li>
+<li><p>Sphere: The zone entity’s shape will be a stretched sphere.</p></li>
+<li><p>Ellipsoid: The zone entity will take the shape of an ellipsoid.</p></li>
+<li><p>Cylinder: The zone entity’s shape will be a cylinder.</p></li>
+<li><p>Compound: The zone entity’s shape will be a convex mesh that is an FBX or OBJ file. These complex convex shapes must be composed of multiple shapes. We can’t check against hollowed out interior volumes. For example, if you want a zone shaped like a bowl, you’ll have to build it up from other elements. You can include elements like sides and a floor, especially if you want a user to experience the right collision properties when in the center of the bowl. Upload your FBX or OBJ file to a cloud server, copy the URL, and paste it in ‘Compound Shape URL’.</p></li>
+</ul>
+<p>All shapes will be stretched to fit the zone entity’s dimensions.</p>
+</div>
+<div class="section" id="add-a-skybox-to-a-zone">
+<h2>Add a Skybox to a Zone<a class="headerlink" href="#add-a-skybox-to-a-zone" title="Permalink to this headline">¶</a></h2>
+<p>A skybox determines the texture of the sky in your domain. The skybox can be just a color, or an image from a URL. For example, you can have a blue sky or use an image of the night sky with stars as a skybox.</p>
+<p>To add a blue sky to your zone:</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select ‘Zone-1’ either from the Entity List or directly in Interface.</p></li>
+<li><p>In the ‘Properties’ tab, change the ‘Skybox’ property by selecting ‘On’ from the drop-down.</p></li>
+<li><p>Click on ‘Skybox’ color, and add these RGB (<code class="docutils literal notranslate"><span class="pre">0,0,255</span></code>) values to add a blue key light.</p></li>
+</ol>
+<p>To add an image of the night sky to your zone:</p>
+<ol>
+<li><p>Host your image on a cloud service and copy the URL.</p></li>
+<li><p>Create a JSON file that refers to the URL and other skybox properties.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;Entities&quot;</span><span class="o">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+           <span class="s2">&quot;skybox&quot;</span><span class="o">:</span> <span class="p">{</span>
+               <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="p">{</span>
+                   <span class="s2">&quot;blue&quot;</span><span class="o">:</span> <span class="mi">255</span><span class="p">,</span>
+                   <span class="s2">&quot;green&quot;</span><span class="o">:</span> <span class="mi">255</span><span class="p">,</span>
+                   <span class="s2">&quot;red&quot;</span><span class="o">:</span> <span class="mi">255</span>
+               <span class="p">},</span>
+               <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="nx">SKYBOX_IMG_URL</span>
+           <span class="p">},</span>
+           <span class="s2">&quot;skyboxMode&quot;</span><span class="o">:</span> <span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Zone&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;userData&quot;</span><span class="o">:</span> <span class="s2">&quot;{\&quot;grabbableKey\&quot;:{\&quot;grabbable\&quot;:false}}&quot;</span>
+       <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">&quot;Id&quot;</span><span class="o">:</span> <span class="nx">ENTITY_ID</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Host the JSON file on a cloud service. Copy its URL.</p></li>
+<li><p>Select ‘Zone-1’ either from the Entity List or directly in Interface.</p></li>
+<li><p>In the ‘Properties’ tab, change the ‘Skybox’ property by selecting ‘On’ from the drop-down.</p></li>
+<li><p>In ‘Skybox source’, add the JSON file’s URL.</p></li>
+</ol>
+<p>You’ll see your zone’s lighting change to the image you specified in the skybox.</p>
+</div>
+<div class="section" id="add-ambient-light-to-a-zone">
+<h2>Add Ambient Light to a Zone<a class="headerlink" href="#add-ambient-light-to-a-zone" title="Permalink to this headline">¶</a></h2>
+<p>The ambient light in a zone is a source of light different from the key light and provides background lighting. For example, warm sunlight coming from a sunset in your domain is ambient light.</p>
+<p>Similar to the skybox, your ambient light image can be added as a JSON file.</p>
+<ol class="simple">
+<li><p>Select ‘Zone-2’ either from the Entity List or directly in Interface.</p></li>
+<li><p>Change the ‘Ambient Intensity’ to <code class="docutils literal notranslate"><span class="pre">1.00</span></code>.</p></li>
+<li><p>In ‘Ambient Source’, add your ambient light JSON file, or click ‘Copy from Skybox’ to use the same image as the skybox.</p></li>
+</ol>
+<p>Your zone’s ambient lighting will change to the image you’ve provided.</p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="display-youtube.html" class="btn btn-neutral float-right" title="Tutorial: Display a YouTube Channel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create-fountain.html" class="btn btn-neutral float-left" title="Tutorial: Create a Smoke Fountain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

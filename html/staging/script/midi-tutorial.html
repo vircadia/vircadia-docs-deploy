@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Use MIDI to Control Your Environment &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Host" href="../host.html" />
+    <link rel="prev" title="Tutorial: Transfer Money and Items" href="transfer-hfc-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js-tips.html">JavaScript Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface-scripts.html">Interface Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avatar-scripts.html">Avatar Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-entity-scripts.html">Server Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">Tutorial: Transfer Money and Items</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutorial: Use MIDI to Control Your Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../script.html">Script</a> &raquo;</li>
+        
+      <li>Tutorial: Use MIDI to Control Your Environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/midi-tutorial.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/script/midi-tutorial.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-use-midi-to-control-your-environment">
+<h1><a class="toc-backref" href="#id1">Tutorial: Use MIDI to Control Your Environment</a><a class="headerlink" href="#tutorial-use-midi-to-control-your-environment" title="Permalink to this headline">¶</a></h1>
+<p>MIDI (Musical Instrument Digital Interface) is a protocol (with electrical connectors and a digital interface) that allows digital tools and electronic devices (virtual and physical) to communicate with each other. MIDI is usually used as a music sequencer. Originally, this format was created in the 80s as a way for instruments to communicate with each other, but over the last 30 years, it has evolved into a highly organized specification that is heavily tested and adopted for a multitude of purposes.</p>
+<p>We created a MIDI class (with the help of one of our community members, Brainstormer) that can be used to control your environment in High Fidelity. For example, we used MIDI to control lighting in a domain for a music show.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, we support the MIDI class only on Windows.</p>
+</div>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tutorial-use-midi-to-control-your-environment" id="id1">Tutorial: Use MIDI to Control Your Environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#midi-class-basics" id="id2">MIDI Class Basics</a></p></li>
+<li><p><a class="reference internal" href="#connect-your-controller-device" id="id3">Connect Your Controller Device</a></p></li>
+<li><p><a class="reference internal" href="#configure-your-midi-device" id="id4">Configure Your MIDI Device</a></p></li>
+<li><p><a class="reference internal" href="#example-change-the-color-of-a-cube-using-midi" id="id5">Example: Change the Color of a Cube using MIDI</a></p></li>
+<li><p><a class="reference internal" href="#other-ways-to-use-midi-in-high-fidelity" id="id6">Other Ways to Use MIDI in High Fidelity</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="midi-class-basics">
+<h2><a class="toc-backref" href="#id2">MIDI Class Basics</a><a class="headerlink" href="#midi-class-basics" title="Permalink to this headline">¶</a></h2>
+<p>Our MIDI class works by passing a DWORD (double word), a data type specific to Microsoft Windows, as a message. It is an unsigned 32-bit unit of data and can contain an integer value ranging from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">4,294,967,295</span></code>.</p>
+<p>Every time you move a lever, rotate a knob, press/release a key, or push down a pad, you are creating a MIDI message that says what channel, what note, what velocity, and what is the status/command to run.</p>
+<p>Each byte in this message describes a different type’s value.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>00000000</p></td>
+<td><p>0vvvvvvv</p></td>
+<td><p>0nnnnnnn</p></td>
+<td><p>1sss</p></td>
+<td><p>cccc</p></td>
+</tr>
+</tbody>
+</table>
+<p>Where:</p>
+<ul class="simple">
+<li><p>v = velocity</p></li>
+<li><p>n = notes</p></li>
+<li><p>s = status</p></li>
+<li><p>c = channel</p></li>
+</ul>
+<p>The number in the higher order bit (the first number) denotes whether it is a command (1) or data (0). The rest of the numbers determine the value of the type. This means that the velocity and note can represent 128 unique values (1+2+4+8+16+32+64), status can represent 8 unique values, and channel can represent 16 values.</p>
+<p>The different status types we support are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Status</p></th>
+<th class="head"><p>Types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>08</p></td>
+<td><p>note off</p></td>
+</tr>
+<tr class="row-odd"><td><p>09</p></td>
+<td><p>note on</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>polyphonic key pressure</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>control change</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>program change</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>channel pressure</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>pitch bend</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>system message</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="connect-your-controller-device">
+<h2><a class="toc-backref" href="#id3">Connect Your Controller Device</a><a class="headerlink" href="#connect-your-controller-device" title="Permalink to this headline">¶</a></h2>
+<p>You can either connect a real controller device that you use to control your environment in High Fidelity, or create a virtual one that will help you connect to other virtual devices.</p>
+<div class="section" id="connect-ableton-live-to-interface">
+<h3>Connect Ableton Live to Interface<a class="headerlink" href="#connect-ableton-live-to-interface" title="Permalink to this headline">¶</a></h3>
+<p>To <a class="reference external" href="https://help.ableton.com/hc/en-us/articles/209774225-Using-virtual-MIDI-buses">connect Ableton Live</a> directly to High Fidelity’s Interface client, we recommend the following virtual tools:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tobias-erichsen.de/software/loopmidi.html">loopMIDI</a>: This will create a virtual in/out port to send information into and out of HiFi</p></li>
+<li><p><a class="reference external" href="http://vmpk.sourceforge.net">VMP</a>: You can use this to simulate keys being pressed or sliders/knobs being manipulated if you do not have a controller.</p></li>
+</ul>
+</div>
+<div class="section" id="connect-an-ipad-or-iphone-to-interface">
+<h3>Connect an iPad or iPhone to Interface<a class="headerlink" href="#connect-an-ipad-or-iphone-to-interface" title="Permalink to this headline">¶</a></h3>
+<p>You can use your iPad or iPhone as a touch screen controller with buttons, knobs, and sliders. Read the sections <a class="reference internal" href="#configure-your-midi-device">Configure Your MIDI Device</a> and <a class="reference internal" href="#example-change-the-color-of-a-cube-using-midi">Example: Change the Color of a Cube using MIDI</a> before reading these instructions.</p>
+<ul class="simple">
+<li><p>Download our recommended app <a class="reference external" href="https://hexler.net/software/touchosc">touchosc</a>.</p></li>
+<li><p>Download the Windows bridge.</p></li>
+<li><p>Set up either through USB or through your local WIFI network in the settings menu.</p></li>
+<li><p>If you setup your <cite>onEventReceived</cite> to log the messages coming in, you can see which knobs send what information that you can use to call custom functions.</p></li>
+<li><p>There are some interesting components like the accelerometer which you can use as well!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="configure-your-midi-device">
+<h2><a class="toc-backref" href="#id4">Configure Your MIDI Device</a><a class="headerlink" href="#configure-your-midi-device" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve set up your MIDI Controller Device, you need to configure it.</p>
+<ol class="arabic">
+<li><p>Here is a general recommended MIDI config function you can run in a script. With it, you can see a list of MIDI devices that are currently connected:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some helpful constants</span>
+<span class="kr">const</span> <span class="nx">INPUT</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">OUTPUT</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">ENABLE</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">DISABLE</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">midiConfig</span><span class="p">(){</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">thruModeEnable</span><span class="p">(</span><span class="nx">DISABLE</span> <span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">broadcastEnable</span><span class="p">(</span><span class="nx">DISABLE</span> <span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeNoteOffEnable</span><span class="p">(</span><span class="nx">ENABLE</span> <span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeNoteOnEnable</span><span class="p">(</span><span class="nx">ENABLE</span> <span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typePolyKeyPressureEnable</span><span class="p">(</span><span class="nx">DISABLE</span><span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeControlChangeEnable</span><span class="p">(</span><span class="nx">ENABLE</span><span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeProgramChangeEnable</span><span class="p">(</span><span class="nx">ENABLE</span><span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeChanPressureEnable</span><span class="p">(</span><span class="nx">DISABLE</span><span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typePitchBendEnable</span><span class="p">(</span><span class="nx">ENABLE</span> <span class="p">);</span>
+    <span class="nx">Midi</span><span class="p">.</span><span class="nx">typeSystemMessageEnable</span><span class="p">(</span><span class="nx">DISABLE</span><span class="p">);</span>
+
+    <span class="c1">// get a list of the available  in and  out device IDs</span>
+    <span class="nx">midiInDeviceList</span> <span class="o">=</span> <span class="nx">Midi</span><span class="p">.</span><span class="nx">listDevices</span><span class="p">(</span><span class="nx">INPUT</span><span class="p">);</span>
+    <span class="nx">midiOutDeviceList</span> <span class="o">=</span> <span class="nx">Midi</span><span class="p">.</span><span class="nx">listDevices</span><span class="p">(</span><span class="nx">OUTPUT</span><span class="p">);</span>
+    <span class="nx">print</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">midiInDeviceList</span><span class="p">));</span>
+    <span class="nx">print</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">midiOutDeviceList</span><span class="p">));</span>
+</pre></div>
+</div>
+</li>
+<li><p>After you run the configuration function, you will want to connect to <code class="docutils literal notranslate"><span class="pre">midiMessages</span></code>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Midi</span><span class="p">.</span><span class="nx">midiMessage</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">onEventReceived</span><span class="p">);</span>
+<span class="c1">// Your message handler will look like the following:</span>
+<span class="c1">/// @param {int} device: device number</span>
+<span class="c1">/// @param {int} channel: channel number</span>
+<span class="c1">/// @param {int} type: 0x8 is noteoff, 0x9 is noteon (if velocity=0, noteoff), etc</span>
+<span class="c1">/// @param {int} note: MIDI note number</span>
+<span class="c1">/// @param {int} velocity: note velocity (0 means noteoff)</span>
+
+<span class="kd">function</span> <span class="nx">onEventReceived</span><span class="p">(</span><span class="nx">eventData</span><span class="p">){</span>
+    <span class="c1">// functions you run in response to different MIDI events</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="example-change-the-color-of-a-cube-using-midi">
+<h2><a class="toc-backref" href="#id5">Example: Change the Color of a Cube using MIDI</a><a class="headerlink" href="#example-change-the-color-of-a-cube-using-midi" title="Permalink to this headline">¶</a></h2>
+<p>Let’s change the color of a cube entity in High Fidelity using MIDI.</p>
+<ol class="arabic">
+<li><p>Use this method to figure out the MIDI range of <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">127</span></code> to be any other output range you want using linear interpolation:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">lerp</span><span class="p">(</span><span class="nx">InputLow</span><span class="p">,</span> <span class="nx">InputHigh</span><span class="p">,</span> <span class="nx">OutputLow</span><span class="p">,</span> <span class="nx">OutputHigh</span><span class="p">,</span> <span class="nx">Input</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">((</span><span class="nx">Input</span> <span class="o">-</span> <span class="nx">InputLow</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nx">InputHigh</span> <span class="o">-</span> <span class="nx">InputLow</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="nx">OutputHigh</span> <span class="o">-</span> <span class="nx">OutputLow</span><span class="p">)</span> <span class="o">+</span> <span class="nx">OutputLow</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">lerp</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="nx">eventData</span><span class="p">.</span><span class="nx">velocity</span><span class="p">);</span> <span class="c1">// the 0 would be 0, and the 127 would be 360.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Since colors go from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">255</span></code>, we could do the following:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">red</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span>  <span class="nx">changeCubeColor</span><span class="p">(</span><span class="nx">redValue</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">entityColorProps</span> <span class="o">=</span> <span class="nx">Entities</span><span class="p">.</span><span class="nx">getEntityProps</span><span class="p">(</span><span class="nx">cubeID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]).</span><span class="nx">color</span><span class="p">;</span>
+    <span class="nx">entityColorProps</span><span class="p">.</span><span class="nx">red</span> <span class="o">=</span> <span class="nx">redValue</span><span class="p">;</span>
+    <span class="nx">Entities</span><span class="p">.</span><span class="nx">editEntity</span><span class="p">(</span><span class="nx">cubeID</span><span class="p">,</span> <span class="nx">entityColorProps</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then use <code class="docutils literal notranslate"><span class="pre">onEventReceived</span></code> to change the color of the cube:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// eventData.device, eventData.channel, eventData.type, eventData.note, eventData.velocity</span>
+
+<span class="kd">function</span> <span class="nx">onEventReceived</span><span class="p">(</span><span class="nx">eventData</span><span class="p">){</span>
+    <span class="nx">changeCubeColor</span><span class="p">(</span> <span class="nx">lerp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="nx">eventData</span><span class="p">.</span><span class="nx">velocity</span><span class="p">)</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Print the <code class="docutils literal notranslate"><span class="pre">eventData</span></code> in your <code class="docutils literal notranslate"><span class="pre">onEventReceived</span></code> function to see each controller and its output. This will tell you everything you need to know about how to route the right key, slider, knob, or button to to your intended JavaScript functions.</p>
+<p>If you want to use to control something outside of High Fidelity, or to directly call a MIDI event to control something in Hifi, you can use the function:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// event similar to the above</span>
+<span class="nx">Midi</span><span class="p">.</span><span class="nx">playNote</span><span class="p">(</span><span class="nx">Status</span><span class="p">,</span> <span class="nx">Note</span><span class="p">,</span> <span class="nx">Velocity</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-ways-to-use-midi-in-high-fidelity">
+<h2><a class="toc-backref" href="#id6">Other Ways to Use MIDI in High Fidelity</a><a class="headerlink" href="#other-ways-to-use-midi-in-high-fidelity" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use Ableton to sequence out entire animations of your domain.</p></li>
+<li><p>Control real world devices by the movements things make in Hifi and vice versa (think update loop)</p></li>
+<li><p>Setup your iPad to be a whole group of buttons that you can press at any time to trigger events in your domain at will.</p></li>
+</ul>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://apidocs.highfidelity.com/Midi.html">API Reference: MIDI</a></p></li>
+<li><p><a class="reference external" href="https://cdn.highfidelity.com/milad/production/Midi/MidiAPI.txt">MIDI-API</a></p></li>
+<li><p><a class="reference external" href="https://cdn.highfidelity.com/milad/production/Midi/midiTest.js">MIDI-Test</a></p></li>
+<li><p><a class="reference external" href="https://cdn.highfidelity.com/milad/production/Midi/MIDI-Example.js">MIDI-Examples</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../host.html" class="btn btn-neutral float-right" title="Host" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transfer-hfc-tutorial.html" class="btn btn-neutral float-left" title="Tutorial: Transfer Money and Items" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

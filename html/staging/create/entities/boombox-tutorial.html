@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Create a Boombox &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Materials" href="../materials.html" />
+    <link rel="prev" title="Tutorial: Create a Purchase Button for Marketplace Sales" href="purchase-button-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create-spotlight.html">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create-fountain.html">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zone-tutorial.html">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portal-tutorial.html">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
+        
+      <li>Tutorial: Create a Boombox</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/boombox-tutorial.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/boombox-tutorial.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-create-a-boombox">
+<h1><a class="toc-backref" href="#id1">Tutorial: Create a Boombox</a><a class="headerlink" href="#tutorial-create-a-boombox" title="Permalink to this headline">¶</a></h1>
+<p>You can create a music player that plays all your favorite tracks and also syncs the audio for other users in your domain.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tutorial-create-a-boombox" id="id1">Tutorial: Create a Boombox</a></p>
+<ul>
+<li><p><a class="reference internal" href="#prerequisites" id="id2">Prerequisites</a></p></li>
+<li><p><a class="reference internal" href="#create-a-boombox-entity" id="id3">Create a Boombox Entity</a></p></li>
+<li><p><a class="reference internal" href="#add-user-data-to-your-boombox" id="id4">Add User Data to Your Boombox</a></p></li>
+<li><p><a class="reference internal" href="#write-music-player-scripts" id="id5">Write Music Player Scripts</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="prerequisites">
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-entities.html"><span class="doc">Create New Entities</span></a></p></li>
+<li><p><a class="reference internal" href="entity-appearance.html"><span class="doc">Change How Entities Look</span></a></p></li>
+<li><p><a class="reference internal" href="entity-behavior.html"><span class="doc">Define an Entity’s Behavior</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/get-started-with-scripting.html"><span class="doc">Get Started with Scripting</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/client-entity-scripts.html"><span class="doc">Client Entity Scripts</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/write-scripts.html"><span class="doc">Write Your Own Scripts</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="create-a-boombox-entity">
+<h2><a class="toc-backref" href="#id3">Create a Boombox Entity</a><a class="headerlink" href="#create-a-boombox-entity" title="Permalink to this headline">¶</a></h2>
+<p>Your BoomBox will consist of:</p>
+<ul class="simple">
+<li><p>A boombox base model: A model entity that runs an entity server script.</p></li>
+<li><p>An ‘ON/OFF’ button: A child entity runs a client entity script to allow users to interact with the boombox.</p></li>
+</ul>
+<p>The boombox will start playing when users click or trigger the ON/OFF button.</p>
+<p>To create a boombox:</p>
+<ol class="arabic simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Use the <strong>Create</strong> app to <a class="reference internal" href="../3d-models/import-model.html"><span class="doc">import the 3D model entity</span></a>. You can create your own 3D model for the boombox base or <a class="reference external" href="https://github.com/misslivirose/happy-boombox/blob/master/BoomBox.fbx">use one we’ve created</a>.</p></li>
+<li><p>Next, <a class="reference internal" href="create-entities.html"><span class="doc">create the button entity</span></a> that users will interact with. This can be a cube entity.</p></li>
+<li><p>Go to ‘Properties’ tab for the button entity. Change the ‘Shape’ property from ‘Box’ to ‘Octagon’ or ‘Cylinder’ depending on your aesthetic preferences.</p></li>
+<li><p>Scroll down to the ‘Behavior’ section and ensure that ‘Grabbable’ and ‘Triggerable’ are checked.</p></li>
+<li><p>Scale, rotate, and move your button to align it to the desired position on the model.</p></li>
+</ol>
+<img alt="../../_images/boombox.png" src="../../_images/boombox.png" />
+<ol class="arabic simple" start="7">
+<li><p>With the <strong>Create</strong> app open, select the 3D model of the boombox. Go to the ‘Properties’ tab and copy the ‘ID’ under ‘Name’.</p></li>
+<li><p>Select the cube entity you created, go to the ‘Properties’ tab, and paste the copied entity ID in the ‘Parent’ field. This makes your boombox model entity the parent of your button entity.</p></li>
+</ol>
+</div>
+<div class="section" id="add-user-data-to-your-boombox">
+<h2><a class="toc-backref" href="#id4">Add User Data to Your Boombox</a><a class="headerlink" href="#add-user-data-to-your-boombox" title="Permalink to this headline">¶</a></h2>
+<p>The User Data property is a JSON object that can be customized to fit the needs of a script. User Data also helps in synchronizing and keeping variables the same for all users in a domain. In this case, User Data will contain:</p>
+<ul class="simple">
+<li><p>Song List: All URLs of the songs you want played on your boombox. You can also use MP3 or WAV files stored on your local machine.</p></li>
+<li><p>Music player volume information: You can change this as per your preference.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>User Data can store information only up to a certain size. We recommend keeping the limit of 10 songs. We support the following formats:</p>
+<ul class="simple">
+<li><p>WAV: 16-bit uncompressed WAV at any sample rate, with 1 (mono), 2(stereo), or 4 (ambisonic) channels.</p></li>
+<li><p>MP3: Mono or stereo, at any sample rate.</p></li>
+<li><p>RAW: 48khz 16-bit mono or stereo. Filename must include “.stereo” to be interpreted as stereo.</p></li>
+</ul>
+</div>
+<p>To add User Data to your boombox:</p>
+<ol class="arabic">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select your boombox entity, not the button.</p></li>
+<li><p>Go to the ‘Properties’ tab. Scroll down to ‘User Data’ and paste the following JSON information. This JSON data consists of 10 songs and the volume setting. You can use your own songs and change the volume setting:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;grabbableKey&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;grabbable&quot;</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;music&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;All That&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-allthat.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Country Boy&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-countryboy.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cute&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-cute.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Happiness&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-happiness.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Happy Rock&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-happyrock.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;High Octane&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-highoctane.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hip Jazz&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-hipjazz.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Pop Dance&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-popdance.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sci-Fi&quot;</span><span class="o">:</span> <span class="s2">&quot;https://hifi-content.s3-us-west-1.amazonaws.com/liv/dev/BoomBox/music/bensound-scifi.mp3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sample&quot;</span><span class="o">:</span> <span class="s2">&quot;sample.com&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;volume&quot;</span><span class="o">:</span> <span class="mf">0.7</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="write-music-player-scripts">
+<h2><a class="toc-backref" href="#id5">Write Music Player Scripts</a><a class="headerlink" href="#write-music-player-scripts" title="Permalink to this headline">¶</a></h2>
+<p>The boombox system contains the following scripts and files that allows a user to control audio playback:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 49%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Entity Server Script</p></td>
+<td><p>This server script handles the state of the music
+player and plays audio back so that it is
+synchronized across all users. Actions and behaviors
+of entities that need to be in the same state for
+all users, should run on the server. The client
+script that runs on the button relays the requests
+for each remotely callable function to execute on
+the server, and the server script handles the audio
+playback accordingly.</p></td>
+<td><p><a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityServerScript.js">boomBoxEntityServerScript.js</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Client Entity Script</p></td>
+<td><p>This client script handles the interactions between
+users and displays the UI for controlling the boombox
+via an HTML page using the Tablet Scripting Interface.
+It listens for mouse clicks and controller triggers,
+displays the controls, and serves as a relay mechanic
+between the HTML page and the boombox entity server
+script.</p></td>
+<td><p><a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityScript.js">boomBoxEntityScript.js</a></p></td>
+</tr>
+<tr class="row-even"><td><p>HTML and CSS</p></td>
+<td><p>The HTML page displays the controller UI for the
+boombox through the Tablet Scripting Interface and is
+styled with CSS. It uses the <cite>EventBridge</cite> to send
+the user input from the HTML elements to the boombox
+entity script, which in turns calls entity server
+methods depending on the <cite>EventBridge</cite> message
+contents.</p></td>
+<td><p><a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/app/boomBoxController.html">boomBoxController.html</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/app/styles.css">styles.css</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can use the existing versions of our scripts, modify them, or <a class="reference internal" href="../../script/write-scripts.html"><span class="doc">write your own scripts</span></a>.</p>
+<p>If you’re using the existing versions of our scripts:</p>
+<ol class="arabic simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>Select your boombox model and go to the ‘Properties’ tab.</p></li>
+<li><p>Scroll down to the ‘Behavior’ section and paste the <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityServerScript.js">entity server script’s URL</a> into the ‘Server Script’ field.</p></li>
+<li><p>Select your button entity and go to the ‘Properties’ tab.</p></li>
+<li><p>Scroll down to the ‘Behavior’ section and paste the <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityScript.js">client entity script’s URL</a> into the ‘Script’ field.</p></li>
+</ol>
+<p>If you’re writing your own scripts or modifying the existing ones, and want to host these in the ‘Asset Browser’:</p>
+<ol class="arabic simple">
+<li><p>On your computer, create a folder called ‘BoomBox’. You’ll save your files here with the following structure.</p></li>
+</ol>
+<img alt="../../_images/boombox-folder.png" src="../../_images/boombox-folder.png" />
+<ol class="arabic simple" start="2">
+<li><p>Save the <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityServerScript.js">entity server script</a>, <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/boomBoxEntityScript.js">client entity script</a>, <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/app/boomBoxController.html">HTML file</a>, and <a class="reference external" href="https://raw.githubusercontent.com/misslivirose/happy-boombox/master/app/styles.css">CSS file</a> to the folder in your computer.</p></li>
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p>In the <strong>Create</strong> app, click ‘Open This Domain’s Asset Server’ to view the Asset Browser.</p></li>
+<li><p>Create the same boombox directory in your ‘Asset Browser’ and upload your files.</p></li>
+<li><p>Use the <strong>Create</strong> app and select your boombox model and go to the ‘Properties’ tab.</p></li>
+<li><p>Scroll down to the ‘Behavior’ section and paste the entity server script’s URL into the ‘Server Script’ field.</p></li>
+<li><p>Use the <strong>Create</strong> app and select your button entity and go to the ‘Properties’ tab.</p></li>
+<li><p>Scroll down to the ‘Behavior’ section and paste the client entity script’s URL into the ‘Script’ field.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some additional notes:</p>
+<ul class="simple">
+<li><p>The scripts linked above use relative paths to link to one another, so it’s important to preserve the folder structure given. If you want to move things around, make sure you also update the links in the scripts themselves to reference the new file location.</p></li>
+<li><p>If you want to make modifications to your script files, you will need to re-upload them to the asset browser. Reload all content and reload your entity server scripts to see changes take effect after modifying files.</p></li>
+<li><p>Entity server scripts do not have access to mouse press or controller events, since these are all handled on the client side.</p></li>
+<li><p>HTML pages will not render in the Oculus Quest, so only desktop users will be able to interact with the boombox controls.</p></li>
+</ul>
+</div>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-entities.html"><span class="doc">Create New Entities</span></a></p></li>
+<li><p><a class="reference internal" href="entity-appearance.html"><span class="doc">Change How Entities Look</span></a></p></li>
+<li><p><a class="reference internal" href="entity-behavior.html"><span class="doc">Define an Entity’s Behavior</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/get-started-with-scripting.html"><span class="doc">Get Started with Scripting</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/client-entity-scripts.html"><span class="doc">Client Entity Scripts</span></a></p></li>
+<li><p><a class="reference internal" href="../../script/write-scripts.html"><span class="doc">Write Your Own Scripts</span></a></p></li>
+<li><p><a class="reference internal" href="../../explore/interact.html"><span class="doc">Interact with Your Environment</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../materials.html" class="btn btn-neutral float-right" title="Materials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="purchase-button-tutorial.html" class="btn btn-neutral float-left" title="Tutorial: Create a Purchase Button for Marketplace Sales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

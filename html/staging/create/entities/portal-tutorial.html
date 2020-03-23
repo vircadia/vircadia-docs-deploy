@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Create a Portal &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial: Create an Avatar Scaling Button" href="avatar-scaling-tutorial.html" />
+    <link rel="prev" title="Tutorial: Display a YouTube Channel" href="display-youtube.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create-spotlight.html">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create-fountain.html">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zone-tutorial.html">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boombox-tutorial.html">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
+        
+      <li>Tutorial: Create a Portal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/portal-tutorial.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/portal-tutorial.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-create-a-portal">
+<h1>Tutorial: Create a Portal<a class="headerlink" href="#tutorial-create-a-portal" title="Permalink to this headline">¶</a></h1>
+<p>Portals in Project Athena transport you to the domain of your choice. You can use these portals to travel to a domain you visit frequently instead of using the <strong>GoTo</strong> app on your HUD or Tablet.</p>
+<p><strong>On This Page:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
+<li><p><a class="reference external" href="#write-a-script-for-the-portal">Write a Script for the Portal</a></p></li>
+<li><p><a class="reference external" href="#create-and-edit-an-entity-to-use-as-a-portal">Create and Edit an Entity to Use as a Portal</a></p></li>
+</ul>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Consider getting familiar with the following concepts before starting this tutorial:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+<li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
+<li><p><a class="reference external" href="../../script/get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="../../script/client-entity-scripts.html">Client Entity Scripts</a></p></li>
+<li><p><a class="reference external" href="../../script/write-scripts.html">Write Your Own Scripts</a></p></li>
+</ul>
+</div>
+<div class="section" id="write-a-script-for-the-portal">
+<h2>Write a Script for the Portal<a class="headerlink" href="#write-a-script-for-the-portal" title="Permalink to this headline">¶</a></h2>
+<p>A portal is an entity with a script attached (entity script). This attached script defines what happens when a user comes in contact with the portal. We’ve used <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>, the script used to teleport in Project Athena domains. You can also <a class="reference external" href="../../script/write-scripts.html">write your own script</a> to suit your needs.</p>
+<p>The portal.js script we’ve used:</p>
+<ul class="simple">
+<li><p>Uses Project Athena’s <a class="reference external" href="https://apidocs.highfidelity.com">JavaScript API</a> to determine when a user walks into the entity and the teleport destination.</p></li>
+<li><p>Includes a sound that will played every time a user uses the portal.</p></li>
+<li><p>Teleports a user to the specified destination.</p></li>
+</ul>
+</div>
+<div class="section" id="create-and-edit-an-entity-to-use-as-a-portal">
+<h2>Create and Edit an Entity to Use as a Portal<a class="headerlink" href="#create-and-edit-an-entity-to-use-as-a-portal" title="Permalink to this headline">¶</a></h2>
+<p>Any entity you create to be used as a portal has to be <a class="reference external" href="entity-behavior.html#set-entity-behavior-on-collision">collisionless</a> so that the script can detect when you walk into the entity.</p>
+<ol class="simple">
+<li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
+<li><p><a class="reference external" href="create-entities.html">Create an entity</a> to be used as a portal. This can be a 3D model or a box or sphere entity.</p></li>
+<li><p>Go to the ‘Properties’ tab and scroll down to ‘Behavior’.</p></li>
+<li><p>Next to ‘Script’, paste the script URL. In this case, it is ‘<a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>’.</p></li>
+<li><p>The script takes the location you want to teleport to from the ‘User Data’ field under ‘Behavior’.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">hifi://</span> <span class="pre">welcome</span></code> (Project Athena’s welcome domain) to the ‘User Data’ field.</p></li>
+<li><p>Scroll down to ‘Collision’ and uncheck ‘Collides’. This is so that a user can walk into the entity and trigger the script.</p></li>
+<li><p>Exit <strong>Create</strong> mode and walk into the entity.</p></li>
+</ol>
+<p><img alt="../../_images/create-portal.png" src="../../_images/create-portal.png" /></p>
+<p>You will be teleported to Project Athena’s welcome domain.</p>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+<li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
+<li><p><a class="reference external" href="../../script/get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="../../script/client-entity-scripts.html">Client Entity Scripts</a></p></li>
+<li><p><a class="reference external" href="../../script/write-scripts.html">Write Your Own Scripts</a></p></li>
+<li><p><a class="reference external" href="../../explore/interact.html">Interact with Your Environment</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="avatar-scaling-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Create an Avatar Scaling Button" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="display-youtube.html" class="btn btn-neutral float-left" title="Tutorial: Display a YouTube Channel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

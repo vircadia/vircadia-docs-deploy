@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Define Your Audio Environment &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Add Content to Your Domain" href="../add-content.html" />
+    <link rel="prev" title="Protect Your Domain’s Content" href="entity-filters.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="network-settings.html">Define Your Network Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="place-setting.html">Set Up a Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-groups.html">Create User Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permission-settings.html">Assign User Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authentication-setting.html">Secure Your Domain Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-filters.html">Protect Your Domain's Content</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Define Your Audio Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../host.html">Host</a> &raquo;</li>
+        
+          <li><a href="../configure-settings.html">Configure Your Domain Settings</a> &raquo;</li>
+        
+      <li>Define Your Audio Environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/configure-settings/audio-settings.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/configure-settings/audio-settings.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="define-your-audio-environment">
+<h1><a class="toc-backref" href="#id1">Define Your Audio Environment</a><a class="headerlink" href="#define-your-audio-environment" title="Permalink to this headline">¶</a></h1>
+<p>Audio is an integral part of a visitor’s experience in your domain. Quality audio is essential for easy communication between real people, and it has a meaningful impact on a user’s sense of immersion and presence in the world.</p>
+<p>You define exactly how High Fidelity’s 3D immersive, stereo audio is implemented in your domain. Not only can you control the audio mixer’s server configuration to a certain degree, you have full control over the attenuation and reverb levels throughout the entire domain. By defining zones, you can define sound-proof areas for private meetings and amplified stages for presentations. All of this is possible by changing the audio settings in your domain settings.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#define-your-audio-environment" id="id1">Define Your Audio Environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#audio-environment" id="id2">Audio Environment</a></p></li>
+<li><p><a class="reference internal" href="#audio-threading-and-buffers" id="id3">Audio Threading and Buffers</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="audio-environment">
+<h2><a class="toc-backref" href="#id2">Audio Environment</a><a class="headerlink" href="#audio-environment" title="Permalink to this headline">¶</a></h2>
+<p>The audio environment defines how sound carries throughout your domain. We’ve designed our default audio settings to mimic reality - that is, we attempt to achieve a sense of presence by reflecting voices and sounds off of the surfaces in the virtual space. In addition, we adjust the volume of sound based on the distance between the source and the listener.</p>
+<p>However, we understand that our equation may not match exactly what you’re looking for in your domain. You can change your domain-wide audio settings by adjusting the attenuation and the reverb levels (go to <strong>Domain Settings &gt; Content &gt; Audio Environment</strong>).</p>
+<ul class="simple">
+<li><p><em>Attenuation</em> determines how much quieter sounds get over distance. The default domain attenuation is the amount of noise reduction that is enabled across the domain environment. High Fidelity domains default to a distance attenuation curve roughly like the real world. If you see two avatars talking in the distance, you can hear them, but not very well. If you approach them, they become more audible in a manner that approximates what you’re likely to be used to. If the default attenuation is 0, no matter how far away a sound source is, it still plays at full volume. Likewise, the default attenuation for a domain can be set very high (to a max value of 1), making only things very near to you audible.</p></li>
+<li><p><em>Reverb</em> enables echo-like effects in your domain. It can give the effect of sounding like you are in a large empty room, deep inside a large cave, or inside a tiny room like a tiled shower. The ‘Reverb Decay Time’ defines how long you can hear an echo after the initial sound. ‘Wet/Dry Mix’ sets the percentage mix of the reverb tail relative to the original “dry” signal. Levels between 5-25% will generally give you useful results. For a very thick reverb, you might try a value as high as 50% where the reverb is nearly as loud as the original signal.</p></li>
+</ul>
+<div class="section" id="audio-zones">
+<h3>Audio Zones<a class="headerlink" href="#audio-zones" title="Permalink to this headline">¶</a></h3>
+<p>A “zone” is a 3D area where you can define custom properties. In the case of an audio zone, it is a 3D area with its own unique attenuation and reverb properties defined. For example, an audio zone could be used to create two separate rooms in the same domain, where the sound does not migrate over into the other room.</p>
+<p>To define an audio zone:</p>
+<ol class="arabic">
+<li><p>Open your domain settings.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>For cloud hosted domains, go to <a class="reference external" href="https://metaverse.highfidelity.com/user/cloud_domains">https://metaverse.highfidelity.com/user/cloud_domains</a>. Click the “More Options” menu (3 dots on the right-side of the row), then click ‘Domain Server settings’. Log in when prompted.</p></li>
+<li><p>For local servers on Windows: Click on the High Fidelity icon in the system tray, then click ‘Settings’.</p></li>
+<li><p>For local servers on Mac: Right-click the High Fidelity icon on the top menu bar, then click ‘Settings’.</p></li>
+<li><p>For any OS: Open a browser and enter the URL <a class="reference external" href="http://localhost:40100/settings">http://localhost:40100/settings</a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>On the top menu bar, select <strong>Content &gt; Audio Environment</strong>.</p></li>
+<li><p>Under ‘Zones’, click the <code class="docutils literal notranslate"><span class="pre">+</span></code> icon.</p></li>
+<li><p>Enter a name for the zone, along with the zone’s coordinates.</p></li>
+<li><p>(Optional) If you have more than one zone, then you can set up the attenuation relationship between two specific zones. This relationship is known as the “attenuation coefficient”. When the attenuation coefficient is 0, there is no change to the attenuation between zones; at 1, you won’t be able to hear someone in another zone.</p></li>
+<li><p>Under ‘Reverb Settings’, click the <code class="docutils literal notranslate"><span class="pre">+</span></code> icon, enter the zone name from step 4, and define the reverb levels for the zone.</p></li>
+<li><p>Save your domain settings.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="audio-threading-and-buffers">
+<h2><a class="toc-backref" href="#id3">Audio Threading and Buffers</a><a class="headerlink" href="#audio-threading-and-buffers" title="Permalink to this headline">¶</a></h2>
+<p>The ‘Audio Threading’ and ‘Audio Buffer’ sections of the Domain Settings define the server configuration for the audio mixer. Here, you can determine the number of threads the audio mixer uses to process audio, and when to throttle or buffer a heavy-loaded system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are advanced domain server settings. Do not modify without prior technical knowledge of servers.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../add-content.html" class="btn btn-neutral float-right" title="Add Content to Your Domain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="entity-filters.html" class="btn btn-neutral float-left" title="Protect Your Domain’s Content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

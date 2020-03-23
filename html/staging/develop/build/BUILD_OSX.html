@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build OSX &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Build Android" href="BUILD_ANDROID.html" />
+    <link rel="prev" title="Build Linux" href="BUILD_LINUX.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../develop.html">DEVELOP</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="BUILD_GENERAL.html">General Build Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Build OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../develop.html">Develop</a> &raquo;</li>
+        
+          <li><a href="../build.html">Building Project Athena</a> &raquo;</li>
+        
+      <li>Build OSX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/develop/build/BUILD_OSX.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/develop/build/BUILD_OSX.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-osx">
+<h1>Build OSX<a class="headerlink" href="#build-osx" title="Permalink to this headline">¶</a></h1>
+<p>Only macOS specific instructions are found in this document.</p>
+<div class="section" id="homebrew">
+<h2>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://brew.sh/">Homebrew</a> is an excellent package manager for macOS. It makes install of some High Fidelity dependencies very simple.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">cmake</span> <span class="nx">openssl</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-3">
+<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h2>
+<p>Download an install Python 3.6.6 or higher from <a class="reference external" href="https://www.python.org/downloads/">here</a>.<br />Execute the <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Shell</span> <span class="pre">Profile.command</span></code> script that is provided with the installer.</p>
+</div>
+<div class="section" id="openssl">
+<h2>OpenSSL<a class="headerlink" href="#openssl" title="Permalink to this headline">¶</a></h2>
+<p>Assuming you’ve installed OpenSSL using the homebrew instructions above, you’ll need to set OPENSSL_ROOT_DIR so CMake can find your installations.<br />For OpenSSL installed via homebrew, set OPENSSL_ROOT_DIR:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l
+</pre></div>
+</div>
+<p>Note that this uses the version from the homebrew formula at the time of this writing, and the version in the path will likely change.</p>
+</div>
+<div class="section" id="xcode">
+<h2>Xcode<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
+<p>If Xcode is your editor of choice, you can ask CMake to generate Xcode project files instead of Unix Makefiles.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cmake</span> <span class="p">..</span> <span class="o">-</span><span class="nx">G</span> <span class="nx">Xcode</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">cmake</span></code> complains about Python 3 being missing, you may need to update your CMake binary with command <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">upgrade</span> <span class="pre">cmake</span></code>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
+<p>After running cmake, you will have the make files or Xcode project file necessary to build all of the components. Open the hifi.xcodeproj file, choose ALL_BUILD from the Product &gt; Scheme menu (or target drop down), and click Run.</p>
+<p>If the build completes successfully, you will have built targets for all components located in the <code class="docutils literal notranslate"><span class="pre">build/${target_name}/Debug</span></code> directories.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BUILD_ANDROID.html" class="btn btn-neutral float-right" title="Build Android" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BUILD_LINUX.html" class="btn btn-neutral float-left" title="Build Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Add a Scattering Effect &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Wearables" href="../wearables.html" />
+    <link rel="prev" title="Tutorial: Modify Materials and Textures Using Blender" href="blender-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../avatars.html">Avatars</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-avatars.html">Create Your Own Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="find-avatars.html">Find and Use an Existing Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="package-avatar.html">Package and Host Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-flow.html">Add Flow to Your Avatar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-animations.html">Customize Avatar Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fuse-tutorial.html">Tutorial: Create an Avatar with Fuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mixamo-tutorial.html">Tutorial: Rig Avatars in Mixamo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blender-tutorial.html">Tutorial: Modify Materials and Textures with Blender</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tutorial: Add a Scattering Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../entities.html">Entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../avatars.html">Avatars</a> &raquo;</li>
+        
+      <li>Tutorial: Add a Scattering Effect</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/scattering-tutorial.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/avatars/scattering-tutorial.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-add-a-scattering-effect">
+<h1><a class="toc-backref" href="#id1">Tutorial: Add a Scattering Effect</a><a class="headerlink" href="#tutorial-add-a-scattering-effect" title="Permalink to this headline">¶</a></h1>
+<p>Subsurface Scattering (SSS) is the diffuse reflection caused by light entering a material, being absorbed, scattered, and eventually exiting the material. It’s critical for surfaces like paper, marble, wax, and realistic skin. You can add this effect to your avatar in High Fidelity.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title first">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tutorial-add-a-scattering-effect" id="id1">Tutorial: Add a Scattering Effect</a></p>
+<ul>
+<li><p><a class="reference internal" href="#subsurface-scattering-map-and-value" id="id2">Subsurface Scattering Map and Value</a></p></li>
+<li><p><a class="reference internal" href="#add-scattering-to-an-avatar" id="id3">Add Scattering to an Avatar</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="subsurface-scattering-map-and-value">
+<h2><a class="toc-backref" href="#id2">Subsurface Scattering Map and Value</a><a class="headerlink" href="#subsurface-scattering-map-and-value" title="Permalink to this headline">¶</a></h2>
+<p>Subsurface scattering (SSS) is noticeable when light passes through a thin translucent object like an avatar’s skin. It causes the diffusion of light within the shallow top layer of skin.</p>
+<p>Scattering is composed of a “scattering value” and a “scattering map”. By setting the scattering value and map, you can influence how light scatters on the geometry of an avatar.</p>
+<ul class="simple">
+<li><p>The scattering value is a <code class="docutils literal notranslate"><span class="pre">[0,1]</span></code> number which sets the amount of scatter.</p></li>
+<li><p>The scattering map is gray scale image that masks the areas of scatter. It is based on the avatar’s UV map.</p></li>
+</ul>
+</div>
+<div class="section" id="add-scattering-to-an-avatar">
+<h2><a class="toc-backref" href="#id3">Add Scattering to an Avatar</a><a class="headerlink" href="#add-scattering-to-an-avatar" title="Permalink to this headline">¶</a></h2>
+<p>You can easily add scattering to an avatar by adding the value and map to the avatar’s FST file.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="create-avatars.html"><span class="doc">Create a custom avatar</span></a> and package it using the <a class="reference external" href="create-avatars.html#package-your-avatar">Avatar Packager</a>.</p></li>
+<li><p>Create a scattering map for the subsurface scattering in Adobe Photoshop or its equivalent.</p></li>
+<li><p>Open your avatar’s FST file in a text editor of your choice.</p></li>
+<li><p>Add scattering information to the avatar’s FST file. For example:</p></li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">materialMap</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;body_mat&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;scattering&quot;</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;scatteringMap&quot;</span> <span class="o">:</span> <span class="s2">&quot;![skinMap.jpg](http://.../skinMap.jpg)&quot;</span> <span class="p">}</span> <span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Wear the avatar to observe the scattering effects in High Fidelity.</p></li>
+</ol>
+<p>Here’s an example of the scattering effect. The left image has no scattering and the right image has scattering. You can see the red diffuse reflection along the shadow line.</p>
+<table class="center-cell docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>No Scattering</p></td>
+<td><p>Scattering</p></td>
+</tr>
+<tr class="row-even"><td><img alt="../../_images/no-scattering.png" src="../../_images/no-scattering.png" />
+</td>
+<td><img alt="../../_images/scattering.png" src="../../_images/scattering.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the scattering skin maps for this avatar.</p>
+<table class="center-cell docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><img alt="../../_images/skin-map.png" src="../../_images/skin-map.png" />
+</td>
+<td><img alt="../../_images/skin-map-2.png" src="../../_images/skin-map-2.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can also check out the following avatars that have scattering effects:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://hifi-public.s3.amazonaws.com/sam/models/skinRenderingTest/matthew/matthew.fst">Matthew</a></p></li>
+<li><p><a class="reference external" href="https://hifi-public.s3.amazonaws.com/sam/models/skinRenderingTest/priscilla/priscilla.fst">Priscilla</a></p></li>
+</ul>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-avatars.html"><span class="doc">Create Your Own Avatar</span></a></p></li>
+<li><p><a class="reference external" href="create-avatars.html#package-your-avatar">Package Your Avatar</a></p></li>
+<li><p><a class="reference internal" href="../3d-models/pbr-materials-guide.html"><span class="doc">PBR Materials</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../wearables.html" class="btn btn-neutral float-right" title="Wearables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="blender-tutorial.html" class="btn btn-neutral float-left" title="Tutorial: Modify Materials and Textures Using Blender" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
