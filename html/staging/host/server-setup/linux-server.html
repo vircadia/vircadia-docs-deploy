@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Host a Domain from a Local or Cloud Linux Server &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Configure Your Domain Settings" href="../configure-settings.html" />
+    <link rel="prev" title="Host a Domain from a Local Server" href="windows-server.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="windows-server.html">Host a Domain from a Local Windows Server</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Host a Domain from a Linux Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../host.html">Host</a> &raquo;</li>
+        
+          <li><a href="../server-setup.html">Set up a Domain Server</a> &raquo;</li>
+        
+      <li>Host a Domain from a Local or Cloud Linux Server</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/server-setup/linux-server.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/host/server-setup/linux-server.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="host-a-domain-from-a-local-or-cloud-linux-server">
+<h1>Host a Domain from a Local or Cloud Linux Server<a class="headerlink" href="#host-a-domain-from-a-local-or-cloud-linux-server" title="Permalink to this headline">¶</a></h1>
+<p>The Project Athena packages can help you get up and running your own domain quickly.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Packages are currently available for the following distributions:</p>
+<div class="section" id="ubuntu-server-18-04-lts">
+<h3>Ubuntu Server 18.04 LTS<a class="headerlink" href="#ubuntu-server-18-04-lts" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">wget</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//odys-asset.s3.amazonaws.com/rpm/athena-server_0.86.0-k2-20200321-b4391f8-0ubuntu1-1_amd64.deb</span>
+<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="p">.</span><span class="o">/</span><span class="nx">athena</span><span class="o">-</span><span class="nx">server_0</span><span class="mf">.86.0</span><span class="o">-</span><span class="nx">k2</span><span class="o">-</span><span class="mi">20200321</span><span class="o">-</span><span class="nx">b4391f8</span><span class="o">-</span><span class="mi">0</span><span class="nx">ubuntu1</span><span class="o">-</span><span class="mi">1</span><span class="nx">_amd64</span><span class="p">.</span><span class="nx">deb</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="amazon-linux-2">
+<h3>Amazon Linux 2<a class="headerlink" href="#amazon-linux-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">sudo</span> <span class="nx">yum</span> <span class="nx">install</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//odys-asset.s3.amazonaws.com/rpm/athena-server-0.86.0_K2_20200321_b4391f8-1.amzn2.x86_64.rpm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The installation packages will create a domain at the default port location and configure a service to keep it running on that machine.</p>
+<p>Connect a web browser to the server at port 40100 (if you are on the machine, this would be http://localhost:40100).  Complete the initial setup wizard and you should have a functioning domain.</p>
+</div>
+<div class="section" id="networking">
+<h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
+<p>A Project Athena domain reserves a range of four ports to operate on, usually starting at 40100 (Note that the encrypted ports may not be implemented yet). These ports are:</p>
+<ul class="simple">
+<li><p>40100 (+0) : (tcp) administrative http connection</p></li>
+<li><p>~~40101 (+1): (tcp) administrative https (encrypted) connection~~</p></li>
+<li><p>40102 (+2): (udp) main connection from clients</p></li>
+<li><p>~~40103 (+3): (udp) main connection from clients (encrypted)~~</p></li>
+</ul>
+<p>Generally speaking only port 40102 must be publicly exposed to permit others to connect to a domain.</p>
+<p>In addition there are six “assignment clients” that must run in order for the domain to be operational.  These clients run alongside the domain server and must be able to connect with any outside user.  These clients are:</p>
+<ul class="simple">
+<li><p><strong>asset-server</strong>: stores object data to download to the user</p></li>
+<li><p><strong>audio-mixer</strong>: controls what each user would hear</p></li>
+<li><p><strong>avatar-mixer</strong>: allows users to see each other</p></li>
+<li><p><strong>entity-script-server</strong>: runs actions inside the domain</p></li>
+<li><p><strong>entity-server</strong>: describes the location of each object in the domain</p></li>
+<li><p><strong>messages-mixer</strong>: passes messages between users in the domain</p></li>
+</ul>
+<p>These assignment clients use udp connections on a port number assigned by the operating system at launch (within <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">the ephemeral port range</a>)</p>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<p>The program files are installed in /opt/athena:</p>
+<ul class="simple">
+<li><p><strong>/opt/athena</strong> contains the executables</p></li>
+<li><p><strong>/opt/athena/lib</strong> contains libraries required for operation</p></li>
+<li><p><strong>/opt/athena/plugins</strong> is currently used for audio codecs</p></li>
+<li><p><strong>/opt/athena/resources</strong> is required for the administrative website</p></li>
+</ul>
+<p>The executables in this folder (with the exception of <code>new-server</code>) cannot be launched from the command prompt without first setting <code>LD_LIBRARY_PATH=/opt/athena/lib</code>.</p>
+<p>The file <code>/etc/opt/athena/default.conf</code> contains any environment variables necessary to running the domain.</p>
+<p>All content is stored under <code>/var/lib/athena/default</code>.  All files underneath <code>/var/lib/athena</code> are owned by the user <code>athena</code>, which is also the user that runs all domain-related processes.</p>
+</div>
+<div class="section" id="services">
+<h2>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
+<p>The installation packages setup the following systemd services to manage the Athena domain:</p>
+<ul class="simple">
+<li><p><strong>athena-domain-server&#64;default.service</strong>: Manages the core domain server</p></li>
+<li><p><strong>athena-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients</p></li>
+<li><p><strong>athena-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p></li>
+</ul>
+<p>The <code>athena-server&#64;default.target</code> service is the only one that is set to auto-start, starting or stopping it will bring the other two services down.</p>
+<p>The first two services do log a large amount of data to their service journal, checking their logs (via <code>systemctl status</code>) is a good way to ensure they are operating properly.</p>
+</div>
+<div class="section" id="multiple-domains">
+<h2>Multiple domains<a class="headerlink" href="#multiple-domains" title="Permalink to this headline">¶</a></h2>
+<p>The installation package is configured to permit multiple domains to run on a single server at different port numbers.  New servers can be created using the following command:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>/opt/athena/new-server &lt;name&gt; &lt;base-port&gt;
+</pre></div>
+</div>
+<p>where <code>name</code> is a word used to name and manage the domain and <code>base-port</code> must be the the first of a range of four contiguous port numbers not overlapping with any other use on the system.</p>
+<p>Assuming you created a new server with the name <strong>second-bite</strong>, this would setup the following:</p>
+<ul class="simple">
+<li><p>Environment variables in <code>/etc/opt/athena/<strong>second-bite</strong>.conf</code></p></li>
+<li><p>Content stored in <code>/var/lib/athena/<strong>second-bite</strong></code></p></li>
+<li><p>Services launched as <code>athena-domain-server&#64;<strong>second-bite</strong>.service</code>, <code>athena-assignment-client&#64;<strong>second-bite</strong>.service</code>, and <code>athena-server&#64;<strong>second-bite</strong>.target</code></p></li>
+</ul>
+</div>
+<div class="section" id="legacy-services">
+<h2>Legacy Services<a class="headerlink" href="#legacy-services" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of tweaks that are made to the default configuration to simplify storage and the ability to run multiple domains on one server.  In case you would like to remove this logic and run the servers closer to how the original <em>High Fidelity</em> domain servers were running, this is provided as an option.</p>
+<ul class="simple">
+<li><p>Systemd services named <code>athena-domain-server.service</code>, <code>athena-assignment-client.service</code>, and <code>athena-server.target</code> <em>(without the &#64;name)</em> have simplified configuration</p></li>
+<li><p>No file is provided to specify environment variables for the server</p></li>
+<li><p>Content would be stored in <code>/var/lib/athena/.local</code></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../configure-settings.html" class="btn btn-neutral float-right" title="Configure Your Domain Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows-server.html" class="btn btn-neutral float-left" title="Host a Domain from a Local Server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

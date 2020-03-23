@@ -94,12 +94,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../develop.html">DEVELOP</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">General Build Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_OSX.html">Build OSX</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build.html">Build from Source</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../installer.html">Create an Installer</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installer Creation Guide</a></li>
 </ul>
 </li>
 </ul>
@@ -216,10 +213,10 @@
 <li><p><a class="reference external" href="https://sourceforge.net/projects/quazip/files/quazip/">QuaZip</a>:   0.7.3</p></li>
 <li><p><a class="reference external" href="https://www.libsdl.org/download-2.0.php">SDL2</a>:   2.0.3</p></li>
 <li><p><a class="reference external" href="https://www.threadingbuildingblocks.org/">Intel Threading Building Blocks</a>:   4.3</p></li>
-<li><p><a class="reference external" href="https://github.com/highfidelity/vcpkg">vcpkg</a>:</p></li>
+<li><p><a class="reference external" href="https://github.com/hifi-archive/vcpkg">vcpkg</a>:</p></li>
 <li><p><a class="reference external" href="https://github.com/virneo/v-hacd">VHACD</a></p></li>
 <li><p><a class="reference external" href="http://www.zlib.net/">zlib</a>:   1.28 (Win32 only)</p></li>
-<li><p><a class="reference external" href="https://github.com/highfidelity/nvidia-texture-tools">nvtt</a>:   2.1.1 (customized)</p></li>
+<li><p><a class="reference external" href="https://github.com/hifi-archive/nvidia-texture-tools">nvtt</a>:   2.1.1 (customized)</p></li>
 </ul>
 <p>The above dependencies will be downloaded, built, linked and included automatically by CMake where we require them. The CMakeLists files that handle grabbing each of the following external dependencies can be found in the <a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/cmake/externals">cmake/externals folder</a>. The resulting downloads, source files and binaries will be placed in the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder in each of the subfolders for each external project.</p>
 <p>These are not placed in your normal build tree when doing an out of source build so that they do not need to be re-downloaded and re-compiled every time the CMake build folder is cleared. Should you want to force a re-download and re-compile of a specific external, you can simply remove that directory from the appropriate subfolder in <code class="docutils literal notranslate"><span class="pre">build/ext</span></code>. Should you want to force a re-download and re-compile of all externals, just remove the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder.</p>
