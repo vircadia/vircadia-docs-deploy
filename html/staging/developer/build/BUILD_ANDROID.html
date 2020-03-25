@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build Android &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating an Installer" href="../installer.html" />
+    <link rel="prev" title="Build OSX" href="BUILD_OSX.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="BUILD_GENERAL.html">General Build Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_OSX.html">Build OSX</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Build Android</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../developer.html">Developer</a> &raquo;</li>
+        
+          <li><a href="../build.html">Building Project Athena</a> &raquo;</li>
+        
+      <li>Build Android</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_ANDROID.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_ANDROID.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-android">
+<h1>Build Android<a class="headerlink" href="#build-android" title="Permalink to this headline">¶</a></h1>
+<p>Only Android specific instructions are found in this file. <strong>Note that these instructions apply to building for Oculus Quest.</strong></p>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Building is currently supported on Windows, OSX and Linux, but developers intending to do work on the library dependencies are strongly urged to use 64 bit Linux as a build platform.</p>
+<div class="section" id="os-specific-dependencies">
+<h3>OS specific dependencies<a class="headerlink" href="#os-specific-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>Please install the dependencies for your OS using the <a class="reference internal" href="BUILD_WIN.html"><span class="doc">Windows</span></a>, <a class="reference internal" href="BUILD_OSX.html"><span class="doc">OSX</span></a> or <a class="reference internal" href="BUILD_LINUX.html"><span class="doc">Linux</span></a> build instructions before attempting to build for Android.</p>
+</div>
+<div class="section" id="android-studio">
+<h3>Android Studio<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h3>
+<p>Download the <a class="reference external" href="https://developer.android.com/studio/index.html">Android Studio</a> installer and run it. Once installed, at the welcome screen, click <em>Configure</em> in the lower right corner and select <em>SDK Manager</em>.</p>
+<p>From the <em>SDK Platforms</em> tab, select API levels 26 and 28.</p>
+<p>From the <em>SDK Tools</em> tab, select the following</p>
+<ul class="simple">
+<li><p>Android SDK Build-Tools</p></li>
+<li><p>GPU Debugging Tools</p></li>
+<li><p>LLDB</p></li>
+<li><p>Android SDK Platform-Tools</p></li>
+<li><p>Android SDK Tools</p></li>
+<li><p>NDK (even if you have the NDK installed separately)</p></li>
+</ul>
+<p>Still in the <em>SDK Tools</em> tab, click <em>Show Package Details</em>. Select CMake 3.6.4. Do this even if you have a separate CMake installation.</p>
+<p>Also, make sure the NDK installed version is 18 (or higher).</p>
+</div>
+</div>
+<div class="section" id="environment">
+<h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-keystore-in-android-studio">
+<h3>Create a keystore in Android Studio<a class="headerlink" href="#create-a-keystore-in-android-studio" title="Permalink to this headline">¶</a></h3>
+<p>Follow the directions <a class="reference external" href="https://developer.android.com/studio/publish/app-signing#generate-key">here</a> to create a keystore file. You can save it anywhere (preferably not in the <code class="docutils literal notranslate"><span class="pre">hifi</span></code> folder).</p>
+</div>
+<div class="section" id="set-up-machine-specific-gradle-properties">
+<h3>Set up machine specific Gradle properties<a class="headerlink" href="#set-up-machine-specific-gradle-properties" title="Permalink to this headline">¶</a></h3>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code> file in the <code class="docutils literal notranslate"><span class="pre">.gradle</span></code> folder (<code class="docutils literal notranslate"><span class="pre">$HOME/.gradle</span></code> on Unix, <code class="docutils literal notranslate"><span class="pre">Users/&lt;yourname&gt;/.gradle</span></code> on Windows). Edit the file to contain the following</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>HIFI_ANDROID_PRECOMPILED=&lt;your_home_directory&gt;/Android/hifi_externals
+HIFI_ANDROID_KEYSTORE=&lt;key_store_directory&gt;/&lt;keystore_name&gt;.jks
+HIFI_ANDROID_KEYSTORE_PASSWORD=&lt;password&gt;
+HIFI_ANDROID_KEY_ALIAS=&lt;key_alias&gt;
+HIFI_ANDROID_KEY_PASSWORD=&lt;key_passwords&gt;
+</pre></div>
+</div>
+<p>Note, do not use $HOME for the path. It must be a fully qualified path name. Also, be sure to use forward slashes in your path.</p>
+<div class="section" id="if-you-are-building-for-an-android-phone">
+<h4>If you are building for an Android phone<a class="headerlink" href="#if-you-are-building-for-an-android-phone" title="Permalink to this headline">¶</a></h4>
+<p>Add these lines to <code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">SUPPRESS_QUEST_INTERFACE</span>
+<span class="nx">SUPPRESS_QUEST_FRAME_PLAYER</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-you-are-building-for-an-oculus-quest">
+<h4>If you are building for an Oculus Quest<a class="headerlink" href="#if-you-are-building-for-an-oculus-quest" title="Permalink to this headline">¶</a></h4>
+<p>Add these lines to <code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">SUPPRESS_INTERFACE</span>
+<span class="nx">SUPPRESS_FRAME_PLAYER</span>
+</pre></div>
+</div>
+<p>The above code to suppress modules is not necessary, but will speed up the build process.</p>
+</div>
+</div>
+<div class="section" id="clone-the-repository">
+<h3>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/kasenvr/project-athena.git</span></code></p>
+</div>
+</div>
+<div class="section" id="building-running">
+<h2>Building &amp; Running<a class="headerlink" href="#building-running" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="building-modules">
+<h3>Building Modules<a class="headerlink" href="#building-modules" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Open Android Studio</p></li>
+<li><p>Choose <em>Open an existing Android Studio project</em></p></li>
+<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">hifi</span></code> repository and choose the <code class="docutils literal notranslate"><span class="pre">android</span></code> folder and select <em>OK</em></p></li>
+<li><p>Wait for Gradle to sync (this should take around 20 minutes the first time)</p></li>
+<li><p>From the <em>Build</em> menu select <em>Make Project</em></p></li>
+</ul>
+</div>
+<div class="section" id="running-a-module">
+<h3>Running a Module<a class="headerlink" href="#running-a-module" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In the toolbar at the top of Android Studio, next to the green hammer icon, you should see a dropdown menu.</p></li>
+<li><p>You may already see a configuration for the module you are trying to build. If so, select it.</p></li>
+<li><p>Otherwise, select <em>Edit Configurations</em>.</p></li>
+</ul>
+<p>Your configuration should be as follows</p>
+<ul class="simple">
+<li><p>Type: Android App</p></li>
+<li><p>Module: <your module> (you probably want <code class="docutils literal notranslate"><span class="pre">interface</span></code> or <code class="docutils literal notranslate"><span class="pre">questInterface</span></code>)</p></li>
+</ul>
+<p>For the interface modules, you also need to select the activity to launch.</p>
+<div class="section" id="for-the-android-phone-interface">
+<h4>For the Android phone interface<a class="headerlink" href="#for-the-android-phone-interface" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>From the <em>Launch</em> drop down menu, select <em>Specified Activity</em></p></li>
+<li><p>In the <em>Activity</em> field directly below, put <code class="docutils literal notranslate"><span class="pre">io.highfidelity.hifiinterface.PermissionChecker</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="for-the-oculus-quest-interface">
+<h4>For the Oculus Quest interface<a class="headerlink" href="#for-the-oculus-quest-interface" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>From the <em>Launch</em> drop down menu, select <em>Specified Activity</em></p></li>
+<li><p>In the <em>Activity</em> field directly below, put <code class="docutils literal notranslate"><span class="pre">io.highfidelity.questInterface.PermissionsChecker</span></code></p></li>
+</ul>
+<p>Note the ‘s’ in Permission<strong>s</strong>Checker for the Quest.</p>
+<p>Now you are able to run your module! Click the green play button in the top toolbar of Android Studio.</p>
+</div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>To view a more complete debug log,</p>
+<ul class="simple">
+<li><p>Click the icon with the two overlapping squares in the upper left corner of the tab where the sync is running (hover text says <em>Toggle view</em>)</p></li>
+<li><p>To change verbosity, click <em>File &gt; Settings</em>. Under <em>Build, Execution, Deployment &gt; Compiler</em> you can add command-line flags, as per Gradle documentation</p></li>
+</ul>
+<p>Some things you can try if you want to do a clean build</p>
+<ul class="simple">
+<li><p>Delete the <code class="docutils literal notranslate"><span class="pre">build</span></code> and <code class="docutils literal notranslate"><span class="pre">.externalNativeBuild</span></code> folders from the folder for each module you’re building (for example, <code class="docutils literal notranslate"><span class="pre">hifi/android/apps/interface</span></code>)</p></li>
+<li><p>If you have set your <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_ROOT</span></code> environment variable, delete the contents of that directory; otherwise, delete <code class="docutils literal notranslate"><span class="pre">AppData/Local/Temp/hifi</span></code></p></li>
+<li><p>In Android Studio, click <em>File &gt; Invalidate Caches / Restart</em> and select <em>Invalidate and Restart</em></p></li>
+</ul>
+<p>If you see lots of “couldn’t acquire lock” errors,</p>
+<ul class="simple">
+<li><p>Open Task Manager and close any running Clang / Gradle processes</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installer.html" class="btn btn-neutral float-right" title="Creating an Installer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BUILD_OSX.html" class="btn btn-neutral float-left" title="Build OSX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Parameters &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="../../faq.html" />
+    <link rel="prev" title="Assignment Client" href="../assignment-client.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../build.html">Build from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../assignment-client.html">Assignment Client</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Command Line Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../developer.html">Developer</a> &raquo;</li>
+        
+          <li><a href="../assignment-client.html">Assignment Client</a> &raquo;</li>
+        
+      <li>Command Line Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/assignment-client/command-line-parameters.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/assignment-client/command-line-parameters.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-parameters">
+<h1>Command Line Parameters<a class="headerlink" href="#command-line-parameters" title="Permalink to this headline">¶</a></h1>
+<p>You can launch an assignment-client with these parameters.</p>
+<p>Displays help information</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
+</pre></div>
+</div>
+<p>Displays version information</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">v</span><span class="p">,</span> <span class="o">--</span><span class="nx">version</span>
+</pre></div>
+</div>
+<p>Assignment client type (int).</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">t</span> <span class="o">&lt;</span><span class="nx">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>0 = audio-mixer</p></li>
+<li><p>1 = avatar-mixer</p></li>
+<li><p>2 = agent</p></li>
+<li><p>3 = asset-server</p></li>
+<li><p>4 = message-mixer</p></li>
+<li><p>5 = entity-script-server</p></li>
+<li><p>6 = entity-server</p></li>
+</ul>
+<p>Set assignment pool</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">pool</span>
+</pre></div>
+</div>
+<p>UDP port for this assignment client</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">p</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Set wallet destination</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">wallet</span> <span class="o">&lt;</span><span class="nx">wallet</span><span class="o">-</span><span class="nx">uuid</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Set assignment-server hostname</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">a</span> <span class="o">&lt;</span><span class="nx">hostname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Set assignment-server port</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">server</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Number of children to fork</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">n</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Minimum number of children</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">min</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Maximum number of children</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">max</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Assignment-client monitor port</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">monitor</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>HTTP status server port</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">http</span><span class="o">-</span><span class="nx">status</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Directory to store logs</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">log</span><span class="o">-</span><span class="nx">directory</span> <span class="o">&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>PID of the parent process</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">parent</span><span class="o">-</span><span class="nx">pid</span> <span class="o">&lt;</span><span class="nx">pid</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../assignment-client.html" class="btn btn-neutral float-left" title="Assignment Client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
