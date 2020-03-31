@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build Linux &mdash; Project Athena Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Build OSX" href="BUILD_OSX.html" />
+    <link rel="prev" title="Build Windows" href="BUILD_WIN.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="BUILD_GENERAL.html">General Build Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Build Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_OSX.html">Build OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Athena Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../developer.html">Developer</a> &raquo;</li>
+        
+          <li><a href="../build.html">Building Project Athena</a> &raquo;</li>
+        
+      <li>Build Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_LINUX.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_LINUX.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-linux">
+<h1>Build Linux<a class="headerlink" href="#build-linux" title="Permalink to this headline">¶</a></h1>
+<p><em>Last Updated on January 20, 2020</em></p>
+<p>Please read the <a class="reference external" href="BUILD">general build guide</a> for information on dependencies required for all platforms. Only Linux specific instructions are found in this file.</p>
+<div class="section" id="ubuntu-16-04-18-04-specific-build-guide">
+<h2>Ubuntu 16.04/18.04 specific build guide<a class="headerlink" href="#ubuntu-16-04-18-04-specific-build-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubuntu-16-04-only">
+<h3>Ubuntu 16.04 only<a class="headerlink" href="#ubuntu-16-04-only" title="Permalink to this headline">¶</a></h3>
+<p>Add the following line to <em>.bash_profile</em><br /><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">QT_QPA_FONTDIR=/usr/share/fonts/truetype/dejavu/</span></code></p>
+</div>
+<div class="section" id="ubuntu-18-04-server-only">
+<h3>Ubuntu 18.04 server only<a class="headerlink" href="#ubuntu-18-04-server-only" title="Permalink to this headline">¶</a></h3>
+<p>Add the universe repository:<br /><em>(This is not enabled by default on the server edition)</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository universe
+sudo apt-get update
+</pre></div>
+</div>
+<div class="section" id="install-build-tools">
+<h4>Install build tools:<a class="headerlink" href="#install-build-tools" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>First update the repositories:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update -y
+sudo apt-get upgrade -y
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>git</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install git -y
+</pre></div>
+</div>
+<p>Verify by git –version</p>
+<ul class="simple">
+<li><p>g++</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install g++ -y
+</pre></div>
+</div>
+<p>Verify by g++ –version</p>
+<ul class="simple">
+<li><p><em>Ubuntu 18.04</em> cmake</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install cmake -y
+</pre></div>
+</div>
+<p>Verify by cmake –version</p>
+<ul class="simple">
+<li><p><em>Ubuntu 16.04</em> cmake</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://cmake.org/files/v3.14/cmake-3.14.2-Linux-x86_64.sh
+sudo sh cmake-3.14.2-Linux-x86_64.sh --prefix<span class="o">=</span>/usr/local --exclude-subdir
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-build-dependencies">
+<h4>Install build dependencies:<a class="headerlink" href="#install-build-dependencies" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>OpenSSL:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libssl-dev
+</pre></div>
+</div>
+<p>Verify with <code class="docutils literal notranslate"><span class="pre">openssl</span> <span class="pre">version</span></code></p>
+<ul class="simple">
+<li><p>OpenGL:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libgl1-mesa-dev -y
+sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.346.35 /usr/lib/x86_64-linux-gnu/libGL.so.1.2.0
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Verify OpenGL:</p>
+<ul>
+<li><p>First install mesa-utils with the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">mesa-utils</span> <span class="pre">-y</span></code></p></li>
+<li><p>Then run <code class="docutils literal notranslate"><span class="pre">glxinfo</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">&quot;OpenGL</span> <span class="pre">version&quot;</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="to-compile-interface-in-a-server-you-must-install">
+<h4>To compile interface in a server you must install:<a class="headerlink" href="#to-compile-interface-in-a-server-you-must-install" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get -y install libpulse0 libnss3 libnspr4 libfontconfig1 libxcursor1 libxcomposite1 libxtst6 libxslt1.1
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Misc dependencies:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libasound2 libxmu-dev libxi-dev freeglut3-dev libasound2-dev libjack0 libjack-dev libxrandr-dev libudev-dev libssl-dev zlib1g-dev
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Install Python 3 and required packages:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python python3 python3-distro
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Install node, required to build the jsdoc documentation:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install nodejs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-code-and-checkout-the-branch-you-need">
+<h3>Get code and checkout the branch you need<a class="headerlink" href="#get-code-and-checkout-the-branch-you-need" title="Permalink to this headline">¶</a></h3>
+<p>Clone this repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/kasenvr/project-athena.git
+</pre></div>
+</div>
+<p>To compile a DEV version checkout the branch you need. To get a list of all tags:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch -a
+</pre></div>
+</div>
+<p>Then checkout the main branch with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout kasen/core
+</pre></div>
+</div>
+</div>
+<div class="section" id="compiling">
+<h3>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<p>Create the build directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> project-athena
+mkdir build
+<span class="nb">cd</span> build
+</pre></div>
+</div>
+<p>Prepare makefiles:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake ..
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If cmake fails with a vcpkg error - delete /tmp/hifi/vcpkg.</p></li>
+</ul>
+<p>Start compilation of the server and get a cup of coffee:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make domain-server assignment-client
+</pre></div>
+</div>
+<p>To compile interface:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make interface
+</pre></div>
+</div>
+<p>The commands above will compile with a single thread. If you have enough memory,
+you can decrease your build time using the <code class="docutils literal notranslate"><span class="pre">-j</span></code> flag. Since most x64 CPUs
+support two threads per core, this works out to CPU_COUNT*2. As an example, if
+you have a 2 core machine, you could use:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">make</span> <span class="o">-</span><span class="nx">j4</span> <span class="kr">interface</span>
+</pre></div>
+</div>
+<p>In a server, it does not make sense to compile interface.</p>
+</div>
+<div class="section" id="running-the-software">
+<h3>Running the software<a class="headerlink" href="#running-the-software" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="domain-server">
+<h4>Domain server<a class="headerlink" href="#domain-server" title="Permalink to this headline">¶</a></h4>
+<p>Running domain server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./domain-server/domain-server
+</pre></div>
+</div>
+</div>
+<div class="section" id="assignment-clients">
+<h4>Assignment clients<a class="headerlink" href="#assignment-clients" title="Permalink to this headline">¶</a></h4>
+<p>Running assignment client:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./assignment-client/assignment-client -n <span class="m">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interface">
+<h4>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h4>
+<p>Running interface:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./interface/interface
+</pre></div>
+</div>
+<p>Go to localhost in the running interface.</p>
+</div>
+<div class="section" id="notes">
+<h4>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h4>
+<p>If your goal is to set up a development environment, it is desirable to set the
+directory that vcpkg builds into with the <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code> environment variable.
+For example, you might set <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code> to <code class="docutils literal notranslate"><span class="pre">/home/$USER/vcpkg</span></code>.
+By default, vcpkg will build in the system <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> directory.</p>
+<div class="section" id="ubuntu-18-04-only">
+<h5>Ubuntu 18.04 only<a class="headerlink" href="#ubuntu-18-04-only" title="Permalink to this headline">¶</a></h5>
+<p>In Ubuntu 18.04 there is a problem related with NVidia driver library version.</p>
+<p>It can be worked around following these steps:</p>
+<ol class="simple">
+<li><p>Uninstall incompatible nvtt libraries:<br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">remove</span> <span class="pre">libnvtt2</span> <span class="pre">libnvtt-dev</span></code></p></li>
+<li><p>Install libssl1.0-dev:<br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">libssl1.0-dev</span></code></p></li>
+<li><p>Clone castano nvidia-texture-tools:<br /><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/castano/nvidia-texture-tools</span></code><br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">nvidia-texture-tools/</span></code></p></li>
+<li><p>Make these changes in repo:</p></li>
+</ol>
+<ul class="simple">
+<li><p>In file <strong>VERSION</strong> set <code class="docutils literal notranslate"><span class="pre">2.2.1</span></code></p></li>
+<li><p>In file <strong>configure</strong>:</p>
+<ul>
+<li><p>set <code class="docutils literal notranslate"><span class="pre">build=&quot;release&quot;</span></code></p></li>
+<li><p>set <code class="docutils literal notranslate"><span class="pre">-DNVTT_SHARED=1</span></code></p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p>Configure, build and install:<br /><code class="docutils literal notranslate"><span class="pre">./configure</span></code><br /><code class="docutils literal notranslate"><span class="pre">make</span></code><br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">make</span> <span class="pre">install</span></code></p></li>
+<li><p>Link compiled files:<br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/usr/local/lib/libnvcore.so</span> <span class="pre">/usr/lib/libnvcore.so</span></code><br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/usr/local/lib/libnvimage.so</span> <span class="pre">/usr/lib/libnvimage.so</span></code><br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/usr/local/lib/libnvmath.so</span> <span class="pre">/usr/lib/libnvmath.so</span></code><br /><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/usr/local/lib/libnvtt.so</span> <span class="pre">/usr/lib/libnvtt.so</span></code></p></li>
+<li><p>After running these steps you can run interface:<br /><code class="docutils literal notranslate"><span class="pre">interface/interface</span></code></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BUILD_OSX.html" class="btn btn-neutral float-right" title="Build OSX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BUILD_WIN.html" class="btn btn-neutral float-left" title="Build Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
