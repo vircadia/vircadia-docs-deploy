@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Set up a Domain Server &mdash; Project Athena Documentation</title>
+  <title>Set up a Domain Server &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="start-hosting.html">Get Started with Hosting</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Set Up a Domain Server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="server-setup/windows-server.html">Host a Domain from a Local Windows Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="server-setup/linux-server.html">Host a Domain from a Linux Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server-setup/linux-server.html">Host a Domain from a Local, Remote, *or* Cloud Linux Server</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configure-settings.html">Configure Your Domain Settings</a></li>
@@ -108,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -124,7 +124,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Athena Docs</a>
+          <a href="../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -188,73 +188,11 @@
   <div class="section" id="set-up-a-domain-server">
 <h1>Set up a Domain Server<a class="headerlink" href="#set-up-a-domain-server" title="Permalink to this headline">¶</a></h1>
 <p>Depending on your requirements, you can host your domain on a physical computer (by turning it into a local server) or on cloud servers. In general, we recommend using local servers for private events and gatherings, and cloud services for larger public venues. To help with hosting your domains, we have a partnership with DigitalOcean to provide affordable, integrated cloud domain services for your use.</p>
-<table class="list-table docutils align-default">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 37%" />
-<col style="width: 44%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Pros</p></th>
-<th class="head"><p>Cons</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Local Server</p></td>
-<td><ul class="simple">
-<li><p>No hosting or maintenance fees</p></li>
-<li><p>Control over the hosted environment</p></li>
-<li><p>Ideal for private domains</p></li>
-</ul>
-</td>
-<td><ul class="simple">
-<li><p>Hardware and network must be able to
-handle visitor load and content set.
-Depending on the complexity of your
-domain set and the number of visitors
-you plan to have, you may need more than
-the minimum requirements</p></li>
-<li><p>Responsible for security and maintenance
-of your server</p></li>
-<li><p>Requires manual installation and configuration
-of High Fidelity’s Sandbox and domain</p></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>DigitalOcean Droplet</p></td>
-<td><ul class="simple">
-<li><p>No need to have expensive hardware
-on hand to host a domain</p></li>
-<li><p>Ability to easily re-scale servers,
-adjusting memory or transfer to
-support more or less visitors</p></li>
-<li><p>A secure environment separate from
-your personal computer, protecting
-yourself from hacking attempts or
-griefers</p></li>
-<li><p>High Fidelity’s partnership with
-DigitalOcean automatically sets up and
-configures a domain that is ready for
-use out of the box</p></li>
-<li><p>Ideal for large, public domains for
-hosting events or open gathering areas</p></li>
-</ul>
-</td>
-<td><ul class="simple">
-<li><p>Monthly subscription cost</p></li>
-<li><p>Service outages may occur with the cloud
-provider</p></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Once you’ve decided what hosting platform to use, you’re ready to set it up:</p>
+<p class="list-table">Once you’ve decided what hosting platform to use, you’re ready to set it up:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="server-setup/windows-server.html">Host a Domain from a Local Windows Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="server-setup/linux-server.html">Host a Domain from a Linux Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server-setup/linux-server.html">Host a Domain from a Local, Remote, *or* Cloud Linux Server</a></li>
 </ul>
 </div>
 </div>
@@ -279,7 +217,7 @@ provider</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

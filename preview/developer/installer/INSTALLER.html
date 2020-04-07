@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating an Installer &mdash; Project Athena Documentation</title>
+  <title>Creating an Installer &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -106,7 +106,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -122,7 +122,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -187,8 +187,9 @@
             
   <div class="section" id="creating-an-installer">
 <h1>Creating an Installer<a class="headerlink" href="#creating-an-installer" title="Permalink to this headline">¶</a></h1>
+<p>Follow the <a class="reference external" href="BUILD">build guide</a> to figure out how to build Project Athena for your platform.</p>
 <p>During generation, CMake should produce an <code class="docutils literal notranslate"><span class="pre">install</span></code> target and a <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the High Fidelity targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the Project Athena targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <p>To produce an installer, run the <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
@@ -256,8 +257,8 @@
 </ol>
 </li>
 <li><p>Perform a clean cmake from a new terminal.</p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">athena.sln</span></code> Solution and select the Release configuration.</p></li>
-<li><p>Build the Solution.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">athena.sln</span></code> solution and select the Release configuration.</p></li>
+<li><p>Build the solution.</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console-npm-install</span></code> (found under <strong>hidden/Server Console</strong>)</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code> (found under <strong>Server Console</strong>)<br />This will add 2 folders to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br /><code class="docutils literal notranslate"><span class="pre">server-console-win32-x64</span></code> and <code class="docutils literal notranslate"><span class="pre">x64</span></code></p></li>
 <li><p>Build CMakeTargets-&gt;PACKAGE<br />Installer is now available in <code class="docutils literal notranslate"><span class="pre">build\_CPack_Packages\win64\NSIS</span></code></p></li>
@@ -268,7 +269,7 @@
 <ol class="simple">
 <li><p><a class="reference external" href="https://www.npmjs.com/get-npm">npm</a>
 Install version 10.15.0 LTS</p></li>
-<li><p>Perform a clean cmake.</p></li>
+<li><p>Perform a clean CMake.</p></li>
 <li><p>Perform a Release build of ALL_BUILD</p></li>
 <li><p>Perform a Release build of <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code>
 This will add a folder to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br />Sandbox-darwin-x64</p></li>
@@ -299,7 +300,7 @@ Installer is now available in `build/_CPack_Packages/Darwin/DragNDrop</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

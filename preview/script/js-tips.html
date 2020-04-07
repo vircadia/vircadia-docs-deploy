@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>JavaScript Tips &amp; Tricks &mdash; Project Athena Documentation</title>
+  <title>JavaScript Tips &amp; Tricks &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -108,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -124,7 +124,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Athena Docs</a>
+          <a href="../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -187,7 +187,7 @@
             
   <div class="section" id="javascript-tips-tricks">
 <h1>JavaScript Tips &amp; Tricks<a class="headerlink" href="#javascript-tips-tricks" title="Permalink to this headline">¶</a></h1>
-<p>High Fidelity’s robust <a class="reference external" href="https://apidocs.highfidelity.com">JavaScript API</a> provides the tools for you to build great content and user experiences in VR. We’ve compiled some advanced JavaScript tips you can use while scripting for High Fidelity.</p>
+<p>High Fidelity’s robust <a class="reference external" href="https://apidocs.vircadia.dev">JavaScript API</a> provides the tools for you to build great content and user experiences in VR. We’ve compiled some advanced JavaScript tips you can use while scripting for High Fidelity.</p>
 <p>You can use the <a class="reference external" href="get-started-with-scripting.html#scripting-console">Scripting Console in Interface</a> to try out the examples on this page. The output will be visible in the console itself.</p>
 <p><strong>On This Page:</strong></p>
 <ul class="simple">
@@ -207,9 +207,9 @@
 <h2>Compute 3D Math Operations<a class="headerlink" href="#compute-3d-math-operations" title="Permalink to this headline">¶</a></h2>
 <p>When you script for VR worlds like High Fidelity, you need 3D math operations to compute the position and orientation of 3D objects and avatars in-world. We cannot simply add two vectors. To script 3D math operations and to determine position and orientation information of avatars, you can use the following namespaces in our JavaScript API:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://apidocs.highfidelity.com/Vec3.html">Vec3</a>: The Vec3 API has facilities for generating and manipulating 3-dimensional vectors.</p></li>
-<li><p><a class="reference external" href="https://apidocs.highfidelity.com/Quat.html">Quat</a>: The Quat API provides facilities for generating and manipulating quaternions.</p></li>
-<li><p><a class="reference external" href="https://apidocs.highfidelity.com/MyAvatar.html">MyAvatar</a>: The MyAvatar API provides facilities for manipulating avatars.</p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">Vec3</a>: The Vec3 API has facilities for generating and manipulating 3-dimensional vectors.</p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">Quat</a>: The Quat API provides facilities for generating and manipulating quaternions.</p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a>: The MyAvatar API provides facilities for manipulating avatars.</p></li>
 </ul>
 <div class="section" id="get-your-avatar-s-position">
 <h3>Get Your Avatar’s Position<a class="headerlink" href="#get-your-avatar-s-position" title="Permalink to this headline">¶</a></h3>
@@ -218,7 +218,7 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span>
 </pre></div>
 </div>
-<p>To get your avatar’s current position, use the <a class="reference external" href="https://apidocs.highfidelity.com/MyAvatar.html">MyAvatar</a> namespace. MyAvatar contains properties with information related to your avatar. Use the position property, <code class="docutils literal notranslate"><span class="pre">MyAvatar.position</span></code>, which returns an object.</p>
+<p>To get your avatar’s current position, use the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a> namespace. MyAvatar contains properties with information related to your avatar. Use the position property, <code class="docutils literal notranslate"><span class="pre">MyAvatar.position</span></code>, which returns an object.</p>
 <p>In the following example, we are using the JSON.stringify method to convert the JavaScript object (returned by <code class="docutils literal notranslate"><span class="pre">MyAvatar.position</span></code>) to a data string that can be sent over the server.</p>
 <p>Open your Scripting Console and find your avatar’s position.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">);</span>
@@ -242,7 +242,7 @@
 </div>
 <div class="section" id="get-the-direction-your-avatar-is-facing">
 <h3>Get the Direction Your Avatar is Facing<a class="headerlink" href="#get-the-direction-your-avatar-is-facing" title="Permalink to this headline">¶</a></h3>
-<p>You can use the <a class="reference external" href="https://apidocs.highfidelity.com/Quat.html">Quat</a> namespace to get the direction which your avatar is facing. Pass your avatar’s orientation to <code class="docutils literal notranslate"><span class="pre">Quat.getForward</span></code> to get a vector describing which direction you are facing on the world axis.</p>
+<p>You can use the <a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">Quat</a> namespace to get the direction which your avatar is facing. Pass your avatar’s orientation to <code class="docutils literal notranslate"><span class="pre">Quat.getForward</span></code> to get a vector describing which direction you are facing on the world axis.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1">// Backward</span>
 <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span> <span class="c1">// Forward</span>
 <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="c1">// Left</span>
@@ -253,7 +253,7 @@
 <div class="section" id="make-an-entity-appear-before-your-avatar">
 <h3>Make an Entity Appear Before Your Avatar<a class="headerlink" href="#make-an-entity-appear-before-your-avatar" title="Permalink to this headline">¶</a></h3>
 <p>You can make an entity appear before your avatar and also control the distance at which it appears.</p>
-<p>Use the <a class="reference external" href="https://apidocs.highfidelity.com/Vec3.html">Vec3</a> namespace and the direction your avatar is facing to return the position at which you can make your entity appear. This position is 1m away from your avatar.</p>
+<p>Use the <a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">Vec3</a> namespace and the direction your avatar is facing to return the position at which you can make your entity appear. This position is 1m away from your avatar.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Vec3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">,</span> <span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">));</span> <span class="c1">// This will add your position vector to the direction vector returned from Quat.getForward. This will represent a position that is 1 meter in front of your avatar.</span>
 </pre></div>
 </div>
@@ -342,7 +342,7 @@
 <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">collisionsEnabledChanged</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">collisionChanged</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Each signal usually gets passed in arguments, and you can refer to the <a class="reference external" href="https://apidocs.highfidelity.com/MyAvatar.html">API documentation</a> to see what a signal will provide you, such as the enabled property passed into collision changed.</p>
+<p>Each signal usually gets passed in arguments, and you can refer to the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">API documentation</a> to see what a signal will provide you, such as the enabled property passed into collision changed.</p>
 <p>It’s good practice to disconnect from signals, but you can only do that if you name your function.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">collsionEnabledChanged</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">(</span><span class="nx">collsionChanged</span><span class="p">);</span>
 </pre></div>
@@ -350,7 +350,7 @@
 <p><strong>See Also</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
-<li><p><a class="reference external" href="https://apidocs.highfidelity.com">API Reference</a></p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev">API Reference</a></p></li>
 </ul>
 </div>
 </div>
@@ -375,7 +375,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

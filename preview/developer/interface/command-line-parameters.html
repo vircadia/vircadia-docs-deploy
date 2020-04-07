@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Command Line Parameters &mdash; Project Athena Documentation</title>
+  <title>Command Line Parameters &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -106,7 +106,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -122,7 +122,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -187,37 +187,105 @@
             
   <div class="section" id="command-line-parameters">
 <h1>Command Line Parameters<a class="headerlink" href="#command-line-parameters" title="Permalink to this headline">¶</a></h1>
-<p>You can launch an interface with these parameters.</p>
-<p>Displays help information</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
+<p>You can launch Interface with the following parameters.</p>
+<p>Displays help dialog</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-?</span><span class="p">,</span> <span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
 </pre></div>
 </div>
 <p>Displays version information</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">v</span><span class="p">,</span> <span class="o">--</span><span class="nx">version</span>
 </pre></div>
 </div>
-<p>ICE-Server address</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">i</span> <span class="o">&lt;</span><span class="nx">IP</span><span class="o">:</span><span class="nx">PORT</span> <span class="nx">or</span> <span class="nx">HOSTNAME</span><span class="o">:</span><span class="nx">PORT</span><span class="o">&gt;</span>
+<p>Start up at specified URL location</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">url</span><span class="o">=&lt;</span><span class="nx">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Domain Server UUID</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">d</span> <span class="o">&lt;</span><span class="nx">uuid</span><span class="o">&gt;</span>
+<p>Displays the protocol version</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">protocolVersion</span>
 </pre></div>
 </div>
-<p>Request a temporary domain name</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">get</span><span class="o">-</span><span class="nx">temp</span><span class="o">-</span><span class="nx">name</span>
+<p>Do not show the auto-updater</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">updater</span>
 </pre></div>
 </div>
-<p><path> User config file path</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">user</span><span class="o">-</span><span class="nx">config</span>
+<p>Checks to see if the machine meets the minimum specification requirements.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">checkMinSpec</span>
 </pre></div>
 </div>
-<p>Displays help information</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">parent_pid</span>
+<p>Whether to run the server</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">runserver</span>
 </pre></div>
 </div>
-<p>PID of the parent process</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
+<p>Port to listen on. (Needs clarification!)</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">listenPort</span><span class="o">=&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Where to find server content</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">serverContentPath</span><span class="o">=&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Set cache location. Defaults to the operating system local data path.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">cache</span><span class="o">=&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Set path for defaultScripts.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">scripts</span><span class="o">=&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Allow multiple instances of the interface to run simultaneously.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">allowMultipleInstances</span>
+</pre></div>
+</div>
+<p>Preferred displays.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">displays</span><span class="o">=&lt;</span><span class="nx">device</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Disable display plugin. Possible devices include “OpenVR (Vive)”, “Oculus Rift”.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">displays</span><span class="o">=&lt;</span><span class="nx">device</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Disable input plugin. Possible devices include “OpenVR (Vive)”, “Oculus Rift”.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">inputs</span><span class="o">=&lt;</span><span class="nx">device</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Suppress the prompt to reset interface settings</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">suppress</span><span class="o">-</span><span class="nx">settings</span><span class="o">-</span><span class="nx">reset</span>
+</pre></div>
+</div>
+<p>Let the Oculus plugin know if Interface was run from the Oculus Store</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">oculus</span><span class="o">-</span><span class="nx">store</span>
+</pre></div>
+</div>
+<p>Emulate a standalone device</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">standalone</span>
+</pre></div>
+</div>
+<p>Disable the watchdog thread. The interface will crash on deadlocks.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">disableWatchdog</span>
+</pre></div>
+</div>
+<p>(Needs clarification!)</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">system</span><span class="o">-</span><span class="nx">cursor</span>
+</pre></div>
+</div>
+<p>Maximum concurrent resource downloads. Default is 16, except for Android where it is 4.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">concurrent</span><span class="o">-</span><span class="nx">downloads</span><span class="o">=&lt;</span><span class="nx">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Override the avatar URL</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">avatarURL</span><span class="o">=&lt;</span><span class="nx">url</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Replaces the Avatar URL. If both this and –avatarURL is set, this one takes precedence.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">replaceAvatarURL</span><span class="o">=&lt;</span><span class="nx">url</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Bookmarks are expected to be in a name=url form. An <code class="docutils literal notranslate"><span class="pre">=</span></code> character in the name or url is unsupported.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">setBookmark</span> <span class="o">&lt;</span><span class="nx">name</span><span class="o">=</span><span class="nx">url</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Disable level of detail auto config.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">lod</span>
 </pre></div>
 </div>
 </div>
@@ -242,7 +310,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

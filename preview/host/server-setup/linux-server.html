@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Host a Domain from a Local or Cloud Linux Server &mdash; Project Athena Documentation</title>
+  <title>Host a Domain from a Local or Cloud Linux Server &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="windows-server.html">Host a Domain from a Local Windows Server</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Host a Domain from a Linux Server</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Host a Domain from a Local, Remote, *or* Cloud Linux Server</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a></li>
@@ -108,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -124,7 +124,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -189,20 +189,20 @@
             
   <div class="section" id="host-a-domain-from-a-local-or-cloud-linux-server">
 <h1>Host a Domain from a Local or Cloud Linux Server<a class="headerlink" href="#host-a-domain-from-a-local-or-cloud-linux-server" title="Permalink to this headline">¶</a></h1>
-<p>The Project Athena packages can help you get up and running your own domain quickly.</p>
+<p>The Vircadia packages can help you get up and running your own domain quickly.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Packages are currently available for the following distributions:</p>
 <div class="section" id="ubuntu-server-18-04-lts">
 <h3>Ubuntu Server 18.04 LTS<a class="headerlink" href="#ubuntu-server-18-04-lts" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>    wget https://cdn.vircadia.com/dist/domain-server/ubuntu/athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb
-    sudo apt-get update <span class="o">&amp;&amp;</span> apt-get install ./athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget https://cdn.vircadia.com/dist/domain-server/ubuntu/athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb
+sudo apt-get update <span class="o">&amp;&amp;</span> apt-get install ./athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb
 </pre></div>
 </div>
 </div>
 <div class="section" id="amazon-linux-2">
 <h3>Amazon Linux 2<a class="headerlink" href="#amazon-linux-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>    sudo yum install https://odys-asset.s3.amazonaws.com/rpm/athena-server-0.86.0_K2_20200321_b4391f8-1.amzn2.x86_64.rpm
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/athena-server-0.86.0_K2_20200402_76aff7a-1.amzn2.x86_64.rpm
 </pre></div>
 </div>
 </div>
@@ -210,18 +210,18 @@
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>The installation packages will create a domain at the default port location and configure a service to keep it running on that machine.</p>
-<p>Connect a web browser to the server at port 40100 (if you are on the machine, this would be http://localhost:40100). Complete the initial setup wizard and you should have a functioning domain.</p>
+<p>Connect a web browser to the server at port 40100. (If you are on the machine that the server is running on, this would be http://localhost:40100.) Complete the initial setup wizard and you should have a functioning domain.</p>
 </div>
 <div class="section" id="networking">
 <h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
-<p>A Project Athena domain reserves a range of four ports to operate on, usually starting at 40100 (Note that the encrypted ports may not be implemented yet). These ports are:</p>
+<p>A Vircadia domain reserves a range of four ports to operate on, usually starting at 40100. (Note that the encrypted ports may not be implemented yet.) These ports are:</p>
 <ul class="simple">
 <li><p>40100 (+0) : (tcp) administrative http connection</p></li>
 <li><p><del>40101 (+1): (tcp) administrative https (encrypted) connection</dev></p></li>
 <li><p>40102 (+2): (udp) main connection from clients</p></li>
 <li><p><del>40103 (+3): (udp) main connection from clients (encrypted)</dev></p></li>
 </ul>
-<p>Generally speaking only port 40102 must be publicly exposed to permit others to connect to a domain.</p>
+<p>Generally speaking, only port 40102 must be publicly exposed to permit others to connect to a domain.</p>
 <p>In addition there are six “assignment clients” that must run in order for the domain to be operational.  These clients run alongside the domain server and must be able to connect with any outside user.  These clients are:</p>
 <ul class="simple">
 <li><p><strong>asset-server</strong>: stores object data to download to the user</p></li>
@@ -254,8 +254,8 @@
 <li><p><strong>athena-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients</p></li>
 <li><p><strong>athena-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p></li>
 </ul>
-<p>The <code>athena-server&#64;default.target</code> service is the only one that is set to auto-start, starting or stopping it will bring the other two services down.</p>
-<p>The first two services do log a large amount of data to their service journal, checking their logs (via <code>systemctl status</code>) is a good way to ensure they are operating properly.</p>
+<p>The <code>athena-server&#64;default.target</code> service is the only one that is set to auto-start. Starting or stopping it will bring the other two services down.</p>
+<p>The first two services log a large amount of data to their service journal. Checking their logs (via <code>systemctl status</code>) is a good way to ensure they are operating properly.</p>
 </div>
 <div class="section" id="multiple-domains">
 <h2>Multiple domains<a class="headerlink" href="#multiple-domains" title="Permalink to this headline">¶</a></h2>
@@ -302,7 +302,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

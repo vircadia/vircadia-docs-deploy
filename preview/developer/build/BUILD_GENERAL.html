@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Build Information &mdash; Project Athena Documentation</title>
+  <title>General Build Information &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Build Windows" href="BUILD_WIN.html" />
-    <link rel="prev" title="Building Project Athena" href="../build.html" /> 
+    <link rel="prev" title="Building Vircadia" href="../build.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -110,7 +110,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -126,7 +126,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -166,7 +166,7 @@
         
           <li><a href="../../developer.html">Developer</a> &raquo;</li>
         
-          <li><a href="../build.html">Building Project Athena</a> &raquo;</li>
+          <li><a href="../build.html">Building Vircadia</a> &raquo;</li>
         
       <li>General Build Information</li>
     
@@ -226,7 +226,7 @@
 <li><p><a class="reference external" href="http://www.zlib.net/">zlib</a>:   1.28 (Win32 only)</p></li>
 <li><p><a class="reference external" href="https://github.com/hifi-archive/nvidia-texture-tools">nvtt</a>:   2.1.1 (customized)</p></li>
 </ul>
-<p>The above dependencies will be downloaded, built, linked and included automatically by CMake where we require them. The CMakeLists files that handle grabbing each of the following external dependencies can be found in the <a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/cmake/externals">cmake/externals folder</a>. The resulting downloads, source files and binaries will be placed in the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder in each of the subfolders for each external project.</p>
+<p>The above dependencies will be downloaded, built, linked and included automatically by CMake where we require them. The CMakeLists files that handle grabbing each of the following external dependencies can be found in the <a class="reference external" href="cmake/externals">cmake/externals folder</a>. The resulting downloads, source files and binaries will be placed in the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder in each of the subfolders for each external project.</p>
 <p>These are not placed in your normal build tree when doing an out of source build so that they do not need to be re-downloaded and re-compiled every time the CMake build folder is cleared. Should you want to force a re-download and re-compile of a specific external, you can simply remove that directory from the appropriate subfolder in <code class="docutils literal notranslate"><span class="pre">build/ext</span></code>. Should you want to force a re-download and re-compile of all externals, just remove the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder.</p>
 <div class="section" id="cmake">
 <h3>CMake<a class="headerlink" href="#cmake" title="Permalink to this headline">¶</a></h3>
@@ -273,7 +273,7 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 <div class="section" id="finding-dependencies">
 <h3>Finding Dependencies<a class="headerlink" href="#finding-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>The following applies for dependencies we do not grab via CMake ExternalProject (OpenSSL is an example), or for dependencies you have opted not to grab as a CMake ExternalProject (via -DUSE_LOCAL_$NAME=0). The list of dependencies we grab by default as external projects can be found in <a class="reference external" href="#cmake-external-project-dependencies">the CMake External Project Dependencies section</a>.</p>
-<p>You can point our <a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/cmake/modules">Cmake find modules</a> to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
+<p>You can point our <a class="reference external" href="cmake/modules/">Cmake find modules</a> to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
 <p>In the examples below the variable $NAME would be replaced by the name of the dependency in uppercase, and $name would be replaced by the name of the dependency in lowercase (ex: OPENSSL_ROOT_DIR, openssl).</p>
 <ul class="simple">
 <li><p>$NAME_ROOT_DIR - pass this variable to Cmake with the -DNAME_ROOT_DIR= flag when running Cmake to generate build files</p></li>
@@ -303,7 +303,7 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 </div>
 <div class="section" id="devices">
 <h3>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h3>
-<p>You can support external input/output devices such as Leap Motion, MIDI, and more by adding each individual SDK in the visible building path. Refer to the readme file available in each device folder in <a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/interface/external">interface/external/</a> for the detailed explanation of the requirements to use the device.</p>
+<p>You can support external input/output devices such as Leap Motion, MIDI, and more by adding each individual SDK in the visible building path. Refer to the readme file available in each device folder in <a class="reference external" href="interface/external">interface/external/</a> for the detailed explanation of the requirements to use the device.</p>
 </div>
 </div>
 </div>
@@ -319,7 +319,7 @@ However, those files can potentially get cleaned up by the OS, so in order to av
         <a href="BUILD_WIN.html" class="btn btn-neutral float-right" title="Build Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../build.html" class="btn btn-neutral float-left" title="Building Project Athena" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../build.html" class="btn btn-neutral float-left" title="Building Vircadia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -328,7 +328,7 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

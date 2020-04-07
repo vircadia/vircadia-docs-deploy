@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Apply Physics to Entities &mdash; Project Athena Documentation</title>
+  <title>Apply Physics to Entities &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -117,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -133,7 +133,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -198,7 +198,7 @@
             
   <div class="section" id="apply-physics-to-entities">
 <h1>Apply Physics to Entities<a class="headerlink" href="#apply-physics-to-entities" title="Permalink to this headline">¶</a></h1>
-<p>Your Project Athena VR experience is made realistic with the help of a <a class="reference external" href="https://pybullet.org/wordpress">physics engine</a>. Project Athena uses this engine to simulate an object’s behavior according to the Newtonian laws of physics. For example, if you hit a ball with a bat in Project Athena, the physics engine computes these movements and makes the ball spin away from the bat after collision. You can modify an entity’s physics behavior using the Create app.</p>
+<p>Your Vircadia VR experience is made realistic with the help of a <a class="reference external" href="https://pybullet.org/wordpress">physics engine</a>. Vircadia uses this engine to simulate an object’s behavior according to the Newtonian laws of physics. For example, if you hit a ball with a bat in Vircadia, the physics engine computes these movements and makes the ball spin away from the bat after collision. You can modify an entity’s physics behavior using the Create app.</p>
 <div class="admonition note">
    <p class="admonition-title">Note</p>
    <p>You can select and edit multiple entities at once. The behavior will be different based on the type of property you'd like to set:</p>
@@ -226,7 +226,7 @@
 </div>
 <div class="section" id="change-an-entity-s-velocity">
 <h2>Change an Entity’s Velocity<a class="headerlink" href="#change-an-entity-s-velocity" title="Permalink to this headline">¶</a></h2>
-<p>Velocity is the speed of an object in a certain direction. All entities that have a position and orientation in Project Athena will have linear and angular velocity. These velocities might be zero, but they still exist.</p>
+<p>Velocity is the speed of an object in a certain direction. All entities that have a position and orientation in Vircadia will have linear and angular velocity. These velocities might be zero, but they still exist.</p>
 <div class="section" id="linear-velocity">
 <h3>Linear Velocity<a class="headerlink" href="#linear-velocity" title="Permalink to this headline">¶</a></h3>
 <p><strong>Type</strong>: 3D Vector<br />
@@ -257,7 +257,7 @@
 <p><strong>Type</strong>: Scalar<br />
 <strong>Range:</strong> 0 - 1<br />
 <strong>Default Value:</strong> 0.00</p>
-<p>In Project Athena, damping represents how much of an entity’s linear or angular velocity is lost over time. All moving objects we see in the real world experience some friction with air, reducing their velocities over time. Damping is used to approximate this effect of the real world in Project Athena. So if the damping of an object is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>, it will not lose any velocity and it will not slow down. If the damping of an object is <code class="docutils literal notranslate"><span class="pre">1.00</span></code>, it will lose all its velocity and stop immediately. If you want to throw a ball and have it slow down over time, you can add a damping value to do so.</p>
+<p>In Vircadia, damping represents how much of an entity’s linear or angular velocity is lost over time. All moving objects we see in the real world experience some friction with air, reducing their velocities over time. Damping is used to approximate this effect of the real world in Vircadia. So if the damping of an object is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>, it will not lose any velocity and it will not slow down. If the damping of an object is <code class="docutils literal notranslate"><span class="pre">1.00</span></code>, it will lose all its velocity and stop immediately. If you want to throw a ball and have it slow down over time, you can add a damping value to do so.</p>
 <p>To set the linear damping of an object:</p>
 <ol class="simple">
 <li><p>In the ‘Properties’ tab, scroll down to the ‘Linear Damping’ property. The default value is <code class="docutils literal notranslate"><span class="pre">0.00</span></code>.</p></li>
@@ -295,7 +295,7 @@
 <strong>Range:</strong> 100 - 10000<br />
 <strong>Default Value:</strong> 1000.0000</p>
 <p>An entity’s density is the ratio of its mass to its volume. For example, an entity with low density is made of light materials such as wood, while an entity with high density is made of dense materials such as iron.</p>
-<p>In Project Athena, the maximum (<code class="docutils literal notranslate"><span class="pre">10000</span></code>) and minimum (<code class="docutils literal notranslate"><span class="pre">100</span></code>) values of density were chosen for stability. It’s difficult to perform stable physics calculations between objects of very disparate masses (such as a light feather and an iron ball). To help keep the environment stable, we picked conservative density limits.</p>
+<p>In Vircadia, the maximum (<code class="docutils literal notranslate"><span class="pre">10000</span></code>) and minimum (<code class="docutils literal notranslate"><span class="pre">100</span></code>) values of density were chosen for stability. It’s difficult to perform stable physics calculations between objects of very disparate masses (such as a light feather and an iron ball). To help keep the environment stable, we picked conservative density limits.</p>
 <p>To change this value, scroll down to the ‘Density’ property in the ‘Properties’ tab. Change it to the value of your choice.</p>
 </div>
 <div class="section" id="set-how-an-entity-moves-in-a-gravitational-field">
@@ -334,7 +334,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 
