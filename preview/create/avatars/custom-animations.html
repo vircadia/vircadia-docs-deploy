@@ -277,6 +277,35 @@ By default, every avatar uses the same <a class="reference external" href="https
 <h3>Override Using a Script<a class="headerlink" href="#override-using-a-script" title="Permalink to this headline">¶</a></h3>
 <p>You can <a class="reference external" href="../../script/write-scripts.html">write a script</a> and use the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a> namespace to override an existing animation or animation role.</p>
 <p>We’ve listed the methods you can use to replace the standard animations on your avatar.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html#.overrideAnimation">MyAvatar.overrideAnimation</a></p></td>
+<td><p>This method can be used to play any animation on the current avatar. It will
+move smoothly from the current pose to the starting frame of the custom
+animation. For example, if your avatar is waving, this script will stop your
+avatar waving and play the custom animation provided.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/AnimationCache.html#.prefetch">AnimationCache.prefetch</a></p></td>
+<td><p>This method fetches a resource. You can use this to fetch a custom animation
+you’ve hosted on a cloud server. If you do not prefetch your animations before
+playing them, you might see a t-pose appear briefly as the animation is
+downloaded.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html#.restoreAnimation">MyAvatar.restoreAnimation</a></p></td>
+<td><p>This method stops the override function from playing any custom animation.
+Your avatar will go back to playing the standard animations.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This process to replace an existing animation will take complete control of all avatar joints. Inverse Kinematics of the hands and head of HMD users will be disabled.</p>
@@ -469,7 +498,7 @@ HMD strafe right at 2.5 m/s.</p></td>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Here is the current default <a class="reference external" href="https://github.com/highfidelity/hifi/blob/master/interface/resources/avatar/avatar-animation.json">avatar-animation.json</a> file.</p></li>
+<li><p>Here is the current default <a class="reference external" href="https://github.com/kasenvr/project-athena/blob/kasen/core/interface/resources/avatar/avatar-animation.json">avatar-animation.json</a> file.</p></li>
 <li><p>This <a class="reference external" href="https://s3.amazonaws.com/hifi-public/tony/scoot-animation.json">scoot-animation.json</a> file replaces the idle and walk animations with a sitting pose. This example shows how you can replace some of an avatar’s default animations.</p></li>
 </ul>
 </div>
