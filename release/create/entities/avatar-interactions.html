@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Define Interactions with Avatars &mdash; Project Athena Documentation</title>
+  <title>Define Interactions with Avatars &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -117,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -133,7 +133,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -198,7 +198,7 @@
             
   <div class="section" id="define-interactions-with-avatars">
 <h1>Define Interactions with Avatars<a class="headerlink" href="#define-interactions-with-avatars" title="Permalink to this headline">¶</a></h1>
-<p>In real life, you interact with objects on a daily basis. In Project Athena, your avatar can also interact with objects (entities) in the metaverse. There are a number of ways you can define the interactions you have with objects: you can write scripts to change the properties of an entity. You can create entities that are unique to your avatar (we call these “avatar entities”). And don’t forget that you can set an entity’s behavior and collision properties, so that objects are grabbable, triggerable, or dynamic.</p>
+<p>In real life, you interact with objects on a daily basis. In Vircadia, your avatar can also interact with objects (entities) in the metaverse. There are a number of ways you can define the interactions you have with objects: you can write scripts to change the properties of an entity. You can create entities that are unique to your avatar (we call these “avatar entities”). And don’t forget that you can set an entity’s behavior and collision properties, so that objects are grabbable, triggerable, or dynamic.</p>
 <p><strong>On This Page:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="#control-interactions-with-entities-using-Scripts">Control Interactions with Entities using Scripts</a></p></li>
@@ -208,7 +208,7 @@
 <h2>Control Interactions with Entities using Scripts<a class="headerlink" href="#control-interactions-with-entities-using-scripts" title="Permalink to this headline">¶</a></h2>
 <p>When your avatar comes in contact with an entity, you can control its interactions with the entity using simple scripts.</p>
 <p>An interaction between an avatar and an entity occurs when the avatar comes in contact with an entity’s bounding box. The bounding box (or bounds) is the frame that is around the outside of the entity. In the case of a cube, the bounds are the exact size and shape as the entity. However, in the case of more complex objects, the bounds might be larger than the actual mesh model.</p>
-<p>There are two methods you can use to script these interactions. <a class="reference external" href="https://apidocs.highfidelity.com/Entities.html#.enterEntity"><code class="docutils literal notranslate"><span class="pre">Entities.enterEntity()</span></code></a> occurs when the avatar contacts the bounding box, not the model itself. Similarly, <a class="reference external" href="https://apidocs.highfidelity.com/Entities.html#.leaveEntity"><code class="docutils literal notranslate"><span class="pre">Entities.leaveEntity()</span></code></a> occurs when the avatar exits the bounding box.</p>
+<p>There are two methods you can use to script these interactions. <a class="reference external" href="https://apidocs.vircadia.dev/Entities.html#.enterEntity"><code class="docutils literal notranslate"><span class="pre">Entities.enterEntity()</span></code></a> occurs when the avatar contacts the bounding box, not the model itself. Similarly, <a class="reference external" href="https://apidocs.vircadia.dev/Entities.html#.leaveEntity"><code class="docutils literal notranslate"><span class="pre">Entities.leaveEntity()</span></code></a> occurs when the avatar exits the bounding box.</p>
 <div class="section" id="tutorial-enter-a-box-to-change-its-color">
 <h3>Tutorial: Enter a Box to Change Its Color<a class="headerlink" href="#tutorial-enter-a-box-to-change-its-color" title="Permalink to this headline">¶</a></h3>
 <p>The following example walks you through the process of creating a simple entity, and scripting an interaction between the entity and your avatar. When your avatar comes in contact with the box, the box will change color. When your avatar moves away, the box will return to its original color.</p>
@@ -242,7 +242,7 @@
 <ol>
 <li><p><a class="reference external" href="../wearables.html">Create a wearable:</a> All wearables are avatar entities.</p></li>
 <li><p><a class="reference external" href="entity-behavior.html#make-an-entity-cloneable">Clone as an avatar entity:</a> When you clone an entity as an avatar entity, you make a copy of the entity and attach it to your avatar. Every copy of that entity will now leave with the avatar when they leave the domain. For example, if you have a coffee shop in your domain, you can set all coffee cups to be cloned as avatar entities. Any user who clones a coffee cup will take the avatar entity with them when they exit the domain. You can keep your domain free of clutter using this property.</p></li>
-<li><p>Add an avatar entity using a script: You can add an avatar entity using scripts. For example, you can create a script to have a pet (avatar entity) follow you around as you explore Project Athena.</p>
+<li><p>Add an avatar entity using a script: You can add an avatar entity using scripts. For example, you can create a script to have a pet (avatar entity) follow you around as you explore Vircadia.</p>
 <p>This example script adds a cube as an avatar entity to your domain.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">entityID</span> <span class="o">=</span> <span class="nx">Entities</span><span class="p">.</span><span class="nx">addEntity</span><span class="p">({</span>
     <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
@@ -256,7 +256,7 @@
 <ul class="simple">
 <li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
 <li><p><a class="reference external" href="../../explore/interact.html">Interact with Your Environment</a></p></li>
-<li><p><a class="reference external" href="https://apidocs.highfidelity.com/Entities.html">API Reference: Entities</a></p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">API Reference: Entities</a></p></li>
 <li><p><a class="reference external" href="../../script/get-started-with-scripting.html">Get Started with Scripting</a></p></li>
 </ul>
 </div>
@@ -282,7 +282,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

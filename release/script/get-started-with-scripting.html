@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Get Started with Scripting &mdash; Project Athena Documentation</title>
+  <title>Get Started with Scripting &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -108,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -124,7 +124,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Athena Docs</a>
+          <a href="../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -187,14 +187,14 @@
             
   <div class="section" id="get-started-with-scripting">
 <h1><a class="toc-backref" href="#id2">Get Started with Scripting</a><a class="headerlink" href="#get-started-with-scripting" title="Permalink to this headline">¶</a></h1>
-<p>Many of the scripts in High Fidelity run behind the scenes, so that you don’t even know they’re running. However, if you want to create some advanced behavior, you may need to <a class="reference internal" href="write-scripts.html"><span class="doc">write your own scripts</span></a> to make sure everything works correctly.</p>
+<p>Many of the scripts in Vircadia run behind the scenes, so that you don’t even know they’re running. However, if you want to create some advanced behavior, you may need to <a class="reference internal" href="write-scripts.html"><span class="doc">write your own scripts</span></a> to make sure everything works correctly.</p>
 <p>This page ensures that you know what type of script to use and helps you get started running your own simple scripts.</p>
 <div class="contents topic" id="on-this-page">
 <p class="topic-title first">On This Page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#get-started-with-scripting" id="id2">Get Started with Scripting</a></p>
 <ul>
-<li><p><a class="reference internal" href="#javascript-basics-in-high-fidelity" id="id3">JavaScript Basics in High Fidelity</a></p></li>
+<li><p><a class="reference internal" href="#javascript-basics-in-vircadia" id="id3">JavaScript Basics in Vircadia</a></p></li>
 <li><p><a class="reference internal" href="#types-of-scripts" id="id4">Types of Scripts</a></p></li>
 <li><p><a class="reference internal" href="#scripting-permissions" id="id5">Scripting Permissions</a></p></li>
 <li><p><a class="reference internal" href="#running-scripts-window" id="id6">Running Scripts Window</a></p></li>
@@ -205,14 +205,14 @@
 </li>
 </ul>
 </div>
-<div class="section" id="javascript-basics-in-high-fidelity">
-<h2><a class="toc-backref" href="#id3">JavaScript Basics in High Fidelity</a><a class="headerlink" href="#javascript-basics-in-high-fidelity" title="Permalink to this headline">¶</a></h2>
-<p>High Fidelity scripting runs on a JavaScript engine that is provided with Qt.</p>
+<div class="section" id="javascript-basics-in-vircadia">
+<h2><a class="toc-backref" href="#id3">JavaScript Basics in Vircadia</a><a class="headerlink" href="#javascript-basics-in-vircadia" title="Permalink to this headline">¶</a></h2>
+<p>Vircadia scripting runs on a JavaScript engine that is provided with Qt.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that any functionality that runs around web pages (such as cookies, local storages, or databases) does not work with 3D environments such as High Fidelity. For this reason, you cannot use JavaScript frameworks such as Angular, React, Express, jQuery, Vue, etc.</p>
+<p>Note that any functionality that runs around web pages (such as cookies, local storages, or databases) does not work with 3D environments such as Vircadia. For this reason, you cannot use JavaScript frameworks such as Angular, React, Express, jQuery, Vue, etc.</p>
 </div>
-<p>You are likely to interface most with these High Fidelity APIs:</p>
+<p>You are likely to interface most with these Vircadia APIs:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 53%" />
@@ -224,7 +224,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.highfidelity.com/Entities.html">Entities</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">Entities</a></p></td>
 <td><p>Lets you manipulate the entities around you, as long
 as you have permissions to do so. This means you can
 add, remove, and edit entities. Everyone has access
@@ -232,17 +232,17 @@ to <code class="docutils literal notranslate"><span class="pre">get</span></code
 to find Entities in range, direction, collision, or
 raytrace.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://apidocs.highfidelity.com/AvatarList.html">AvatarList</a></p>
-<p><a class="reference external" href="https://apidocs.highfidelity.com/AvatarManager.html">AvatarManager</a></p>
-<p><a class="reference external" href="https://apidocs.highfidelity.com/MyAvatar.html">MyAvatar</a></p>
+<tr class="row-odd"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/AvatarList.html">AvatarList</a></p>
+<p><a class="reference external" href="https://apidocs.vircadia.dev/AvatarManager.html">AvatarManager</a></p>
+<p><a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a></p>
 </td>
-<td><p>Lets you get information on an <a class="reference external" href="https://apidocs.highfidelity.com/Avatar.html">Avatar</a>,
-or manipulate your own client-only <a class="reference external" href="https://apidocs.highfidelity.com/MyAvatar.html">MyAvatar</a>. The
+<td><p>Lets you get information on an <a class="reference external" href="https://apidocs.vircadia.dev/Avatar.html">Avatar</a>,
+or manipulate your own client-only <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a>. The
 information here will be always the avatar information
 of the client running the script. AvatarList and
 AvatarManager are basically the same.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.highfidelity.com/Script.html">Script</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://apidocs.vircadia.dev/Script.html">Script</a></p></td>
 <td><p>Lets you to connect callbacks from your client to script,
 such as functionality that is dependent on time
 (Script.update, Script.setTime, Script.setInterval etc),
@@ -252,7 +252,7 @@ which occur when the script is turned off (Script.scriptEnding).</p></td>
 </tr>
 </tbody>
 </table>
-<p>There are <a class="reference external" href="https://apidocs.highfidelity.com">many other APIs available</a>, and we encourage you to make sure use of them as you become more comfortable scripting in High Fidelity.</p>
+<p>There are <a class="reference external" href="https://apidocs.vircadia.dev">many other APIs available</a>, and we encourage you to make sure use of them as you become more comfortable scripting in Vircadia.</p>
 </div>
 <div class="section" id="types-of-scripts">
 <h2><a class="toc-backref" href="#id4">Types of Scripts</a><a class="headerlink" href="#types-of-scripts" title="Permalink to this headline">¶</a></h2>
@@ -299,12 +299,12 @@ heard by everyone in the domain.</p></td>
 </div>
 <div class="section" id="running-scripts-window">
 <h2><a class="toc-backref" href="#id6">Running Scripts Window</a><a class="headerlink" href="#running-scripts-window" title="Permalink to this headline">¶</a></h2>
-<p>The Running Scripts window can be used to load, run and stop scripts from a URL or from a disk drive. High Fidelity also provides a number of sample scripts for you to try out.</p>
+<p>The Running Scripts window can be used to load, run and stop scripts from a URL or from a disk drive. Vircadia also provides a number of sample scripts for you to try out.</p>
 <p>To open the <em>Running Scripts</em> window, go to <strong>Edit &gt; Running Scripts</strong> or press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">J</span></code> on your keyboard.</p>
 </div>
 <div class="section" id="sample-scripts">
 <h2><a class="toc-backref" href="#id7">Sample Scripts</a><a class="headerlink" href="#sample-scripts" title="Permalink to this headline">¶</a></h2>
-<p>High Fidelity comes with a collection of scripts designed to improve your experience as a user and provide tools for developing your own content. We encourage you to look at these scripts as a resource to learn how to code your own.</p>
+<p>Vircadia comes with a collection of scripts designed to improve your experience as a user and provide tools for developing your own content. We encourage you to look at these scripts as a resource to learn how to code your own.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Loading (or running) a script lets you test the functionality and see how it behaves. If you want to view the actual code, you will need to open the file in the text editor of your choice. In the ‘Running Scripts’ window, click the ‘Reveal Scripts’ folder and browse to the JavaScript file that you want to view.</p>
@@ -330,17 +330,17 @@ advanced developers may find them useful when creating content. These scripts ar
 not “entry-level” and are not guaranteed to work or be documented.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">modules</span></code></p></td>
-<td><p>These scripts create external tools that simplify scripting in High Fidelity.
+<td><p>These scripts create external tools that simplify scripting in Vircadia.
 For example, the AppUI module helps you create a tablet app, while the Request
 module processes HTTP requests.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">system</span></code></p></td>
-<td><p>These scripts are critical to the stability and usability of High Fidelity.
+<td><p>These scripts are critical to the stability and usability of Vircadia.
 Making changes to these scripts is not recommended, nor is it easy, as you may
 need ‘administrative’ privileges.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tutorials</span></code></p></td>
-<td><p>These scripts provide examples of what you can do using scripts in High Fidelity.
+<td><p>These scripts provide examples of what you can do using scripts in Vircadia.
 Examples include: creating butterflies, making your avatar clap, and adding
 ambient sound to your domain.</p></td>
 </tr>
@@ -383,7 +383,7 @@ ambient sound to your domain.</p></td>
 </div>
 <div class="section" id="scripting-console">
 <h2><a class="toc-backref" href="#id8">Scripting Console</a><a class="headerlink" href="#scripting-console" title="Permalink to this headline">¶</a></h2>
-<p>The Scripting Console lets you test and run short script snippets quickly in High Fidelity to see how they work. To open the console, go to the ‘Developer menu’, then <strong>Scripting &gt; Console</strong>. If the ‘Developer’ menu is not visible, first go to the ‘Settings’ menu and click ‘Developer’ Menu.</p>
+<p>The Scripting Console lets you test and run short script snippets quickly in Vircadia to see how they work. To open the console, go to the ‘Developer menu’, then <strong>Scripting &gt; Console</strong>. If the ‘Developer’ menu is not visible, first go to the ‘Settings’ menu and click ‘Developer’ Menu.</p>
 <img alt="../_images/scripting-console.png" src="../_images/scripting-console.png" />
 </div>
 <div class="section" id="debug-window">
@@ -422,7 +422,7 @@ ambient sound to your domain.</p></td>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 
