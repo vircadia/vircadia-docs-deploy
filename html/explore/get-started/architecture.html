@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Understand the Architecture &mdash; Project Athena Documentation</title>
+  <title>Understand the Architecture &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Set Up Your Audio Devices" href="setup-audio.html" />
-    <link rel="prev" title="Install Project Athena" href="install.html" /> 
+    <link rel="prev" title="Install Vircadia" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -89,8 +89,8 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../explore.html">EXPLORE</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../get-started.html">Get Started with Project Athena</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install.html">Install Project Athena</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../get-started.html">Get Started with Vircadia</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install.html">Install Vircadia</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Understand the Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="setup-audio.html">Set Up Your Audio Devices</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vr-controls.html">Use Your VR Equipment</a></li>
@@ -111,10 +111,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -130,7 +130,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -170,7 +170,7 @@
         
           <li><a href="../../explore.html">Explore</a> &raquo;</li>
         
-          <li><a href="../get-started.html">Get Started with Project Athena</a> &raquo;</li>
+          <li><a href="../get-started.html">Get Started with Vircadia</a> &raquo;</li>
         
       <li>Understand the Architecture</li>
     
@@ -195,14 +195,14 @@
             
   <div class="section" id="understand-the-architecture">
 <h1><a class="toc-backref" href="#id2">Understand the Architecture</a><a class="headerlink" href="#understand-the-architecture" title="Permalink to this headline">¶</a></h1>
-<p>Project Athena’s architecture shows how different parts of the system work together to give you the best VR experience.</p>
+<p>Vircadia’s architecture shows how different parts of the system work together to give you the best VR experience.</p>
 <div class="contents topic" id="on-this-page">
 <p class="topic-title first">On This Page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#understand-the-architecture" id="id2">Understand the Architecture</a></p>
 <ul>
 <li><p><a class="reference internal" href="#architecture-overview" id="id3">Architecture Overview</a></p></li>
-<li><p><a class="reference internal" href="#project-athena-interface" id="id4">Project Athena Interface</a></p></li>
+<li><p><a class="reference internal" href="#vircadia-interface" id="id4">Vircadia Interface</a></p></li>
 <li><p><a class="reference internal" href="#domain-server" id="id5">Domain Server</a></p></li>
 <li><p><a class="reference internal" href="#global-services" id="id6">Global Services</a></p></li>
 </ul>
@@ -211,28 +211,28 @@
 </div>
 <div class="section" id="architecture-overview">
 <h2><a class="toc-backref" href="#id3">Architecture Overview</a><a class="headerlink" href="#architecture-overview" title="Permalink to this headline">¶</a></h2>
-<p>Project Athena’s architecture consists of the following components that work together and send data to each other for your VR experience.</p>
+<p>Vircadia’s architecture consists of the following components that work together and send data to each other for your VR experience.</p>
 <ul class="simple">
-<li><p>The <a class="reference internal" href="#project-athena-interface">Project Athena Interface</a> runs your personal experience in the metaverse. With it, you can <a class="reference internal" href="../travel.html"><span class="doc">visit VR worlds</span></a>, <a class="reference internal" href="../socialize.html"><span class="doc">meet people</span></a>, <a class="reference external" href="../socialize.html#attend-live-events">attend live events</a> and more.</p></li>
+<li><p>The <a class="reference internal" href="#vircadia-interface">Vircadia Interface</a> runs your personal experience in the metaverse. With it, you can <a class="reference internal" href="../travel.html"><span class="doc">visit VR worlds</span></a>, <a class="reference internal" href="../socialize.html"><span class="doc">meet people</span></a>, <a class="reference external" href="../socialize.html#attend-live-events">attend live events</a> and more.</p></li>
 <li><p>The <a class="reference internal" href="#domain-server">Domain Server</a> is the server that hosts a domain. The domain server hosts the content in the domain, and manages the <a class="reference internal" href="../../host/configure-settings.html"><span class="doc">domain-wide settings</span></a>, such as audio spatialization, user permissions, and running scripts.</p></li>
-<li><p>The <a class="reference internal" href="#global-services">Global Services</a> connect all of the servers together. These services are maintained by Project Athena so that you can sign in, move seamlessly between places, and <a class="reference internal" href="../shop.html"><span class="doc">purchase items on the Marketplace</span></a>.</p></li>
+<li><p>The <a class="reference internal" href="#global-services">Global Services</a> connect all of the servers together. These services are maintained by Vircadia so that you can sign in, move seamlessly between places, and <a class="reference internal" href="../shop.html"><span class="doc">purchase items on the Marketplace</span></a>.</p></li>
 </ul>
 <img alt="../../_images/overview.png" src="../../_images/overview.png" />
 </div>
-<div class="section" id="project-athena-interface">
-<h2><a class="toc-backref" href="#id4">Project Athena Interface</a><a class="headerlink" href="#project-athena-interface" title="Permalink to this headline">¶</a></h2>
-<p>The Project Athena Interface (or simply ‘Interface’) is the main user interface for Project Athena. It is used to explore the metaverse and engage with people from around the world. When you enter a domain, your Interface connects with the <a class="reference internal" href="#domain-server">domain server</a> that is hosting the virtual world, alongside any <a class="reference internal" href="#global-services">global services</a>.</p>
+<div class="section" id="vircadia-interface">
+<h2><a class="toc-backref" href="#id4">Vircadia Interface</a><a class="headerlink" href="#vircadia-interface" title="Permalink to this headline">¶</a></h2>
+<p>The Vircadia Interface (or simply ‘Interface’) is the main user interface for Vircadia. It is used to explore the metaverse and engage with people from around the world. When you enter a domain, your Interface connects with the <a class="reference internal" href="#domain-server">domain server</a> that is hosting the virtual world, alongside any <a class="reference internal" href="#global-services">global services</a>.</p>
 <p>You can download and use the Interface on your computer or your Android phone using the <a class="reference external" href="install.html#client-only-installer">Client-Only Installer</a>.</p>
 <img alt="../../_images/interface.png" src="../../_images/interface.png" />
 <div class="section" id="physics-engine">
 <h3>Physics Engine<a class="headerlink" href="#physics-engine" title="Permalink to this headline">¶</a></h3>
-<p>Your VR experience won’t be realistic without some physics. Project Athena includes a <a class="reference external" href="http://bulletphysics.org">physics engine</a> that simulates behaviors of objects according to the Newtonian laws of physics. When an object falls to the ground and bounces, or when two or more objects collide, their movements are computed by the physics engine.</p>
+<p>Your VR experience won’t be realistic without some physics. Vircadia includes a <a class="reference external" href="http://bulletphysics.org">physics engine</a> that simulates behaviors of objects according to the Newtonian laws of physics. When an object falls to the ground and bounces, or when two or more objects collide, their movements are computed by the physics engine.</p>
 <p>Each Interface runs its own physics engine, and the entity server coordinates the results to produce a consistent simulation across the entire domain.</p>
 </div>
 </div>
 <div class="section" id="domain-server">
 <h2><a class="toc-backref" href="#id5">Domain Server</a><a class="headerlink" href="#domain-server" title="Permalink to this headline">¶</a></h2>
-<p>A domain is a spatial simulation in Project Athena that you can visit. It is computed by a stack of programs on one or more computers. You need a domain’s <a class="reference internal" href="../../host/configure-settings/place-setting.html"><span class="doc">place name</span></a> to visit a domain, just like you would need a web address to visit a website.</p>
+<p>A domain is a spatial simulation in Vircadia that you can visit. It is computed by a stack of programs on one or more computers. You need a domain’s <a class="reference internal" href="../../host/configure-settings/place-setting.html"><span class="doc">place name</span></a> to visit a domain, just like you would need a web address to visit a website.</p>
 <p>You can <a class="reference internal" href="../../host/server-setup.html"><span class="doc">set up your own domain</span></a> and host it on your local machine or on a cloud server to make it available to other users. Your domain’s server stack is a set of components that simulate and manage different aspects of the domain such as audio, entities, and avatars. Everything that you see, hear, and do in your domain is managed by the server stack.</p>
 <img alt="../../_images/domain-server.png" src="../../_images/domain-server.png" />
 <div class="section" id="server-stack">
@@ -251,11 +251,11 @@
 </div>
 <div class="section" id="global-services">
 <h2><a class="toc-backref" href="#id6">Global Services</a><a class="headerlink" href="#global-services" title="Permalink to this headline">¶</a></h2>
-<p>Project Athena maintains global services to connect different servers together.</p>
+<p>Vircadia maintains global services to connect different servers together.</p>
 <img alt="../../_images/services.png" src="../../_images/services.png" />
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="install.html"><span class="doc">Install Project Athena</span></a></p></li>
+<li><p><a class="reference internal" href="install.html"><span class="doc">Install Vircadia</span></a></p></li>
 <li><p><a class="reference internal" href="../../host.html"><span class="doc">Host Your Domain</span></a></p></li>
 <li><p><a class="reference internal" href="../travel.html"><span class="doc">Travel Between Worlds</span></a></p></li>
 </ul>
@@ -273,7 +273,7 @@
         <a href="setup-audio.html" class="btn btn-neutral float-right" title="Set Up Your Audio Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral float-left" title="Install Project Athena" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="Install Vircadia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -282,7 +282,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

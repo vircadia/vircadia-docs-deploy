@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Procedural Shaders for Models and Avatars &mdash; Project Athena Documentation</title>
+  <title>Procedural Shaders for Models and Avatars &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -106,10 +106,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -125,7 +125,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -207,14 +207,14 @@
 <div><p>If you already have experience making drawings with computers, you know that in that process you draw a circle, then a rectangle, a line, some triangles until you compose the image you want. That process is very similar to writing a letter or a book by hand - it is a set of instructions that do one task after another.</p>
 <p>Shaders are also a set of instructions, but the instructions are executed all at once for every single pixel on the screen. That means the code you write has to behave differently depending on the position of the pixel on the screen. Like a type press, your program will work as a function that receives a position and returns a color, and when it’s compiled it will run extraordinarily fast.</p>
 </div></blockquote>
-<p>Project Athena has support for vertex and fragment shaders on shape and material entities, and avatars. These shaders are based on the GLSL shader language, which uses the syntax and features of the C programming language. It does not have support for geometry, tessellation and evaluation, or compute shaders.</p>
+<p>Vircadia has support for vertex and fragment shaders on shape and material entities, and avatars. These shaders are based on the GLSL shader language, which uses the syntax and features of the C programming language. It does not have support for geometry, tessellation and evaluation, or compute shaders.</p>
 <p>This documentation is not intended to be a complete course on how to create a shader. This is an advanced topic that requires good math and programming skills. Many free books are available on the internet that can teach about shaders. <a class="reference external" href="https://thebookofshaders.com">The Book of Shaders</a> is one such book that is often cited.</p>
-<p>An understanding of how to use JavaScript and JSON with Project Athena is important before you dive into this topic. If you intend to create shaders yourself, knowing the C programming language will also be important.</p>
+<p>An understanding of how to use JavaScript and JSON with Vircadia is important before you dive into this topic. If you intend to create shaders yourself, knowing the C programming language will also be important.</p>
 <div class="section" id="differences-between-athena-and-glsl-shaders">
 <h3>Differences Between Athena and GLSL Shaders<a class="headerlink" href="#differences-between-athena-and-glsl-shaders" title="Permalink to this headline">¶</a></h3>
-<p>When exploring shaders online, you may have come across many shader examples. Or you might have seen websites and applications that allow you to experiment with shader code in a live environment. Most of the code from these sources will not work with Project Athena without modification.</p>
-<p>The first thing to be aware of is that there are a few shader languages. GLSL is one that is used by OpenGL, and Project Athena’s shaders are based on this language. Another common one is HLSL, which is used often for DirectX programs. Although these languages share a lot of similarities, you cannot use HLSL code in an OpenGL application without modification.</p>
-<p>Another consideration is that Project Athena does not expose the full range of what GLSL offers to scripters. Instead, users are offered a subset of GLSL, and a custom set of naming conventions for fragment or vertex components.</p>
+<p>When exploring shaders online, you may have come across many shader examples. Or you might have seen websites and applications that allow you to experiment with shader code in a live environment. Most of the code from these sources will not work with Vircadia without modification.</p>
+<p>The first thing to be aware of is that there are a few shader languages. GLSL is one that is used by OpenGL, and Vircadia’s shaders are based on this language. Another common one is HLSL, which is used often for DirectX programs. Although these languages share a lot of similarities, you cannot use HLSL code in an OpenGL application without modification.</p>
+<p>Another consideration is that Vircadia does not expose the full range of what GLSL offers to scripters. Instead, users are offered a subset of GLSL, and a custom set of naming conventions for fragment or vertex components.</p>
 </div>
 <div class="section" id="basic-method-for-using-shaders">
 <h3>Basic Method for Using Shaders<a class="headerlink" href="#basic-method-for-using-shaders" title="Permalink to this headline">¶</a></h3>
@@ -233,7 +233,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">materialData</span></code> JSON can be applied either via the Project Athena Interface’s edit tools or with a script. Here’s another example:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">materialData</span></code> JSON can be applied either via the Vircadia Interface’s edit tools or with a script. Here’s another example:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Entities</span><span class="p">.</span><span class="nx">addEntity</span><span class="p">({</span>
     <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Material&quot;</span><span class="p">,</span>
     <span class="nx">materialURL</span><span class="o">:</span> <span class="s2">&quot;materialData&quot;</span><span class="p">,</span>
@@ -255,7 +255,7 @@
 </div>
 <div class="section" id="shader-template">
 <h3>Shader Template<a class="headerlink" href="#shader-template" title="Permalink to this headline">¶</a></h3>
-<p>When you learn about shaders for other applications, the shader may have a function like <code class="docutils literal notranslate"><span class="pre">main()</span></code> that is run first. By contrast, Project Athena has a specific function name that must be called. Which function is used depends on which version of the shader you use.</p>
+<p>When you learn about shaders for other applications, the shader may have a function like <code class="docutils literal notranslate"><span class="pre">main()</span></code> that is run first. By contrast, Vircadia has a specific function name that must be called. Which function is used depends on which version of the shader you use.</p>
 <p>As shaders were developed, features for them evolved a bit over time. As a result, there are several shader versions, and each version has a different call signature. <strong>Versions 1 and 2</strong> are the oldest, and will still work. <strong>Versions 3 and 4</strong> are the newest and expose more features. Version 4 provides for per-fragment positions, however it is also the most computationally expensive. Therefore it is recommended to use version 3 if that extra feature from version 4 is not needed.</p>
 <p>A shader consists of two primary pieces: <strong>the main function</strong> that is responsible for coloring the pixel, and any desired <strong>helper functions</strong> that assist in that processing logic (which must go above the main function).</p>
 <p>A basic template for a shader without helper functions looks something like this example:</p>
@@ -565,7 +565,7 @@ The return value is <code class="docutils literal notranslate"><span class="pre"
 </div>
 <div class="section" id="a-cautionary-note-on-shaders">
 <h3>A Cautionary Note on Shaders<a class="headerlink" href="#a-cautionary-note-on-shaders" title="Permalink to this headline">¶</a></h3>
-<p>Project Athena does not enable seeing procedural shaders by default. This is because currently, they are an experimental feature. Shaders are a very powerful tool, and when used incorrectly, can harm the user experience for everyone on the domain. A poorly written shader or a shader created by a bad actor can slow things down to a crawl or interfere with a user’s view of the virtual world.</p>
+<p>Vircadia does not enable seeing procedural shaders by default. This is because currently, they are an experimental feature. Shaders are a very powerful tool, and when used incorrectly, can harm the user experience for everyone on the domain. A poorly written shader or a shader created by a bad actor can slow things down to a crawl or interfere with a user’s view of the virtual world.</p>
 <p>Shaders are best used as a very strong spice in a recipe. Attempt to keep them small and efficient. Shaders can produce marvelous and mind-blowing effects, but overuse can spoil the desired end effect. If you create a shader that has hundreds of lines of code, consider trimming it down if possible.</p>
 <p>If you find yourself in a position where a shader is causing trouble for you, remember that you can disable them in the Athena Interface.</p>
 </div>
@@ -592,7 +592,7 @@ The return value is <code class="docutils literal notranslate"><span class="pre"
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 

@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build Windows &mdash; Vircadia Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Build Linux" href="BUILD_LINUX.html" />
+    <link rel="prev" title="General Build Information" href="BUILD_GENERAL.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="BUILD_GENERAL.html">General Build Information</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Build Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_OSX.html">Build OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Vircadia Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../developer.html">Developer</a> &raquo;</li>
+        
+          <li><a href="../build.html">Building Vircadia</a> &raquo;</li>
+        
+      <li>Build Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_WIN.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/developer/build/BUILD_WIN.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-windows">
+<h1>Build Windows<a class="headerlink" href="#build-windows" title="Permalink to this headline">¶</a></h1>
+<p><em>Last Updated on January 13, 2020</em></p>
+<p>This is a stand-alone guide for creating your first Vircadia build for Windows 64-bit.</p>
+<p>Note: We are now using Visual Studio 2017 or 2019 and Qt 5.12.3.<br />If you are upgrading from previous versions, do a clean uninstall of those versions before going through this guide.</p>
+<p>Note: The prerequisites will require about 10 GB of space on your drive. You will also need a system with at least 8GB of main memory.</p>
+<div class="section" id="step-1-visual-studio-python-3-x">
+<h2>Step 1. Visual Studio &amp; Python 3.x<a class="headerlink" href="#step-1-visual-studio-python-3-x" title="Permalink to this headline">¶</a></h2>
+<p>If you don’t have Community or Professional edition of Visual Studio, download <a class="reference external" href="https://visualstudio.microsoft.com/vs/">Visual Studio Community 2019</a>. If you have Visual Studio 2017, you are not required to download Visual Studio 2019.</p>
+<p>When selecting components, check “Desktop development with C++”. On the right on the Summary toolbar, select the following components.</p>
+<div class="section" id="if-you-re-installing-visual-studio-2017">
+<h3>If you’re installing Visual Studio 2017,<a class="headerlink" href="#if-you-re-installing-visual-studio-2017" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Windows 8.1 SDK and UCRT SDK</p></li>
+<li><p>VC++ 2015.3 v14.00 (v140) toolset for desktop</p></li>
+</ul>
+</div>
+<div class="section" id="if-you-re-installing-visual-studio-2019">
+<h3>If you’re installing Visual Studio 2019,<a class="headerlink" href="#if-you-re-installing-visual-studio-2019" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>MSVC v141 - VS 2017 C++ x64/x86 build tools</p></li>
+<li><p>MSVC v140 - VS 2015 C++ build tools (v14.00)</p></li>
+</ul>
+<p>If you do not already have a Python 3.x development environment installed, also check “Python Development” in this screen.</p>
+<p>If you already have Visual Studio installed and need to add Python, open the “Add or remove programs” control panel and find the “Microsoft Visual Studio Installer”.  Select it and click “Modify”.  In the installer, select “Modify” again, then check “Python Development” and allow the installer to apply the changes.</p>
+</div>
+</div>
+<div class="section" id="step-1a-alternate-python">
+<h2>Step 1a.  Alternate Python<a class="headerlink" href="#step-1a-alternate-python" title="Permalink to this headline">¶</a></h2>
+<p>If you do not wish to use the Python installation bundled with Visual Studio, you can download the installer from <a class="reference external" href="https://www.python.org/downloads/">here</a>.  Ensure you get version 3.6.6 or higher.</p>
+</div>
+<div class="section" id="step-2-python-dependencies">
+<h2>Step 2. Python Dependencies<a class="headerlink" href="#step-2-python-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>In a command-line that can access Python’s pip you will need to run the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">distro</span></code></p>
+</div>
+<div class="section" id="step-3-installing-cmake">
+<h2>Step 3. Installing CMake<a class="headerlink" href="#step-3-installing-cmake" title="Permalink to this headline">¶</a></h2>
+<p>Download and install the latest version of CMake 3.15.</p>
+<ul class="simple">
+<li><p>Note that earlier versions of CMake will work, but there is a specific bug related to the interaction of Visual Studio 2019 and CMake versions prior to 3.15 that will cause Visual Studio to rebuild far more than it needs to on every build</p></li>
+</ul>
+<p>Download the file named win64-x64 Installer from the <a class="reference external" href="https://cmake.org/download/">CMake Website</a>. You can access the installer on this <a class="reference external" href="https://cmake.org/files/v3.15/">3.15 Version page</a>. During installation, make sure to check “Add CMake to system PATH for all users” when prompted.</p>
+</div>
+<div class="section" id="step-4-create-vcpkg-environment-variable">
+<h2>Step 4. Create VCPKG environment variable<a class="headerlink" href="#step-4-create-vcpkg-environment-variable" title="Permalink to this headline">¶</a></h2>
+<p>In the next step, you will use CMake to build Project Athena. By default, the CMake process builds dependency files in Windows’ <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> directory, which is periodically cleared by the operating system. To prevent you from having to re-build the dependencies in the event that Windows clears that directory, we recommend that you create a <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code> environment variable linked to a directory somewhere on your machine. That directory will contain all dependency files until you manually remove them.</p>
+<p>To create this variable:</p>
+<ul class="simple">
+<li><p>Naviagte to ‘Edit the System Environment Variables’ Through the start menu.</p></li>
+<li><p>Click on ‘Environment Variables’</p></li>
+<li><p>Select ‘New’</p></li>
+<li><p>Set “Variable name” to <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code></p></li>
+<li><p>Set “Variable value” to any directory that you have control over.</p></li>
+</ul>
+<p>Additionally, if you have Visual Studio 2019 installed and <em>only</em> Visual Studio 2019 (i.e. you do not have Visual Studio 2017 installed) you must add an additional environment variable <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BOOTSTRAP</span></code> that will fix a bug in our <code class="docutils literal notranslate"><span class="pre">vcpkg</span></code> pre-build step.</p>
+<p>To create this variable:</p>
+<ul class="simple">
+<li><p>Naviagte to ‘Edit the System Environment Variables’ Through the start menu.</p></li>
+<li><p>Click on ‘Environment Variables’</p></li>
+<li><p>Select ‘New’</p></li>
+<li><p>Set “Variable name” to <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BOOTSTRAP</span></code></p></li>
+<li><p>Set “Variable value” to <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="step-5-running-cmake-to-generate-build-files">
+<h2>Step 5. Running CMake to Generate Build Files<a class="headerlink" href="#step-5-running-cmake-to-generate-build-files" title="Permalink to this headline">¶</a></h2>
+<p>Run Command Prompt from Start and run the following commands:<br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&quot;%HIFI_DIR%&quot;</span></code><br /><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">build</span></code><br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">build</span></code></p>
+<div class="section" id="if-you-re-using-visual-studio-2017">
+<h3>If you’re using Visual Studio 2017,<a class="headerlink" href="#if-you-re-using-visual-studio-2017" title="Permalink to this headline">¶</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">&quot;Visual</span> <span class="pre">Studio</span> <span class="pre">15</span> <span class="pre">Win64&quot;</span></code>.</p>
+</div>
+<div class="section" id="if-you-re-using-visual-studio-2019">
+<h3>If you’re using Visual Studio 2019,<a class="headerlink" href="#if-you-re-using-visual-studio-2019" title="Permalink to this headline">¶</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">&quot;Visual</span> <span class="pre">Studio</span> <span class="pre">16</span> <span class="pre">2019&quot;</span> <span class="pre">-A</span> <span class="pre">x64</span></code>.</p>
+<p>Where <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%</span></code> is the directory for the highfidelity repository.</p>
+</div>
+</div>
+<div class="section" id="step-6-making-a-build">
+<h2>Step 6. Making a Build<a class="headerlink" href="#step-6-making-a-build" title="Permalink to this headline">¶</a></h2>
+<p>Open <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build\athena.sln</span></code> using Visual Studio.</p>
+<p>Change the Solution Configuration (menu ribbon under the menu bar, next to the green play button) from “Debug” to “Release” for best performance.</p>
+<p>Run from the menu bar <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">&gt;</span> <span class="pre">Build</span> <span class="pre">Solution</span></code>.</p>
+</div>
+<div class="section" id="step-7-testing-interface">
+<h2>Step 7. Testing Interface<a class="headerlink" href="#step-7-testing-interface" title="Permalink to this headline">¶</a></h2>
+<p>Create another environment variable (see Step #3)</p>
+<ul class="simple">
+<li><p>Set “Variable name”: <code class="docutils literal notranslate"><span class="pre">_NO_DEBUG_HEAP</span></code></p></li>
+<li><p>Set “Variable value”: <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+<p>Restart Visual Studio again.</p>
+<p>In Visual Studio, right+click “interface” under the Apps folder in Solution Explorer and select “Set as Startup Project”. Run from the menu bar <code class="docutils literal notranslate"><span class="pre">Debug</span> <span class="pre">&gt;</span> <span class="pre">Start</span> <span class="pre">Debugging</span></code>.</p>
+<p>Now, you should have a full build of Project Athena and be able to run the Interface using Visual Studio. Please check our <a class="reference external" href="https://wiki.highfidelity.com/wiki/Main_Page">Docs</a> for more information regarding the programming workflow.</p>
+<p>Note: You can also run Interface by launching it from command line or File Explorer from <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build\interface\Release\interface.exe</span></code></p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>For any problems after Step #6, first try this:</p>
+<ul class="simple">
+<li><p>Delete your locally cloned copy of the highfidelity repository</p></li>
+<li><p>Restart your computer</p></li>
+<li><p>Redownload the <a class="reference external" href="https://github.com/kasenvr/project-athena">repository</a></p></li>
+<li><p>Restart directions from Step #6</p></li>
+</ul>
+<div class="section" id="cmake-gives-you-the-same-error-message-repeatedly-after-the-build-fails">
+<h3>CMake gives you the same error message repeatedly after the build fails<a class="headerlink" href="#cmake-gives-you-the-same-error-message-repeatedly-after-the-build-fails" title="Permalink to this headline">¶</a></h3>
+<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build</span></code> directory.</p>
+</div>
+<div class="section" id="cmake-can-t-find-openssl">
+<h3>CMake can’t find OpenSSL<a class="headerlink" href="#cmake-can-t-find-openssl" title="Permalink to this headline">¶</a></h3>
+<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build</span></code> directory.  Verify that your HIFI_VCPKG_BASE environment variable is set and pointing to the correct location.  Verify that the file <code class="docutils literal notranslate"><span class="pre">${HIFI_VCPKG_BASE}/installed/x64-windows/include/openssl/ssl.h</span></code> exists.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BUILD_LINUX.html" class="btn btn-neutral float-right" title="Build Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BUILD_GENERAL.html" class="btn btn-neutral float-left" title="General Build Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

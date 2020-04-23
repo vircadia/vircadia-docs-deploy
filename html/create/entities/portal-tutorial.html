@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial: Create a Portal &mdash; Project Athena Documentation</title>
+  <title>Tutorial: Create a Portal &mdash; Vircadia Documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../_static/fav-icon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
   
   
   
@@ -59,7 +59,7 @@
 
           
             
-            <img src="../../_static/project-athena-logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -68,12 +68,12 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search Project Athena Docs" />
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.projectathena.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
 
           
         </div>
@@ -126,10 +126,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../develop.html">DEVELOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://apidocs.projectathena.dev">API REFERENCE</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
             
@@ -145,7 +145,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Athena Docs</a>
+          <a href="../../index.html">Vircadia Docs</a>
         
       </nav>
 
@@ -212,7 +212,7 @@
             
   <div class="section" id="tutorial-create-a-portal">
 <h1>Tutorial: Create a Portal<a class="headerlink" href="#tutorial-create-a-portal" title="Permalink to this headline">¶</a></h1>
-<p>Portals in Project Athena transport you to the domain of your choice. You can use these portals to travel to a domain you visit frequently instead of using the <strong>GoTo</strong> app on your HUD or Tablet.</p>
+<p>Portals in Vircadia transport you to the domain of your choice. You can use these portals to travel to a domain you visit frequently instead of using the <strong>GoTo</strong> app on your HUD or Tablet.</p>
 <p><strong>On This Page:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
@@ -233,10 +233,10 @@
 </div>
 <div class="section" id="write-a-script-for-the-portal">
 <h2>Write a Script for the Portal<a class="headerlink" href="#write-a-script-for-the-portal" title="Permalink to this headline">¶</a></h2>
-<p>A portal is an entity with a script attached (entity script). This attached script defines what happens when a user comes in contact with the portal. We’ve used <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>, the script used to teleport in Project Athena domains. You can also <a class="reference external" href="../../script/write-scripts.html">write your own script</a> to suit your needs.</p>
+<p>A portal is an entity with a script attached (entity script). This attached script defines what happens when a user comes in contact with the portal. We’ve used <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>, the script used to teleport in Vircadia domains. You can also <a class="reference external" href="../../script/write-scripts.html">write your own script</a> to suit your needs.</p>
 <p>The portal.js script we’ve used:</p>
 <ul class="simple">
-<li><p>Uses Project Athena’s <a class="reference external" href="https://apidocs.highfidelity.com">JavaScript API</a> to determine when a user walks into the entity and the teleport destination.</p></li>
+<li><p>Uses Vircadia’s <a class="reference external" href="https://apidocs.vircadia.dev">JavaScript API</a> to determine when a user walks into the entity and the teleport destination.</p></li>
 <li><p>Includes a sound that will played every time a user uses the portal.</p></li>
 <li><p>Teleports a user to the specified destination.</p></li>
 </ul>
@@ -250,12 +250,12 @@
 <li><p>Go to the ‘Properties’ tab and scroll down to ‘Behavior’.</p></li>
 <li><p>Next to ‘Script’, paste the script URL. In this case, it is ‘<a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>’.</p></li>
 <li><p>The script takes the location you want to teleport to from the ‘User Data’ field under ‘Behavior’.</p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">hifi://</span> <span class="pre">welcome</span></code> (Project Athena’s welcome domain) to the ‘User Data’ field.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">hifi://</span> <span class="pre">welcome</span></code> (Vircadia’s welcome domain) to the ‘User Data’ field.</p></li>
 <li><p>Scroll down to ‘Collision’ and uncheck ‘Collides’. This is so that a user can walk into the entity and trigger the script.</p></li>
 <li><p>Exit <strong>Create</strong> mode and walk into the entity.</p></li>
 </ol>
 <p><img alt="../../_images/create-portal.png" src="../../_images/create-portal.png" /></p>
-<p>You will be teleported to Project Athena’s welcome domain.</p>
+<p>You will be teleported to Vircadia’s welcome domain.</p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
@@ -289,7 +289,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Project Athena.
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
 
     </p>
   </div> 
