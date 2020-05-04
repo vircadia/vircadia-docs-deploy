@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Server Entity Scripts &mdash; Vircadia Documentation</title>
+  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorial: Transfer Money and Items" href="transfer-hfc-tutorial.html" />
-    <link rel="prev" title="Client Entity Scripts" href="client-entity-scripts.html" /> 
+    <link rel="next" title="});" href="transfer-hfc-tutorial.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="client-entity-scripts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,23 +86,11 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="js-tips.html">JavaScript Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interface-scripts.html">Interface Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="avatar-scripts.html">Avatar Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Server Entity Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">Tutorial: Transfer Money and Items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="midi-tutorial.html">Tutorial: Use MIDI to Control Your Environment</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
@@ -164,7 +152,7 @@
         
           <li><a href="../script.html">Script</a> &raquo;</li>
         
-      <li>Server Entity Scripts</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,68 +173,69 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="server-entity-scripts">
-<h1>Server Entity Scripts<a class="headerlink" href="#server-entity-scripts" title="Permalink to this headline">¶</a></h1>
+  <p># Server Entity Scripts</p>
 <p>You can make content in High Fidelity interactive by attaching scripts to entities. <em>Server entity scripts</em> are entity scripts that run on the server (or domain) that hosts the entity. These scripts run persistently in a domain, even if there are no users present. This means that there is only one instance of the script is running at a time, and it is running on the server. Any behavior that is controlled by your script will be seen and heard by everyone in the domain.</p>
-<p><strong>On This Page</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="#attach-a-server-entity-script-to-an-entity">Attach a Server Entity Script to an Entity</a></p></li>
-<li><p><a class="reference external" href="#example-of-a-server-entity-script">Example of a Server Entity Script</a></p></li>
-<li><p><a class="reference external" href="#script-api">Script API</a></p></li>
-</ul>
-<div class="section" id="attach-a-server-entity-script-to-an-entity">
-<h2>Attach a Server Entity Script to an Entity<a class="headerlink" href="#attach-a-server-entity-script-to-an-entity" title="Permalink to this headline">¶</a></h2>
-<p>To attach a server entity script to an entity:</p>
-<ol class="simple">
-<li><p>In Interface, pull up your tablet or HUD and go to <strong>Create</strong>.</p></li>
-<li><p>Select the entity you’d like to script by either clicking on it in Interface or finding it in the ‘Entity List’.</p></li>
-<li><p>In the <strong>Create</strong> app, go to the ‘Properties’ tab and scroll down to the ‘Behavior’ section.</p></li>
-<li><p>For ‘Server Script’, enter the URL to your server entity script.</p></li>
-</ol>
-<div class="admonition note">
-    <p class="admonition-title">Note</p>
-    <p>An entity can have multiple server entity scripts attached to it, but all of these must be through a single file URL. </p>
-</div></div>
-<div class="section" id="example-of-a-server-entity-script">
-<h2>Example of a Server Entity Script<a class="headerlink" href="#example-of-a-server-entity-script" title="Permalink to this headline">¶</a></h2>
-<p>The following script modifies the intensity of a light entity, so that it flickers tea lights.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">MINIMUM_LIGHT_INTENSITY</span> <span class="o">=</span> <span class="mf">100.0</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">MAXIMUM_LIGHT_INTENSITY</span> <span class="o">=</span> <span class="mf">125.0</span><span class="p">;</span>
-
-    <span class="c1">// Return a random number between `low` (inclusive) and `high` (exclusive)</span>
-    <span class="kd">function</span> <span class="nx">randFloat</span><span class="p">(</span><span class="nx">low</span><span class="p">,</span> <span class="nx">high</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">low</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">high</span> <span class="o">-</span> <span class="nx">low</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">preload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entityID</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">self</span><span class="p">.</span><span class="nx">intervalID</span> <span class="o">=</span> <span class="nx">Script</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">Entities</span><span class="p">.</span><span class="nx">editEntity</span><span class="p">(</span><span class="nx">entityID</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">intensity</span><span class="o">:</span> <span class="nx">randFloat</span><span class="p">(</span><span class="nx">MINIMUM_LIGHT_INTENSITY</span><span class="p">,</span> <span class="nx">MAXIMUM_LIGHT_INTENSITY</span><span class="p">)</span>
-            <span class="p">});</span>
-        <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
-    <span class="p">};</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">unload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">Script</span><span class="p">.</span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">intervalID</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-<p>This script is a good example of a server entity script because it only needs one actor to update the intensity of the light. The same script could be attached as an entity client script, but all clients who could see the tea light would be editing the entity to vary the intensity of the light to flicker it.</p>
-</div>
-<div class="section" id="script-api">
-<h2>Script API<a class="headerlink" href="#script-api" title="Permalink to this headline">¶</a></h2>
+<p><strong>On This Page</strong>
+* [Attach a Server Entity Script to an Entity](#attach-a-server-entity-script-to-an-entity)
+* [Example of a Server Entity Script](#example-of-a-server-entity-script)
+* [Script API](#script-api)</p>
+<p>## Attach a Server Entity Script to an Entity
+To attach a server entity script to an entity:
+1. In Interface, pull up your tablet or HUD and go to <strong>Create</strong>.
+2. Select the entity you’d like to script by either clicking on it in Interface or finding it in the ‘Entity List’.
+3. In the <strong>Create</strong> app, go to the ‘Properties’ tab and scroll down to the ‘Behavior’ section.
+4. For ‘Server Script’, enter the URL to your server entity script.</p>
+<dl class="simple">
+<dt>&lt;div class=”admonition note”&gt;</dt><dd><p>&lt;p class=”admonition-title”&gt;Note&lt;/p&gt;
+&lt;p&gt;An entity can have multiple server entity scripts attached to it, but all of these must be through a single file URL. &lt;/p&gt;</p>
+</dd>
+</dl>
+<p>&lt;/div&gt;</p>
+<p>## Example of a Server Entity Script
+The following script modifies the intensity of a light entity, so that it flickers tea lights.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>javascript
+(function() {</p>
+<blockquote>
+<div><p>var MINIMUM_LIGHT_INTENSITY = 100.0;
+var MAXIMUM_LIGHT_INTENSITY = 125.0;</p>
+<p>// Return a random number between <cite>low</cite> (inclusive) and <cite>high</cite> (exclusive)
+function randFloat(low, high) {</p>
+<blockquote>
+<div><p>return low + Math.random() * (high - low);</p>
+</div></blockquote>
+<p>}</p>
+<p>var self = this;
+this.preload = function(entityID) {</p>
+<blockquote>
+<div><dl>
+<dt>self.intervalID = Script.setInterval(function() {</dt><dd><dl class="simple">
+<dt>Entities.editEntity(entityID, {</dt><dd><p>intensity: randFloat(MINIMUM_LIGHT_INTENSITY, MAXIMUM_LIGHT_INTENSITY)</p>
+</dd>
+</dl>
+<p>});</p>
+</dd>
+</dl>
+<p>}, 100);</p>
+</div></blockquote>
+<p>};
+this.unload = function() {</p>
+<blockquote>
+<div><p>Script.clearInterval(self.intervalID);</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>});</p>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a>`
+This script is a good example of a server entity script because it only needs one actor to update the intensity of the light. The same script could be attached as an entity client script, but all clients who could see the tea light would be editing the entity to vary the intensity of the light to flicker it.</p>
+<p>## Script API</p>
 <p>The Entity Script Server does not have access to all of the listed components of the API. APIs for avatars, controllers, recording, overlays, and mouse and keyboard events are not available in the Entity Script Server.</p>
-<p>Learn more about what APIs are available to server entity scripts <a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">here</a>.</p>
+<p>Learn more about what APIs are available to server entity scripts [here](<a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">https://apidocs.vircadia.dev/Entities.html</a>).</p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
-<li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
-<li><p><a class="reference external" href="https://apidocs.vircadia.dev">API Reference</a></p></li>
+<li><p>[Get Started with Scripting](get-started-with-scripting.html)</p></li>
+<li><p>[Write Your Own Scripts](write-scripts.html)</p></li>
+<li><p>[API Reference](<a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>)</p></li>
 </ul>
-</div>
-</div>
 
 
            </div>
@@ -256,10 +245,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="transfer-hfc-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Transfer Money and Items" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="transfer-hfc-tutorial.html" class="btn btn-neutral float-right" title="});" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="client-entity-scripts.html" class="btn btn-neutral float-left" title="Client Entity Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="client-entity-scripts.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

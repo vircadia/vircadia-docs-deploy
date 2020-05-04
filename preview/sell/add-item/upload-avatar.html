@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Add Your Avatar &mdash; Vircadia Documentation</title>
+  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -148,7 +148,7 @@
     You are here: 
       <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
         
-      <li>Add Your Avatar</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,70 +169,68 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="add-your-avatar">
-<h1>Add Your Avatar<a class="headerlink" href="#add-your-avatar" title="Permalink to this headline">¶</a></h1>
-<p>Once you <a class="reference external" href="../../create/avatars/create-avatars.html">create an avatar</a>, it should contain the following files:</p>
-<ul class="simple">
-<li><p>An FST file</p></li>
-<li><p>An FBX file</p></li>
-<li><p>Scripts folder (optional)</p></li>
-<li><p>Textures folder</p></li>
-</ul>
+  <p># Add Your Avatar</p>
+<p>Once you [create an avatar](../../create/avatars/create-avatars.html), it should contain the following files:
+* An FST file
+* An FBX file
+* Scripts folder (optional)
+* Textures folder</p>
 <p>You will need to upload all these files to the Marketplace.</p>
-<p><strong>On This Page</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="#add-your-avatars-files">Add Your Avatar’s Files</a></p></li>
-<li><p><a class="reference external" href="#find-your-avatars-url">Find Your Avatar’s URL</a></p></li>
-</ul>
-<div class="section" id="add-your-avatar-s-files">
-<h2>Add Your Avatar’s Files<a class="headerlink" href="#add-your-avatar-s-files" title="Permalink to this headline">¶</a></h2>
-<ol>
-<li><p>Go to <a class="reference external" href="https://highfidelity.com/marketplace/items/new">https://highfidelity.com/marketplace/items/new</a> to create a new item. If you’re not logged in, you will be prompted to do so.</p></li>
+<p><strong>On This Page</strong>
+* [Add Your Avatar’s Files](#add-your-avatars-files)
+* [Find Your Avatar’s URL](#find-your-avatars-url)</p>
+<p>## Add Your Avatar’s Files</p>
+<ol class="arabic">
+<li><p>Go to [<a class="reference external" href="https://highfidelity.com/marketplace/items/new](https://highfidelity.com/marketplace/items/new">https://highfidelity.com/marketplace/items/new](https://highfidelity.com/marketplace/items/new</a>) to create a new item. If you’re not logged in, you will be prompted to do so.</p></li>
 <li><p>Enter your avatar’s name and select your category as ‘Avatars’. You can add the metadata now or later.</p></li>
 <li><p>Click ‘Save Draft’.</p></li>
 <li><p>Scroll down to the ‘Assets’ section.</p></li>
 <li><p>Click ‘Choose Folder’ and navigate to where your avatar is saved on your computer. Select the folder that contains your FBX file, click ‘Upload’ twice and wait for it to upload.</p></li>
-<li><p>Click on the uploaded FBX file, and copy the Marketplace path including the unique hash for your avatar. Do not copy your folder name or the name of the file. <img alt="../../_images/avatar-marketplace-path.png" src="../../_images/avatar-marketplace-path.png" /></p></li>
+<li><p>Click on the uploaded FBX file, and copy the Marketplace path including the unique hash for your avatar. Do not copy your folder name or the name of the file. ![](_images/avatar-marketplace-path.png)</p></li>
 <li><p>Open your FST file in the text editor of your choice. (Note that the FST file is a local file on your computer)</p></li>
-<li><p>Locate the relative path references to the FBX file, textures directory, and script file(s). Replace these with the absolute path references of the uploaded content.
-<img alt="../../_images/fst-absolute.png" src="../../_images/fst-absolute.png" /></p>
- <div class="admonition note">
-     <p class="admonition-title">Note</p>
-     <p>Absolute paths are entire URLs that generally begin with 'https://' and contain a website address, such as 'https://website.com/resources/scripts/interact.js'. Relative paths drop the beginning of the path and only specify how to get to a resource from the location of the script. Relative paths usually look something like '/resources/scripts/interact.js'.</p>
- </div></li>
+<li><dl>
+<dt>Locate the relative path references to the FBX file, textures directory, and script file(s). Replace these with the absolute path references of the uploaded content.</dt><dd><p>![](_images/fst-absolute.png)
+&lt;div class=”admonition note”&gt;</p>
+<blockquote>
+<div><p>&lt;p class=”admonition-title”&gt;Note&lt;/p&gt;
+&lt;p&gt;Absolute paths are entire URLs that generally begin with ‘<a class="reference external" href="https://">https://</a>’ and contain a website address, such as ‘<a class="reference external" href="https://website.com/resources/scripts/interact.js">https://website.com/resources/scripts/interact.js</a>’. Relative paths drop the beginning of the path and only specify how to get to a resource from the location of the script. Relative paths usually look something like ‘/resources/scripts/interact.js’.&lt;/p&gt;</p>
+</div></blockquote>
+<p>&lt;/div&gt;</p>
+</dd>
+</dl>
+</li>
 <li><p>Return to your avatar submission on the Marketplace.</p></li>
-<li><p>In the ‘Assets’ section, click ‘Choose Files’ and navigate to where your avatar is saved on your computer. Select your updated FST file, click ‘Open’ and wait for it to upload.</p>
-<div class="admonition note">
-    <p class="admonition-title">Note</p>
-    <p>Be sure you do not have any files or folders selected in the asset viewer so that the uploaded file goes to the right place. Any selected files and folders will be highlighted blue.</p>
-</div></li>
+<li><p>In the ‘Assets’ section, click ‘Choose Files’ and navigate to where your avatar is saved on your computer. Select your updated FST file, click ‘Open’ and wait for it to upload.
+&lt;div class=”admonition note”&gt;</p>
+<blockquote>
+<div><p>&lt;p class=”admonition-title”&gt;Note&lt;/p&gt;
+&lt;p&gt;Be sure you do not have any files or folders selected in the asset viewer so that the uploaded file goes to the right place. Any selected files and folders will be highlighted blue.&lt;/p&gt;</p>
+</div></blockquote>
+<p>&lt;/div&gt;</p>
+</li>
 <li><p>Click the FST file as your root file in the Asset Viewer.</p></li>
 <li><p>Save your submission.
-<img alt="../../_images/marketplace-assets.png" src="../../_images/marketplace-assets.png" /></p></li>
+![](_images/marketplace-assets.png)</p></li>
 </ol>
-<p>At this time, we recommend that you test your avatar using the <a class="reference external" href="../../create/tools.html#marketplace-item-tester">Marketplace Item Tester</a>. If your avatar re-imports into Vircadia without any issues, it is now ready to be uploaded to the Marketplace.</p>
-</div>
-<div class="section" id="find-your-avatar-s-url">
-<h2>Find Your Avatar’s URL<a class="headerlink" href="#find-your-avatar-s-url" title="Permalink to this headline">¶</a></h2>
+<p>At this time, we recommend that you test your avatar using the [Marketplace Item Tester](../../create/tools.html#marketplace-item-tester). If your avatar re-imports into Vircadia without any issues, it is now ready to be uploaded to the Marketplace.</p>
+<p>## Find Your Avatar’s URL</p>
 <p>Now you are ready to use your avatar! To locate the URL for your avatar:</p>
-<ol class="simple">
-<li><p>Go to <a class="reference external" href="https://highfidelity.com/marketplace">https://highfidelity.com/marketplace</a>. If you’re not logged in, you will be prompted to do so.</p></li>
+<ol class="arabic simple">
+<li><p>Go to [<a class="reference external" href="https://highfidelity.com/marketplace](https://highfidelity.com/marketplace">https://highfidelity.com/marketplace](https://highfidelity.com/marketplace</a>). If you’re not logged in, you will be prompted to do so.</p></li>
 <li><p>Click on your user name, then on ‘My Items’.</p></li>
 <li><p>Locate your avatar in Draft mode and click on it.</p></li>
 <li><p>Click ‘Edit’.</p></li>
 <li><p>Scroll down to the Assets section.</p></li>
 <li><p>Click on the FST file. Below it, click the ‘Copy URL’ button.</p></li>
 </ol>
-<p>This is the URL you will use when you <a class="reference external" href="../../explore/personalize/change-avatar.html">change your avatar</a> in Vircadia.</p>
-<p>If you wish to sell your avatar on the Marketplace, be sure to fill out your metadata. You can format your item’s description using <a class="reference external" href="../../sell/markdown-guide.html">Markdown</a> syntax. Click “Submit for Review” to be verified and certified on the Marketplace.</p>
+<p>This is the URL you will use when you [change your avatar](../../explore/personalize/change-avatar.html) in Vircadia.</p>
+<p>If you wish to sell your avatar on the Marketplace, be sure to fill out your metadata. You can format your item’s description using [Markdown](../../sell/markdown-guide.html) syntax. Click “Submit for Review” to be verified and certified on the Marketplace.</p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="../../create/avatars/create-avatars.html">Create Your Own Avatar</a></p></li>
-<li><p><a class="reference external" href="../../explore/personalize/change-avatar.html">Change Your Avatar</a></p></li>
-<li><p><a class="reference external" href="../submission-rules.html">Marketplace Submission Rules</a></p></li>
+<li><p>[Create Your Own Avatar](../../create/avatars/create-avatars.html)</p></li>
+<li><p>[Change Your Avatar](../../explore/personalize/change-avatar.html)</p></li>
+<li><p>[Marketplace Submission Rules](../submission-rules.html)</p></li>
 </ul>
-</div>
-</div>
 
 
            </div>

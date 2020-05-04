@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Beta Release 84 &mdash; Vircadia Documentation</title>
+  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Beta Release 83" href="v83.html" />
-    <link rel="prev" title="Beta Release 85" href="v85.html" /> 
+    <link rel="next" title="&lt;no title&gt;" href="v83.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="v85.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,7 +86,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
@@ -95,17 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="v86-k2.html">Beta Release 86 K2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v86.html">Beta Release 86</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v85.html">Beta Release 85</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Beta Release 84</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v83.html">Beta Release 83</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v82.html">Beta Release 82</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v81.html">Beta Release 81</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v80.html">Beta Release 80</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
@@ -162,7 +152,7 @@
         
           <li><a href="../release-notes.html">Release Notes</a> &raquo;</li>
         
-      <li>Beta Release 84</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,136 +173,116 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="beta-release-84">
-<h1>Beta Release 84<a class="headerlink" href="#beta-release-84" title="Permalink to this headline">¶</a></h1>
+  <p># Beta Release 84</p>
 <p>We released Beta Release 84 on Monday September 23, 2019.</p>
 <p>Note: There is a protocol change in this version.</p>
-<div class="section" id="new-in-v0-84-0">
-<h2>New in v0.84.0!<a class="headerlink" href="#new-in-v0-84-0" title="Permalink to this headline">¶</a></h2>
+<p>## New in v0.84.0!</p>
 <ul class="simple">
-<li><p><strong>Acoustic Echo Cancellation</strong>: In this release, we implemented Acoustic Echo Cancellation (AEC), which improves voice quality by preventing the echo that results in open mic setups. By default, AEC is turned on, and you can turn it off in Settings &gt; Audio. Documentation is available at <a class="reference external" href="https://docs.highfidelity.com/en/rc84/explore/get-started/adjust-settings.html#id1">Acoustic Echo Cancellation</a>.</p></li>
+<li><p><strong>Acoustic Echo Cancellation</strong>: In this release, we implemented Acoustic Echo Cancellation (AEC), which improves voice quality by preventing the echo that results in open mic setups. By default, AEC is turned on, and you can turn it off in Settings &gt; Audio. Documentation is available at [Acoustic Echo Cancellation](<a class="reference external" href="https://docs.highfidelity.com/en/rc84/explore/get-started/adjust-settings.html#id1">https://docs.highfidelity.com/en/rc84/explore/get-started/adjust-settings.html#id1</a>).</p></li>
 </ul>
-</div>
-<div class="section" id="improvements">
-<h2>Improvements<a class="headerlink" href="#improvements" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="avatars">
-<h3>Avatars<a class="headerlink" href="#avatars" title="Permalink to this headline">¶</a></h3>
+<p>## Improvements</p>
+<p>### Avatars</p>
 <ul class="simple">
 <li><p>Improved our safe landing code so that avatars will no longer get trapped in the ground or other objects.</p></li>
 <li><p>Added feetPosition property to MyAvatar API.</p></li>
 </ul>
-</div>
-<div class="section" id="create">
-<h3>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
+<p>### Create</p>
 <ul class="simple">
 <li><p>Added font, textEffect, textEffectColor, and textEffectThickness properties to text entities to allow configuration of the appearance of the text.</p></li>
 <li><p>Changed the keyboard shortcut for ‘Duplicate entities’ in Create mode to Ctrl + Click (Windows) or Cmd + Click (Mac).</p></li>
 </ul>
-</div>
-<div class="section" id="rendering">
-<h3>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h3>
+<p>### Rendering</p>
 <ul class="simple">
-<li><p>Improved performance when any entity needs to be re-rendered (thanks to <a class="reference external" href="https://github.com/HifiExperiments">HifiExperiments</a>!).</p></li>
+<li><p>Improved performance when any entity needs to be re-rendered (thanks to [HifiExperiments](<a class="reference external" href="https://github.com/HifiExperiments">https://github.com/HifiExperiments</a>)!).</p></li>
 <li><p>Improved performance for Interface’s rendering pipelines.</p></li>
 <li><p>Added a check to see if a user’s machine will render cleanly using a higher graphics mode; if not, we will default to “Low”.</p></li>
 <li><p>Fixed rendering issue where the sky was a darker color than it should have been for some users with AMD graphics cards.</p></li>
 <li><p>Automatically tier computers with Intel videos cards and Mac without secondary video cards into “Low” graphics rendering mode by default.</p></li>
-<li><p>Improved rendering of entities on low-end PCs:</p>
-<ul>
+<li><dl class="simple">
+<dt>Improved rendering of entities on low-end PCs:</dt><dd><ul>
 <li><p>Invisible polylines</p></li>
 <li><p>Black fringes surrounding polylines</p></li>
 <li><p>Missing blendshapes on avatars</p></li>
 </ul>
+</dd>
+</dl>
 </li>
 </ul>
-</div>
-<div class="section" id="other-mentions">
-<h3>Other Mentions<a class="headerlink" href="#other-mentions" title="Permalink to this headline">¶</a></h3>
+<p>### Other Mentions</p>
 <ul class="simple">
 <li><p>Updated High Fidelity branding on the login screen and dialogs throughout the Interface.</p></li>
 <li><p>Added setting to keep audio volume settings across sessions.</p></li>
 <li><p>Removed Crash sub-menu from the Developer menu in Interface.</p></li>
 <li><p>Removed keyboard shortcut (Shift+L) to open LOD tools.</p></li>
-<li><p>Provided additional information in the scripting console for debugging picks. This introduces the ability to get:</p>
-<ul>
+<li><dl class="simple">
+<dt>Provided additional information in the scripting console for debugging picks. This introduces the ability to get:</dt><dd><ul>
 <li><p>the list of created picks (Picks.getPicks())</p></li>
 <li><p>the properties that were given to a pick at time of creation (Picks.getPickScriptParameters(id))</p></li>
 <li><p>the current properties of a pick (Picks.getPickProperties(id))</p></li>
 </ul>
+</dd>
+</dl>
 </li>
-<li><p>Introduced new build-time environment variable HIFI_VCPKG_BOOTSTRAP that will allow developers using Visual Studio 2019 to build the High Fidelity binaries. See the updated build guide for Windows here: <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi/master/BUILD_WIN">https://github.com/kasenvr/project-athena/blob/kasen/core/BUILD_WIN.md</a></p></li>
+<li><p>Introduced new build-time environment variable HIFI_VCPKG_BOOTSTRAP that will allow developers using Visual Studio 2019 to build the High Fidelity binaries. See the updated build guide for Windows here: [<a class="reference external" href="https://github.com/kasenvr/project-athena/blob/kasen/core/BUILD_WIN.md](https://raw.githubusercontent.com/highfidelity/hifi/master/BUILD_WIN.md">https://github.com/kasenvr/project-athena/blob/kasen/core/BUILD_WIN.md](https://raw.githubusercontent.com/highfidelity/hifi/master/BUILD_WIN.md</a>)</p></li>
 <li><p>Updated High Fidelity’s copyright on the About dialog.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="fixes">
-<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="installer">
-<h3>Installer<a class="headerlink" href="#installer" title="Permalink to this headline">¶</a></h3>
+<p>## Fixes</p>
+<p>### Installer</p>
 <ul class="simple">
 <li><p>Fixed missing api-ms-win-shcore-scaling-l1-1-1.dll installer error introduced in v0.83.0.</p></li>
 <li><p>Removed the Sandbox that was inadvertently added to the client-only installer on Windows.</p></li>
 </ul>
-</div>
-<div class="section" id="id1">
-<h3>Avatars<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>### Avatars</p>
 <ul class="simple">
-<li><p>Bugs were fixed when users would incorrectly receive an avatar theft message in the following circumstances:</p>
-<ul>
+<li><dl class="simple">
+<dt>Bugs were fixed when users would incorrectly receive an avatar theft message in the following circumstances:</dt><dd><ul>
 <li><p>Following disconnects of Interface</p></li>
 <li><p>Laptops falling asleep with Interface running</p></li>
 <li><p>Changing network connections</p></li>
 <li><p>Rapidly switching between avatars in Inventory</p></li>
 <li><p>User reloads content</p></li>
 </ul>
+</dd>
+</dl>
 </li>
 <li><p>When traveling at higher speeds, whether flying or running, the collision box for the avatar no longer extends outward to hit objects that are more than a meter away</p></li>
 <li><p>Fixed an issue where avatars were able to fly through some walls and other objects</p></li>
 <li><p>You no longer have to set MyAvatar.hasProceduralEyeFaceMovement = false in JavaScript for MyAvatar.setJointRotation() to function properly on eye joints</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
-<h3>Rendering<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>### Rendering</p>
 <ul class="simple">
 <li><p>Fixed an issue occurring in “Low” graphics mode where some semi-transparent entities would show black artifacts from the objects behind them</p></li>
 <li><p>Corrected the sky color on Mac where it would flash a different blue color before settling into the normal sky color</p></li>
 <li><p>The in-world representation of “20:20 vision” now more closely matches real-world 20:20 vision, and is set as the default</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h3>Other Mentions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>### Other Mentions</p>
 <ul class="simple">
 <li><p>Returned Shield icon to HUD and Interface window in Desktop mode</p></li>
 <li><p>Using track pad with Mac no longer gets stuck in “mouse look” mode after releasing the click buttons</p></li>
-<li><p>8-Channel audio output works again in Interface (thanks to <a class="reference external" href="https://github.com/ctrlaltdavid">ctrlaltdavid</a>!)</p></li>
+<li><p>8-Channel audio output works again in Interface (thanks to [ctrlaltdavid](<a class="reference external" href="https://github.com/ctrlaltdavid">https://github.com/ctrlaltdavid</a>)!)</p></li>
 <li><p>Removed ‘HMD Mute Warning’ option from Settings &gt; Audio &gt; Desktop tab</p></li>
 <li><p>Fixed memory leak in the ESS causing a leak of all XMLHttpRequests in the domain server</p></li>
 <li><p>Addressed security issue that allowed server scripts using web pages to access files on the local machine</p></li>
 <li><p>Fixed crash in the Oven executable for lack of MaterialCache instance in DependencyManager</p></li>
 </ul>
-</div>
-<div class="section" id="crash-fixes">
-<h3>Crash Fixes<a class="headerlink" href="#crash-fixes" title="Permalink to this headline">¶</a></h3>
+<p>### Crash Fixes</p>
 <ul class="simple">
-<li><p>Fixed crashes in the following scenarios:</p>
-<ul>
+<li><dl class="simple">
+<dt>Fixed crashes in the following scenarios:</dt><dd><ul>
 <li><p>In AudioInjector when Mac laptops go to sleep</p></li>
 <li><p>Closing laptop lids and re-opening them while Interface is running (on both Windows and Mac)</p></li>
 <li><p>Checking for web page access permissions was not thread safe</p></li>
 <li><p>Attempting to stop the audio injector when exiting out of interface on a Mac</p></li>
 <li><p>Using ‘originalProperties’ in a Domain filter</p></li>
-<li><p>Using the <code class="docutils literal notranslate"><span class="pre">ScriptDiscoveryService.scriptsModel</span></code> property and trying to access data for a non-existent row in the model</p></li>
+<li><p>Using the <cite>ScriptDiscoveryService.scriptsModel</cite> property and trying to access data for a non-existent row in the model</p></li>
 <li><p>Added a workaround for a bug present in the Qt framework that can cause a crash when multiple threads attempt to serialize rendering of QML surfaces</p></li>
 </ul>
+</dd>
+</dl>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="android">
-<h2>Android<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
+<p>## Android</p>
 <p>There are no Android-specific fixes in this release.</p>
-</div>
-</div>
 
 
            </div>
@@ -322,10 +292,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v83.html" class="btn btn-neutral float-right" title="Beta Release 83" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v83.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v85.html" class="btn btn-neutral float-left" title="Beta Release 85" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="v85.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

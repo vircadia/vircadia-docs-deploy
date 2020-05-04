@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Beta Release 80 &mdash; Vircadia Documentation</title>
+  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Beta Release 81" href="v81.html" /> 
+    <link rel="prev" title="&lt;no title&gt;" href="v81.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,7 +85,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
@@ -94,17 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="v86-k2.html">Beta Release 86 K2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v86.html">Beta Release 86</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v85.html">Beta Release 85</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v84.html">Beta Release 84</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v83.html">Beta Release 83</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v82.html">Beta Release 82</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v81.html">Beta Release 81</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Beta Release 80</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
 </ul>
 
@@ -161,7 +151,7 @@
         
           <li><a href="../release-notes.html">Release Notes</a> &raquo;</li>
         
-      <li>Beta Release 80</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,124 +172,100 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="beta-release-80">
-<h1>Beta Release 80<a class="headerlink" href="#beta-release-80" title="Permalink to this headline">¶</a></h1>
+  <p># Beta Release 80</p>
 <p>We released Beta Release 80 on Tuesday, March 19, 2019.</p>
 <p>Note: There is a protocol change in this version.</p>
-<div class="section" id="new-in-v0-80-0">
-<h2>New in v0.80.0!<a class="headerlink" href="#new-in-v0-80-0" title="Permalink to this headline">¶</a></h2>
+<p>## New in v0.80.0!</p>
 <ul class="simple">
 <li><p><strong>Added Clock to Tablet</strong>: Local time is displayed in the upper right of the tablet in HMD, above the username (or log in, if not logged in).</p></li>
 <li><p><strong>Downloadable Assets</strong>: Content creators can now download their assets for their Marketplace items, including both approved and invalidated items. This is supported on the web-based Marketplace by opening it in a browser; it is not yet supported using the Market app.</p></li>
-<li><p><strong>Digital Ocean Password Reset</strong>: Domain Admin users can now reset their admin username and password on Digital Ocean Domain Servers. Go to <a class="reference external" href="https://highfidelity.com/user/cloud_domains">highfidelity.com/user/cloud_domains</a>, sign in to High Fidelity, and select the Reset Domain Server password option from the menu.</p></li>
+<li><p><strong>Digital Ocean Password Reset</strong>: Domain Admin users can now reset their admin username and password on Digital Ocean Domain Servers. Go to [highfidelity.com/user/cloud_domains](<a class="reference external" href="https://highfidelity.com/user/cloud_domains">https://highfidelity.com/user/cloud_domains</a>), sign in to High Fidelity, and select the Reset Domain Server password option from the menu.</p></li>
 <li><p><strong>Avatar Doctor</strong>: The Avatar Packager now contains error detection, aka the “Avatar Doctor”. This tool will notify you of common errors before you upload your avatar files to our server for hosting. <em>Coming in future releases</em>: click on the error to view troubleshooting tips on how to resolve the error prior to uploading your avatar.</p></li>
 <li><p><strong>Creators Stocking Inventory</strong>: Allows creators to stock their inventory with their own NFS certified items and gift them to others.</p></li>
-<li><p><strong>New and Updated Documentation</strong>:</p>
-<ul>
-<li><p>The API Reference has been updated to a new, easy-to-read style that helps developers find what they’re looking for more easily, complete with a comprehensive search. It is available at <a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>.</p></li>
-<li><p>New documentation will include (clear cookies if you’re getting 404 errors):</p>
-<ul>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/host/your-domain/configure-settings.html#firewall-settings">Firewall Settings</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/explore/get-started/android.html">Using High Fidelity with Android</a> (Canny request: <a class="reference external" href="http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android">http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android</a>)</p></li>
-<li><p>Improved Documentation for <a class="reference external" href="https://docs.highfidelity.com/host/secure-domain.html#protect-your-domain-s-content">Entity Filters and ‘Protecting Your Domain Content’</a> (Canny request: <a class="reference external" href="http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation">http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation</a>)</p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/host/place-name.html#add-your-place-to-the-goto-directory">Add Your Place to the GoTo Menu</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/create/entities/boombox-tutorial.html">Tutorial: Build a Boom Box</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/create/entities/avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/create/entities/open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/create/entities/primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></p></li>
-<li><p><a class="reference external" href="https://docs.highfidelity.com/create/entities/purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></p></li>
+<li><dl class="simple">
+<dt><strong>New and Updated Documentation</strong>:</dt><dd><ul>
+<li><p>The API Reference has been updated to a new, easy-to-read style that helps developers find what they’re looking for more easily, complete with a comprehensive search. It is available at [<a class="reference external" href="https://apidocs.vircadia.dev](https://apidocs.vircadia.dev">https://apidocs.vircadia.dev](https://apidocs.vircadia.dev</a>).</p></li>
+<li><dl class="simple">
+<dt>New documentation will include (clear cookies if you’re getting 404 errors):</dt><dd><ul>
+<li><p>[Firewall Settings](<a class="reference external" href="https://docs.highfidelity.com/host/your-domain/configure-settings.html#firewall-settings">https://docs.highfidelity.com/host/your-domain/configure-settings.html#firewall-settings</a>)</p></li>
+<li><p>[Using High Fidelity with Android](<a class="reference external" href="https://docs.highfidelity.com/explore/get-started/android.html">https://docs.highfidelity.com/explore/get-started/android.html</a>) (Canny request: [<a class="reference external" href="http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android](http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android">http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android](http://roadmap.highfidelity.com/feature-requests/p/requested-documentation-more-info-for-high-fidelity-on-android</a>))</p></li>
+<li><p>Improved Documentation for [Entity Filters and ‘Protecting Your Domain Content’](<a class="reference external" href="https://docs.highfidelity.com/host/secure-domain.html#protect-your-domain-s-content">https://docs.highfidelity.com/host/secure-domain.html#protect-your-domain-s-content</a>) (Canny request: [<a class="reference external" href="http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation](http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation">http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation](http://roadmap.highfidelity.com/feature-requests/p/improve-filter-documentation</a>))</p></li>
+<li><p>[Add Your Place to the GoTo Menu](<a class="reference external" href="https://docs.highfidelity.com/host/place-name.html#add-your-place-to-the-goto-directory">https://docs.highfidelity.com/host/place-name.html#add-your-place-to-the-goto-directory</a>)</p></li>
+<li><p>[Tutorial: Build a Boom Box](<a class="reference external" href="https://docs.highfidelity.com/create/entities/boombox-tutorial.html">https://docs.highfidelity.com/create/entities/boombox-tutorial.html</a>)</p></li>
+<li><p>[Tutorial: Create an Avatar Scaling Button](<a class="reference external" href="https://docs.highfidelity.com/create/entities/avatar-scaling-tutorial.html">https://docs.highfidelity.com/create/entities/avatar-scaling-tutorial.html</a>)</p></li>
+<li><p>[Tutorial: Open Web Page with Entities](<a class="reference external" href="https://docs.highfidelity.com/create/entities/open-tablet-page-tutorial.html">https://docs.highfidelity.com/create/entities/open-tablet-page-tutorial.html</a>)</p></li>
+<li><p>[Tutorial: Build a Painting Set](<a class="reference external" href="https://docs.highfidelity.com/create/entities/primitive-painting-set-tutorial.html">https://docs.highfidelity.com/create/entities/primitive-painting-set-tutorial.html</a>)</p></li>
+<li><p>[Tutorial: Create a Purchase Button for Marketplace Sales](<a class="reference external" href="https://docs.highfidelity.com/create/entities/purchase-button-tutorial.html">https://docs.highfidelity.com/create/entities/purchase-button-tutorial.html</a>)</p></li>
 </ul>
+</dd>
+</dl>
 </li>
 </ul>
+</dd>
+</dl>
 </li>
 </ul>
 <p>This release completes the overlay work we began a couple of releases back. We have converted our internal use of overlays to local entities and are moving toward deprecation of 3D overlays.</p>
 <p>Content Creators: From now on, <strong>please use local entities instead of overlays</strong>. Any work you have that uses Overlays should be migrated to use local entities.</p>
-</div>
-<div class="section" id="improvements">
-<h2>Improvements<a class="headerlink" href="#improvements" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="avatars">
-<h3>Avatars<a class="headerlink" href="#avatars" title="Permalink to this headline">¶</a></h3>
+<p>## Improvements</p>
+<p>### Avatars</p>
 <ul class="simple">
-<li><p>The Vircadia Avatar Exporter for Unity has been updated to notify you of texture and file errors you may encounter while using the tool. Download the updated exporter here: <a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter">https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter</a></p></li>
+<li><p>The Vircadia Avatar Exporter for Unity has been updated to notify you of texture and file errors you may encounter while using the tool. Download the updated exporter here: [<a class="reference external" href="https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter](https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter">https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter](https://github.com/kasenvr/project-athena/tree/kasen/core/tools/unity-avatar-exporter</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="create-tools">
-<h3>Create Tools<a class="headerlink" href="#create-tools" title="Permalink to this headline">¶</a></h3>
+<p>### Create Tools</p>
 <ul class="simple">
 <li><p>The ‘Entity Types’ dropdown of the Entity List has new buttons for Select All (check all entity types) and Clear All (uncheck all entity types).</p></li>
 </ul>
-</div>
-<div class="section" id="rendering">
-<h3>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h3>
+<p>### Rendering</p>
 <ul class="simple">
 <li><p>We added the ability to load GLB (GLTF binary) format assets with on our ongoing work to support glTF.</p></li>
 <li><p>The Market tablet app is rewritten in QML (from HTML) to support future mobile-compatible devices.</p></li>
 </ul>
-</div>
-<div class="section" id="other-mentions">
-<h3>Other Mentions<a class="headerlink" href="#other-mentions" title="Permalink to this headline">¶</a></h3>
+<p>### Other Mentions</p>
 <ul class="simple">
 <li><p>When you update a Marketplace item, the number of likes now carries over from the original item to the updated item in the Marketplace.</p></li>
 <li><p>During a custom install, you now have the ability to install only the Sandbox or only the Interface <strong>without uninstalling</strong> the other.</p></li>
 <li><p>The list of live-speakers in the People tablet app are sorted live. You no longer need to refresh or close the PAL to re-sort the list except in very noisy or low-level places.</p></li>
 <li><p>We’ve added new text to warn when sending an inventory to the Trash is an irreversible action.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="fixes">
-<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Avatars<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>## Fixes</p>
+<p>### Avatars</p>
 <ul class="simple">
 <li><p>UTF-8 characters are read correctly in FST files. This fixes a bug where Japanese characters in FST files were incorrectly read, causing the avatars to fail while loading.</p></li>
 <li><p>We continue to address the “white orb” issue where avatars appear as white orbs when loading into a domain and never fully load as avatars.</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
-<h3>Create Tools<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>### Create Tools</p>
 <ul class="simple">
-<li><p>Fixed the ability to change animations of an FBX model entity by a script or via the Create menu (Canny Request: <a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations">http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations</a>).</p></li>
+<li><p>Fixed the ability to change animations of an FBX model entity by a script or via the Create menu (Canny Request: [<a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations](http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations">http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations](http://roadmap.highfidelity.com/bugs/p/fix-entity-model-animations</a>)).</p></li>
 <li><p>Sorting entity and files lists now correctly sorts alpha and non-alphanumeric characters.</p></li>
 <li><p>Drop-downs now close when a user clicks outside of the list.</p></li>
 <li><p>Users can now change a particle effect’s URL by typing into the field directly.</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h3>Rendering<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>### Rendering</p>
 <ul class="simple">
-<li><p>Tablet no longer disappears due to LOD issues (Canny Request: <a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod">http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod</a>)</p></li>
-<li><p>Entity properties are respected during far/near grab while in HMD (Canny Request: <a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr">http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr</a>)</p></li>
+<li><p>Tablet no longer disappears due to LOD issues (Canny Request: [<a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod](http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod">http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod](http://roadmap.highfidelity.com/bugs/p/make-overlayslocal-entities-not-effected-by-current-lod</a>))</p></li>
+<li><p>Entity properties are respected during far/near grab while in HMD (Canny Request: [<a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr](http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr">http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr](http://roadmap.highfidelity.com/bugs/p/entity-properties-not-set-in-vr</a>))</p></li>
 <li><p>Fixed an issue where avatars drop through the floor when loading, because they were able to move too soon. We now don’t allow avatar movement until the floor renders and physics is enabled.</p></li>
-<li><p>Fixed an issue where you could fly in zones that had “Flying Allowed” set to <strong>off</strong> when creating a Zone in Create tool. (Canny Request: <a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly">http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly</a>).</p></li>
+<li><p>Fixed an issue where you could fly in zones that had “Flying Allowed” set to <strong>off</strong> when creating a Zone in Create tool. (Canny Request: [<a class="reference external" href="http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly](http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly">http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly](http://roadmap.highfidelity.com/bugs/p/avatar-dont-fall-and-can-start-to-fly-when-the-zone-is-set-to-no-fly</a>)).</p></li>
 <li><p>Continuing to improve and work on the issue of soft wearables <strong>flickering</strong> when worn.</p></li>
 <li><p>Keylights now update correctly when a zone is rotated.</p></li>
 <li><p>Procedural entities now render both sides of their triangles correctly. This fixes a bug that was introduced in a recent release.</p></li>
 <li><p>As part of overlay work, we’ve deprecated Overlays.keyboardFocusOverlay in favor of Entities.keyboarFocusOverlay which can be used to set keyboard focus via scripting.</p></li>
 </ul>
-</div>
-<div class="section" id="other">
-<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<p>### Other</p>
 <ul class="simple">
 <li><p>Fixed a long-standing issue that would sometimes occur where an ESS script couldn’t get the properties of its parent. There has a been a workaround in place where a blank javascript function was placed inside of the parent entities serverScripts property. After this fix, you should no longer need to use this workaround.</p></li>
 <li><p>Fixed an issue in the PAL where index numbers would append after display names for users even if they were the only user with that name in the domain. This was occurring due to an issue with refreshing content, re-entering a domain, or recovering from crashes.</p></li>
 </ul>
-</div>
-<div class="section" id="crash-fixes">
-<h3>Crash Fixes<a class="headerlink" href="#crash-fixes" title="Permalink to this headline">¶</a></h3>
+<p>### Crash Fixes</p>
 <p>Fixed crashes in the following scenarios:</p>
 <ul class="simple">
 <li><p>Resizing entities</p></li>
 <li><p>Parsing AvatarEntity data with too many LocalJointTranslations</p></li>
 <li><p>On Mac Desktop computers</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="android">
-<h2>Android<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
+<p>## Android</p>
 <p>Nothing specific for Android in this release.</p>
-</div>
-</div>
 
 
            </div>
@@ -310,7 +276,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="v81.html" class="btn btn-neutral float-left" title="Beta Release 81" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="v81.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

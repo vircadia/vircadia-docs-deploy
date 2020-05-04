@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>JavaScript Tips &amp; Tricks &mdash; Vircadia Documentation</title>
+  <title>}; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interface Scripts" href="interface-scripts.html" />
-    <link rel="prev" title="Write Your Own Scripts" href="write-scripts.html" /> 
+    <link rel="next" title="&lt;no title&gt;" href="interface-scripts.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="write-scripts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,14 +92,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">JavaScript Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interface-scripts.html">Interface Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="avatar-scripts.html">Avatar Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server-entity-scripts.html">Server Entity Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">Tutorial: Transfer Money and Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">});</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html#id6">});</a></li>
 <li class="toctree-l2"><a class="reference internal" href="midi-tutorial.html">Tutorial: Use MIDI to Control Your Environment</a></li>
 </ul>
 </li>
@@ -164,7 +159,7 @@
         
           <li><a href="../script.html">Script</a> &raquo;</li>
         
-      <li>JavaScript Tips &amp; Tricks</li>
+      <li>};</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,174 +180,171 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="javascript-tips-tricks">
-<h1>JavaScript Tips &amp; Tricks<a class="headerlink" href="#javascript-tips-tricks" title="Permalink to this headline">¶</a></h1>
-<p>Vircadia’s robust <a class="reference external" href="https://apidocs.vircadia.dev">JavaScript API</a> provides the tools for you to build great content and user experiences in VR. We’ve compiled some advanced JavaScript tips you can use while scripting for Vircadia.</p>
-<p>You can use the <a class="reference external" href="get-started-with-scripting.html#scripting-console">Scripting Console in Interface</a> to try out the examples on this page. The output will be visible in the console itself.</p>
+  <p># JavaScript Tips &amp; Tricks</p>
+<p>Vircadia’s robust [JavaScript API](<a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>) provides the tools for you to build great content and user experiences in VR. We’ve compiled some advanced JavaScript tips you can use while scripting for Vircadia.</p>
+<p>You can use the [Scripting Console in Interface](get-started-with-scripting.html#scripting-console) to try out the examples on this page. The output will be visible in the console itself.</p>
 <p><strong>On This Page:</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="#compute-3d-math-operations">Compute 3D Math Operations</a></p>
-<ul>
-<li><p><a class="reference external" href="#get-your-avatars-position">Get Your Avatar’s Position</a></p></li>
-<li><p><a class="reference external" href="#get-your-avatars-orientation">Get Your Avatar’s Orientation</a></p></li>
-<li><p><a class="reference external" href="#get-the-direction-your-avatar-is-facing">Get the Direction Your Avatar is Facing</a></p></li>
-<li><p><a class="reference external" href="#make-an-entity-appear-before-your-avatar">Make an Entity Appear Before Your Avatar</a></p></li>
+<li><dl class="simple">
+<dt>[Compute 3D Math Operations](#compute-3d-math-operations)</dt><dd><ul>
+<li><p>[Get Your Avatar’s Position](#get-your-avatars-position)</p></li>
+<li><p>[Get Your Avatar’s Orientation](#get-your-avatars-orientation)</p></li>
+<li><p>[Get the Direction Your Avatar is Facing](#get-the-direction-your-avatar-is-facing)</p></li>
+<li><p>[Make an Entity Appear Before Your Avatar](#make-an-entity-appear-before-your-avatar)</p></li>
 </ul>
+</dd>
+</dl>
 </li>
-<li><p><a class="reference external" href="#include-external-js-and-json-files">Include External JS and JSON Files</a></p></li>
-<li><p><a class="reference external" href="#equip-an-item">Equip an Item</a></p></li>
-<li><p><a class="reference external" href="#connect-a-signal-to-a-function">Connect a Signal to a Function</a></p></li>
+<li><p>[Include External JS and JSON Files](#include-external-js-and-json-files)</p></li>
+<li><p>[Equip an Item](#equip-an-item)</p></li>
+<li><p>[Connect a Signal to a Function](#connect-a-signal-to-a-function)</p></li>
 </ul>
-<div class="section" id="compute-3d-math-operations">
-<h2>Compute 3D Math Operations<a class="headerlink" href="#compute-3d-math-operations" title="Permalink to this headline">¶</a></h2>
+<p>## Compute 3D Math Operations</p>
 <p>When you script for VR worlds like High Fidelity, you need 3D math operations to compute the position and orientation of 3D objects and avatars in-world. We cannot simply add two vectors. To script 3D math operations and to determine position and orientation information of avatars, you can use the following namespaces in our JavaScript API:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">Vec3</a>: The Vec3 API has facilities for generating and manipulating 3-dimensional vectors.</p></li>
-<li><p><a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">Quat</a>: The Quat API provides facilities for generating and manipulating quaternions.</p></li>
-<li><p><a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a>: The MyAvatar API provides facilities for manipulating avatars.</p></li>
+<li><p>[Vec3](<a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">https://apidocs.vircadia.dev/Vec3.html</a>): The Vec3 API has facilities for generating and manipulating 3-dimensional vectors.</p></li>
+<li><p>[Quat](<a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">https://apidocs.vircadia.dev/Quat.html</a>): The Quat API provides facilities for generating and manipulating quaternions.</p></li>
+<li><p>[MyAvatar](<a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">https://apidocs.vircadia.dev/MyAvatar.html</a>): The MyAvatar API provides facilities for manipulating avatars.</p></li>
 </ul>
-<div class="section" id="get-your-avatar-s-position">
-<h3>Get Your Avatar’s Position<a class="headerlink" href="#get-your-avatar-s-position" title="Permalink to this headline">¶</a></h3>
+<p>### Get Your Avatar’s Position</p>
 <p>When creating objects in world, it’s often very helpful to know where your avatar currently is.</p>
 <p>High Fidelity uses a 3D Cartesian coordinate system where the position vector of an entity or avatar looks like this:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span>
-</pre></div>
-</div>
-<p>To get your avatar’s current position, use the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a> namespace. MyAvatar contains properties with information related to your avatar. Use the position property, <code class="docutils literal notranslate"><span class="pre">MyAvatar.position</span></code>, which returns an object.</p>
-<p>In the following example, we are using the JSON.stringify method to convert the JavaScript object (returned by <code class="docutils literal notranslate"><span class="pre">MyAvatar.position</span></code>) to a data string that can be sent over the server.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">0</span> <span class="pre">}</span>
+<span class="pre">`</span></code></p>
+<p>To get your avatar’s current position, use the [MyAvatar](<a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">https://apidocs.vircadia.dev/MyAvatar.html</a>) namespace. MyAvatar contains properties with information related to your avatar. Use the position property, <cite>MyAvatar.position</cite>, which returns an object.</p>
+<p>In the following example, we are using the JSON.stringify method to convert the JavaScript object (returned by <cite>MyAvatar.position</cite>) to a data string that can be sent over the server.</p>
 <p>Open your Scripting Console and find your avatar’s position.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">);</span>
-<span class="c1">// {&quot;x&quot;:-10.349810600280762,&quot;y&quot;:-9.55379867553711,&quot;z&quot;:11.861204147338867}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="get-your-avatar-s-orientation">
-<h3>Get Your Avatar’s Orientation<a class="headerlink" href="#get-your-avatar-s-orientation" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">JSON.stringify(MyAvatar.position);</span>
+<span class="pre">//</span> <span class="pre">{&quot;x&quot;:-10.349810600280762,&quot;y&quot;:-9.55379867553711,&quot;z&quot;:11.861204147338867}</span>
+<span class="pre">`</span></code></p>
+<p>### Get Your Avatar’s Orientation</p>
 <p>If you want an object to appear in front of you, you need to know how your avatar is currently oriented in-world.</p>
 <p>Rotations are handled are by a number-system called Quaternions. Quaternions help simplify calculations in three dimensional space. They add an extra dimension of ‘w’ and the values are normalized (-1,1).</p>
 <p>Quaternions are represented in the form:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
-</pre></div>
-</div>
-<p>Get your avatar’s orientation in the Scripting Console by using the <code class="docutils literal notranslate"><span class="pre">MyAvatar.orientation</span></code> property:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">);</span>
-<span class="c1">// {&quot;x&quot;:0,&quot;y&quot;:-0.4974651634693146,&quot;z&quot;:0,&quot;w&quot;:0.8674839735031128}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="get-the-direction-your-avatar-is-facing">
-<h3>Get the Direction Your Avatar is Facing<a class="headerlink" href="#get-the-direction-your-avatar-is-facing" title="Permalink to this headline">¶</a></h3>
-<p>You can use the <a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">Quat</a> namespace to get the direction which your avatar is facing. Pass your avatar’s orientation to <code class="docutils literal notranslate"><span class="pre">Quat.getForward</span></code> to get a vector describing which direction you are facing on the world axis.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1">// Backward</span>
-<span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span> <span class="c1">// Forward</span>
-<span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="c1">// Left</span>
-<span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="c1">// Right</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="make-an-entity-appear-before-your-avatar">
-<h3>Make an Entity Appear Before Your Avatar<a class="headerlink" href="#make-an-entity-appear-before-your-avatar" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">0,</span> <span class="pre">w:</span> <span class="pre">1</span> <span class="pre">}</span>
+<span class="pre">`</span></code></p>
+<p>Get your avatar’s orientation in the Scripting Console by using the <cite>MyAvatar.orientation</cite> property:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">JSON.stringify(MyAvatar.orientation);</span>
+<span class="pre">//</span> <span class="pre">{&quot;x&quot;:0,&quot;y&quot;:-0.4974651634693146,&quot;z&quot;:0,&quot;w&quot;:0.8674839735031128}</span>
+<span class="pre">`</span></code></p>
+<p>### Get the Direction Your Avatar is Facing</p>
+<p>You can use the [Quat](<a class="reference external" href="https://apidocs.vircadia.dev/Quat.html">https://apidocs.vircadia.dev/Quat.html</a>) namespace to get the direction which your avatar is facing. Pass your avatar’s orientation to <cite>Quat.getForward</cite> to get a vector describing which direction you are facing on the world axis.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">1</span> <span class="pre">}</span> <span class="pre">//</span> <span class="pre">Backward</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">-1</span> <span class="pre">}</span> <span class="pre">//</span> <span class="pre">Forward</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">-1,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">0</span> <span class="pre">}</span> <span class="pre">//</span> <span class="pre">Left</span>
+<span class="pre">{</span> <span class="pre">x:</span> <span class="pre">1,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">0</span> <span class="pre">}</span> <span class="pre">//</span> <span class="pre">Right</span>
+<span class="pre">`</span></code></p>
+<p>### Make an Entity Appear Before Your Avatar</p>
 <p>You can make an entity appear before your avatar and also control the distance at which it appears.</p>
-<p>Use the <a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">Vec3</a> namespace and the direction your avatar is facing to return the position at which you can make your entity appear. This position is 1m away from your avatar.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Vec3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">,</span> <span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">));</span> <span class="c1">// This will add your position vector to the direction vector returned from Quat.getForward. This will represent a position that is 1 meter in front of your avatar.</span>
-</pre></div>
-</div>
+<p>Use the [Vec3](<a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">https://apidocs.vircadia.dev/Vec3.html</a>) namespace and the direction your avatar is facing to return the position at which you can make your entity appear. This position is 1m away from your avatar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">Vec3.sum(MyAvatar.position,</span> <span class="pre">Quat.getForward(MyAvatar.orientation));</span> <span class="pre">//</span> <span class="pre">This</span> <span class="pre">will</span> <span class="pre">add</span> <span class="pre">your</span> <span class="pre">position</span> <span class="pre">vector</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">direction</span> <span class="pre">vector</span> <span class="pre">returned</span> <span class="pre">from</span> <span class="pre">Quat.getForward.</span> <span class="pre">This</span> <span class="pre">will</span> <span class="pre">represent</span> <span class="pre">a</span> <span class="pre">position</span> <span class="pre">that</span> <span class="pre">is</span> <span class="pre">1</span> <span class="pre">meter</span> <span class="pre">in</span> <span class="pre">front</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">avatar.</span>
+<span class="pre">`</span></code></p>
 <p>You can also control the distance at which an entity appears rather than using the default distance of 1m. First, multiply the vector representing the direction your avatar is facing and the distance.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Vec3</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">),</span> <span class="mf">2.0</span><span class="p">);</span> <span class="c1">// if we are facing forward, that means our vector { x: 0, y: 0, z: -1 }, get&#39;s multiplied by 2.0 giving us a vector of { x: 0, y: 0, z: -2 }</span>
-</pre></div>
-</div>
-<p>Use <code class="docutils literal notranslate"><span class="pre">Vec3.sum</span></code> to return a new vector representing how far away an entity will appear from your avatar.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Vec3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">,</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)));</span> <span class="c1">// this will give us a final vector representing where in the world a point 2 meters directly in front of our avatar is</span>
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">Vec3.multiply(Quat.getForward(MyAvatar.orientation),</span> <span class="pre">2.0);</span> <span class="pre">//</span> <span class="pre">if</span> <span class="pre">we</span> <span class="pre">are</span> <span class="pre">facing</span> <span class="pre">forward,</span> <span class="pre">that</span> <span class="pre">means</span> <span class="pre">our</span> <span class="pre">vector</span> <span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">-1</span> <span class="pre">},</span> <span class="pre">get's</span> <span class="pre">multiplied</span> <span class="pre">by</span> <span class="pre">2.0</span> <span class="pre">giving</span> <span class="pre">us</span> <span class="pre">a</span> <span class="pre">vector</span> <span class="pre">of</span> <span class="pre">{</span> <span class="pre">x:</span> <span class="pre">0,</span> <span class="pre">y:</span> <span class="pre">0,</span> <span class="pre">z:</span> <span class="pre">-2</span> <span class="pre">}</span>
+<span class="pre">`</span></code></p>
+<p>Use <cite>Vec3.sum</cite> to return a new vector representing how far away an entity will appear from your avatar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">Vec3.sum(MyAvatar.position,</span> <span class="pre">Vec3.multiply(Quat.getForward(MyAvatar.orientation,</span> <span class="pre">2.0)));</span> <span class="pre">//</span> <span class="pre">this</span> <span class="pre">will</span> <span class="pre">give</span> <span class="pre">us</span> <span class="pre">a</span> <span class="pre">final</span> <span class="pre">vector</span> <span class="pre">representing</span> <span class="pre">where</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">world</span> <span class="pre">a</span> <span class="pre">point</span> <span class="pre">2</span> <span class="pre">meters</span> <span class="pre">directly</span> <span class="pre">in</span> <span class="pre">front</span> <span class="pre">of</span> <span class="pre">our</span> <span class="pre">avatar</span> <span class="pre">is</span>
+<span class="pre">`</span></code></p>
 <p>We’ve included the above operations in a function below for you to save and run as a script.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">myPosition</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>   
-<span class="kd">var</span> <span class="nx">myOrientation</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">myDirection</span> <span class="o">=</span> <span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">myOrientation</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">distanceInFrontOfMe</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">distanceVectorOfObjectInFrontOfMe</span><span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">myDirection</span><span class="p">,</span> <span class="nx">distanceInFrontOfMe</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">positionOfObjectInFrontOfMe</span> <span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">myPosition</span><span class="p">,</span> <span class="nx">distanceVectorOfObjectInFrontOfMe</span><span class="p">);</span>
-
-<span class="c1">// we can even wrap this all up in a function to help simplify this any time we want the position of an object to appear in front of us</span>
-<span class="kd">function</span> <span class="nx">getPositionInFrontOfMe</span><span class="p">(</span><span class="nx">distanceInFrontOfMe</span><span class="p">){</span>
-  <span class="kd">var</span> <span class="nx">myPosition</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">myOrientation</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">orientation</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">myDirection</span> <span class="o">=</span> <span class="nx">Quat</span><span class="p">.</span><span class="nx">getForward</span><span class="p">(</span><span class="nx">myOrientation</span><span class="p">);</span>
-  <span class="kd">var</span> <span class="nx">distanceVectorOfObjectInFrontOfMe</span><span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">myDirection</span><span class="p">,</span> <span class="nx">distanceInFrontOfMe</span><span class="p">);</span>
-  <span class="kd">var</span> <span class="nx">positionOfObjectInFrontOfMe</span> <span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">myPosition</span><span class="p">,</span> <span class="nx">distanceVectorOfObjectInFrontOfMe</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">positionOfObjectInFrontOfMe</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">getPositionInFrontOfMe</span><span class="p">(</span><span class="mf">4.0</span><span class="p">);</span> <span class="c1">// { x: 0, y: 0, z: -4 }</span>
-<span class="nx">getPositionInFrontOfMe</span><span class="p">(</span><span class="mf">8.0</span><span class="p">);</span> <span class="c1">// { x: 0, y: 0, z: -8 }</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="include-external-js-and-json-files">
-<h2>Include External JS and JSON Files<a class="headerlink" href="#include-external-js-and-json-files" title="Permalink to this headline">¶</a></h2>
-<p>When writing a script in High Fidelity, you might need to access the methods or objects in an external JS file or get information from a JSON file. For example, if you’re writing a script to make your avatar wave, you might need to use some methods that already exist in an external JS file. You can do this using the <code class="docutils literal notranslate"><span class="pre">require</span></code> method in the Scripts namespace of our API.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>javascript
+var myPosition = MyAvatar.position;
+var myOrientation = MyAvatar.orientation;
+var myDirection = Quat.getForward(myOrientation);
+var distanceInFrontOfMe = 2.0;
+var distanceVectorOfObjectInFrontOfMe= Vec3.multiply(myDirection, distanceInFrontOfMe);
+var positionOfObjectInFrontOfMe = Vec3.sum(myPosition, distanceVectorOfObjectInFrontOfMe);</p>
+<p>// we can even wrap this all up in a function to help simplify this any time we want the position of an object to appear in front of us
+function getPositionInFrontOfMe(distanceInFrontOfMe){</p>
+<blockquote>
+<div><p>var myPosition = MyAvatar.position;
+var myOrientation = MyAvatar.orientation;
+var myDirection = Quat.getForward(myOrientation);
+var distanceVectorOfObjectInFrontOfMe= Vec3.multiply(myDirection, distanceInFrontOfMe);
+var positionOfObjectInFrontOfMe = Vec3.sum(myPosition, distanceVectorOfObjectInFrontOfMe);
+return positionOfObjectInFrontOfMe;</p>
+</div></blockquote>
+<p>}</p>
+<p>getPositionInFrontOfMe(4.0); // { x: 0, y: 0, z: -4 }
+getPositionInFrontOfMe(8.0); // { x: 0, y: 0, z: -8 }
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>## Include External JS and JSON Files</p>
+<p>When writing a script in High Fidelity, you might need to access the methods or objects in an external JS file or get information from a JSON file. For example, if you’re writing a script to make your avatar wave, you might need to use some methods that already exist in an external JS file. You can do this using the <cite>require</cite> method in the Scripts namespace of our API.</p>
 <p>Any script that you try to retrieve using this method must export either a function or an object. Let’s try this using an example.</p>
 <p>Create a JS script that you want to access from your main script.</p>
 <p><strong>example.js</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">sayHello</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="nx">sayGoodbye</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Goodbye!&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</pre></div>
-</div>
-<p>In <strong>example.js</strong>, you are exporting two functions that print either Hello or Goodbye, depending on which function you call, to the console. Now, let’s use <code class="docutils literal notranslate"><span class="pre">require</span></code> in your main script.</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>javascript
+module.exports = {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>sayHello: function () {</dt><dd><p>console.log(“Hello!”);</p>
+</dd>
+</dl>
+<p>},
+sayGoodbye: function () {</p>
+<blockquote>
+<div><p>console.log(“Goodbye!”);</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<div class="section" id="id13">
+<h1>};<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h1>
+<p>In <strong>example.js</strong>, you are exporting two functions that print either Hello or Goodbye, depending on which function you call, to the console. Now, let’s use <cite>require</cite> in your main script.</p>
 <p>Create a JS script called <strong>main.js</strong>.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">greet</span> <span class="o">=</span> <span class="nx">Script</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="nx">Script</span><span class="p">.</span><span class="nx">resolvePath</span><span class="p">(</span><span class="s2">&quot;example.js&quot;</span><span class="p">));</span>
-<span class="nx">greet</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">();</span> <span class="c1">// prints Hello to the console</span>
-</pre></div>
-</div>
-<p>When you use the <code class="docutils literal notranslate"><span class="pre">require</span></code> method, you are making any function or object exported from <strong>example.js</strong> available to <strong>main.js</strong>. This means that <strong>main.js</strong> now has access to functions that will print either Hello or Goodbye to the console. In the above example, we are printing Hello to the console when we run <strong>main.js</strong>.</p>
-<div class="admonition note">
-    <p class="admonition-title">Note</p>
-    <p>We recommend using relative paths in your development so that you can easily move content without having to update absolute paths. However, in JSON files, you have to use absolute paths (e.g. in the event of a marketplace upload).</p>
-</div></div>
-<div class="section" id="equip-an-item">
-<h2>Equip an Item<a class="headerlink" href="#equip-an-item" title="Permalink to this headline">¶</a></h2>
-<p>You can equip an item by grabbing and holding an entity without pressing the grab button or trigger continuously. For example, you could equip a paint brush to your avatar’s hand and drop it only when you’re done painting.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">var</span> <span class="pre">greet</span> <span class="pre">=</span> <span class="pre">Script.require(Script.resolvePath(&quot;example.js&quot;));</span>
+<span class="pre">greet.sayHello();</span> <span class="pre">//</span> <span class="pre">prints</span> <span class="pre">Hello</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">console</span>
+<span class="pre">`</span></code></p>
+<p>When you use the <cite>require</cite> method, you are making any function or object exported from <strong>example.js</strong> available to <strong>main.js</strong>. This means that <strong>main.js</strong> now has access to functions that will print either Hello or Goodbye to the console. In the above example, we are printing Hello to the console when we run <strong>main.js</strong>.</p>
+<dl class="simple">
+<dt>&lt;div class=”admonition note”&gt;</dt><dd><p>&lt;p class=”admonition-title”&gt;Note&lt;/p&gt;
+&lt;p&gt;We recommend using relative paths in your development so that you can easily move content without having to update absolute paths. However, in JSON files, you have to use absolute paths (e.g. in the event of a marketplace upload).&lt;/p&gt;</p>
+</dd>
+</dl>
+<p>&lt;/div&gt;</p>
+<p>## Equip an Item
+You can equip an item by grabbing and holding an entity without pressing the grab button or trigger continuously. For example, you could equip a paint brush to your avatar’s hand and drop it only when you’re done painting.</p>
 <p>You can equip an item using a script:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>Messages.sendLocalMessage(&#39;Hifi-Hand-Grab&#39;, JSON.stringify({hand: &#39;XXX&#39;, entityID: &#39;YYY&#39;})); \\ where XXX is either the left or right hand and YYY is entityID to equip
-</pre></div>
-</div>
-<p>To drop the entity from your avatar’s hand:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>Messages.sendLocalMessage(&#39;Hifi-Hand-Drop&#39;, &#39;XXX&#39;); \\ where XXX is either the left or right hand
-</pre></div>
-</div>
-</div>
-<div class="section" id="connect-a-signal-to-a-function">
-<h2>Connect a Signal to a Function<a class="headerlink" href="#connect-a-signal-to-a-function" title="Permalink to this headline">¶</a></h2>
-<p>Signals can be connected to functions. This means that every time a signal is triggered, a function is executed. For example, if your avatar changes when collisions are enabled or disabled, you can connect a function to react to this specific event such as:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">collisionChanged</span><span class="p">(</span><span class="nx">enabled</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">enabled</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;avatar collision is enabled&quot;</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;avatar collision id disabled&quot;</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">collisionsEnabledChanged</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">collisionChanged</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Each signal usually gets passed in arguments, and you can refer to the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">API documentation</a> to see what a signal will provide you, such as the enabled property passed into collision changed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">Messages.sendLocalMessage('Hifi-Hand-Grab',</span> <span class="pre">JSON.stringify({hand:</span> <span class="pre">'XXX',</span> <span class="pre">entityID:</span> <span class="pre">'YYY'}));</span> <span class="pre">\\</span> <span class="pre">where</span> <span class="pre">XXX</span> <span class="pre">is</span> <span class="pre">either</span> <span class="pre">the</span> <span class="pre">left</span> <span class="pre">or</span> <span class="pre">right</span> <span class="pre">hand</span> <span class="pre">and</span> <span class="pre">YYY</span> <span class="pre">is</span> <span class="pre">entityID</span> <span class="pre">to</span> <span class="pre">equip</span>
+<span class="pre">`</span></code></p>
+<p>To drop the entity from your avatar’s hand:
+<code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">Messages.sendLocalMessage('Hifi-Hand-Drop',</span> <span class="pre">'XXX');</span> <span class="pre">\\</span> <span class="pre">where</span> <span class="pre">XXX</span> <span class="pre">is</span> <span class="pre">either</span> <span class="pre">the</span> <span class="pre">left</span> <span class="pre">or</span> <span class="pre">right</span> <span class="pre">hand</span>
+<span class="pre">`</span></code></p>
+<p>## Connect a Signal to a Function</p>
+<p>Signals can be connected to functions. This means that every time a signal is triggered, a function is executed. For example, if your avatar changes when collisions are enabled or disabled, you can connect a function to react to this specific event such as:
+<a href="#id14"><span class="problematic" id="id15">``</span></a>`
+function collisionChanged(enabled) {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if(enabled) {</dt><dd><p>console.log(“avatar collision is enabled”);</p>
+</dd>
+<dt>} else {</dt><dd><p>console.log(“avatar collision id disabled”)</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+<p>MyAvatar.collisionsEnabledChanged.connect(collisionChanged);
+<a href="#id16"><span class="problematic" id="id17">``</span></a><a href="#id18"><span class="problematic" id="id19">`</span></a></p>
+<p>Each signal usually gets passed in arguments, and you can refer to the [API documentation](<a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">https://apidocs.vircadia.dev/MyAvatar.html</a>) to see what a signal will provide you, such as the enabled property passed into collision changed.</p>
 <p>It’s good practice to disconnect from signals, but you can only do that if you name your function.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">collsionEnabledChanged</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">(</span><span class="nx">collsionChanged</span><span class="p">);</span>
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">MyAvatar.collsionEnabledChanged.disconnect(collsionChanged);</span>
+<span class="pre">`</span></code></p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
-<li><p><a class="reference external" href="https://apidocs.vircadia.dev">API Reference</a></p></li>
+<li><p>[Write Your Own Scripts](write-scripts.html)</p></li>
+<li><p>[API Reference](<a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>)</p></li>
 </ul>
-</div>
 </div>
 
 
@@ -363,10 +355,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="interface-scripts.html" class="btn btn-neutral float-right" title="Interface Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interface-scripts.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="write-scripts.html" class="btn btn-neutral float-left" title="Write Your Own Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="write-scripts.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

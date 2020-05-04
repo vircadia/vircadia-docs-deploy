@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Build OSX &mdash; Vircadia Documentation</title>
+  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
   
 
   
@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Build Android" href="BUILD_ANDROID.html" />
-    <link rel="prev" title="Build Linux" href="BUILD_LINUX.html" /> 
+    <link rel="next" title="&lt;no title&gt;" href="BUILD_ANDROID.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="BUILD_LINUX.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,28 +86,14 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="BUILD_GENERAL.html">General Build Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Build OSX</a></li>
-<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -168,7 +154,7 @@
         
           <li><a href="../build.html">Building Vircadia</a> &raquo;</li>
         
-      <li>Build OSX</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,40 +175,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="build-osx">
-<h1>Build OSX<a class="headerlink" href="#build-osx" title="Permalink to this headline">¶</a></h1>
+  <p># Build OSX</p>
 <p><em>Last Updated on April 30, 2019</em></p>
-<p>Please read the <a class="reference external" href="BUILD">general build guide</a> for information on dependencies required for all platforms. Only macOS specific instructions are found in this document.</p>
-<div class="section" id="homebrew">
-<h2>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://brew.sh/">Homebrew</a> is an excellent package manager for macOS. It makes install of some High Fidelity dependencies very simple.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">cmake</span> <span class="nx">openssl</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="python-3">
-<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h2>
-<p>Download an install Python 3.6.6 or higher from <a class="reference external" href="https://www.python.org/downloads/">here</a>.<br />Execute the <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Shell</span> <span class="pre">Profile.command</span></code> script that is provided with the installer.</p>
-</div>
-<div class="section" id="openssl">
-<h2>OpenSSL<a class="headerlink" href="#openssl" title="Permalink to this headline">¶</a></h2>
-<p>Assuming you’ve installed OpenSSL using the homebrew instructions above, you’ll need to set OPENSSL_ROOT_DIR so CMake can find your installations.<br />For OpenSSL installed via homebrew, set OPENSSL_ROOT_DIR:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l
-</pre></div>
-</div>
-<p>Note that this uses the version from the homebrew formula at the time of this writing, and the version in the path will likely change.</p>
-</div>
-<div class="section" id="xcode">
-<h2>Xcode<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
+<p>Please read the [general build guide](BUILD.md) for information on dependencies required for all platforms. Only macOS specific instructions are found in this document.</p>
+<p>### Homebrew</p>
+<p>[Homebrew](<a class="reference external" href="https://brew.sh/">https://brew.sh/</a>) is an excellent package manager for macOS. It makes install of some High Fidelity dependencies very simple.</p>
+<blockquote>
+<div><p>brew install cmake openssl</p>
+</div></blockquote>
+<p>### Python 3</p>
+<p>Download an install Python 3.6.6 or higher from [here](<a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>).
+Execute the <cite>Update Shell Profile.command</cite> script that is provided with the installer.</p>
+<p>### OpenSSL</p>
+<p>Assuming you’ve installed OpenSSL using the homebrew instructions above, you’ll need to set OPENSSL_ROOT_DIR so CMake can find your installations.
+For OpenSSL installed via homebrew, set OPENSSL_ROOT_DIR:</p>
+<blockquote>
+<div><p>export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l</p>
+</div></blockquote>
+<p>Note that this uses the version from the homebrew formula at the time of this writing, and the version in the path will likely change.
+### Xcode</p>
 <p>If Xcode is your editor of choice, you can ask CMake to generate Xcode project files instead of Unix Makefiles.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cmake</span> <span class="p">..</span> <span class="o">-</span><span class="nx">G</span> <span class="nx">Xcode</span>
-</pre></div>
-</div>
-<p>If <code class="docutils literal notranslate"><span class="pre">cmake</span></code> complains about Python 3 being missing, you may need to update your CMake binary with command <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">upgrade</span> <span class="pre">cmake</span></code>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
+<blockquote>
+<div><p>cmake .. -G Xcode</p>
+</div></blockquote>
+<p>If <cite>cmake</cite> complains about Python 3 being missing, you may need to update your CMake binary with command <cite>brew upgrade cmake</cite>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
 <p>After running cmake, you will have the make files or Xcode project file necessary to build all of the components. Open the hifi.xcodeproj file, choose ALL_BUILD from the Product &gt; Scheme menu (or target drop down), and click Run.</p>
-<p>If the build completes successfully, you will have built targets for all components located in the <code class="docutils literal notranslate"><span class="pre">build/${target_name}/Debug</span></code> directories.</p>
-</div>
-</div>
+<p>If the build completes successfully, you will have built targets for all components located in the <cite>build/${target_name}/Debug</cite> directories.</p>
 
 
            </div>
@@ -232,10 +210,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BUILD_ANDROID.html" class="btn btn-neutral float-right" title="Build Android" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="BUILD_ANDROID.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BUILD_LINUX.html" class="btn btn-neutral float-left" title="Build Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BUILD_LINUX.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
