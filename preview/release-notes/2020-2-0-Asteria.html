@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alpha 2020.2.0 Asteria Release Notes &mdash; Vircadia Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon-256.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Alpha 0.86.0 K2.0 Release Notes" href="v86-k2.html" />
+    <link rel="prev" title="Release Notes" href="../release-notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.0 Asteria (06/09/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v86-k2.html">Alpha Release 86 K2 (04/03/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v86.html">Beta Release 86 (11/14/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v85.html">Beta Release 85 (10/17/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v84.html">Beta Release 84 (09/23/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v83.html">Beta Release 83 (07/31/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v82.html">Beta Release 82 (04/30/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v81.html">Beta Release 81 (03/29/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v80.html">Beta Release 80 (03/19/19)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Vircadia Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../release-notes.html">Release Notes</a> &raquo;</li>
+        
+      <li>Alpha 2020.2.0 Asteria Release Notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-0-Asteria.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-0-Asteria.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alpha-2020-2-0-asteria-release-notes">
+<h1>Alpha 2020.2.0 Asteria Release Notes<a class="headerlink" href="#alpha-2020-2-0-asteria-release-notes" title="Permalink to this headline">¶</a></h1>
+<p>This version of Vircadia is the follow-up version to K2. It is not compatible with the v0.86.0 protocol. This version was released on May 9th, 2020.</p>
+<p>The software version is denoted by the new versioning scheme:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">YYYY</span><span class="p">.</span><span class="nx">MajorVersion</span><span class="p">.</span><span class="nx">MinorVersion</span><span class="o">-</span><span class="nx">Name</span>
+</pre></div>
+</div>
+<p>The major version will denote a protocol bump and therefore incompatibility with other versions. A minor version is a patch or update that will be compatible with its major version. The name of the release (Asteria, Demeter, etc.) changes when the major version changes.</p>
+<p>For example, <strong>2020.2.5-Asteria</strong> will be compatible with <strong>2020.2.0-Asteria</strong>. Whereas <strong>2020.3.0-Demeter</strong> will not be compatible with <strong>2020.2.0-Asteria</strong> or <strong>2020.2.5-Asteria</strong>.</p>
+<div class="section" id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>The numbers at the end of each item are the PR numbers in the Project Athena <a class="reference external" href="https://github.com/kasenvr/project-athena/projects/2">repo</a>.</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Create App</p>
+<ul>
+<li><p>Now has tabs for entity properties. (#193)</p></li>
+<li><p><strong>“Alpha”</strong> property added to the <strong>“Shape”</strong> entity’s editor. (#215)</p></li>
+<li><p><strong>“renderWithZones”</strong> property added to all entities. (#274, #369)</p></li>
+</ul>
+</li>
+<li><p>User Activity Logging separated from crash reporting functionality. (#257)</p></li>
+<li><p>QML branding updates. (#277)</p></li>
+<li><p>Gridchat is now muted by default. (#287)</p></li>
+<li><p>Grabbable property on entities is now disabled by default. (#344)</p></li>
+<li><p>Flying in VR is now enabled by default in new Interface installations. (#394)</p></li>
+</ul>
+</div>
+<div class="section" id="graphics">
+<h3>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Zone Occlusion feature added. You can now have entities within a zone become culled if you are not within specified zones. (#78)</p></li>
+<li><p>Models now support flipped normals on double sided geometry. (#301)</p></li>
+<li><p>Models now support blendshapes. (#62)</p></li>
+</ul>
+</div>
+<div class="section" id="technicals">
+<h3>Technicals<a class="headerlink" href="#technicals" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>VS2019 (Version 16.5.1) build fix. (#279)</p></li>
+<li><p>Make custom Qt builds work on unsupported Ubuntu distributions. (#292)</p></li>
+<li><p>Add community-apps repo to default QML whitelist. (#296)</p></li>
+<li><p>GitHub Actions for PR builds with artifact uploading. (#300)</p></li>
+<li><p>Fix GHA PR building. (#421)</p></li>
+<li><p>Snapshot name changed from “hifi” to “vircadia”. (#334)</p></li>
+<li><p>Vircadia now uses version 1.11.11 of the OpenVR SDK. (#335)</p></li>
+<li><p>Crash reporting information sent to Sentry improved. (#336)</p></li>
+<li><p>Packet version size fixed. (#338)</p></li>
+<li><p>Fix whitespace and line endings in tabs.css. (#339)</p></li>
+<li><p>Attempt to fix issue #337: by ensuring the object is marked as dead. (#340)</p></li>
+<li><p>Log file names updated from “hifi” to “vircadia”. (#343)</p></li>
+<li><p>Remove all uses of QString::null. (#346)</p></li>
+<li><p>Fix issue #347: Linux PR builds failing due to “distro” not found. (#364)</p></li>
+<li><p>Fix issue #380: Create app now uses proper dimensions when creating entities. (#406)</p></li>
+<li><p>Revert commit 359248829c using -m 1 to temporarily fix issue 383. (#414)</p></li>
+<li><p>Fix many GLTF (*.glb) files being unable to be loaded due to bad URL parsing. (#415)</p></li>
+<li><p>Include <stdexcept> for building on Windows 10 with Visual Studio 2019. (#418)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="high-fidelity-vircadia-master-merge-285">
+<h2>High Fidelity -&gt; Vircadia Master Merge (#285)<a class="headerlink" href="#high-fidelity-vircadia-master-merge-285" title="Permalink to this headline">¶</a></h2>
+<p>(v0.86.0 -&gt; v0.87.0)</p>
+<p>High Fidelity’s v0.87.0 was merged with Vircadia’s v0.86.0 codebase. PR numbers here relate to the original High Fidelity repo and can only be retrieved if you have a backup of that repo before it was set to private.</p>
+<div class="section" id="id1">
+<h3>General<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>DEV-2330: Improved attenuation zones. Redefine an audio zone attenuation coefficient = 1.0 to mean “silent at any distance” instead of extreme falloff with distance. This ensures that chatterboxes are not audible outside of their boundary. Include code-health improvements to the HRTF. New functionality (parametric occlusion/lowpass effect) is not currently used, as it will require a new audio zone type to enable. (#16480)</p></li>
+<li><p>DEV-2769: Remove the “acceleration” entity property from Create app
+It’s a deprecated property that doesn’t affect the entity. (#16497)</p></li>
+<li><p>Added animedit avatar-animation.json graph editor tool. Animedit is a developer tool used to inspect and edit avatar animation graphs. Note: this is an independent application, separate from the main application. (#16532)</p></li>
+<li><p>Use Alt to clone entities on Mac. (#16443)</p></li>
+<li><p>Add display name field to the log in screen. (#15334)</p></li>
+<li><p>Add automaticLookAt.js to developer scripts
+<code class="docutils literal notranslate"><span class="pre">automaticLookAt.js</span></code> is a script that automatically controls the avatar’s head and eye to simulate human interaction during group interactions.
+This PR adds that script to the developer script folder. (#16545)</p></li>
+<li><p>Screenshare in Interface! (#16429)</p>
+<ul>
+<li><p>Fix a few Screenshare bugs. (#16534)</p>
+<ul>
+<li><p>Fix screenshare broadcast on MacOS DEV builds <em>only</em> - this is related to [DEV-2812], but doesn’t fix the issue.</p></li>
+<li><p>Fix z-fighting on smartboard in screenshare mode [DEV-2484].</p></li>
+</ul>
+</li>
+<li><p>Ignore anonymous screenshare zone entry. (#16544)</p></li>
+<li><p>DEV-2700: Add screenshare property to zones and evaluate in avatar mixer. (#16540)</p></li>
+<li><p>DEV-2858: White screen displayed when using screenshare. (#16555)</p></li>
+<li><p>Attempt to fix DEV-2859 with tighter constraints on screenshare resolution and framerate. (#16554)</p></li>
+<li><p>DEV-2832, DEV-2816, DEV-2843: Auto-minimize Screen Share; enable switching between windows; prevent video dropout. (#16549)</p></li>
+</ul>
+</li>
+<li><p>Important bug fixes.</p>
+<ul>
+<li><p>DEV-2663: Adding safeguard in case device list is empty. (#16481)</p></li>
+<li><p>DEV-2742: Fix Graphics.exportModelToOBJ() JavaScript crash. (#16490)</p></li>
+<li><p>DEV-2800: Fix crash in Stats.forceUpdateStats() at start-up. (#16533)</p></li>
+<li><p>DEV-2825: Fix camera pitch by mouse wheel. (#16531)</p></li>
+<li><p>DEV-2760: Fix Realtime Unfocused to be 60 Hz. When choosing “Realtime” rendering in custom graphics or if you’re using the High Quality graphics setting, the render/game rate should still target 60hz even when the window is focused. This is so that people doing streaming can still have high frame rate rendering when using apps like OBS. (#16496)</p></li>
+<li><p>DEV-2649: Fix entities list “filter to frustum” eye button. (#16461)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="github-actions">
+<h3>GitHub Actions<a class="headerlink" href="#github-actions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>GitHub actions initial work. (#16401)</p></li>
+<li><p>Switching Windows builds over to a self-hosted runner. (#16582)</p></li>
+<li><p>GitHub Actions workflow clean-up.</p>
+<ul>
+<li><p>Add step to clear out working directory before starting build</p></li>
+<li><p>Change “find” path for symbol packaging in hopes of fixing that error. (#16584)</p></li>
+</ul>
+</li>
+<li><p>Add apt-update step to refresh the apt repository index for Linux builds. (#16575)</p></li>
+<li><p>Enable label based PR builds. (#16569)</p></li>
+<li><p>DEV-2572: Linux GHA PR builds. Split out from pull/16520; includes some new files for Docker image creation but doesn’t affect master-build workflow. (#16565)</p></li>
+<li><p>Fix GHA S3 upload path. (#16568)</p></li>
+<li><p>Github Actions master builds. (#16552)</p></li>
+<li><p>Remove upload step and unlabel job from builds. (#16524)</p></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>DOC-209: AudioStats JSDoc. (#16495)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>AudioStats</p></li>
+</ul>
+</li>
+<li><p>Classes:</p>
+<ul>
+<li><p>AudioStreamStats</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-208: Revisions to JSDoc added by developers since July 2019.</p>
+<ul>
+<li><p>pull/15974 - Sitting API.</p></li>
+<li><p>pull/16025 - Debug API for Picks/Pointers.</p></li>
+<li><p>pull/16144 - Avatar “look at” target.</p></li>
+<li><p>pull/16245 - Directional blending for point reaction.</p></li>
+<li><p>pull/16399 - Updated blend shape support with ARKit compatibility.</p></li>
+</ul>
+</li>
+<li><p>DOC-233: MaterialCache JSDoc (#16541)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>MaterialCache</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Added missing <code class="docutils literal notranslate"><span class="pre">numGlobalQueriesPending</span></code> and <code class="docutils literal notranslate"><span class="pre">numGlobalQueriesLoading</span></code> properties’ documentation to <code class="docutils literal notranslate"><span class="pre">AnimationCache</span></code>, <code class="docutils literal notranslate"><span class="pre">ModelCache</span></code>, <code class="docutils literal notranslate"><span class="pre">SoundCache</span></code>, and <code class="docutils literal notranslate"><span class="pre">TextureCache</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Entities.MaterialResource</span></code> type now appears in and is used in the JSDoc output.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Entities.Material</span></code> type now appears in and is used in the JSDoc output.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RGBS</span></code> global type now appears in and is used in the JSDoc output.</p></li>
+<li><p>Revised recent <code class="docutils literal notranslate"><span class="pre">Entities.Material</span></code> JSDoc changes.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-227: Stats JSDoc (#16539)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>Stats</p></li>
+</ul>
+</li>
+<li><p>Globals:</p>
+<ul>
+<li><p>RefreshRateProfile</p></li>
+<li><p>RefreshRateRegime</p></li>
+<li><p>UXMode</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-237: DialogsManager JSDoc (#16560)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>DialogsManager</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-238: AddressManager JSDoc (#16561)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>AddressManager</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-235: DriveKeys JSDoc (#16556)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>DriveKeys</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Type MyAvatar.DriveKeys renamed to (global) type DriveKey.</p></li>
+<li><p>MyAvatar.disableDriveKey() example updated to use DriveKeys API.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-198: OffscreenFlags JSDoc (#16563)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>OffscreenFlags</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-240: console JSDoc (#16567)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>console</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Updated Script API accordingly.</p></li>
+<li><p>Fixed global print function’s JSDoc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-239: Rates JSDoc (#16564)</p>
+<ul>
+<li><p>Rates</p></li>
+</ul>
+</li>
+<li><p>DOC-244: OverlayWindow and OverlayWebWindow JSDoc (#16573)</p>
+<ul>
+<li><p>Classes:</p>
+<ul>
+<li><p>OverlayWindow</p></li>
+<li><p>OverlayWebWindow</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Fixed up some related InteractiveWindow JSDoc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-243: EntityScriptServerLog JSDoc (#16571)</p></li>
+<li><p>DOC-241: ContextOverlay JSDoc (#16570)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>ContextOverlay</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Updated WalletScripingInteface JSDoc with links to a relevant ContextOverlay method.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-242: WebSocket and WebSocketServer JSDoc (#16574)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>WebSocket</p></li>
+<li><p>WebsocketServer</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-157: LODManager and Performance JSDoc</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>LODManager</p></li>
+<li><p>Performance</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>Update the Stats API JSDoc to match.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DOC-55: XMLHttpRequest JSDoc (#16577)</p>
+<ul>
+<li><p>Namespaces:</p>
+<ul>
+<li><p>XMLHttpRequest</p></li>
+</ul>
+</li>
+<li><p>Also:</p>
+<ul>
+<li><p>A few minor fixes to the WebSocket API JSDoc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Combined API docs update. Condenses the following PRs into a single PR and resolves the merge conflicts. (#16583)</p>
+<ul>
+<li><p>pull/16578</p></li>
+<li><p>pull/16579</p></li>
+<li><p>pull/16580</p></li>
+<li><p>pull/16581</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="technical-other-changes">
+<h3>Technical / Other Changes<a class="headerlink" href="#technical-other-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix handleUrl helper regex. (#16511)</p></li>
+<li><p>Reduce fidgety motions in seated fidgets; remove jitter and bounce from several seated idles and fidgets, also reduce look-around cone. (#16464)</p></li>
+<li><p>Fix for assert in AnimBlendDirectional on startup; specifically, std::vector subscript out of range. (#16458)</p></li>
+<li><p>DEV-2650: Remove “user” icon from Entities List. (#16451)</p></li>
+<li><p>DEV-2648: Fix Cmd-click multi-select in entity list on Mac. (#16440)</p></li>
+<li><p>Remove Avatar app links to AvatarIsland and BodyMart. (#16504)</p></li>
+<li><p>Procedural Material crashes in shadow pass on deformed shape renderItems. Now that avatars can potentially have their own custom pipeline, shadow pass needs to support it. (#16470)</p></li>
+<li><p>Made web entities not grabbable by default. (#16468)</p></li>
+<li><p>Oculus Quest: Fix for the hand controllers in the latest version. The change will let you use both of your hands on the Quest. Without this 6DOF fix it will assume that the user is holding a Oculus GearVR remote controller. See more info about this issue at:</p>
+<ul>
+<li><p>https://developer.oculus.com/documentation/quest/latest/concepts/mobile-native-manifest/?fbclid=IwAR3AgasGPJFVGsz7lyzfJNfuTB8R1FOg88Quq8YZz67eQlwEFvgEMDGjSdo</p></li>
+<li><p>https://developers.google.com/vr/develop/android/3dof-to-6dof</p></li>
+</ul>
+</li>
+<li><p>Update WindowScriptingInterface.h; replace “model” with “modal”. (#16742)</p></li>
+<li><p>Different settle transition depending on momentum. The settle animation that transitions from walk/run to idle is too big for very small adjustments, such as nudging the WASD keys just to slightly reposition. This creates a bool that is true when speed rises above 2.2 m/s. If true, play the larger settle. (#16467)</p></li>
+<li><p>Fix HMD strafe locomotion animation. Handle HMD in input vars in Rig.cpp, remove buggy json transitions between normal/HMD strafe states, and use isNotMoving to leave HMD strafe states. (#16486)</p></li>
+<li><p>DEV-2709: Reset QAudioDevInfo on switch. (#16487)</p></li>
+<li><p>DEV-2711: Fix crash when highlighting custom pipeline shapes. (#16477)</p></li>
+<li><p>Bugfix for t-pose avatar when moving. The android specific optimized IK animation graph was out of date, it was referencing animations that have been deleted, hence the t-pose. This PR updates and renames the android/optimized IK animation graph to the latest. (#16488)</p></li>
+<li><p>Speculative fix for infinite loop in SafeLanding. This PR (#16479) contains two fixes:</p>
+<ul>
+<li><p>Tightening up the locks in the SafeLanding class to prevent race conditions. By inspection there are cases where variables are read and modified outside of locks.</p></li>
+<li><p>A check to help prevent an infinite loop in the _sequenceNumber std::distance calculation. This is the main issue, in some cases backtrace is reporting the main thread as deadlocked. The stacktrace points to an issue with the std::distance() calculation. If the EntityQueryInitialResultsComplete is delayed significantly, there could be a rare case where the _sequenceNumber map grows large enough for the wraparound less then operator will no longer function correctly. This will cause the std::distance calculation to never complete. I’ve added a guard to prevent this from happening and some logs to help diagnose this issue in the future.</p></li>
+</ul>
+</li>
+<li><p>Revert safe landing “fix”. This was introduced via this PR #16479. (#16494)</p></li>
+<li><p>DEV-1811 redux: Apply entity deletion rules. This is a second attempt to apply the entity deletion rules. The previous attempt was PR-16307. (#16361)</p>
+<ul>
+<li><p>deleting an avatar-entity parent doesn’t delete any domain-entity children.</p></li>
+<li><p>deleting a domain-entity parent does delete all of its children.</p></li>
+</ul>
+</li>
+<li><p>Fix Realtime Unfocused to be 60 Hz. (#16496)</p></li>
+<li><p>Fix for inadvertent comment. (#16500)</p></li>
+<li><p>DEV-2718: Models brought in at incorrect dimensions. (#16502)</p></li>
+<li><p>Added desktopSharing variable. (#16504)</p></li>
+<li><p>Add tools for debugging entity workload proxies. This PR introduces some debug tools for examining entity workload proxies. The hope is this will allow us to get more clues about the “sometimes fall through ground” problem (DEV-2189). (#16483)</p></li>
+<li><p>Clear more disk caches. When the user selects “Clear Disk Cache” from the Developer menu, clear more of the caches. (#15278)</p></li>
+<li><p>DEV-2789: Implement retry timer when retrieving screen share info. (#16508)</p></li>
+<li><p>DEV-430 Instancing: Introduce hfm::Shape to enable Instancing support. This PR will introduce the concept of hfm::Shape to the runtime model format, and refactor runtime code to use the new format. This will assist support for efficient rendering of multiple copies of the same geometry within a single model. (#16197)</p></li>
+<li><p>Improve seated rotation. Add support for acceleration in seated rotation, and trigger lean animation with inputs as well as transition and settle back to seated idle. Remove deadspot beyond 90 degrees where Q/E don’t work. (#16498)</p></li>
+<li><p>DEV-2791: Update hard-coded screen values. (#16510)</p></li>
+<li><p>Fix for whiteboard poly lines getting their parentID incorrectly reverted. (#16512)</p></li>
+<li><p>Fix-multiple-color-sphere-pops. (#16514)</p></li>
+<li><p>Pinch to zoom camera, two finger swipe to look around, bug fixes. (#16505)</p></li>
+<li><p>Attempt to fix Mac release builds. (#16518)</p></li>
+<li><p>DEV-2797/DEV-2798: Add some comments to that click to zoom script, and connects the update signal only when necessary. (#16519)</p></li>
+<li><p>Force rebuild for Mac build issue. (#16521)</p></li>
+<li><p>Remove worklist.net references. (#16516)</p></li>
+<li><p>DEV-2794: Update BUILD.MD. (#16522)</p></li>
+<li><p>Move “away” animation from S3 bucket to local resource
+Put away animation into compiled animation resource and update script to use local resource path. (#16523)</p></li>
+<li><p>On Linux, remove quazip5 dynamic libs. (#16527)</p></li>
+<li><p>Call updateGeometry before Model::createRenderItemSet. (#16526)</p></li>
+<li><p>DEV-2871: Signal connection check before emit of devices changed. Fixing logic to emit after scripting interface has initialized the audio devices. (#16525)</p></li>
+<li><p>Fix Linux build. (#16530)</p></li>
+<li><p>Input plugin for streaming blendshapes from an iPhone. An OSC input plugin that works in conjunction with the FaceCap application for streaming facial blendshapes from an iPhone. (#16517)</p></li>
+<li><p>Update prebuilt dependencies. (#16536)</p></li>
+<li><p>DEV-491: Create a README.md file to document the Qt Launcher. (#16537)</p></li>
+<li><p>DEV-2840: Fix z-fighting issues in Smartboard and enable quicker positional iteration in the future. (#16547)</p></li>
+<li><p>DEV-829: Waiting on local injector prep. Adding a future to the thread pool(ed) call to preparelocalinjectors. Since the function call runs on a separate thread it does not get notified that he device has swapped. Before switching we check if the prep local injectors is running and wait until its completed. Switching devices has lower priority than preparing local injectors. (otherwise we can cause starve problems.) (#16542)</p></li>
+<li><p>DEV-2729: Airpods starve on startup. (#16550)</p></li>
+<li><p>DEV-2812: Broadcasting from MacOS won’t work. (#16553)</p></li>
+<li><p>Dump installer logs on failure. (#16559)</p></li>
+<li><p>Allow Linux interface to connect to domain when DISABLE_QML is true
+when built with DISABLE_QML true, Linux interface doesn’t attempt to connect to domain. (#16566)</p></li>
+<li><p>DEV-1943: Make MyAvatar.getAvatarEntityData() return all properties. Make MyAvatar.getAvatarEntityData() return all properties rather than just changed properties. (#16551)</p>
+<ul>
+<li><p>Fixed string property values to be returned as string primitives instead of String objects. (So the JSON.stringify() produces the expected results.)</p></li>
+<li><p>Included localPosition etc. properties in values returned by <code class="docutils literal notranslate"><span class="pre">MyAvatar.getAvatarEntitiesVariant()</span></code> and <code class="docutils literal notranslate"><span class="pre">Avatar.getAvatarEntitiesData()</span></code>, to match those returned by <code class="docutils literal notranslate"><span class="pre">Entities.getEntityProperties()</span></code>.</p></li>
+<li><p>Removed now-unnecessary call to <code class="docutils literal notranslate"><span class="pre">Entities.getEntityProperties()</span></code> in WebTablet.js.</p></li>
+<li><p>Make Agent.getAvatarEntityData() return all properties.</p></li>
+</ul>
+</li>
+<li><p>DEV-2810: Rename Stats.audioAudioInboundPPS to Stats.audioInboundPPS. (#16557)</p></li>
+<li><p>DEV-2442: Fix main gamepad (XBox controller) controls. (#16562)</p>
+<ul>
+<li><p>General fixes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Controller.Actions.CycleCamera</span></code> fixed so that it doesn’t get stuck in third person (HMD mode) or selfie view (desktop mode).</p></li>
+<li><p>JSDoc for <code class="docutils literal notranslate"><span class="pre">Controller.Actions.CycleCamera</span></code> updated to reflect new camera modes used.</p></li>
+</ul>
+</li>
+<li><p>Gamepad-specific fixes:</p>
+<ul>
+<li><p>Reinstated teleporting on “Y” button.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Documentation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="user-docs">
+<h3>User Docs<a class="headerlink" href="#user-docs" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Vircadia-Docs-Sphinx <a class="reference external" href="https://github.com/kasenvr/vircadia-docs-sphinx">repo</a>.</p>
+<ul class="simple">
+<li><p>Explore section updates with further rebranding. (#21, #40)</p></li>
+<li><p>Build Docs support added to the main documentation repo. (#25)</p></li>
+<li><p>Various general and rebranding updates. (#29, #30, #39, #43)</p></li>
+<li><p>Last minute K2 release notes updated. (#27, #28)</p></li>
+<li><p>Avatar thumbnails documentation added. (#32)</p></li>
+<li><p>Updated “Get your 3D Model” page. (#34)</p></li>
+<li><p>Videos in web entities documentation added. (#36)</p></li>
+<li><p>Meta documentation updated. (#37, #45)</p></li>
+</ul>
+</div>
+<div class="section" id="api-docs">
+<h3>API Docs<a class="headerlink" href="#api-docs" title="Permalink to this headline">¶</a></h3>
+<p>The API docs are generated from the software source <a class="reference external" href="https://github.com/kasenvr/project-athena">repo</a>.
+The latest live deployment source can be viewed <a class="reference external" href="https://github.com/kasenvr/vircadia-api-docs">here</a>.</p>
+<ul class="simple">
+<li><p>Various API docs updates. (#277, #278)</p></li>
+<li><p>Various API docs fixes. (#320)</p></li>
+<li><p>Installer creation docs updated. (#391)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="extra-applications">
+<h2>Extra Applications<a class="headerlink" href="#extra-applications" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="explore-app-interim-version">
+<h3>Explore App (Interim Version)<a class="headerlink" href="#explore-app-interim-version" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Decentralized GoTo <a class="reference external" href="https://github.com/kasenvr/Decentralized_GoTo_Experimental">repo</a>.</p>
+<ul class="simple">
+<li><p>Nothing new!</p></li>
+</ul>
+</div>
+<div class="section" id="community-apps">
+<h3>Community Apps<a class="headerlink" href="#community-apps" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Community Apps <a class="reference external" href="https://github.com/kasenvr/community-apps">repo</a>.</p>
+<ul class="simple">
+<li><p>VR Grab Scale app updated. (#17)</p>
+<ul>
+<li><p>Gizmo entities updated to avatar entities.</p></li>
+<li><p>Added lifetime of 300 seconds for gizmo entities + interval updater.</p></li>
+<li><p>Added righthand distance checker.</p></li>
+<li><p>Changed renderLayer to front.</p></li>
+<li><p>Don’t scale gizmo to grabbed entity dimension.</p></li>
+</ul>
+</li>
+<li><p>Newly installed scripts are not loaded from the cache but rather the latest version is retrieved from the server. (#11)</p></li>
+<li><p>Spectator Camera app added. (#12)</p></li>
+<li><p>Record app housekeeping. (#13, #14)</p></li>
+<li><p>Radar app created by ctrlaltdavid added. (#15)</p></li>
+<li><p>Developer mode for main app added. (#16)</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="v86-k2.html" class="btn btn-neutral float-right" title="Alpha 0.86.0 K2.0 Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../release-notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

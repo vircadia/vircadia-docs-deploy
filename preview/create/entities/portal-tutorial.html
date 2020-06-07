@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Tutorial: Create a Portal &mdash; Vircadia Documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="avatar-scaling-tutorial.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="display-youtube.html" /> 
+    <link rel="next" title="Tutorial: Create an Avatar Scaling Button" href="avatar-scaling-tutorial.html" />
+    <link rel="prev" title="Tutorial: Display a YouTube Channel" href="display-youtube.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,10 +86,44 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web-entity-media.html">Play Media in a Web Entity</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tutorials.html">Entity Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create-spotlight.html">Tutorial: Create a Gold Spotlight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create-fountain.html">Tutorial: Create a Smoke Fountain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zone-tutorial.html">Tutorial: Modify a Zone Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display-youtube.html">Tutorial: Display a YouTube Channel</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tutorial: Create a Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="avatar-scaling-tutorial.html">Tutorial: Create an Avatar Scaling Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-tablet-page-tutorial.html">Tutorial: Open Web Page with Entities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="primitive-painting-set-tutorial.html">Tutorial: Build a Painting Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purchase-button-tutorial.html">Tutorial: Create a Purchase Button for Marketplace Sales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boombox-tutorial.html">Tutorial: Create a Boombox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
@@ -156,7 +190,7 @@
         
           <li><a href="tutorials.html">Entity Tutorials</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Tutorial: Create a Portal</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -177,54 +211,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Tutorial: Create a Portal</p>
+  <div class="section" id="tutorial-create-a-portal">
+<h1>Tutorial: Create a Portal<a class="headerlink" href="#tutorial-create-a-portal" title="Permalink to this headline">¶</a></h1>
 <p>Portals in Vircadia transport you to the domain of your choice. You can use these portals to travel to a domain you visit frequently instead of using the <strong>GoTo</strong> app on your HUD or Tablet.</p>
 <p><strong>On This Page:</strong></p>
 <ul class="simple">
-<li><p>[Prerequisites](#prerequisites)</p></li>
-<li><p>[Write a Script for the Portal](#write-a-script-for-the-portal)</p></li>
-<li><p>[Create and Edit an Entity to Use as a Portal](#create-and-edit-an-entity-to-use-as-a-portal)</p></li>
+<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
+<li><p><a class="reference external" href="#write-a-script-for-the-portal">Write a Script for the Portal</a></p></li>
+<li><p><a class="reference external" href="#create-and-edit-an-entity-to-use-as-a-portal">Create and Edit an Entity to Use as a Portal</a></p></li>
 </ul>
-<p>## Prerequisites</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>Consider getting familiar with the following concepts before starting this tutorial:</p>
 <ul class="simple">
-<li><p>[Create New Entities](create-entities.html)</p></li>
-<li><p>[Change How Entities Look](entity-appearance.html)</p></li>
-<li><p>[Define an Entity’s Behavior](entity-behavior.html)</p></li>
-<li><p>[Get Started with Scripting](../../script/get-started-with-scripting.html)</p></li>
-<li><p>[Client Entity Scripts](../../script/client-entity-scripts.html)</p></li>
-<li><p>[Write Your Own Scripts](../../script/write-scripts.html)</p></li>
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+<li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
+<li><p><a class="reference external" href="../../script/get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="../../script/client-entity-scripts.html">Client Entity Scripts</a></p></li>
+<li><p><a class="reference external" href="../../script/write-scripts.html">Write Your Own Scripts</a></p></li>
 </ul>
-<p>## Write a Script for the Portal</p>
-<p>A portal is an entity with a script attached (entity script). This attached script defines what happens when a user comes in contact with the portal. We’ve used [portal.js](<a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js</a>), the script used to teleport in Vircadia domains. You can also [write your own script](../../script/write-scripts.html) to suit your needs.</p>
-<p>The portal.js script we’ve used:
-+ Uses Vircadia’s [JavaScript API](<a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>) to determine when a user walks into the entity and the teleport destination.
-+ Includes a sound that will played every time a user uses the portal.
-+ Teleports a user to the specified destination.</p>
-<p>## Create and Edit an Entity to Use as a Portal</p>
-<p>Any entity you create to be used as a portal has to be [collisionless](entity-behavior.html#set-entity-behavior-on-collision) so that the script can detect when you walk into the entity.</p>
-<ol class="arabic simple">
+</div>
+<div class="section" id="write-a-script-for-the-portal">
+<h2>Write a Script for the Portal<a class="headerlink" href="#write-a-script-for-the-portal" title="Permalink to this headline">¶</a></h2>
+<p>A portal is an entity with a script attached (entity script). This attached script defines what happens when a user comes in contact with the portal. We’ve used <a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>, the script used to teleport in Vircadia domains. You can also <a class="reference external" href="../../script/write-scripts.html">write your own script</a> to suit your needs.</p>
+<p>The portal.js script we’ve used:</p>
+<ul class="simple">
+<li><p>Uses Vircadia’s <a class="reference external" href="https://apidocs.vircadia.dev">JavaScript API</a> to determine when a user walks into the entity and the teleport destination.</p></li>
+<li><p>Includes a sound that will played every time a user uses the portal.</p></li>
+<li><p>Teleports a user to the specified destination.</p></li>
+</ul>
+</div>
+<div class="section" id="create-and-edit-an-entity-to-use-as-a-portal">
+<h2>Create and Edit an Entity to Use as a Portal<a class="headerlink" href="#create-and-edit-an-entity-to-use-as-a-portal" title="Permalink to this headline">¶</a></h2>
+<p>Any entity you create to be used as a portal has to be <a class="reference external" href="entity-behavior.html#set-entity-behavior-on-collision">collisionless</a> so that the script can detect when you walk into the entity.</p>
+<ol class="simple">
 <li><p>In Interface, pull up your HUD or Tablet and go to <strong>Create</strong>.</p></li>
-<li><p>[Create an entity](create-entities.html) to be used as a portal. This can be a 3D model or a box or sphere entity.</p></li>
+<li><p><a class="reference external" href="create-entities.html">Create an entity</a> to be used as a portal. This can be a 3D model or a box or sphere entity.</p></li>
 <li><p>Go to the ‘Properties’ tab and scroll down to ‘Behavior’.</p></li>
-<li><p>Next to ‘Script’, paste the script URL. In this case, it is ‘[portal.js](<a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js</a>)’.</p></li>
+<li><p>Next to ‘Script’, paste the script URL. In this case, it is ‘<a class="reference external" href="https://raw.githubusercontent.com/highfidelity/hifi-content/44a10a3fb07f3271307ef0a2c28429d51f696326/DomainContent/Home/portal.js">portal.js</a>’.</p></li>
 <li><p>The script takes the location you want to teleport to from the ‘User Data’ field under ‘Behavior’.</p></li>
-<li><p>Add <cite>hifi:// welcome</cite> (Vircadia’s welcome domain) to the ‘User Data’ field.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">hifi://</span> <span class="pre">welcome</span></code> (Vircadia’s welcome domain) to the ‘User Data’ field.</p></li>
 <li><p>Scroll down to ‘Collision’ and uncheck ‘Collides’. This is so that a user can walk into the entity and trigger the script.</p></li>
 <li><p>Exit <strong>Create</strong> mode and walk into the entity.</p></li>
 </ol>
-<p>![](_images/create-portal.png)</p>
+<p><img alt="../../_images/create-portal.png" src="../../_images/create-portal.png" /></p>
 <p>You will be teleported to Vircadia’s welcome domain.</p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p>[Create New Entities](create-entities.html)</p></li>
-<li><p>[Change How Entities Look](entity-appearance.html)</p></li>
-<li><p>[Define an Entity’s Behavior](entity-behavior.html)</p></li>
-<li><p>[Get Started with Scripting](../../script/get-started-with-scripting.html)</p></li>
-<li><p>[Client Entity Scripts](../../script/client-entity-scripts.html)</p></li>
-<li><p>[Write Your Own Scripts](../../script/write-scripts.html)</p></li>
-<li><p>[Interact with Your Environment](../../explore/interact.html)</p></li>
+<li><p><a class="reference external" href="create-entities.html">Create New Entities</a></p></li>
+<li><p><a class="reference external" href="entity-appearance.html">Change How Entities Look</a></p></li>
+<li><p><a class="reference external" href="entity-behavior.html">Define an Entity’s Behavior</a></p></li>
+<li><p><a class="reference external" href="../../script/get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="../../script/client-entity-scripts.html">Client Entity Scripts</a></p></li>
+<li><p><a class="reference external" href="../../script/write-scripts.html">Write Your Own Scripts</a></p></li>
+<li><p><a class="reference external" href="../../explore/interact.html">Interact with Your Environment</a></p></li>
 </ul>
+</div>
+</div>
 
 
            </div>
@@ -234,10 +278,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="avatar-scaling-tutorial.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="avatar-scaling-tutorial.html" class="btn btn-neutral float-right" title="Tutorial: Create an Avatar Scaling Button" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="display-youtube.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="display-youtube.html" class="btn btn-neutral float-left" title="Tutorial: Display a YouTube Channel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

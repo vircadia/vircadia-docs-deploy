@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Avatar Scripts &mdash; Vircadia Documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="client-entity-scripts.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="assignment-client-scripts.html" /> 
+    <link rel="next" title="Client Entity Scripts" href="client-entity-scripts.html" />
+    <link rel="prev" title="Assignment Client Scripts" href="assignment-client-scripts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,11 +86,23 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../script.html">SCRIPT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../script.html">SCRIPT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="get-started-with-scripting.html">Get Started with Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="write-scripts.html">Write Your Own Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js-tips.html">JavaScript Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface-scripts.html">Interface Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment-client-scripts.html">Assignment Client Scripts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Avatar Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-entity-scripts.html">Client Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-entity-scripts.html">Server Entity Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-hfc-tutorial.html">Tutorial: Transfer Money and Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="midi-tutorial.html">Tutorial: Use MIDI to Control Your Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
@@ -152,7 +164,7 @@
         
           <li><a href="../script.html">Script</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Avatar Scripts</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,100 +185,91 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Avatar Scripts</p>
+  <div class="section" id="avatar-scripts">
+<h1>Avatar Scripts<a class="headerlink" href="#avatar-scripts" title="Permalink to this headline">¶</a></h1>
 <p>Avatar scripts are bound to an avatar. This means that they run when a user puts on a specific avatar. Likewise, avatar scripts stop running when the avatar is removed or changed. Other users in the domain will be able to see the script in action, but they will not be able to run the script themselves.</p>
 <p>With avatar scripts, you can do things like make your hair flow or create particle clouds around your avatar.</p>
 <p><strong>On This Page</strong></p>
 <ul class="simple">
-<li><p>[Add an Avatar Script](#add-an-avatar-script)</p></li>
-<li><p>[Example of an Avatar Script](#example-of-an-avatar-script)</p></li>
+<li><p><a class="reference external" href="#add-an-avatar-script">Add an Avatar Script</a></p></li>
+<li><p><a class="reference external" href="#example-of-an-avatar-script">Example of an Avatar Script</a></p></li>
 </ul>
-<p>## Add an Avatar Script
-There are two different ways you can add an avatar script to your FST file: either by using our Package Model tool or by manually adding the script.</p>
-<dl class="simple">
-<dt>&lt;div class=”admonition note”&gt;</dt><dd><p>&lt;p class=”admonition-title”&gt;Note&lt;/p&gt;
-&lt;p&gt;You cannot add scripts to avatars you have purchased from the Marketplace. You can add scripts to custom avatars only. &lt;/p&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
-<p>To add an avatar script using the Package Model tools:
-1. Create a folder called <cite>scripts</cite> in the same location as your FBX file.
-2. Copy your avatar script into this new folder.
-3. In Interface, go to <strong>Edit &gt; Package Model as .fst</strong>
-4. For ‘Script Directory’, enter the path to the <cite>scripts</cite> folder you created above.</p>
-<p>To add an avatar script manually:
-1. Open the FST file for your avatar in the text editor of your choice.
-2. Add a line telling the avatar where to find the script file using the syntax <cite>script = [SCRIPT URL]</cite>.![](_images/add-script.png)</p>
-<p>You can add multiple scripts to your avatar by adding multiple <cite>script = url</cite> lines.</p>
-<p>## Example of an Avatar Script</p>
+<div class="section" id="add-an-avatar-script">
+<h2>Add an Avatar Script<a class="headerlink" href="#add-an-avatar-script" title="Permalink to this headline">¶</a></h2>
+<p>There are two different ways you can add an avatar script to your FST file: either by using our Package Model tool or by manually adding the script.</p>
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>You cannot add scripts to avatars you have purchased from the Marketplace. You can add scripts to custom avatars only. </p>
+</div><p>To add an avatar script using the Package Model tools:</p>
+<ol class="simple">
+<li><p>Create a folder called <code class="docutils literal notranslate"><span class="pre">scripts</span></code> in the same location as your FBX file.</p></li>
+<li><p>Copy your avatar script into this new folder.</p></li>
+<li><p>In Interface, go to <strong>Edit &gt; Package Model as .fst</strong></p></li>
+<li><p>For ‘Script Directory’, enter the path to the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> folder you created above.</p></li>
+</ol>
+<p>To add an avatar script manually:</p>
+<ol class="simple">
+<li><p>Open the FST file for your avatar in the text editor of your choice.</p></li>
+<li><p>Add a line telling the avatar where to find the script file using the syntax <code class="docutils literal notranslate"><span class="pre">script</span> <span class="pre">=</span> <span class="pre">[SCRIPT</span> <span class="pre">URL]</span></code>.<img alt="../_images/add-script.png" src="../_images/add-script.png" /></p></li>
+</ol>
+<p>You can add multiple scripts to your avatar by adding multiple <code class="docutils literal notranslate"><span class="pre">script</span> <span class="pre">=</span> <span class="pre">url</span></code> lines.</p>
+</div>
+<div class="section" id="example-of-an-avatar-script">
+<h2>Example of an Avatar Script<a class="headerlink" href="#example-of-an-avatar-script" title="Permalink to this headline">¶</a></h2>
 <p>The following script makes your avatar throw balls when its right hand moves.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>javascript
-function(){</p>
-<blockquote>
-<div><p>var triggerDistance = 0.0;
-var TRIGGER_THRESHOLD = 0.9;
-var LOAD_THRESHOLD = 0.6
-var init = false;
-var rightHandIndex = MyAvatar.getJointIndex(“RightHand”);
-var rightArmIndex = MyAvatar.getJointIndex(“RightArm”);
-var distance = 0.0;
-var triggered = false;
-function fireBall(position, speed) {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>var baseID = Entities.addEntity({</dt><dd><p>type: “Sphere”,
-color: { blue: 128, green: 128, red: 20 },
-dimensions: { x: 0.1, y: 0.1, z: 0.1 },
-position: position,
-dynamic: true,
-collisionless: false,
-lifetime: 10,
-gravity: speed,
-userData: “{ “grabbableKey”: { “grabbable”: true, “kinematic”: false } }”</p>
-</dd>
-</dl>
-<p>});
-Entities.editEntity(baseID, { velocity: speed });</p>
-</div></blockquote>
-<p>}
-Script.update.connect(function() {</p>
-<blockquote>
-<div><p>rightHandPos = MyAvatar.getJointPosition(rightHandIndex);
-rightArmPos = MyAvatar.getJointPosition(rightArmIndex);
-fireDir = Vec3.subtract(rightHandPos, rightArmPos);
-var distance = Vec3.length(fireDir);
-triggerDistance = distance &gt; triggerDistance ? distance : triggerDistance;
-if (!triggered) {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if (distance &lt; LOAD_THRESHOLD * triggerDistance) {</dt><dd><p>triggered = true;</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<dl class="simple">
-<dt>} else if (distance &gt; TRIGGER_THRESHOLD * triggerDistance) {</dt><dd><p>triggered = false;
-fireBall(rightHandPos, Vec3.normalize(fireDir));</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>});
-MyAvatar.scaleChanged.connect(function () {</p>
-<blockquote>
-<div><p>triggerDistance = 0.0;</p>
-</div></blockquote>
-<p>});</p>
-</div></blockquote>
-<p>})()
-<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
-<p>This example script uses the [MyAvatar](<a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">https://apidocs.vircadia.dev/MyAvatar.html</a>) namespace to determine if your avatar’s hand moves. Upon detecting movement, the script makes your avatar launch balls. It also uses some other namespaces such as [Entities](<a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">https://apidocs.vircadia.dev/Entities.html</a>) (to create the ball you will launch) and [Vec3](<a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">https://apidocs.vircadia.dev/Vec3.html</a>) (to determine the right positions and distances). Add it to your avatar to see how it works.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">triggerDistance</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">TRIGGER_THRESHOLD</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">LOAD_THRESHOLD</span> <span class="o">=</span> <span class="mf">0.6</span>
+    <span class="kd">var</span> <span class="nx">init</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">rightHandIndex</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">getJointIndex</span><span class="p">(</span><span class="s2">&quot;RightHand&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">rightArmIndex</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">getJointIndex</span><span class="p">(</span><span class="s2">&quot;RightArm&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">distance</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">triggered</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">fireBall</span><span class="p">(</span><span class="nx">position</span><span class="p">,</span> <span class="nx">speed</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">baseID</span> <span class="o">=</span> <span class="nx">Entities</span><span class="p">.</span><span class="nx">addEntity</span><span class="p">({</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sphere&quot;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="p">{</span> <span class="nx">blue</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nx">green</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nx">red</span><span class="o">:</span> <span class="mi">20</span> <span class="p">},</span>
+            <span class="nx">dimensions</span><span class="o">:</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mf">0.1</span> <span class="p">},</span>
+            <span class="nx">position</span><span class="o">:</span> <span class="nx">position</span><span class="p">,</span>
+            <span class="nx">dynamic</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">collisionless</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">lifetime</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nx">gravity</span><span class="o">:</span> <span class="nx">speed</span><span class="p">,</span>
+            <span class="nx">userData</span><span class="o">:</span> <span class="s2">&quot;{ \&quot;grabbableKey\&quot;: { \&quot;grabbable\&quot;: true, \&quot;kinematic\&quot;: false } }&quot;</span>
+        <span class="p">});</span> 
+        <span class="nx">Entities</span><span class="p">.</span><span class="nx">editEntity</span><span class="p">(</span><span class="nx">baseID</span><span class="p">,</span> <span class="p">{</span> <span class="nx">velocity</span><span class="o">:</span> <span class="nx">speed</span> <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="nx">Script</span><span class="p">.</span><span class="nx">update</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">rightHandPos</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">getJointPosition</span><span class="p">(</span><span class="nx">rightHandIndex</span><span class="p">);</span>
+        <span class="nx">rightArmPos</span> <span class="o">=</span> <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">getJointPosition</span><span class="p">(</span><span class="nx">rightArmIndex</span><span class="p">);</span>
+        <span class="nx">fireDir</span> <span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="nx">rightHandPos</span><span class="p">,</span> <span class="nx">rightArmPos</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">distance</span> <span class="o">=</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">length</span><span class="p">(</span><span class="nx">fireDir</span><span class="p">);</span>
+        <span class="nx">triggerDistance</span> <span class="o">=</span> <span class="nx">distance</span> <span class="o">&gt;</span> <span class="nx">triggerDistance</span> <span class="o">?</span> <span class="nx">distance</span> <span class="o">:</span> <span class="nx">triggerDistance</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">triggered</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">distance</span> <span class="o">&lt;</span> <span class="nx">LOAD_THRESHOLD</span> <span class="o">*</span> <span class="nx">triggerDistance</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">triggered</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">distance</span> <span class="o">&gt;</span> <span class="nx">TRIGGER_THRESHOLD</span> <span class="o">*</span> <span class="nx">triggerDistance</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">triggered</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="nx">fireBall</span><span class="p">(</span><span class="nx">rightHandPos</span><span class="p">,</span> <span class="nx">Vec3</span><span class="p">.</span><span class="nx">normalize</span><span class="p">(</span><span class="nx">fireDir</span><span class="p">));</span>
+        <span class="p">}</span>     
+    <span class="p">});</span>
+    <span class="nx">MyAvatar</span><span class="p">.</span><span class="nx">scaleChanged</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">triggerDistance</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">})()</span>
+</pre></div>
+</div>
+<p>This example script uses the <a class="reference external" href="https://apidocs.vircadia.dev/MyAvatar.html">MyAvatar</a> namespace to determine if your avatar’s hand moves. Upon detecting movement, the script makes your avatar launch balls. It also uses some other namespaces such as <a class="reference external" href="https://apidocs.vircadia.dev/Entities.html">Entities</a> (to create the ball you will launch) and <a class="reference external" href="https://apidocs.vircadia.dev/Vec3.html">Vec3</a> (to determine the right positions and distances). Add it to your avatar to see how it works.</p>
 <p><strong>See Also</strong></p>
 <ul class="simple">
-<li><p>[Get Started with Scripting](get-started-with-scripting.html)</p></li>
-<li><p>[Write Your Own Scripts](write-scripts.html)</p></li>
-<li><p>[API Reference](<a class="reference external" href="https://apidocs.vircadia.dev">https://apidocs.vircadia.dev</a>)</p></li>
+<li><p><a class="reference external" href="get-started-with-scripting.html">Get Started with Scripting</a></p></li>
+<li><p><a class="reference external" href="write-scripts.html">Write Your Own Scripts</a></p></li>
+<li><p><a class="reference external" href="https://apidocs.vircadia.dev">API Reference</a></p></li>
 </ul>
+</div>
+</div>
 
 
            </div>
@@ -276,10 +279,10 @@ MyAvatar.scaleChanged.connect(function () {</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="client-entity-scripts.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="client-entity-scripts.html" class="btn btn-neutral float-right" title="Client Entity Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="assignment-client-scripts.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="assignment-client-scripts.html" class="btn btn-neutral float-left" title="Assignment Client Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

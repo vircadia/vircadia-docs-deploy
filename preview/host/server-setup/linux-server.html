@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Host a Domain from a Local or Cloud Linux Server &mdash; Vircadia Documentation</title>
   
 
   
@@ -86,12 +86,24 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../host.html">HOST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../start-hosting.html">Get Started with Hosting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../server-setup.html">Set Up a Domain Server</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="windows-server.html">Host a Domain from a Local Windows Server</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Host a Domain from a Local, Remote, *or* Cloud Linux Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configure-settings.html">Configure Your Domain Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../add-content.html">Add Content to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invite-users.html">Bring Visitors to Your Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintain-domain.html">Maintain Your Domain</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
@@ -154,7 +166,7 @@
         
           <li><a href="../server-setup.html">Set up a Domain Server</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Host a Domain from a Local or Cloud Linux Server</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,84 +187,100 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Host a Domain from a Local or Cloud Linux Server</p>
+  <div class="section" id="host-a-domain-from-a-local-or-cloud-linux-server">
+<h1>Host a Domain from a Local or Cloud Linux Server<a class="headerlink" href="#host-a-domain-from-a-local-or-cloud-linux-server" title="Permalink to this headline">¶</a></h1>
 <p>The Vircadia packages can help you get up and running your own domain quickly.</p>
-<p>## Installation</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Packages are currently available for the following distributions:</p>
-<p>### Ubuntu Server 18.04 LTS</p>
-<p><code class="docutils literal notranslate"><span class="pre">`sh</span>
-<span class="pre">wget</span> <span class="pre">https://cdn.vircadia.com/dist/domain-server/ubuntu/athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb</span>
-<span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">./athena-server_0.86.0-k2-20200328-13f3ef2-0ubuntu1-1_amd64.deb</span>
-<span class="pre">`</span></code></p>
-<p>### Amazon Linux 2</p>
-<p><code class="docutils literal notranslate"><span class="pre">`sh</span>
-<span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">https://cdn.vircadia.com/dist/domain-server/amazon-linux/athena-server-0.86.0_K2_20200402_76aff7a-1.amzn2.x86_64.rpm</span>
-<span class="pre">`</span></code></p>
-<p>## Configuration</p>
+<div class="section" id="ubuntu-server-18-04-lts">
+<h3>Ubuntu Server 18.04 LTS<a class="headerlink" href="#ubuntu-server-18-04-lts" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget https://cdn.vircadia.com/dist/domain-server/ubuntu/vircadia-server_2020.2.0-asteria-20200606-db9139f-0ubuntu1-1_amd64.deb
+sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install ./vircadia-server_2020.2.0-asteria-20200606-db9139f-0ubuntu1-1_amd64.deb
+</pre></div>
+</div>
+</div>
+<div class="section" id="amazon-linux-2">
+<h3>Amazon Linux 2<a class="headerlink" href="#amazon-linux-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/athena-server-0.86.0_K2_20200402_76aff7a-1.amzn2.x86_64.rpm
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>The installation packages will create a domain at the default port location and configure a service to keep it running on that machine.</p>
-<p>Connect a web browser to the server at port 40100. (If you are on the machine that the server is running on, this would be <a class="reference external" href="http://localhost:40100">http://localhost:40100</a>.) Complete the initial setup wizard and you should have a functioning domain.</p>
-<p>## Networking</p>
-<dl class="simple">
-<dt>A Vircadia domain reserves a range of four ports to operate on, usually starting at 40100. (Note that the encrypted ports may not be implemented yet.) These ports are:</dt><dd><ul class="simple">
+<p>Connect a web browser to the server at port 40100. (If you are on the machine that the server is running on, this would be http://localhost:40100.) Complete the initial setup wizard and you should have a functioning domain.</p>
+</div>
+<div class="section" id="networking">
+<h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
+<p>A Vircadia domain reserves a range of four ports to operate on, usually starting at 40100. (Note that the encrypted ports may not be implemented yet.) These ports are:</p>
+<ul class="simple">
 <li><p>40100 (+0) : (tcp) administrative http connection</p></li>
-<li><p>&lt;del&gt;40101 (+1): (tcp) administrative https (encrypted) connection&lt;/dev&gt;</p></li>
+<li><p><del>40101 (+1): (tcp) administrative https (encrypted) connection</dev></p></li>
 <li><p>40102 (+2): (udp) main connection from clients</p></li>
-<li><p>&lt;del&gt;40103 (+3): (udp) main connection from clients (encrypted)&lt;/dev&gt;</p></li>
+<li><p><del>40103 (+3): (udp) main connection from clients (encrypted)</dev></p></li>
 </ul>
-</dd>
-</dl>
 <p>Generally speaking, only port 40102 must be publicly exposed to permit others to connect to a domain.</p>
-<p>In addition there are six “assignment clients” that must run in order for the domain to be operational.  These clients run alongside the domain server and must be able to connect with any outside user.  These clients are:
-- <strong>asset-server</strong>: stores object data to download to the user
-- <strong>audio-mixer</strong>: controls what each user would hear
-- <strong>avatar-mixer</strong>: allows users to see each other
-- <strong>entity-script-server</strong>: runs actions inside the domain
-- <strong>entity-server</strong>: describes the location of each object in the domain
-- <strong>messages-mixer</strong>: passes messages between users in the domain</p>
-<p>These assignment clients use UDP connections on a port number assigned by the operating system at launch (within [the ephemeral port range](<a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">https://en.wikipedia.org/wiki/Ephemeral_port</a>)).</p>
-<p>## Files</p>
-<dl class="simple">
-<dt>The program files are installed in /opt/athena:</dt><dd><ul class="simple">
+<p>In addition there are six “assignment clients” that must run in order for the domain to be operational.  These clients run alongside the domain server and must be able to connect with any outside user.  These clients are:</p>
+<ul class="simple">
+<li><p><strong>asset-server</strong>: stores object data to download to the user</p></li>
+<li><p><strong>audio-mixer</strong>: controls what each user would hear</p></li>
+<li><p><strong>avatar-mixer</strong>: allows users to see each other</p></li>
+<li><p><strong>entity-script-server</strong>: runs actions inside the domain</p></li>
+<li><p><strong>entity-server</strong>: describes the location of each object in the domain</p></li>
+<li><p><strong>messages-mixer</strong>: passes messages between users in the domain</p></li>
+</ul>
+<p>These assignment clients use UDP connections on a port number assigned by the operating system at launch (within <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">the ephemeral port range</a>).</p>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<p>The program files are installed in /opt/athena:</p>
+<ul class="simple">
 <li><p><strong>/opt/athena</strong> contains the executables</p></li>
 <li><p><strong>/opt/athena/lib</strong> contains libraries required for operation</p></li>
 <li><p><strong>/opt/athena/plugins</strong> is currently used for audio codecs</p></li>
 <li><p><strong>/opt/athena/resources</strong> is required for the administrative website</p></li>
 </ul>
-</dd>
-</dl>
-<p>The executables in this folder (with the exception of &lt;code&gt;new-server&lt;/code&gt;) cannot be launched from the command prompt without first setting &lt;code&gt;LD_LIBRARY_PATH=/opt/athena/lib&lt;/code&gt;.</p>
-<p>The file &lt;code&gt;/etc/opt/athena/default.conf&lt;/code&gt; contains any environment variables necessary to running the domain.</p>
-<p>All content is stored under &lt;code&gt;/var/lib/athena/default&lt;/code&gt;.  All files underneath &lt;code&gt;/var/lib/athena&lt;/code&gt; are owned by the user &lt;code&gt;athena&lt;/code&gt;, which is also the user that runs all domain-related processes.</p>
-<p>## Services</p>
-<p>The installation packages setup the following systemd services to manage the Athena domain:
-- <strong>athena-domain-server&#64;default.service</strong>: Manages the core domain server
-- <strong>athena-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients
-- <strong>athena-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p>
-<p>The &lt;code&gt;athena-<a class="reference external" href="mailto:server&#37;&#52;&#48;default">server<span>&#64;</span>default</a>.target&lt;/code&gt; service is the only one that is set to auto-start. Starting or stopping it will bring the other two services down.</p>
-<p>The first two services log a large amount of data to their service journal. Checking their logs (via &lt;code&gt;systemctl status&lt;/code&gt;) is a good way to ensure they are operating properly.</p>
-<p>## Multiple domains</p>
+<p>The executables in this folder (with the exception of <code>new-server</code>) cannot be launched from the command prompt without first setting <code>LD_LIBRARY_PATH=/opt/athena/lib</code>.</p>
+<p>The file <code>/etc/opt/athena/default.conf</code> contains any environment variables necessary to running the domain.</p>
+<p>All content is stored under <code>/var/lib/athena/default</code>.  All files underneath <code>/var/lib/athena</code> are owned by the user <code>athena</code>, which is also the user that runs all domain-related processes.</p>
+</div>
+<div class="section" id="services">
+<h2>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
+<p>The installation packages setup the following systemd services to manage the Athena domain:</p>
+<ul class="simple">
+<li><p><strong>athena-domain-server&#64;default.service</strong>: Manages the core domain server</p></li>
+<li><p><strong>athena-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients</p></li>
+<li><p><strong>athena-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p></li>
+</ul>
+<p>The <code>athena-server&#64;default.target</code> service is the only one that is set to auto-start. Starting or stopping it will bring the other two services down.</p>
+<p>The first two services log a large amount of data to their service journal. Checking their logs (via <code>systemctl status</code>) is a good way to ensure they are operating properly.</p>
+</div>
+<div class="section" id="multiple-domains">
+<h2>Multiple domains<a class="headerlink" href="#multiple-domains" title="Permalink to this headline">¶</a></h2>
 <p>The installation package is configured to permit multiple domains to run on a single server at different port numbers.  New servers can be created using the following command:</p>
-<blockquote>
-<div><p>/opt/athena/new-server &lt;name&gt; &lt;base-port&gt;</p>
-</div></blockquote>
-<p>where &lt;code&gt;name&lt;/code&gt; is a word used to name and manage the domain and &lt;code&gt;base-port&lt;/code&gt; must be the the first of a range of four contiguous port numbers not overlapping with any other use on the system.</p>
-<dl class="simple">
-<dt>Assuming you created a new server with the name <strong>second-bite</strong>, this would setup the following:</dt><dd><ul class="simple">
-<li><p>Environment variables in &lt;code&gt;/etc/opt/athena/<strong>second-bite</strong>.conf&lt;/code&gt;</p></li>
-<li><p>Content stored in &lt;code&gt;/var/lib/athena/<a href="#id1"><span class="problematic" id="id2">**</span></a>second-bite**&lt;/code&gt;</p></li>
-<li><p>Services launched as &lt;code&gt;athena-<a class="reference external" href="mailto:domain-server&#37;&#52;&#48;**second-bite**">domain-server<span>&#64;</span>**second-bite**</a>.service&lt;/code&gt;, &lt;code&gt;athena-<a class="reference external" href="mailto:assignment-client&#37;&#52;&#48;**second-bite**">assignment-client<span>&#64;</span>**second-bite**</a>.service&lt;/code&gt;, and &lt;code&gt;athena-<a class="reference external" href="mailto:server&#37;&#52;&#48;**second-bite**">server<span>&#64;</span>**second-bite**</a>.target&lt;/code&gt;</p></li>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>/opt/athena/new-server &lt;name&gt; &lt;base-port&gt;
+</pre></div>
+</div>
+<p>where <code>name</code> is a word used to name and manage the domain and <code>base-port</code> must be the the first of a range of four contiguous port numbers not overlapping with any other use on the system.</p>
+<p>Assuming you created a new server with the name <strong>second-bite</strong>, this would setup the following:</p>
+<ul class="simple">
+<li><p>Environment variables in <code>/etc/opt/athena/<strong>second-bite</strong>.conf</code></p></li>
+<li><p>Content stored in <code>/var/lib/athena/<strong>second-bite</strong></code></p></li>
+<li><p>Services launched as <code>athena-domain-server&#64;<strong>second-bite</strong>.service</code>, <code>athena-assignment-client&#64;<strong>second-bite</strong>.service</code>, and <code>athena-server&#64;<strong>second-bite</strong>.target</code></p></li>
 </ul>
-</dd>
-</dl>
-<p>## Legacy Services</p>
-<dl class="simple">
-<dt>There are a number of tweaks that are made to the default configuration to simplify storage and the ability to run multiple domains on one server.  In case you would like to remove this logic and run the servers closer to how the original <em>High Fidelity</em> domain servers were running, this is provided as an option.</dt><dd><ul class="simple">
-<li><p>Systemd services named &lt;code&gt;athena-domain-server.service&lt;/code&gt;, &lt;code&gt;athena-assignment-client.service&lt;/code&gt;, and &lt;code&gt;athena-server.target&lt;/code&gt; <em>(without the &#64;name)</em> have simplified configuration</p></li>
+</div>
+<div class="section" id="legacy-services">
+<h2>Legacy Services<a class="headerlink" href="#legacy-services" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of tweaks that are made to the default configuration to simplify storage and the ability to run multiple domains on one server.  In case you would like to remove this logic and run the servers closer to how the original <em>High Fidelity</em> domain servers were running, this is provided as an option.</p>
+<ul class="simple">
+<li><p>Systemd services named <code>athena-domain-server.service</code>, <code>athena-assignment-client.service</code>, and <code>athena-server.target</code> <em>(without the &#64;name)</em> have simplified configuration</p></li>
 <li><p>No file is provided to specify environment variables for the server</p></li>
-<li><p>Content would be stored in &lt;code&gt;/var/lib/athena/.local&lt;/code&gt;</p></li>
+<li><p>Content would be stored in <code>/var/lib/athena/.local</code></p></li>
 </ul>
-</dd>
-</dl>
+</div>
+</div>
 
 
            </div>

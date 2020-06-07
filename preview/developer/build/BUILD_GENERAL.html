@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>General Build Information &mdash; Vircadia Documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="BUILD_WIN.html" />
+    <link rel="next" title="Build Windows" href="BUILD_WIN.html" />
     <link rel="prev" title="Building Vircadia" href="../build.html" /> 
 </head>
 
@@ -86,14 +86,28 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../build.html">Build from Source</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">General Build Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_WIN.html">Build Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_LINUX.html">Build Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_OSX.html">Build OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BUILD_ANDROID.html">Build Android</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -154,7 +168,7 @@
         
           <li><a href="../build.html">Building Vircadia</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>General Build Information</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,79 +189,103 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># General Build Information</p>
+  <div class="section" id="general-build-information">
+<h1>General Build Information<a class="headerlink" href="#general-build-information" title="Permalink to this headline">¶</a></h1>
 <p><em>Last Updated on December 21, 2019</em></p>
-<p>### OS Specific Build Guides</p>
+<div class="section" id="os-specific-build-guides">
+<h2>OS Specific Build Guides<a class="headerlink" href="#os-specific-build-guides" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>[Build Windows](BUILD_WIN.md) - complete instructions for Windows.</p></li>
-<li><p>[Build Linux](BUILD_LINUX.md) - additional instructions for Linux.</p></li>
-<li><p>[Build OSX](BUILD_OSX.md) - additional instructions for OS X.</p></li>
-<li><p>[Build Android](BUILD_ANDROID.md) - additional instructions for Android</p></li>
+<li><p><a class="reference internal" href="BUILD_WIN.html"><span class="doc">Build Windows</span></a> - complete instructions for Windows.</p></li>
+<li><p><a class="reference internal" href="BUILD_LINUX.html"><span class="doc">Build Linux</span></a> - additional instructions for Linux.</p></li>
+<li><p><a class="reference internal" href="BUILD_OSX.html"><span class="doc">Build OSX</span></a> - additional instructions for OS X.</p></li>
+<li><p><a class="reference internal" href="BUILD_ANDROID.html"><span class="doc">Build Android</span></a> - additional instructions for Android</p></li>
 </ul>
-<p>### Dependencies
-- [git](<a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>): &gt;= 1.6
-- [cmake](<a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a>):  3.9
-- [Python](<a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>): 3.6 or higher</p>
-<p>### CMake External Project Dependencies</p>
-<p>These dependencies need not be installed manually. They are automatically downloaded on the platforms where they are required.
-- [Bullet Physics Engine](<a class="reference external" href="https://github.com/bulletphysics/bullet3/releases">https://github.com/bulletphysics/bullet3/releases</a>):  2.83
-- [glm](<a class="reference external" href="https://glm.g-truc.net/0.9.8/index.html">https://glm.g-truc.net/0.9.8/index.html</a>):  0.9.8
-- [Oculus SDK](<a class="reference external" href="https://developer.oculus.com/downloads/">https://developer.oculus.com/downloads/</a>):   1.11 (Win32) / 0.5 (Mac)
-- [OpenVR](<a class="reference external" href="https://github.com/ValveSoftware/openvr">https://github.com/ValveSoftware/openvr</a>):   1.0.6 (Win32 only)
-- [Polyvox](<a class="reference external" href="http://www.volumesoffun.com/">http://www.volumesoffun.com/</a>):   0.2.1
-- [QuaZip](<a class="reference external" href="https://sourceforge.net/projects/quazip/files/quazip/">https://sourceforge.net/projects/quazip/files/quazip/</a>):   0.7.3
-- [SDL2](<a class="reference external" href="https://www.libsdl.org/download-2.0.php">https://www.libsdl.org/download-2.0.php</a>):   2.0.3
-- [Intel Threading Building Blocks](<a class="reference external" href="https://www.threadingbuildingblocks.org/">https://www.threadingbuildingblocks.org/</a>):   4.3
-- [vcpkg](<a class="reference external" href="https://github.com/hifi-archive/vcpkg">https://github.com/hifi-archive/vcpkg</a>):
-- [VHACD](<a class="reference external" href="https://github.com/virneo/v-hacd">https://github.com/virneo/v-hacd</a>)
-- [zlib](<a class="reference external" href="http://www.zlib.net/">http://www.zlib.net/</a>):   1.28 (Win32 only)
-- [nvtt](<a class="reference external" href="https://github.com/hifi-archive/nvidia-texture-tools">https://github.com/hifi-archive/nvidia-texture-tools</a>):   2.1.1 (customized)</p>
-<p>The above dependencies will be downloaded, built, linked and included automatically by CMake where we require them. The CMakeLists files that handle grabbing each of the following external dependencies can be found in the [cmake/externals folder](cmake/externals). The resulting downloads, source files and binaries will be placed in the <cite>build/ext</cite> folder in each of the subfolders for each external project.</p>
-<p>These are not placed in your normal build tree when doing an out of source build so that they do not need to be re-downloaded and re-compiled every time the CMake build folder is cleared. Should you want to force a re-download and re-compile of a specific external, you can simply remove that directory from the appropriate subfolder in <cite>build/ext</cite>. Should you want to force a re-download and re-compile of all externals, just remove the <cite>build/ext</cite> folder.</p>
-<p>#### CMake</p>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git-scm.com/downloads">git</a>: &gt;= 1.6</p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">cmake</a>:  3.9</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a>: 3.6 or higher</p></li>
+</ul>
+</div>
+<div class="section" id="cmake-external-project-dependencies">
+<h2>CMake External Project Dependencies<a class="headerlink" href="#cmake-external-project-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>These dependencies need not be installed manually. They are automatically downloaded on the platforms where they are required.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/bulletphysics/bullet3/releases">Bullet Physics Engine</a>:  2.83</p></li>
+<li><p><a class="reference external" href="https://glm.g-truc.net/0.9.8/index.html">glm</a>:  0.9.8</p></li>
+<li><p><a class="reference external" href="https://developer.oculus.com/downloads/">Oculus SDK</a>:   1.11 (Win32) / 0.5 (Mac)</p></li>
+<li><p><a class="reference external" href="https://github.com/ValveSoftware/openvr">OpenVR</a>:   1.0.6 (Win32 only)</p></li>
+<li><p><a class="reference external" href="http://www.volumesoffun.com/">Polyvox</a>:   0.2.1</p></li>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/quazip/files/quazip/">QuaZip</a>:   0.7.3</p></li>
+<li><p><a class="reference external" href="https://www.libsdl.org/download-2.0.php">SDL2</a>:   2.0.3</p></li>
+<li><p><a class="reference external" href="https://www.threadingbuildingblocks.org/">Intel Threading Building Blocks</a>:   4.3</p></li>
+<li><p><a class="reference external" href="https://github.com/hifi-archive/vcpkg">vcpkg</a>:</p></li>
+<li><p><a class="reference external" href="https://github.com/virneo/v-hacd">VHACD</a></p></li>
+<li><p><a class="reference external" href="http://www.zlib.net/">zlib</a>:   1.28 (Win32 only)</p></li>
+<li><p><a class="reference external" href="https://github.com/hifi-archive/nvidia-texture-tools">nvtt</a>:   2.1.1 (customized)</p></li>
+</ul>
+<p>The above dependencies will be downloaded, built, linked and included automatically by CMake where we require them. The CMakeLists files that handle grabbing each of the following external dependencies can be found in the <a class="reference external" href="cmake/externals">cmake/externals folder</a>. The resulting downloads, source files and binaries will be placed in the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder in each of the subfolders for each external project.</p>
+<p>These are not placed in your normal build tree when doing an out of source build so that they do not need to be re-downloaded and re-compiled every time the CMake build folder is cleared. Should you want to force a re-download and re-compile of a specific external, you can simply remove that directory from the appropriate subfolder in <code class="docutils literal notranslate"><span class="pre">build/ext</span></code>. Should you want to force a re-download and re-compile of all externals, just remove the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder.</p>
+<div class="section" id="cmake">
+<h3>CMake<a class="headerlink" href="#cmake" title="Permalink to this headline">¶</a></h3>
 <p>Athena uses CMake to generate build files and project files for your platform.</p>
-<p>#### Qt
-CMake will download Qt 5.12.3 using vcpkg.</p>
-<p>To override this (i.e. use an installed Qt configuration - you will need to set a QT_CMAKE_PREFIX_PATH environment variable pointing to your Qt <strong>lib/cmake</strong> folder.
-This can either be entered directly into your shell session before you build or in your shell profile (e.g.: ~/.bash_profile, ~/.bashrc, ~/.zshrc - this depends on your shell and environment).  The path it needs to be set to will depend on where and how Qt5 was installed. e.g.</p>
-<blockquote>
-<div><p>export QT_CMAKE_PREFIX_PATH=/usr/local/Qt5.12.3/gcc_64/lib/cmake
+</div>
+<div class="section" id="qt">
+<h3>Qt<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h3>
+<p>CMake will download Qt 5.12.3 using vcpkg.</p>
+<p>To override this (i.e. use an installed Qt configuration - you will need to set a QT_CMAKE_PREFIX_PATH environment variable pointing to your Qt <strong>lib/cmake</strong> folder.<br />This can either be entered directly into your shell session before you build or in your shell profile (e.g.: ~/.bash_profile, ~/.bashrc, ~/.zshrc - this depends on your shell and environment).  The path it needs to be set to will depend on where and how Qt5 was installed. e.g.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>export QT_CMAKE_PREFIX_PATH=/usr/local/Qt5.12.3/gcc_64/lib/cmake
 export QT_CMAKE_PREFIX_PATH=/usr/local/qt/5.12.3/clang_64/lib/cmake/
 export QT_CMAKE_PREFIX_PATH=/usr/local/Cellar/qt5/5.12.3/lib/cmake
-export QT_CMAKE_PREFIX_PATH=/usr/local/opt/qt5/lib/cmake</p>
-</div></blockquote>
-<p>#### Vcpkg</p>
+export QT_CMAKE_PREFIX_PATH=/usr/local/opt/qt5/lib/cmake
+</pre></div>
+</div>
+</div>
+<div class="section" id="vcpkg">
+<h3>Vcpkg<a class="headerlink" href="#vcpkg" title="Permalink to this headline">¶</a></h3>
 <p>Athena uses vcpkg to download and build dependencies.
 You do not need to install vcpkg.</p>
 <p>Building the dependencies can be lengthy and the resulting files will be stored in your OS temp directory.
 However, those files can potentially get cleaned up by the OS, so in order to avoid this and having to redo the lengthy build step, you can set the following environment variable:</p>
 <p>export HIFI_VCPKG_BASE=/path/to/directory</p>
 <p>Where /path/to/directory is the path to a directory where you wish the build files to get stored.</p>
-<p>#### Generating build files</p>
+</div>
+<div class="section" id="generating-build-files">
+<h3>Generating build files<a class="headerlink" href="#generating-build-files" title="Permalink to this headline">¶</a></h3>
 <p>Create a build directory in the root of your checkout and then run the CMake build from there. This will keep the rest of the directory clean.</p>
-<blockquote>
-<div><p>mkdir build
-cd build
-cmake ..</p>
-</div></blockquote>
-<p>If cmake gives you the same error message repeatedly after the build fails, try removing <cite>CMakeCache.txt</cite>.</p>
-<p>#### Variables</p>
-<p>Any variables that need to be set for CMake to find dependencies can be set as ENV variables in your shell profile, or passed directly to CMake with a <cite>-D</cite> flag appended to the <cite>cmake ..</cite> command.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">mkdir</span> <span class="nx">build</span>
+<span class="nx">cd</span> <span class="nx">build</span>
+<span class="nx">cmake</span> <span class="p">..</span>
+</pre></div>
+</div>
+<p>If cmake gives you the same error message repeatedly after the build fails, try removing <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code>.</p>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<p>Any variables that need to be set for CMake to find dependencies can be set as ENV variables in your shell profile, or passed directly to CMake with a <code class="docutils literal notranslate"><span class="pre">-D</span></code> flag appended to the <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span></code> command.</p>
 <p>For example, to pass the QT_CMAKE_PREFIX_PATH variable (if not using the vcpkg’ed version) during build file generation:</p>
-<blockquote>
-<div><p>cmake .. -DQT_CMAKE_PREFIX_PATH=/usr/local/qt/5.12.3/lib/cmake</p>
-</div></blockquote>
-<p>#### Finding Dependencies</p>
-<p>The following applies for dependencies we do not grab via CMake ExternalProject (OpenSSL is an example), or for dependencies you have opted not to grab as a CMake ExternalProject (via -DUSE_LOCAL_$NAME=0). The list of dependencies we grab by default as external projects can be found in [the CMake External Project Dependencies section](#cmake-external-project-dependencies).</p>
-<p>You can point our [Cmake find modules](cmake/modules/) to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>cmake .. -DQT_CMAKE_PREFIX_PATH=/usr/local/qt/5.12.3/lib/cmake
+</pre></div>
+</div>
+</div>
+<div class="section" id="finding-dependencies">
+<h3>Finding Dependencies<a class="headerlink" href="#finding-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The following applies for dependencies we do not grab via CMake ExternalProject (OpenSSL is an example), or for dependencies you have opted not to grab as a CMake ExternalProject (via -DUSE_LOCAL_$NAME=0). The list of dependencies we grab by default as external projects can be found in <a class="reference external" href="#cmake-external-project-dependencies">the CMake External Project Dependencies section</a>.</p>
+<p>You can point our <a class="reference external" href="cmake/modules/">Cmake find modules</a> to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
 <p>In the examples below the variable $NAME would be replaced by the name of the dependency in uppercase, and $name would be replaced by the name of the dependency in lowercase (ex: OPENSSL_ROOT_DIR, openssl).</p>
 <ul class="simple">
 <li><p>$NAME_ROOT_DIR - pass this variable to Cmake with the -DNAME_ROOT_DIR= flag when running Cmake to generate build files</p></li>
 <li><p>$NAME_ROOT_DIR - set this variable in your ENV</p></li>
 <li><p>HIFI_LIB_DIR - set this variable in your ENV to your High Fidelity lib folder, should contain a folder ‘$name’</p></li>
 </ul>
-<p>### Optional Components</p>
-<p>#### Build Options</p>
+</div>
+</div>
+<div class="section" id="optional-components">
+<h2>Optional Components<a class="headerlink" href="#optional-components" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="build-options">
+<h3>Build Options<a class="headerlink" href="#build-options" title="Permalink to this headline">¶</a></h3>
 <p>The following build options can be used when running CMake</p>
 <ul class="simple">
 <li><p>BUILD_CLIENT</p></li>
@@ -255,13 +293,20 @@ cmake ..</p>
 <li><p>BUILD_TESTS</p></li>
 <li><p>BUILD_TOOLS</p></li>
 </ul>
-<p>#### Developer Build Options</p>
+</div>
+<div class="section" id="developer-build-options">
+<h3>Developer Build Options<a class="headerlink" href="#developer-build-options" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>USE_GLES</p></li>
 <li><p>DISABLE_UI</p></li>
 </ul>
-<p>#### Devices</p>
-<p>You can support external input/output devices such as Leap Motion, MIDI, and more by adding each individual SDK in the visible building path. Refer to the readme file available in each device folder in [interface/external/](interface/external) for the detailed explanation of the requirements to use the device.</p>
+</div>
+<div class="section" id="devices">
+<h3>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h3>
+<p>You can support external input/output devices such as Leap Motion, MIDI, and more by adding each individual SDK in the visible building path. Refer to the readme file available in each device folder in <a class="reference external" href="interface/external">interface/external/</a> for the detailed explanation of the requirements to use the device.</p>
+</div>
+</div>
+</div>
 
 
            </div>
@@ -271,7 +316,7 @@ cmake ..</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BUILD_WIN.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="BUILD_WIN.html" class="btn btn-neutral float-right" title="Build Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../build.html" class="btn btn-neutral float-left" title="Building Vircadia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

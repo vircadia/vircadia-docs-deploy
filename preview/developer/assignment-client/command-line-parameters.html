@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Command Line Parameters &mdash; Vircadia Documentation</title>
   
 
   
@@ -86,14 +86,24 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../build.html">Build from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../assignment-client.html">Assignment Client</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Command Line Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -154,7 +164,7 @@
         
           <li><a href="../assignment-client.html">Assignment Client</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Command Line Parameters</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,20 +185,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Command Line Parameters</p>
+  <div class="section" id="command-line-parameters">
+<h1>Command Line Parameters<a class="headerlink" href="#command-line-parameters" title="Permalink to this headline">¶</a></h1>
 <p>You can launch an assignment-client with these parameters.</p>
 <p>Displays help information</p>
-<blockquote>
-<div><p>-h, –help</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
+</pre></div>
+</div>
 <p>Displays version information</p>
-<blockquote>
-<div><p>-v, –version</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">v</span><span class="p">,</span> <span class="o">--</span><span class="nx">version</span>
+</pre></div>
+</div>
 <p>Assignment client type</p>
-<blockquote>
-<div><p>-t &lt;type&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">t</span> <span class="o">&lt;</span><span class="nx">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>0 = audio-mixer</p></li>
 <li><p>1 = avatar-mixer</p></li>
@@ -199,53 +210,54 @@
 <li><p>6 = entity-server</p></li>
 </ul>
 <p>Assignment pool</p>
-<blockquote>
-<div><p>–pool &lt;pool&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">pool</span> <span class="o">&lt;</span><span class="nx">pool</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Assignment client UDP port</p>
-<blockquote>
-<div><p>-p &lt;port&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">p</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Wallet destination</p>
-<blockquote>
-<div><p>–wallet &lt;wallet-uuid&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">wallet</span> <span class="o">&lt;</span><span class="nx">wallet</span><span class="o">-</span><span class="nx">uuid</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Assignment server hostname</p>
-<blockquote>
-<div><p>-a &lt;hostname&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">a</span> <span class="o">&lt;</span><span class="nx">hostname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Assignment server port</p>
-<blockquote>
-<div><p>–server-port &lt;port&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">server</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Number of children to fork</p>
-<blockquote>
-<div><p>-n &lt;child-count&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">n</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Minimum number of children</p>
-<blockquote>
-<div><p>–min &lt;child-count&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">min</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Maximum number of children</p>
-<blockquote>
-<div><p>–max &lt;child-count&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">max</span> <span class="o">&lt;</span><span class="nx">child</span><span class="o">-</span><span class="nx">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Assignment client monitor port</p>
-<blockquote>
-<div><p>–monitor-port &lt;port&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">monitor</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>HTTP status server port</p>
-<blockquote>
-<div><p>–http-status-port &lt;port&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">http</span><span class="o">-</span><span class="nx">status</span><span class="o">-</span><span class="nx">port</span> <span class="o">&lt;</span><span class="nx">port</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Directory to store logs</p>
-<blockquote>
-<div><p>–log-directory &lt;path&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">log</span><span class="o">-</span><span class="nx">directory</span> <span class="o">&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>PID of the parent process</p>
-<blockquote>
-<div><p>–parent-pid &lt;pid&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">parent</span><span class="o">-</span><span class="nx">pid</span> <span class="o">&lt;</span><span class="nx">pid</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
 
 
            </div>

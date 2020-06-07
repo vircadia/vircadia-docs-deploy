@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Command Line Parameters &mdash; Vircadia Documentation</title>
   
 
   
@@ -86,14 +86,24 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../build.html">Build from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installer.html">Create an Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../domain-server.html">Domain Server</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Command Line Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -154,7 +164,7 @@
         
           <li><a href="../domain-server.html">Domain Server</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Command Line Parameters</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,36 +185,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Command Line Parameters</p>
+  <div class="section" id="command-line-parameters">
+<h1>Command Line Parameters<a class="headerlink" href="#command-line-parameters" title="Permalink to this headline">¶</a></h1>
 <p>You can launch a domain-server with these parameters.</p>
 <p>Displays help information</p>
-<blockquote>
-<div><p>-h, –help</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">help</span>
+</pre></div>
+</div>
 <p>Displays version information</p>
-<blockquote>
-<div><p>-v, –version</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">v</span><span class="p">,</span> <span class="o">--</span><span class="nx">version</span>
+</pre></div>
+</div>
 <p>ICE server address</p>
-<blockquote>
-<div><p>-i &lt;IP:PORT or HOSTNAME:PORT&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">i</span> <span class="o">&lt;</span><span class="nx">IP</span><span class="o">:</span><span class="nx">PORT</span> <span class="nx">or</span> <span class="nx">HOSTNAME</span><span class="o">:</span><span class="nx">PORT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Domain server UUID</p>
-<blockquote>
-<div><p>-d &lt;uuid&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="nx">d</span> <span class="o">&lt;</span><span class="nx">uuid</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Requests a temporary domain name</p>
-<blockquote>
-<div><p>–get-temp-name</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">get</span><span class="o">-</span><span class="nx">temp</span><span class="o">-</span><span class="nx">name</span>
+</pre></div>
+</div>
 <p>User config file path</p>
-<blockquote>
-<div><p>–user-config &lt;path&gt;</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">user</span><span class="o">-</span><span class="nx">config</span> <span class="o">&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Displays the PID of the parent process</p>
-<blockquote>
-<div><p>–parent_pid</p>
-</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">parent_pid</span>
+</pre></div>
+</div>
+</div>
 
 
            </div>

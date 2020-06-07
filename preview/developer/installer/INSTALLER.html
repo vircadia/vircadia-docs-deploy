@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Vircadia Documentation</title>
+  <title>Creating an Installer &mdash; Vircadia Documentation</title>
   
 
   
@@ -86,14 +86,24 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../create.html">CREATE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../developer.html">DEVELOPER</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../build.html">Build from Source</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../installer.html">Create an Installer</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installer Creation Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain-server.html">Domain Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assignment-client.html">Assignment Client</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -154,7 +164,7 @@
         
           <li><a href="../installer.html">Creating an Installer</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Creating an Installer</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,122 +185,100 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># Creating an Installer</p>
-<p>Follow the [build guide](BUILD.md) to figure out how to build Project Athena for your platform.</p>
-<p>During generation, CMake should produce an <cite>install</cite> target and a <cite>package</cite> target.</p>
-<p>The <cite>install</cite> target will copy the Project Athena targets and their dependencies to your <cite>CMAKE_INSTALL_PREFIX</cite>.
-This variable is set by the <cite>project(hifi)</cite> command in <cite>CMakeLists.txt</cite> to <cite>C:/Program Files/hifi</cite> and stored in <cite>build/CMakeCache.txt</cite></p>
-<p>### Packaging</p>
-<p>To produce an installer, run the <cite>package</cite> target.</p>
-<p>#### Windows</p>
+  <div class="section" id="creating-an-installer">
+<h1>Creating an Installer<a class="headerlink" href="#creating-an-installer" title="Permalink to this headline">¶</a></h1>
+<p>Follow the <a class="reference external" href="BUILD">build guide</a> to figure out how to build Project Athena for your platform.</p>
+<p>During generation, CMake should produce an <code class="docutils literal notranslate"><span class="pre">install</span></code> target and a <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the Project Athena targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<p>To produce an installer, run the <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>To produce an executable installer on Windows, the following are required:</p>
-<ol class="arabic simple">
-<li><p>[7-zip](&lt;<a class="reference external" href="https://www.7-zip.org/download.html">https://www.7-zip.org/download.html</a>&gt;)</p></li>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.7-zip.org/download.html">7-zip</a></p></li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/Download">Nullsoft Scriptable Install System</a> - 3.04<br />Install using defaults (will install to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS</span></code>)</p></li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/UAC_plug-in">UAC Plug-in for Nullsoft</a> - 0.2.4c</p>
+<ol class="simple">
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">UAC.nsh</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Include\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugins\x86-ansi\UAC.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugins\x86-unicode\UAC.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><p>[Nullsoft Scriptable Install System](<a class="reference external" href="http://nsis.sourceforge.net/Download">http://nsis.sourceforge.net/Download</a>) - 3.04</p></li>
-</ol>
-<blockquote>
-<div><p>Install using defaults (will install to <cite>C:Program Files (x86)NSIS</cite>)</p>
-</div></blockquote>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>[UAC Plug-in for Nullsoft](<a class="reference external" href="http://nsis.sourceforge.net/UAC_plug-in">http://nsis.sourceforge.net/UAC_plug-in</a>) - 0.2.4c</dt><dd><p>1. Extract Zip
-1. Copy <cite>UAC.nsh</cite> to <cite>C:Program Files (x86)NSISInclude`
-1. Copy `Pluginsx86-ansiUAC.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1. Copy `Pluginsx86-unicodeUAC.dll</cite> to <a href="#id1"><span class="problematic" id="id2">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p>
-</dd>
-</dl>
 </li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/NsProcess_plugin">nsProcess Plug-in for Nullsoft</a> - 1.6 (use the link marked <strong>nsProcess_1_6.7z</strong>)</p>
+<ol class="simple">
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Include\nsProcess.nsh</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Include\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugins\nsProcess.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugins\nsProcessW.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>[nsProcess Plug-in for Nullsoft](<a class="reference external" href="http://nsis.sourceforge.net/NsProcess_plugin">http://nsis.sourceforge.net/NsProcess_plugin</a>) - 1.6 (use the link marked <strong>nsProcess_1_6.7z</strong>)</dt><dd><p>1. Extract Zip
-1. Copy <cite>IncludensProcess.nsh</cite> to <cite>C:Program Files (x86)NSISInclude`
-1. Copy `PluginsnsProcess.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1. Copy `PluginsnsProcessW.dll</cite> to <a href="#id3"><span class="problematic" id="id4">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p>
-</dd>
-</dl>
 </li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/Inetc_plug-in">InetC Plug-in for Nullsoft</a> - 1.0</p>
+<ol class="simple">
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugin\x86-ansi\InetC.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Plugin\x86-unicode\InetC.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>[InetC Plug-in for Nullsoft](<a class="reference external" href="http://nsis.sourceforge.net/Inetc_plug-in">http://nsis.sourceforge.net/Inetc_plug-in</a>) - 1.0</dt><dd><p>1. Extract Zip
-1. Copy <cite>Pluginx86-ansiInetC.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1. Copy `Pluginx86-unicodeInetC.dll</cite> to <a href="#id5"><span class="problematic" id="id6">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p>
-</dd>
-</dl>
 </li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/NSISpcre_plug-in">NSISpcre Plug-in for Nullsoft</a> - 1.0</p>
+<ol class="simple">
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">NSISpre.nsh</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Include\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">NSISpre.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>[NSISpcre Plug-in for Nullsoft](<a class="reference external" href="http://nsis.sourceforge.net/NSISpcre_plug-in">http://nsis.sourceforge.net/NSISpcre_plug-in</a>) - 1.0</dt><dd><p>1. Extract Zip
-1. Copy <cite>NSISpre.nsh</cite> to <cite>C:Program Files (x86)NSISInclude`
-1. Copy `NSISpre.dll</cite> to <a href="#id7"><span class="problematic" id="id8">`</span></a>C:Program Files (x86)NSISPluginsx86-ansi`</p>
-</dd>
-</dl>
 </li>
+<li><p><a class="reference external" href="http://wiz0u.free.fr/prog/nsisSlideshow/">nsisSlideshow Plug-in for Nullsoft</a> - 1.7</p>
+<ol class="simple">
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">bin\nsisSlideshow.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">bin\nsisSlideshowW.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><p>[nsisSlideshow Plug-in for Nullsoft](&lt;<a class="reference external" href="http://wiz0u.free.fr/prog/nsisSlideshow/">http://wiz0u.free.fr/prog/nsisSlideshow/</a>&gt;) - 1.7
-1.  Extract Zip
-1.  Copy <cite>binnsisSlideshow.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1.  Copy `binnsisSlideshowW.dll</cite> to <a href="#id9"><span class="problematic" id="id10">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p></li>
+</li>
+<li><p><a class="reference external" href="http://nsis.sourceforge.net/Nsisunz_plug-in">Nsisunz plug-in for Nullsoft</a></p>
+<ol class="simple">
+<li><p>Download both Zips and unzip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">nsisunz\Release\nsisunz.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">NSISunzU\Plugin</span> <span class="pre">unicode\nsisunz.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><p>[Nsisunz plug-in for Nullsoft](<a class="reference external" href="http://nsis.sourceforge.net/Nsisunz_plug-in">http://nsis.sourceforge.net/Nsisunz_plug-in</a>)
-1.  Download both Zips and unzip
-1.  Copy <cite>nsisunzReleasensisunz.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1.  Copy `NSISunzUPlugin unicodensisunz.dll</cite> to <a href="#id11"><span class="problematic" id="id12">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p></li>
+</li>
+<li><p><a class="reference internal" href="../installer.html"><span class="doc">ApplicationID plug-in for Nullsoft</span></a> - 1.0</p>
+<ol class="simple">
+<li><p>Download <a class="reference external" href="https://github.com/connectiblutz/NSIS-ApplicationID/releases/download/1.1/NSIS-ApplicationID.zip"><code class="docutils literal notranslate"><span class="pre">Pre-built</span> <span class="pre">DLLs</span></code></a></p></li>
+<li><p>Extract Zip</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">Release\ApplicationID.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-ansi\</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">ReleaseUnicode\ApplicationID.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
-<ol class="arabic simple">
-<li><p>[ApplicationID plug-in for Nullsoft]() - 1.0
-1.  Download [<cite>Pre-built DLLs</cite>](&lt;<a class="reference external" href="https://github.com/connectiblutz/NSIS-ApplicationID/releases/download/1.1/NSIS-ApplicationID.zip">https://github.com/connectiblutz/NSIS-ApplicationID/releases/download/1.1/NSIS-ApplicationID.zip</a>&gt;)
-1.  Extract Zip
-1.  Copy <cite>ReleaseApplicationID.dll</cite> to <cite>C:Program Files (x86)NSISPluginsx86-ansi`
-1.  Copy `ReleaseUnicodeApplicationID.dll</cite> to <a href="#id13"><span class="problematic" id="id14">`</span></a>C:Program Files (x86)NSISPluginsx86-unicode`</p></li>
-</ol>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>[npm](&lt;<a class="reference external" href="https://www.npmjs.com/get-npm">https://www.npmjs.com/get-npm</a>&gt;)</dt><dd><ol class="arabic simple">
+</li>
+<li><p><a class="reference external" href="https://www.npmjs.com/get-npm">npm</a></p>
+<ol class="simple">
 <li><p>Install version 10.15.0 LTS</p></li>
 </ol>
-</dd>
-</dl>
 </li>
+<li><p>Perform a clean cmake from a new terminal.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">athena.sln</span></code> solution and select the Release configuration.</p></li>
+<li><p>Build the solution.</p></li>
+<li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console-npm-install</span></code> (found under <strong>hidden/Server Console</strong>)</p></li>
+<li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code> (found under <strong>Server Console</strong>)<br />This will add 2 folders to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br /><code class="docutils literal notranslate"><span class="pre">server-console-win32-x64</span></code> and <code class="docutils literal notranslate"><span class="pre">x64</span></code></p></li>
+<li><p>Build CMakeTargets-&gt;PACKAGE<br />Installer is now available in <code class="docutils literal notranslate"><span class="pre">build\_CPack_Packages\win64\NSIS</span></code></p></li>
 </ol>
-<p>1.  Perform a clean cmake from a new terminal.
-1.  Open the <cite>athena.sln</cite> solution and select the Release configuration.
-1.  Build the solution.
-1.  Build <cite>packaged-server-console-npm-install</cite> (found under <strong>hidden/Server Console</strong>)
-1.  Build <cite>packaged-server-console</cite> (found under <strong>Server Console</strong>)</p>
-<blockquote>
-<div><p>This will add 2 folders to <cite>buildserver-console` -
-`server-console-win32-x64</cite> and <cite>x64</cite></p>
-</div></blockquote>
-<ol class="arabic simple">
-<li><p>Build CMakeTargets-&gt;PACKAGE
-Installer is now available in <cite>build_CPack_Packageswin64NSIS</cite></p></li>
+</div>
+<div class="section" id="os-x">
+<h3>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.npmjs.com/get-npm">npm</a>
+Install version 10.15.0 LTS</p></li>
+<li><p>Perform a clean CMake.</p></li>
+<li><p>Perform a Release build of ALL_BUILD</p></li>
+<li><p>Perform a Release build of <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code>
+This will add a folder to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br />Sandbox-darwin-x64</p></li>
+<li><p>Perform a Release build of <code class="docutils literal notranslate"><span class="pre">package</span></code>
+Installer is now available in `build/_CPack_Packages/Darwin/DragNDrop</p></li>
 </ol>
-<p>#### OS X
-1.   [npm](&lt;<a class="reference external" href="https://www.npmjs.com/get-npm">https://www.npmjs.com/get-npm</a>&gt;)</p>
-<blockquote>
-<div><p>Install version 10.15.0 LTS</p>
-</div></blockquote>
-<p>1.  Perform a clean CMake.
-1.  Perform a Release build of ALL_BUILD
-1.  Perform a Release build of <cite>packaged-server-console</cite></p>
-<blockquote>
-<div><p>This will add a folder to <a href="#id15"><span class="problematic" id="id16">`</span></a>buildserver-console` -
-Sandbox-darwin-x64</p>
-</div></blockquote>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>Perform a Release build of <cite>package</cite></dt><dd><p>Installer is now available in <a href="#id17"><span class="problematic" id="id18">`</span></a>build/_CPack_Packages/Darwin/DragNDrop</p>
-</dd>
-</dl>
-</li>
-</ol>
+</div>
+</div>
+</div>
 
 
            </div>

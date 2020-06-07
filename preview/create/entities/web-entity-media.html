@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Play Media in a Web Entity &mdash; Vircadia Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Entity Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Prioritize Zones Within Your Domain" href="hero-zone.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://projectathena.io/">
+          
+
+          
+            
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Play Media in a Web Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Vircadia Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Play Media in a Web Entity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/web-entity-media.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/web-entity-media.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="play-media-in-a-web-entity">
+<h1><a class="toc-backref" href="#id1">Play Media in a Web Entity</a><a class="headerlink" href="#play-media-in-a-web-entity" title="Permalink to this headline">¶</a></h1>
+<p>Web entities can play a number of different media formats through embedded players.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#play-media-in-a-web-entity" id="id1">Play Media in a Web Entity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#supported-media-formats" id="id2">Supported Media Formats</a></p></li>
+<li><p><a class="reference internal" href="#re-encode-media-with-ffmpeg" id="id3">Re-encode Media with FFmpeg</a></p></li>
+<li><p><a class="reference internal" href="#batch-processing" id="id4">Batch Processing</a></p></li>
+<li><p><a class="reference internal" href="#video-player" id="id5">Video Player</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="supported-media-formats">
+<h2><a class="toc-backref" href="#id2">Supported Media Formats</a><a class="headerlink" href="#supported-media-formats" title="Permalink to this headline">¶</a></h2>
+<p>Currently, exclusively open source formats are supported:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 57%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Container format</p></th>
+<th class="head"><p>Supported codecs</p></th>
+<th class="head"><p>File extension(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WebM</p></td>
+<td><p>Video: VP8, VP9       Audio: Vorbis, Opus</p></td>
+<td><p>.webm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Matroska</p></td>
+<td><p>Video: Theora, VP8, VP9       Audio: Vorbis, Opus, FLAC, MP3</p></td>
+<td><p>.mkv, .mk3d, .mka, .mks</p></td>
+</tr>
+<tr class="row-even"><td><p>Ogg</p></td>
+<td><p>Video: Theora, VP8       Audio: Vorbis, Opus, FLAC</p></td>
+<td><p>.ogg, .oga, .ogv</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 57%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Video codec</p></th>
+<th class="head"><p>Comments</p></th>
+<th class="head"><p>Supported containers</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VP9 (recommended)</p></td>
+<td><p>Good quality, slow encoding.</p></td>
+<td><p>WebM, Matroska</p></td>
+</tr>
+<tr class="row-odd"><td><p>VP8</p></td>
+<td><p>Recommended if your APU has hardware accelerated encoding for
+VP8, but not VP9. Slightly faster than VP9.
+Slightly lower quality to compression ratio than VP9.</p></td>
+<td><p>WebM, Matroska</p></td>
+</tr>
+<tr class="row-even"><td><p>Theora</p></td>
+<td><p>Low quality, low compression, outdated.</p></td>
+<td><p>Matroska</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 57%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Audio codec</p></th>
+<th class="head"><p>Comments</p></th>
+<th class="head"><p>Supported containers</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Opus</p></td>
+<td><p>Recommended, works well with high and low bitrate.</p></td>
+<td><p>WebM, Matroska, Ogg</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vorbis</p></td>
+<td><p>Lower quality to compression ratio than Opus.</p></td>
+<td><p>WebM, Matroska, Ogg</p></td>
+</tr>
+<tr class="row-even"><td><p>FLAC</p></td>
+<td><p>Lossless, bigger files.</p></td>
+<td><p>Matroska, Ogg</p></td>
+</tr>
+<tr class="row-odd"><td><p>MP3</p></td>
+<td><p>Lower quality to compression ratio than Opus and Vorbis.</p></td>
+<td><p>Matroska</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="re-encode-media-with-ffmpeg">
+<h2><a class="toc-backref" href="#id3">Re-encode Media with FFmpeg</a><a class="headerlink" href="#re-encode-media-with-ffmpeg" title="Permalink to this headline">¶</a></h2>
+<p>Here are some example commands for reencoding video files using FFmpeg.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 57%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Encode</p></th>
+<th class="head"><p>Command</p></th>
+<th class="head"><p>Comments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VP9, Opus, WebM</p></td>
+<td><p>ffmpeg -i “INPUTFILE” -c:v libvpx-vp9 -b:v 0 -crf 5 -vf
+scale=-2:600 -cpu-used 5 -row-mt 1 -c:a libopus -b:a 96K
+“OUTPUTFILE.webm”</p></td>
+<td><p>“-vf scale=-2:600”
+scales the video
+down to 600p vertical
+resolution while keeping
+the aspect ratio.
+“-crf 5” is the video
+quality from 0 to 63,
+lower being better. For
+the constant quality to
+work the bitrate has to
+be set to “0” via
+“-b:v 0”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VP9 (Hardware
+accelerated), Opus,
+WebM</p></td>
+<td><p>ffmpeg -i “INPUTFILE” -c:v vp9_vaapi -b:v 2000k -c:a libopus
+-b:a 96K “OUTPUTFILE.webm”</p></td>
+<td><p>VP9 hardware
+acceleration
+is currently only
+supported by Intel Kaby
+Lake or newer APUs.
+Hardware accelerated VP9
+does not have a constant
+quality setting, so
+bitrate needs to be
+used instead.</p></td>
+</tr>
+<tr class="row-even"><td><p>VP8 (Hardware
+accelerated), Opus,
+WebM</p></td>
+<td><p>ffmpeg -i “INPUTFILE” -c:v vp8_vaapi -b:v 2000k -vf scale=-2:600
+-c:a libopus -b:a 96K “OUTPUTFILE.webm”</p></td>
+<td><p>VP8 hardware
+acceleration is
+currently only supported
+by Intel
+Cherryview/Braswell and
+newer APUs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Theora, Opus, Matroska</p></td>
+<td><p>ffmpeg -i “INPUTFILE” -c:v libtheora -q:v 10 -vf scale=-2:600
+-c:a libopus -b:a 96K “OUTPUTFILE.mkv”</p></td>
+<td><p>“-q:v 10” is the quality
+from 0 to 10, higher
+being better.</p></td>
+</tr>
+</tbody>
+</table>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-codecs</span></code> command to see supported codecs.</p>
+<p>Additional info can be found with the command <code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-h</span></code></p>
+<p>Alternatively you can explore these links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://trac.ffmpeg.org/wiki">https://trac.ffmpeg.org/wiki</a></p></li>
+<li><p><a class="reference external" href="https://ffmpeg.org">https://ffmpeg.org</a></p></li>
+<li><p><a class="reference external" href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#VA-API_drivers">https://wiki.archlinux.org/index.php/Hardware_video_acceleration#VA-API_drivers</a></p></li>
+</ul>
+</div>
+<div class="section" id="batch-processing">
+<h2><a class="toc-backref" href="#id4">Batch Processing</a><a class="headerlink" href="#batch-processing" title="Permalink to this headline">¶</a></h2>
+<p>Here is an example shell script to batch reencode the contents of a folder on Linux using FFmpeg:</p>
+<p>You can name it: <code class="docutils literal notranslate"><span class="pre">vircadia_reencode.sh</span></code></p>
+<p>With this code in it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modified version of https://gist.github.com/ralphcrisostomo/56fc395b1646bd55aeeb2eb442043887</span>
+<span class="c1"># Usage: ./vircadia_reencode.sh /SourceDirectory /DestinationDirectory</span>
+
+<span class="nv">SOURCE</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">DESTINATION</span><span class="o">=</span><span class="nv">$2</span>
+
+<span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -d <span class="s1">&#39;&#39;</span> -r ITEM
+<span class="k">do</span>
+
+  <span class="nb">echo</span> <span class="nv">$ITEM</span>
+
+  <span class="nv">FILE</span><span class="o">=</span><span class="si">${</span><span class="nv">ITEM</span><span class="p">##*/</span><span class="si">}</span>
+  <span class="nv">EXT</span><span class="o">=</span><span class="si">${</span><span class="nv">ITEM</span><span class="p">##*.</span><span class="si">}</span>
+  <span class="nv">EXT</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$EXT</span> <span class="p">|</span> tr <span class="s2">&quot;[:upper:]&quot;</span> <span class="s2">&quot;[:lower:]&quot;</span><span class="k">)</span>
+  <span class="nv">OUTPUT</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$DESTINATION</span><span class="s2">/</span><span class="si">${</span><span class="nv">FILE</span><span class="p">%.*</span><span class="si">}</span><span class="s2">.mkv&quot;</span>
+
+  <span class="c1"># Create directory</span>
+  <span class="o">[[</span> -d <span class="nv">$DESTINATION</span> <span class="o">]]</span> <span class="o">||</span> mkdir -p <span class="nv">$DESTINATION</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">|</span> ffmpeg -i <span class="s2">&quot;</span><span class="nv">$ITEM</span><span class="s2">&quot;</span> -c:v libvpx-vp9 -b:v <span class="m">0</span> -crf <span class="m">5</span> -vf <span class="nv">scale</span><span class="o">=</span>-2:600 -cpu-used <span class="m">5</span> -row-mt <span class="m">1</span> -c:a libopus -b:a 96K <span class="s2">&quot;</span><span class="nv">$OUTPUT</span><span class="s2">&quot;</span>
+
+<span class="c1"># All files with the listed extensions will be reencoded.</span>
+<span class="k">done</span>&lt; &lt;<span class="o">(</span>find <span class="s2">&quot;</span><span class="nv">$SOURCE</span><span class="s2">&quot;</span> <span class="se">\(</span> -iname <span class="s1">&#39;*.mp4&#39;</span> -or -iname <span class="s1">&#39;*.avi&#39;</span>  -or -iname <span class="s1">&#39;*.mkv&#39;</span> -or -iname <span class="s1">&#39;*.mts&#39;</span> <span class="se">\)</span> -print0<span class="o">)</span> <span class="p">|</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not forget to set the script as executable on Linux using something like <cite>chmod +x vircadia_reencode.sh</cite></p>
+</div>
+</div>
+<div class="section" id="video-player">
+<h2><a class="toc-backref" href="#id5">Video Player</a><a class="headerlink" href="#video-player" title="Permalink to this headline">¶</a></h2>
+<p>You can embed videos using the HTML5 video tag. This example code can be put into an HTML file on a web server and be used in a Web entity.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span><span class="o">=</span><span class="s">&quot;controls&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;EXAMPLEDIRECTORY/EXAMPLEFILE.webm&quot;</span><span class="p">&gt;</span>
+    Your browser does not support the HTML5 Video element.
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-entities.html"><span class="doc">Create New Entites</span></a></p></li>
+<li><p><a class="reference external" href="../tools.html#the-create-app">The Create App</a></p></li>
+<li><p><a class="reference internal" href="entity-behavior.html"><span class="doc">Define an Entity’s Behavior</span></a></p></li>
+<li><p><a class="reference internal" href="entity-appearance.html"><span class="doc">Change How Entities Look</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Entity Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hero-zone.html" class="btn btn-neutral float-left" title="Prioritize Zones Within Your Domain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
