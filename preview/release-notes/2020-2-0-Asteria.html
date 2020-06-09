@@ -94,9 +94,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">SECURITY</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.0 Asteria (06/09/20)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.0 Asteria (06/08/20)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v86-k2.html">Alpha Release 86 K2 (04/03/20)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v86.html">Beta Release 86 (11/14/19)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v85.html">Beta Release 85 (10/17/19)</a></li>
@@ -186,7 +187,7 @@
             
   <div class="section" id="alpha-2020-2-0-asteria-release-notes">
 <h1>Alpha 2020.2.0 Asteria Release Notes<a class="headerlink" href="#alpha-2020-2-0-asteria-release-notes" title="Permalink to this headline">¶</a></h1>
-<p>This version of Vircadia is the follow-up version to K2. It is not compatible with the v0.86.0 protocol. This version was released on May 9th, 2020.</p>
+<p>This version of Vircadia is the follow-up version to K2. It is not compatible with the v0.86.0 protocol. This version was released on June 8th, 2020.</p>
 <p>The software version is denoted by the new versioning scheme:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">YYYY</span><span class="p">.</span><span class="nx">MajorVersion</span><span class="p">.</span><span class="nx">MinorVersion</span><span class="o">-</span><span class="nx">Name</span>
 </pre></div>
@@ -224,11 +225,11 @@
 <div class="section" id="technicals">
 <h3>Technicals<a class="headerlink" href="#technicals" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><p>Package scripts: rename to Vircadia, add deletion and migration functionality. (#273)</p></li>
 <li><p>VS2019 (Version 16.5.1) build fix. (#279)</p></li>
 <li><p>Make custom Qt builds work on unsupported Ubuntu distributions. (#292)</p></li>
 <li><p>Add community-apps repo to default QML whitelist. (#296)</p></li>
 <li><p>GitHub Actions for PR builds with artifact uploading. (#300)</p></li>
-<li><p>Fix GHA PR building. (#421)</p></li>
 <li><p>Snapshot name changed from “hifi” to “vircadia”. (#334)</p></li>
 <li><p>Vircadia now uses version 1.11.11 of the OpenVR SDK. (#335)</p></li>
 <li><p>Crash reporting information sent to Sentry improved. (#336)</p></li>
@@ -242,6 +243,10 @@
 <li><p>Revert commit 359248829c using -m 1 to temporarily fix issue 383. (#414)</p></li>
 <li><p>Fix many GLTF (*.glb) files being unable to be loaded due to bad URL parsing. (#415)</p></li>
 <li><p>Include <stdexcept> for building on Windows 10 with Visual Studio 2019. (#418)</p></li>
+<li><p>Fix GHA PR building. (#421)</p></li>
+<li><p>Rebrand HiFi &amp; Athena -&gt; Vircadia. (#427)</p></li>
+<li><p>Use newer Opus codec to fix illegal instruction in libopusCodec.so. (#429)</p></li>
+<li><p>Remove path from boilerplate in coding standard. (#431)</p></li>
 </ul>
 </div>
 </div>
