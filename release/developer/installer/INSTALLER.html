@@ -188,9 +188,9 @@
             
   <div class="section" id="creating-an-installer">
 <h1>Creating an Installer<a class="headerlink" href="#creating-an-installer" title="Permalink to this headline">¶</a></h1>
-<p>Follow the <a class="reference external" href="BUILD">build guide</a> to figure out how to build Project Athena for your platform.</p>
+<p>Follow the <a class="reference external" href="BUILD">build guide</a> to figure out how to build Vircadia for your platform.</p>
 <p>During generation, CMake should produce an <code class="docutils literal notranslate"><span class="pre">install</span></code> target and a <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the Project Athena targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the Vircadia targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <p>To produce an installer, run the <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
@@ -252,24 +252,25 @@
 <li><p>Copy <code class="docutils literal notranslate"><span class="pre">ReleaseUnicode\ApplicationID.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\NSIS\Plugins\x86-unicode\</span></code></p></li>
 </ol>
 </li>
-<li><p><a class="reference external" href="https://www.npmjs.com/get-npm">npm</a></p>
+<li><p><a class="reference external" href="https://www.npmjs.com/get-npm">Node.JS and NPM</a></p>
 <ol class="simple">
 <li><p>Install version 10.15.0 LTS</p></li>
 </ol>
 </li>
 <li><p>Perform a clean cmake from a new terminal.</p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">athena.sln</span></code> solution and select the Release configuration.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">vircadia.sln</span></code> solution with elevated (administrator) permissions on Visual Studio and select the <strong>Release</strong> configuration.</p></li>
 <li><p>Build the solution.</p></li>
+<li><p>Build CMakeTargets-&gt;INSTALL</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console-npm-install</span></code> (found under <strong>hidden/Server Console</strong>)</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code> (found under <strong>Server Console</strong>)<br />This will add 2 folders to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br /><code class="docutils literal notranslate"><span class="pre">server-console-win32-x64</span></code> and <code class="docutils literal notranslate"><span class="pre">x64</span></code></p></li>
-<li><p>Build CMakeTargets-&gt;PACKAGE<br />Installer is now available in <code class="docutils literal notranslate"><span class="pre">build\_CPack_Packages\win64\NSIS</span></code></p></li>
+<li><p>Build CMakeTargets-&gt;PACKAGE<br />The installer is now available in <code class="docutils literal notranslate"><span class="pre">build\_CPack_Packages\win64\NSIS</span></code></p></li>
 </ol>
 </div>
 <div class="section" id="os-x">
 <h3>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><a class="reference external" href="https://www.npmjs.com/get-npm">npm</a>
-Install version 10.15.0 LTS</p></li>
+Install version 12.16.3 LTS</p></li>
 <li><p>Perform a clean CMake.</p></li>
 <li><p>Perform a Release build of ALL_BUILD</p></li>
 <li><p>Perform a Release build of <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code>
@@ -278,6 +279,17 @@ This will add a folder to <code class="docutils literal notranslate"><span class
 Installer is now available in `build/_CPack_Packages/Darwin/DragNDrop</p></li>
 </ol>
 </div>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>Problem:</strong> Failure to open a file. <code class="docutils literal notranslate"><span class="pre">File:</span> <span class="pre">failed</span> <span class="pre">opening</span> <span class="pre">file</span> <span class="pre">&quot;\FOLDERSHARE\XYZSRelease\...\Credits.rtf&quot;</span> <span class="pre">Error</span> <span class="pre">in</span> <span class="pre">script</span> <span class="pre">&quot;C:\TFS\XYZProject\Releases\NullsoftInstaller\XYZWin7Installer.nsi&quot;</span> <span class="pre">on</span> <span class="pre">line</span> <span class="pre">77</span> <span class="pre">--</span> <span class="pre">aborting</span> <span class="pre">creation</span> <span class="pre">process</span></code></p>
+<ol class="simple">
+<li><p><strong>Cause:</strong> The complete path (current directory + relative path) has to be &lt; 260 characters to any of the relevant files.</p></li>
+<li><p><strong>Solution:</strong> Move your build and packaging folder as high up in the drive as possible to prevent an overage.</p></li>
+</ol>
+</li>
+</ol>
 </div>
 </div>
 
