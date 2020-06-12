@@ -54,7 +54,7 @@
           
 
           
-            <a href="https://projectathena.io/">
+            <a href="https://vircadia.com/">
           
 
           
@@ -107,6 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">SECURITY</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
@@ -220,14 +221,14 @@
 <h3>Basic Method for Using Shaders<a class="headerlink" href="#basic-method-for-using-shaders" title="Permalink to this headline">¶</a></h3>
 <p>Shaders’ code is stored as a file. Fragment shaders will typically have the file extension <strong>*.fs</strong> or <strong>*.frag</strong> and vertex shaders will usually have the <strong>*.vs</strong> or <strong>*.vert</strong> file extension.</p>
 <p>Shaders are applied to entities and avatars by way of attaching them to a material. That material is then attached to your entity or avatar, therefore applying the shader as intended.</p>
-<p>If you are unfamiliar with material entities, you can find more information <a class="reference external" href="https://docs.projectathena.dev/create/entities/material-entity.html">here</a>.</p>
+<p>If you are unfamiliar with material entities, you can find more information <a class="reference external" href="https://docs.vircadia.dev/create/entities/material-entity.html">here</a>.</p>
 <p>Material entities have data that is stored in the JSON format, and they have a property called <code class="docutils literal notranslate"><span class="pre">materialData</span></code>. The <code class="docutils literal notranslate"><span class="pre">materialData</span></code> property requires <code class="docutils literal notranslate"><span class="pre">model</span></code> and <code class="docutils literal notranslate"><span class="pre">procedural</span></code> fields. Here is an example:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;materials&quot;</span><span class="o">:</span> <span class="p">[{</span>
         <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
         <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span>
+            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.vircadia.dev/_static/resources/Proceduralv3.fs&quot;</span>
         <span class="p">}</span>
     <span class="p">}]</span>
 <span class="p">}</span>
@@ -243,7 +244,7 @@
                     <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
                             <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span>
+                            <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.vircadia.dev/_static/resources/Proceduralv3.fs&quot;</span>
                     <span class="p">}</span>
             <span class="p">}</span>
     <span class="p">})</span>
@@ -490,7 +491,7 @@ The return value is <code class="docutils literal notranslate"><span class="pre"
             <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;hifi_shader_simple&quot;</span><span class="p">,</span>
             <span class="s2">&quot;procedural&quot;</span><span class="o">:</span> <span class="p">{</span>
                 <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.projectathena.dev/_static/resources/Proceduralv3.fs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;shaderUrl&quot;</span><span class="o">:</span> <span class="s2">&quot;https://docs.vircadia.dev/_static/resources/Proceduralv3.fs&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;uniforms&quot;</span><span class="o">:</span> <span class="p">{</span>
                     <span class="s2">&quot;_diffuse&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
                     <span class="s2">&quot;_alpha&quot;</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">,</span>
