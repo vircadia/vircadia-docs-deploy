@@ -192,7 +192,7 @@
             
   <div class="section" id="build-windows">
 <h1>Build Windows<a class="headerlink" href="#build-windows" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on May 17, 2020</em></p>
+<p><em>Last Updated on January 13, 2020</em></p>
 <p>This is a stand-alone guide for creating your first Vircadia build for Windows 64-bit.</p>
 <p>Note: We are now using Visual Studio 2017 or 2019 and Qt 5.12.3.<br />If you are upgrading from previous versions, do a clean uninstall of those versions before going through this guide.</p>
 <p>Note: The prerequisites will require about 10 GB of space on your drive. You will also need a system with at least 8GB of main memory.</p>
@@ -236,7 +236,7 @@
 </div>
 <div class="section" id="step-4-create-vcpkg-environment-variable">
 <h2>Step 4. Create VCPKG environment variable<a class="headerlink" href="#step-4-create-vcpkg-environment-variable" title="Permalink to this headline">¶</a></h2>
-<p>In the next step, you will use CMake to build Vircadia. By default, the CMake process builds dependency files in Windows’ <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> directory, which is periodically cleared by the operating system. To prevent you from having to re-build the dependencies in the event that Windows clears that directory, we recommend that you create a <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code> environment variable linked to a directory somewhere on your machine. That directory will contain all dependency files until you manually remove them.</p>
+<p>In the next step, you will use CMake to build Project Athena. By default, the CMake process builds dependency files in Windows’ <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> directory, which is periodically cleared by the operating system. To prevent you from having to re-build the dependencies in the event that Windows clears that directory, we recommend that you create a <code class="docutils literal notranslate"><span class="pre">HIFI_VCPKG_BASE</span></code> environment variable linked to a directory somewhere on your machine. That directory will contain all dependency files until you manually remove them.</p>
 <p>To create this variable:</p>
 <ul class="simple">
 <li><p>Naviagte to ‘Edit the System Environment Variables’ Through the start menu.</p></li>
@@ -257,7 +257,7 @@
 </div>
 <div class="section" id="step-5-running-cmake-to-generate-build-files">
 <h2>Step 5. Running CMake to Generate Build Files<a class="headerlink" href="#step-5-running-cmake-to-generate-build-files" title="Permalink to this headline">¶</a></h2>
-<p>Run Command Prompt from Start and run the following commands:<br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&quot;%VIRCADIA_DIR%&quot;</span></code><br /><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">build</span></code><br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">build</span></code></p>
+<p>Run Command Prompt from Start and run the following commands:<br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&quot;%HIFI_DIR%&quot;</span></code><br /><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">build</span></code><br /><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">build</span></code></p>
 <div class="section" id="if-you-re-using-visual-studio-2017">
 <h3>If you’re using Visual Studio 2017,<a class="headerlink" href="#if-you-re-using-visual-studio-2017" title="Permalink to this headline">¶</a></h3>
 <p>Run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">&quot;Visual</span> <span class="pre">Studio</span> <span class="pre">15</span> <span class="pre">Win64&quot;</span></code>.</p>
@@ -265,12 +265,12 @@
 <div class="section" id="if-you-re-using-visual-studio-2019">
 <h3>If you’re using Visual Studio 2019,<a class="headerlink" href="#if-you-re-using-visual-studio-2019" title="Permalink to this headline">¶</a></h3>
 <p>Run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">&quot;Visual</span> <span class="pre">Studio</span> <span class="pre">16</span> <span class="pre">2019&quot;</span> <span class="pre">-A</span> <span class="pre">x64</span></code>.</p>
-<p>Where <code class="docutils literal notranslate"><span class="pre">%VIRCADIA_DIR%</span></code> is the directory for the Vircadia repository.</p>
+<p>Where <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%</span></code> is the directory for the highfidelity repository.</p>
 </div>
 </div>
 <div class="section" id="step-6-making-a-build">
 <h2>Step 6. Making a Build<a class="headerlink" href="#step-6-making-a-build" title="Permalink to this headline">¶</a></h2>
-<p>Open <code class="docutils literal notranslate"><span class="pre">%VIRCADIA_DIR%\build\vircadia.sln</span></code> using Visual Studio.</p>
+<p>Open <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build\athena.sln</span></code> using Visual Studio.</p>
 <p>Change the Solution Configuration (menu ribbon under the menu bar, next to the green play button) from “Debug” to “Release” for best performance.</p>
 <p>Run from the menu bar <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">&gt;</span> <span class="pre">Build</span> <span class="pre">Solution</span></code>.</p>
 </div>
@@ -283,25 +283,25 @@
 </ul>
 <p>Restart Visual Studio again.</p>
 <p>In Visual Studio, right+click “interface” under the Apps folder in Solution Explorer and select “Set as Startup Project”. Run from the menu bar <code class="docutils literal notranslate"><span class="pre">Debug</span> <span class="pre">&gt;</span> <span class="pre">Start</span> <span class="pre">Debugging</span></code>.</p>
-<p>Now, you should have a full build of Vircadia and be able to run the Interface using Visual Studio.</p>
-<p>Note: You can also run Interface by launching it from command line or File Explorer from <code class="docutils literal notranslate"><span class="pre">%VIRCADIA_DIR%\build\interface\Release\interface.exe</span></code></p>
+<p>Now, you should have a full build of Project Athena and be able to run the Interface using Visual Studio. Please check our <a class="reference external" href="https://wiki.highfidelity.com/wiki/Main_Page">Docs</a> for more information regarding the programming workflow.</p>
+<p>Note: You can also run Interface by launching it from command line or File Explorer from <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build\interface\Release\interface.exe</span></code></p>
 </div>
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>For any problems after Step #6, first try this:</p>
 <ul class="simple">
-<li><p>Delete your locally cloned copy of the Vircadia repository</p></li>
+<li><p>Delete your locally cloned copy of the highfidelity repository</p></li>
 <li><p>Restart your computer</p></li>
 <li><p>Redownload the <a class="reference external" href="https://github.com/kasenvr/project-athena">repository</a></p></li>
 <li><p>Restart directions from Step #6</p></li>
 </ul>
 <div class="section" id="cmake-gives-you-the-same-error-message-repeatedly-after-the-build-fails">
 <h3>CMake gives you the same error message repeatedly after the build fails<a class="headerlink" href="#cmake-gives-you-the-same-error-message-repeatedly-after-the-build-fails" title="Permalink to this headline">¶</a></h3>
-<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%VIRCADIA_DIR%\build</span></code> directory.</p>
+<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build</span></code> directory.</p>
 </div>
 <div class="section" id="cmake-can-t-find-openssl">
 <h3>CMake can’t find OpenSSL<a class="headerlink" href="#cmake-can-t-find-openssl" title="Permalink to this headline">¶</a></h3>
-<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%VIRCADIA_DIR%\build</span></code> directory.  Verify that your HIFI_VCPKG_BASE environment variable is set and pointing to the correct location. Verify that the file <code class="docutils literal notranslate"><span class="pre">${HIFI_VCPKG_BASE}/installed/x64-windows/include/openssl/ssl.h</span></code> exists.</p>
+<p>Remove <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> found in the <code class="docutils literal notranslate"><span class="pre">%HIFI_DIR%\build</span></code> directory.  Verify that your HIFI_VCPKG_BASE environment variable is set and pointing to the correct location.  Verify that the file <code class="docutils literal notranslate"><span class="pre">${HIFI_VCPKG_BASE}/installed/x64-windows/include/openssl/ssl.h</span></code> exists.</p>
 </div>
 </div>
 </div>
