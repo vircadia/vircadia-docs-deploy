@@ -310,6 +310,16 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.346.35 /usr/lib/x86_64-linux-gnu/l
 </pre></div>
 </div>
 </div>
+<div class="section" id="using-a-custom-qt-build">
+<h3>Using a custom Qt build<a class="headerlink" href="#using-a-custom-qt-build" title="Permalink to this headline">¶</a></h3>
+<p>Qt binaries are only provided for Ubuntu. In order to build on other distributions, a Qt5 install needs to be provided as follows:</p>
+<ul class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">VIRCADIA_USE_PREBUILT_QT=1</span></code></p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">VIRCADIA_USE_QT_VERSION</span></code> to the Qt version (defaults to <code class="docutils literal notranslate"><span class="pre">5.12.3</span></code>)</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">HIFI_QT_BASE=/path/to/qt</span></code></p></li>
+</ul>
+<p>Qt must be installed in <code class="docutils literal notranslate"><span class="pre">$HIFI_QT_BASE/$VIRCADIA_USE_QT_VERSION/qt5-install</span></code>.</p>
+</div>
 <div class="section" id="compiling">
 <h3>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
 <p>Create the build directory:</p>

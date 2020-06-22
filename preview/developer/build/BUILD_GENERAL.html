@@ -192,7 +192,7 @@
             
   <div class="section" id="general-build-information">
 <h1>General Build Information<a class="headerlink" href="#general-build-information" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on December 21, 2019</em></p>
+<p><em>Last Updated on May 17, 2020</em></p>
 <div class="section" id="os-specific-build-guides">
 <h2>OS Specific Build Guides<a class="headerlink" href="#os-specific-build-guides" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -208,6 +208,11 @@
 <li><p><a class="reference external" href="https://git-scm.com/downloads">git</a>: &gt;= 1.6</p></li>
 <li><p><a class="reference external" href="https://cmake.org/download/">cmake</a>:  3.9</p></li>
 <li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a>: 3.6 or higher</p></li>
+<li><p><a class="reference external" href="https://nodejs.org/en/">Node.JS</a>: &gt;= 12.13.1 LTS</p>
+<ul>
+<li><p>Used to build the Screen Sharing executable.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="cmake-external-project-dependencies">
@@ -217,7 +222,7 @@
 <li><p><a class="reference external" href="https://github.com/bulletphysics/bullet3/releases">Bullet Physics Engine</a>:  2.83</p></li>
 <li><p><a class="reference external" href="https://glm.g-truc.net/0.9.8/index.html">glm</a>:  0.9.8</p></li>
 <li><p><a class="reference external" href="https://developer.oculus.com/downloads/">Oculus SDK</a>:   1.11 (Win32) / 0.5 (Mac)</p></li>
-<li><p><a class="reference external" href="https://github.com/ValveSoftware/openvr">OpenVR</a>:   1.0.6 (Win32 only)</p></li>
+<li><p><a class="reference external" href="https://github.com/ValveSoftware/openvr">OpenVR</a>:   1.11.11 (Win32 only)</p></li>
 <li><p><a class="reference external" href="http://www.volumesoffun.com/">Polyvox</a>:   0.2.1</p></li>
 <li><p><a class="reference external" href="https://sourceforge.net/projects/quazip/files/quazip/">QuaZip</a>:   0.7.3</p></li>
 <li><p><a class="reference external" href="https://www.libsdl.org/download-2.0.php">SDL2</a>:   2.0.3</p></li>
@@ -231,7 +236,7 @@
 <p>These are not placed in your normal build tree when doing an out of source build so that they do not need to be re-downloaded and re-compiled every time the CMake build folder is cleared. Should you want to force a re-download and re-compile of a specific external, you can simply remove that directory from the appropriate subfolder in <code class="docutils literal notranslate"><span class="pre">build/ext</span></code>. Should you want to force a re-download and re-compile of all externals, just remove the <code class="docutils literal notranslate"><span class="pre">build/ext</span></code> folder.</p>
 <div class="section" id="cmake">
 <h3>CMake<a class="headerlink" href="#cmake" title="Permalink to this headline">¶</a></h3>
-<p>Athena uses CMake to generate build files and project files for your platform.</p>
+<p>Vircadia uses CMake to generate build files and project files for your platform.</p>
 </div>
 <div class="section" id="qt">
 <h3>Qt<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h3>
@@ -245,8 +250,8 @@ export QT_CMAKE_PREFIX_PATH=/usr/local/opt/qt5/lib/cmake
 </div>
 </div>
 <div class="section" id="vcpkg">
-<h3>Vcpkg<a class="headerlink" href="#vcpkg" title="Permalink to this headline">¶</a></h3>
-<p>Athena uses vcpkg to download and build dependencies.
+<h3>VCPKG<a class="headerlink" href="#vcpkg" title="Permalink to this headline">¶</a></h3>
+<p>Vircadia uses vcpkg to download and build dependencies.
 You do not need to install vcpkg.</p>
 <p>Building the dependencies can be lengthy and the resulting files will be stored in your OS temp directory.
 However, those files can potentially get cleaned up by the OS, so in order to avoid this and having to redo the lengthy build step, you can set the following environment variable:</p>
@@ -254,14 +259,51 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 <p>Where /path/to/directory is the path to a directory where you wish the build files to get stored.</p>
 </div>
 <div class="section" id="generating-build-files">
-<h3>Generating build files<a class="headerlink" href="#generating-build-files" title="Permalink to this headline">¶</a></h3>
+<h3>Generating Build Files<a class="headerlink" href="#generating-build-files" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="possible-environment-variables">
+<h4>Possible Environment Variables<a class="headerlink" href="#possible-environment-variables" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// The URL to post the dump to.</span>
+<span class="nx">CMAKE_BACKTRACE_URL</span>
+<span class="c1">// The identifying tag of the release.</span>
+<span class="nx">CMAKE_BACKTRACE_TOKEN</span>
+
+<span class="c1">// The release version.</span>
+<span class="nx">RELEASE_NUMBER</span>
+<span class="c1">// The build commit.</span>
+<span class="nx">BUILD_NUMBER</span>
+
+<span class="c1">// The type of release.</span>
+<span class="nx">RELEASE_TYPE</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span>
+<span class="nx">RELEASE_BUILD</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span>
+
+<span class="c1">// TODO: What do these do?</span>
+<span class="nx">PRODUCTION_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
+<span class="nx">STABLE_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
+
+<span class="c1">// TODO: What do these do?</span>
+<span class="nx">USE_STABLE_GLOBAL_SERVICES</span><span class="o">=</span><span class="mi">1</span>
+<span class="nx">BUILD_GLOBAL_SERVICES</span><span class="o">=</span><span class="nx">STABLE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-files">
+<h4>Generate Files<a class="headerlink" href="#generate-files" title="Permalink to this headline">¶</a></h4>
 <p>Create a build directory in the root of your checkout and then run the CMake build from there. This will keep the rest of the directory clean.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">mkdir</span> <span class="nx">build</span>
 <span class="nx">cd</span> <span class="nx">build</span>
 <span class="nx">cmake</span> <span class="p">..</span>
 </pre></div>
 </div>
-<p>If cmake gives you the same error message repeatedly after the build fails, try removing <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code>.</p>
+<p>If CMake gives you the same error message repeatedly after the build fails, try removing <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code>.</p>
+</div>
+<div class="section" id="generating-a-release-debug-only-vcpkg-build">
+<h4>Generating a release/debug only vcpkg build<a class="headerlink" href="#generating-a-release-debug-only-vcpkg-build" title="Permalink to this headline">¶</a></h4>
+<p>In order to generate a release or debug only vcpkg package, you could use the use the <code class="docutils literal notranslate"><span class="pre">VCPKG_BUILD_TYPE</span></code> define in your cmake generate command. Building a release only vcpkg can drastically decrease the total build time.</p>
+<p>For release only vcpkg:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-DVCPKG_BUILD_TYPE=release</span></code></p>
+<p>For debug only vcpkg:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-DVCPKG_BUILD_TYPE=debug</span></code></p>
+</div>
 </div>
 <div class="section" id="variables">
 <h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
@@ -274,12 +316,12 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 <div class="section" id="finding-dependencies">
 <h3>Finding Dependencies<a class="headerlink" href="#finding-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>The following applies for dependencies we do not grab via CMake ExternalProject (OpenSSL is an example), or for dependencies you have opted not to grab as a CMake ExternalProject (via -DUSE_LOCAL_$NAME=0). The list of dependencies we grab by default as external projects can be found in <a class="reference external" href="#cmake-external-project-dependencies">the CMake External Project Dependencies section</a>.</p>
-<p>You can point our <a class="reference external" href="cmake/modules/">Cmake find modules</a> to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
+<p>You can point our <a class="reference external" href="cmake/modules/">CMake find modules</a> to the correct version of dependencies by setting one of the three following variables to the location of the correct version of the dependency.</p>
 <p>In the examples below the variable $NAME would be replaced by the name of the dependency in uppercase, and $name would be replaced by the name of the dependency in lowercase (ex: OPENSSL_ROOT_DIR, openssl).</p>
 <ul class="simple">
 <li><p>$NAME_ROOT_DIR - pass this variable to Cmake with the -DNAME_ROOT_DIR= flag when running Cmake to generate build files</p></li>
 <li><p>$NAME_ROOT_DIR - set this variable in your ENV</p></li>
-<li><p>HIFI_LIB_DIR - set this variable in your ENV to your High Fidelity lib folder, should contain a folder ‘$name’</p></li>
+<li><p>HIFI_LIB_DIR - set this variable in your ENV to your Vircadia lib folder, should contain a folder ‘$name’</p></li>
 </ul>
 </div>
 </div>

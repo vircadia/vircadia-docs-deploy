@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alpha 2020.2.2 Asteria Release Notes &mdash; Vircadia Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon-256.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Alpha 2020.2.1 Asteria Release Notes" href="2020-2-1-Asteria.html" />
+    <link rel="prev" title="Release Notes" href="../release-notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://vircadia.com/">
+          
+
+          
+            
+            <img src="../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">EXPLORE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create.html">CREATE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">SECURITY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.2 Asteria (06/26/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-2-1-Asteria.html">Alpha Release 2020.2.1 Asteria (06/11/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-2-0-Asteria.html">Alpha Release 2020.2.0 Asteria (06/08/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v86-k2.html">Alpha Release 86 K2 (04/03/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v86.html">Beta Release 86 (11/14/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v85.html">Beta Release 85 (10/17/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v84.html">Beta Release 84 (09/23/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v83.html">Beta Release 83 (07/31/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v82.html">Beta Release 82 (04/30/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v81.html">Beta Release 81 (03/29/19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v80.html">Beta Release 80 (03/19/19)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Vircadia Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../release-notes.html">Release Notes</a> &raquo;</li>
+        
+      <li>Alpha 2020.2.2 Asteria Release Notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-2-Asteria.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-2-Asteria.md"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alpha-2020-2-2-asteria-release-notes">
+<h1>Alpha 2020.2.2 Asteria Release Notes<a class="headerlink" href="#alpha-2020-2-2-asteria-release-notes" title="Permalink to this headline">¶</a></h1>
+<p>This version of Vircadia is an update to 2020.2.0. It is compatible with the 2020.2.0-Asteria protocol. This version was released on June 26th, 2020.</p>
+<div class="section" id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>The numbers at the end of each item are the PR numbers in the Project Athena <a class="reference external" href="https://github.com/kasenvr/project-athena/projects/2">repo</a>.</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add the “Prometheus” exporter, which allows for exporting of full domain and mixer statistics for visualization. (#280)</p></li>
+<li><p>Vive Pro Eye support added. (#350)</p></li>
+<li><p>Fix Linux default audio selection and warnings. (#377)</p></li>
+<li><p>Rebranding and login screen updates. (#384, #471, #473)</p></li>
+<li><p>Controller API: fix various crashes and fix more than one controller not buzzing on <code class="docutils literal notranslate"><span class="pre">triggerHapticPulse</span></code>. (#399)</p></li>
+<li><p>Begin transitioning metaverse server URLs into central files for easier development around the Metaverse API. (#411)</p></li>
+<li><p>Disable certified entities being auto deleted by the server because the check returned false. (#438)</p></li>
+<li><p>Fix models not scaling correctly on load due to a low timeout; also fix resizing of models for the first time after they load. (#442)</p></li>
+<li><p>Fix reloading content in serverless domains. (#447)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="user-docs">
+<h3>User Docs<a class="headerlink" href="#user-docs" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Vircadia-Docs-Sphinx <a class="reference external" href="https://github.com/kasenvr/vircadia-docs-sphinx">repo</a>.</p>
+<ul class="simple">
+<li><p>Update build docs from main repo, fix link for auto-updating of build docs. (#55)</p></li>
+<li><p>Create debugging tips for Interface on Windows. (#56)</p></li>
+<li><p>Release notes for 2020.2.2. (#57)</p></li>
+</ul>
+</div>
+<div class="section" id="api-docs">
+<h3>API Docs<a class="headerlink" href="#api-docs" title="Permalink to this headline">¶</a></h3>
+<p>The API docs are generated from the software source <a class="reference external" href="https://github.com/kasenvr/project-athena">repo</a>.
+The latest live deployment source can be viewed <a class="reference external" href="https://github.com/kasenvr/vircadia-api-docs">here</a>.</p>
+<ul class="simple">
+<li><p>Nothing new!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="extra-applications">
+<h2>Extra Applications<a class="headerlink" href="#extra-applications" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="explore-app-interim-version">
+<h3>Explore App (Interim Version)<a class="headerlink" href="#explore-app-interim-version" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Decentralized GoTo <a class="reference external" href="https://github.com/kasenvr/Decentralized_GoTo_Experimental">repo</a>.</p>
+<ul class="simple">
+<li><p>Nothing new!</p></li>
+</ul>
+</div>
+<div class="section" id="community-apps">
+<h3>Community Apps<a class="headerlink" href="#community-apps" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Community Apps <a class="reference external" href="https://github.com/kasenvr/community-apps">repo</a>.</p>
+<ul class="simple">
+<li><p>Add “Refresh” app. (#18)</p></li>
+<li><p>Add more info to “Radar” app. (#19)</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2020-2-1-Asteria.html" class="btn btn-neutral float-right" title="Alpha 2020.2.1 Asteria Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../release-notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>

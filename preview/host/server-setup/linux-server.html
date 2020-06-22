@@ -190,10 +190,10 @@
             
   <div class="section" id="host-a-domain-from-a-local-or-cloud-linux-server">
 <h1>Host a Domain from a Local or Cloud Linux Server<a class="headerlink" href="#host-a-domain-from-a-local-or-cloud-linux-server" title="Permalink to this headline">¶</a></h1>
-<p>The Vircadia packages can help you get up and running your own domain quickly.</p>
+<p>The Vircadia packages can help you get your own domain up and running quickly.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Packages are currently available for the following distributions:</p>
+<p>Alongside installation, these packages can also migrate an “Athena” domain to Vircadia. You can run them on an existing Vircadia domain to upgrade it if the original was installed using the package. Packages are currently available for the following distributions:</p>
 <div class="section" id="ubuntu-server-18-04-lts">
 <h3>Ubuntu Server 18.04 LTS<a class="headerlink" href="#ubuntu-server-18-04-lts" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget https://cdn.vircadia.com/dist/domain-server/ubuntu/vircadia-server_2020.2.0-asteria-20200608-585fb19-0ubuntu1-1_amd64.deb
@@ -203,15 +203,19 @@ sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install ./vir
 </div>
 <div class="section" id="amazon-linux-2">
 <h3>Amazon Linux 2<a class="headerlink" href="#amazon-linux-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/athena-server-0.86.0_K2_20200402_76aff7a-1.amzn2.x86_64.rpm
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/vircadia-server-2020.2.0_ASTERIA_20200608_585fb19-1.amzn2.x86_64.rpm
 </pre></div>
 </div>
+</div>
+<div class="section" id="unlisted-distribution">
+<h3>Unlisted Distribution<a class="headerlink" href="#unlisted-distribution" title="Permalink to this headline">¶</a></h3>
+<p>If you do not see your distribution listed here, you may compile your own server from source using the <a class="reference external" href="https://github.com/kasenvr/vircadia-builder">Vircadia builder</a>.</p>
 </div>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>The installation packages will create a domain at the default port location and configure a service to keep it running on that machine.</p>
-<p>Connect a web browser to the server at port 40100. (If you are on the machine that the server is running on, this would be http://localhost:40100.) Complete the initial setup wizard and you should have a functioning domain.</p>
+<p>Connect a web browser to the server at port 40100. (If you are on the machine that the server is running on, this would be http://localhost:40100) Complete the initial setup wizard and you should have a functioning domain.</p>
 </div>
 <div class="section" id="networking">
 <h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
@@ -236,49 +240,49 @@ sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install ./vir
 </div>
 <div class="section" id="files">
 <h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
-<p>The program files are installed in /opt/athena:</p>
+<p>The program files are installed in /opt/vircadia:</p>
 <ul class="simple">
-<li><p><strong>/opt/athena</strong> contains the executables</p></li>
-<li><p><strong>/opt/athena/lib</strong> contains libraries required for operation</p></li>
-<li><p><strong>/opt/athena/plugins</strong> is currently used for audio codecs</p></li>
-<li><p><strong>/opt/athena/resources</strong> is required for the administrative website</p></li>
+<li><p><strong>/opt/vircadia</strong> contains the executables</p></li>
+<li><p><strong>/opt/vircadia/lib</strong> contains libraries required for operation</p></li>
+<li><p><strong>/opt/vircadia/plugins</strong> is currently used for audio codecs</p></li>
+<li><p><strong>/opt/vircadia/resources</strong> is required for the administrative website</p></li>
 </ul>
-<p>The executables in this folder (with the exception of <code>new-server</code>) cannot be launched from the command prompt without first setting <code>LD_LIBRARY_PATH=/opt/athena/lib</code>.</p>
-<p>The file <code>/etc/opt/athena/default.conf</code> contains any environment variables necessary to running the domain.</p>
-<p>All content is stored under <code>/var/lib/athena/default</code>.  All files underneath <code>/var/lib/athena</code> are owned by the user <code>athena</code>, which is also the user that runs all domain-related processes.</p>
+<p>The executables in this folder (with the exception of <code>new-server</code>) cannot be launched from the command prompt without first setting <code>LD_LIBRARY_PATH=/opt/vircadia/lib</code>.</p>
+<p>The file <code>/etc/opt/vircadia/default.conf</code> contains any environment variables necessary to running the domain.</p>
+<p>All content is stored under <code>/var/lib/vircadia/default</code>.  All files underneath <code>/var/lib/vircadia</code> are owned by the user <code>vircadia</code>, which is also the user that runs all domain-related processes.</p>
 </div>
 <div class="section" id="services">
 <h2>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
-<p>The installation packages setup the following systemd services to manage the Athena domain:</p>
+<p>The installation packages setup the following systemd services to manage the Vircadia domain:</p>
 <ul class="simple">
-<li><p><strong>athena-domain-server&#64;default.service</strong>: Manages the core domain server</p></li>
-<li><p><strong>athena-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients</p></li>
-<li><p><strong>athena-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p></li>
+<li><p><strong>vircadia-domain-server&#64;default.service</strong>: Manages the core domain server</p></li>
+<li><p><strong>vircadia-assignment-client&#64;default.service</strong>: Spawns and manages the assignment clients</p></li>
+<li><p><strong>vircadia-server&#64;default.target</strong>: Controls startup and shutdown of the above services</p></li>
 </ul>
-<p>The <code>athena-server&#64;default.target</code> service is the only one that is set to auto-start. Starting or stopping it will bring the other two services down.</p>
+<p>The <code>vircadia-server&#64;default.target</code> service is the only one that is set to auto-start. Starting or stopping it will bring the other two services down.</p>
 <p>The first two services log a large amount of data to their service journal. Checking their logs (via <code>systemctl status</code>) is a good way to ensure they are operating properly.</p>
 </div>
 <div class="section" id="multiple-domains">
 <h2>Multiple domains<a class="headerlink" href="#multiple-domains" title="Permalink to this headline">¶</a></h2>
-<p>The installation package is configured to permit multiple domains to run on a single server at different port numbers.  New servers can be created using the following command:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>/opt/athena/new-server &lt;name&gt; &lt;base-port&gt;
+<p>The installation package is configured to permit multiple domains to run on a single server at different port numbers. New servers can be created using the following command:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>/opt/vircadia/new-server &lt;name&gt; &lt;base-port&gt;
 </pre></div>
 </div>
 <p>where <code>name</code> is a word used to name and manage the domain and <code>base-port</code> must be the the first of a range of four contiguous port numbers not overlapping with any other use on the system.</p>
 <p>Assuming you created a new server with the name <strong>second-bite</strong>, this would setup the following:</p>
 <ul class="simple">
-<li><p>Environment variables in <code>/etc/opt/athena/<strong>second-bite</strong>.conf</code></p></li>
-<li><p>Content stored in <code>/var/lib/athena/<strong>second-bite</strong></code></p></li>
-<li><p>Services launched as <code>athena-domain-server&#64;<strong>second-bite</strong>.service</code>, <code>athena-assignment-client&#64;<strong>second-bite</strong>.service</code>, and <code>athena-server&#64;<strong>second-bite</strong>.target</code></p></li>
+<li><p>Environment variables in <code>/etc/opt/vircadia/<strong>second-bite</strong>.conf</code></p></li>
+<li><p>Content stored in <code>/var/lib/vircadia/<strong>second-bite</strong></code></p></li>
+<li><p>Services launched as <code>vircadia-domain-server&#64;<strong>second-bite</strong>.service</code>, <code>vircadia-assignment-client&#64;<strong>second-bite</strong>.service</code>, and <code>vircadia-server&#64;<strong>second-bite</strong>.target</code></p></li>
 </ul>
 </div>
 <div class="section" id="legacy-services">
 <h2>Legacy Services<a class="headerlink" href="#legacy-services" title="Permalink to this headline">¶</a></h2>
-<p>There are a number of tweaks that are made to the default configuration to simplify storage and the ability to run multiple domains on one server.  In case you would like to remove this logic and run the servers closer to how the original <em>High Fidelity</em> domain servers were running, this is provided as an option.</p>
+<p>There are a number of tweaks that are made to the default configuration to simplify storage and the ability to run multiple domains on one server. In case you would like to remove this logic and run the servers closer to how the original <em>High Fidelity</em> domain servers were running, this is provided as an option.</p>
 <ul class="simple">
-<li><p>Systemd services named <code>athena-domain-server.service</code>, <code>athena-assignment-client.service</code>, and <code>athena-server.target</code> <em>(without the &#64;name)</em> have simplified configuration</p></li>
+<li><p>Systemd services named <code>vircadia-domain-server.service</code>, <code>vircadia-assignment-client.service</code>, and <code>vircadia-server.target</code> <em>(without the &#64;name)</em> have simplified configuration</p></li>
 <li><p>No file is provided to specify environment variables for the server</p></li>
-<li><p>Content would be stored in <code>/var/lib/athena/.local</code></p></li>
+<li><p>Content would be stored in <code>/var/lib/vircadia/.local</code></p></li>
 </ul>
 </div>
 </div>
