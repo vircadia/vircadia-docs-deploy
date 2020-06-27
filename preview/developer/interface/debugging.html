@@ -193,8 +193,8 @@
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="visual-studio">
 <h3>Visual Studio<a class="headerlink" href="#visual-studio" title="Permalink to this headline">¶</a></h3>
-<p>When starting the interface using the <strong>Local Windows Debugger</strong>, you will want to set the Interface as your startup project. To do this, open your <strong>Solution Explorer</strong>. Then, expand the “Apps” folder and right click on <strong>interface</strong> and click “Set as Startup Project”.</p>
-<p>If you do not do this, the solution will try to start the debugger with <strong>ALL_BUILD</strong> under the “CMakeTargets” folder, resulting in an “Access is Denied” error.</p>
+<p>To run Interface from Visual Studio with the debugger attached you need to set Interface as the startup project. To do this, in <strong>Solution Explorer</strong>, expand the “Apps” folder, right click <strong>interface</strong>, and select “Set as Startup Project”. Now <strong>Debug &gt; Start Debugging</strong> and the <strong>Local Windows Debugger</strong> button on the debug toolbar will start Interface.</p>
+<p>If you do not set the startup project to Interface, the debugger will try to start <strong>ALL_BUILD</strong> under the “CMakeTargets” folder, resulting in an “Access is Denied” error.</p>
 </div>
 </div>
 </div>

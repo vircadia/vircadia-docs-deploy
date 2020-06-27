@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Add a Zone Entity &mdash; Vircadia Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon-256.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Add Sound to Entities" href="add-sounds.html" />
+    <link rel="prev" title="Add a Material Entity" href="material-entity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="https://vircadia.com/">
+          
+
+          
+            
+            <img src="../../_static/vircadia-logo-1880.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Vircadia Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<p style="margin-bottom: 10px; margin-top: 10px;"><a href="https://apidocs.vircadia.dev">Looking for <strong>API Reference</strong><br />Documentation?</a></p>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">HOME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explore.html">EXPLORE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../create.html">CREATE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Create Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avatars.html">Avatars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wearables.html">Wearables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../entities.html">Entities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create-entities.html">Create New Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-appearance.html">Change How Entities Look</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-behavior.html">Define an Entity's Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="entity-physics.html">Apply Physics to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material-entity.html">Add a Material Entity</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Add a Zone Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-sounds.html">Add Sounds to Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="avatar-interactions.html">Define Interactions with Avatars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hero-zone.html">Prioritize Zones Within Your Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web-entity-media.html">Play Media in a Web Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html">Entity Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3d-models.html">3D Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applications.html">Tablet Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../script.html">SCRIPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../host.html">HOST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">CONTRIBUTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer.html">DEVELOPER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">SECURITY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">RELEASE NOTES</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://apidocs.vircadia.dev">API REFERENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Vircadia Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    You are here: 
+      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+        
+          <li><a href="../../create.html">Create</a> &raquo;</li>
+        
+          <li><a href="../entities.html">Entities</a> &raquo;</li>
+        
+      <li>Add a Zone Entity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/zone-entity.rst" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/create/entities/zone-entity.rst"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-a-zone-entity">
+<h1><a class="toc-backref" href="#id1">Add a Zone Entity</a><a class="headerlink" href="#add-a-zone-entity" title="Permalink to this headline">¶</a></h1>
+<p>A zone entity allows you to set properties to a specific area. These properties include: flying, ghosting, key lighting, skybox, ambient lighting, hase, bloom and avatar priorities.</p>
+<div class="contents topic" id="on-this-page">
+<p class="topic-title">On This Page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#add-a-zone-entity" id="id1">Add a Zone Entity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#explanation-of-properties" id="id2">Explanation of Properties</a></p>
+<ul>
+<li><p><a class="reference internal" href="#key-light" id="id3">Key Light</a></p></li>
+<li><p><a class="reference internal" href="#skybox" id="id4">Skybox</a></p></li>
+<li><p><a class="reference internal" href="#ambient-light" id="id5">Ambient Light</a></p></li>
+<li><p><a class="reference internal" href="#haze" id="id6">Haze</a></p></li>
+<li><p><a class="reference internal" href="#bloom" id="id7">Bloom</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="explanation-of-properties">
+<h2><a class="toc-backref" href="#id2">Explanation of Properties</a><a class="headerlink" href="#explanation-of-properties" title="Permalink to this headline">¶</a></h2>
+<p>The amount of properties might seem intimidating at first. They all serve their own goals and have reason to exist:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Flying Allowed</p></td>
+<td><p>Enables or disables flying for people inside the zone. This makes sense for gamemodes, or
+if you just don’t want people to break your immersion.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ghosting Allowed</p></td>
+<td><p>Enables or disables the ability to phase through colliders by disabling the enviroment
+collisions. Useful for making labyrinths for example.</p></td>
+</tr>
+<tr class="row-even"><td><p>Filter</p></td>
+<td><p>Filters are specialized JavaScript functions that prevent unwanted modifications to
+entities inside the zone. This property takes the URL to such a script.
+More information here:
+<a class="reference external" href="../../host/configure-settings/entity-filters.html">Protect Your Domain’s Content</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Key Light</p></td>
+<td><p>Enabling this allows you to set a directional light, e.g. a sun, for the entire zone.</p></td>
+</tr>
+<tr class="row-even"><td><p>Skybox</p></td>
+<td><p>This allowed you to set a so called “Skybox”. This is commonly used to apply a sky texture
+the zone.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ambient Light</p></td>
+<td><p>This is used to apply light coming from the Skybox. An example usecase for this would be to
+have a sun that is on the Skyboxs texture actually emit light.</p></td>
+</tr>
+<tr class="row-even"><td><p>Haze</p></td>
+<td><p>Creates fog or mist.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bloom</p></td>
+<td><p>This enables a visual effect known as “Bloom”. A slight Bloom effect could be used to make
+zones appear bright.</p></td>
+</tr>
+<tr class="row-even"><td><p>Avatar Priority</p></td>
+<td><p>This property changes the update priority of avatar movements by allocating more bandwidth,
+which has been reserved by the avatar mixer. It is commonly used on live events to have
+entertainers avatars’ movements still be smooth, even with a huge crowd also being updated.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="key-light">
+<h3><a class="toc-backref" href="#id3">Key Light</a><a class="headerlink" href="#key-light" title="Permalink to this headline">¶</a></h3>
+<p>Key Lighting is used to illuminate a zone. You can think of the Key Light as a sun, which illuminates a zone from a specific direction.
+The following properties are available for Key Lighting:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Key Light Color</p></td>
+<td><p>Sets the color of the key light. This could be used to simulate a sunset.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Light Intensity</p></td>
+<td><p>This changes the intensity of the key lighting.</p></td>
+</tr>
+<tr class="row-even"><td><p>Light Horizontal Angle</p></td>
+<td><p>Sets the rotation around the zones y axis and starts in its -z direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Light Vertical Angle</p></td>
+<td><p>Sets the rotation around the zones x axis and starts in its -z direction.</p></td>
+</tr>
+<tr class="row-even"><td><p>Cast Shadows</p></td>
+<td><p>This enables shadows, while still respecting the “Cast Shadows” property of other entities.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shadow Bias</p></td>
+<td><p>This controls shadow bias and needs to be fine tuned. Too low values can cause so called
+“shadow acne”, while too high values can cause so called “peter panning”.</p></td>
+</tr>
+<tr class="row-even"><td><p>Shadow Max Distance</p></td>
+<td><p>Sets the maximum distance in meters from your view at which shadows will be shown.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="skybox">
+<h3><a class="toc-backref" href="#id4">Skybox</a><a class="headerlink" href="#skybox" title="Permalink to this headline">¶</a></h3>
+<p>Skyboxes are used to define the background of a zone. There is two types of skybox images that can be used. The aspect ratio gets used to define the type of image. Images with a differing aspect ratio will not be displayed.</p>
+<p>Types:</p>
+<ul class="simple">
+<li><p>Cubemaps have an aspect ratio of 4:3 and consist of 6 sides, which are projected onto a cube.</p></li>
+</ul>
+<img alt="../../_images/cubemap-skybox.png" src="../../_images/cubemap-skybox.png" />
+<ul class="simple">
+<li><p>Equirectanglar images have an aspect ratio of 2:1 and are projected onto a sphere.</p></li>
+</ul>
+<img alt="../../_images/equirectanglar-skybox.jpg" src="../../_images/equirectanglar-skybox.jpg" />
+</div>
+<div class="section" id="ambient-light">
+<h3><a class="toc-backref" href="#id5">Ambient Light</a><a class="headerlink" href="#ambient-light" title="Permalink to this headline">¶</a></h3>
+<p>Ambient lighting illuminates the view according to the brightness and color of a texture.
+Accepted properties are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ambient Intensity</p></td>
+<td><p>This sets the intensity of the illumination.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ambient Source</p></td>
+<td><p>This take the URL of a texture similar to the skybox. So similar to the skybox, that you
+can actually use the same texture as the skybox. One scenario where this could be useful,
+would be a spacestation, that is illuminated my multiple suns and reflections from
+different colored planets.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="haze">
+<h3><a class="toc-backref" href="#id6">Haze</a><a class="headerlink" href="#haze" title="Permalink to this headline">¶</a></h3>
+<p>Haze creates fog inside a Zone. This can be used to make things look more unsettling, but is also useful for hiding distant geometry.
+There is a couple of properties available for Haze:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Range</p></td>
+<td><p>This sets how far the Haze extends in meters. Use this to influence viewing distance and
+thickness.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Use Altitude</p></td>
+<td><p>This changes the Haze intensity depending on altitude. Higher altitude means more fog.</p></td>
+</tr>
+<tr class="row-even"><td><p>Base</p></td>
+<td><p>This is the base of the altitude range.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ceiling</p></td>
+<td><p>This is the ceiling of the altitude range. Regardless of the name, the ceiling can be lower
+than the base to have the effect upside down; lower altitude meaning less fog.</p></td>
+</tr>
+<tr class="row-even"><td><p>Haze Color</p></td>
+<td><p>Sets the color of the Hase.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Background Blend</p></td>
+<td><p>This controls how much of the skybox is visible through the Haze. Higher values showing
+more skybox.</p></td>
+</tr>
+<tr class="row-even"><td><p>Glare</p></td>
+<td><p>Glare can be used to show an effect for the direction that the Key Light is coming from.
+This is mainly useful for making a sun look especially bright.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glare Color</p></td>
+<td><p>Sets the color of the glare effect.</p></td>
+</tr>
+<tr class="row-even"><td><p>Glare Angle</p></td>
+<td><p>This changes the size of the glare effect.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bloom">
+<h3><a class="toc-backref" href="#id7">Bloom</a><a class="headerlink" href="#bloom" title="Permalink to this headline">¶</a></h3>
+<p>The bloom effect is used to make bright areas glow. This effect could be used to make streetlight at night appear like they are actually illuminating light.
+It take the following properties:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bloom Intensity</p></td>
+<td><p>Sets the intensity or brightness of the bloom effect.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bloom Threshold</p></td>
+<td><p>This decides how bright something has to be to start glowing. The lower the value, the more
+areas start glowing.</p></td>
+</tr>
+<tr class="row-even"><td><p>Bloom Size</p></td>
+<td><p>Sets the radius of the bloom effect. The higher the value, the larger the glowing effect.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-entities.html"><span class="doc">Create New Entites</span></a></p></li>
+<li><p><a class="reference external" href="../tools.html#the-create-app">The Create App</a></p></li>
+<li><p><a class="reference internal" href="entity-behavior.html"><span class="doc">Define an Entity’s Behavior</span></a></p></li>
+<li><p><a class="reference internal" href="entity-appearance.html"><span class="doc">Change How Entities Look</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="add-sounds.html" class="btn btn-neutral float-right" title="Add Sound to Entities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="material-entity.html" class="btn btn-neutral float-left" title="Add a Material Entity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, High Fidelity. © Copyright 2020, Vircadia.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+
+   
+
+</body>
+</html>
