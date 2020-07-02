@@ -201,7 +201,8 @@
             
   <div class="section" id="add-a-zone-entity">
 <h1><a class="toc-backref" href="#id1">Add a Zone Entity</a><a class="headerlink" href="#add-a-zone-entity" title="Permalink to this headline">¶</a></h1>
-<p>A zone entity allows you to set properties to a specific area. These properties include: flying, ghosting, key lighting, skybox, ambient lighting, hase, bloom and avatar priorities.</p>
+<p>A Zone entity enables you to set properties in a specific area. These properties include: flying, ghosting,
+key lighting, skybox, ambient lighting, haze, bloom, and avatar priorities.</p>
 <div class="contents topic" id="on-this-page">
 <p class="topic-title">On This Page</p>
 <ul class="simple">
@@ -222,7 +223,7 @@
 </div>
 <div class="section" id="explanation-of-properties">
 <h2><a class="toc-backref" href="#id2">Explanation of Properties</a><a class="headerlink" href="#explanation-of-properties" title="Permalink to this headline">¶</a></h2>
-<p>The amount of properties might seem intimidating at first. They all serve their own goals and have reason to exist:</p>
+<p>The number of properties might seem intimidating at first. However, they all serve their own goals and have reason to exist:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
@@ -235,48 +236,48 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Flying Allowed</p></td>
-<td><p>Enables or disables flying for people inside the zone. This makes sense for gamemodes, or
+<td><p>Enables or disables flying for people inside the zone. This makes sense for gamem odes, or
 if you just don’t want people to break your immersion.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Ghosting Allowed</p></td>
-<td><p>Enables or disables the ability to phase through colliders by disabling the enviroment
-collisions. Useful for making labyrinths for example.</p></td>
+<td><p>Enables or disables the ability to pass through entities by disabling the environment
+collisions. Useful for creating labyrinths, for example.</p></td>
 </tr>
 <tr class="row-even"><td><p>Filter</p></td>
 <td><p>Filters are specialized JavaScript functions that prevent unwanted modifications to
 entities inside the zone. This property takes the URL to such a script.
-More information here:
-<a class="reference external" href="../../host/configure-settings/entity-filters.html">Protect Your Domain’s Content</a></p></td>
+See <a class="reference external" href="../../host/configure-settings/entity-filters.html">Protect Your Domain’s Content</a>
+for more information.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Key Light</p></td>
-<td><p>Enabling this allows you to set a directional light, e.g. a sun, for the entire zone.</p></td>
+<td><p>This sets a directional light, e.g. a sun, for the entire zone.</p></td>
 </tr>
 <tr class="row-even"><td><p>Skybox</p></td>
-<td><p>This allowed you to set a so called “Skybox”. This is commonly used to apply a sky texture
+<td><p>This lets you set a so called “Skybox”. This is commonly used to apply a sky texture
 the zone.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Ambient Light</p></td>
-<td><p>This is used to apply light coming from the Skybox. An example usecase for this would be to
-have a sun that is on the Skyboxs texture actually emit light.</p></td>
+<td><p>This is used to apply light coming from the skybox. This is used if you have light coming
+from more than just a sun. For example if you have multiple suns.</p></td>
 </tr>
 <tr class="row-even"><td><p>Haze</p></td>
 <td><p>Creates fog or mist.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Bloom</p></td>
-<td><p>This enables a visual effect known as “Bloom”. A slight Bloom effect could be used to make
+<td><p>This enables a visual effect known as “bloom”. A slight bloom effect could be used to make
 zones appear bright.</p></td>
 </tr>
 <tr class="row-even"><td><p>Avatar Priority</p></td>
-<td><p>This property changes the update priority of avatar movements by allocating more bandwidth,
+<td><p>This property changes the update priority of avatar movements by allocating more bandwidth
 which has been reserved by the avatar mixer. It is commonly used on live events to have
-entertainers avatars’ movements still be smooth, even with a huge crowd also being updated.</p></td>
+entertainers’ avatar movements still be smooth, even with a huge crowd also being updated.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="key-light">
 <h3><a class="toc-backref" href="#id3">Key Light</a><a class="headerlink" href="#key-light" title="Permalink to this headline">¶</a></h3>
-<p>Key Lighting is used to illuminate a zone. You can think of the Key Light as a sun, which illuminates a zone from a specific direction.
-The following properties are available for Key Lighting:</p>
+<p>Key lighting is used to illuminate a zone. You can think of the key light as a sun which illuminates a zone from a specific direction.
+The following properties are available for key lighting:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
@@ -295,10 +296,10 @@ The following properties are available for Key Lighting:</p>
 <td><p>This changes the intensity of the key lighting.</p></td>
 </tr>
 <tr class="row-even"><td><p>Light Horizontal Angle</p></td>
-<td><p>Sets the rotation around the zones y axis and starts in its -z direction.</p></td>
+<td><p>Sets the rotation around the zone’s y axis and starts in its -z direction.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Light Vertical Angle</p></td>
-<td><p>Sets the rotation around the zones x axis and starts in its -z direction.</p></td>
+<td><p>Sets the rotation around the zone’s x axis and starts in its -z direction.</p></td>
 </tr>
 <tr class="row-even"><td><p>Cast Shadows</p></td>
 <td><p>This enables shadows, while still respecting the “Cast Shadows” property of other entities.</p></td>
@@ -315,7 +316,8 @@ The following properties are available for Key Lighting:</p>
 </div>
 <div class="section" id="skybox">
 <h3><a class="toc-backref" href="#id4">Skybox</a><a class="headerlink" href="#skybox" title="Permalink to this headline">¶</a></h3>
-<p>Skyboxes are used to define the background of a zone. There is two types of skybox images that can be used. The aspect ratio gets used to define the type of image. Images with a differing aspect ratio will not be displayed.</p>
+<p>Skyboxes are used to define the background of a zone. There are two types of skybox images that can be used.
+The aspect ratio is used to define the type of image. Images with a differing aspect ratio are not displayed.</p>
 <p>Types:</p>
 <ul class="simple">
 <li><p>Cubemaps have an aspect ratio of 4:3 and consist of 6 sides, which are projected onto a cube.</p></li>
@@ -345,9 +347,9 @@ Accepted properties are:</p>
 <td><p>This sets the intensity of the illumination.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Ambient Source</p></td>
-<td><p>This take the URL of a texture similar to the skybox. So similar to the skybox, that you
+<td><p>This takes the URL of a texture similar to the skybox. So similar to the skybox, that you
 can actually use the same texture as the skybox. One scenario where this could be useful,
-would be a spacestation, that is illuminated my multiple suns and reflections from
+would be a space station, that is illuminated my multiple suns and reflections from
 different colored planets.</p></td>
 </tr>
 </tbody>
@@ -355,8 +357,8 @@ different colored planets.</p></td>
 </div>
 <div class="section" id="haze">
 <h3><a class="toc-backref" href="#id6">Haze</a><a class="headerlink" href="#haze" title="Permalink to this headline">¶</a></h3>
-<p>Haze creates fog inside a Zone. This can be used to make things look more unsettling, but is also useful for hiding distant geometry.
-There is a couple of properties available for Haze:</p>
+<p>Haze creates fog inside a Zone. This can be used to make things look more atmospheric, but is also useful for hiding distant geometry.
+Properties available for haze:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
@@ -369,11 +371,11 @@ There is a couple of properties available for Haze:</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Range</p></td>
-<td><p>This sets how far the Haze extends in meters. Use this to influence viewing distance and
+<td><p>This sets how far the haze extends in meters. Use this to influence viewing distance and
 thickness.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Use Altitude</p></td>
-<td><p>This changes the Haze intensity depending on altitude. Higher altitude means more fog.</p></td>
+<td><p>This changes the haze intensity depending on altitude. Higher altitude means more fog.</p></td>
 </tr>
 <tr class="row-even"><td><p>Base</p></td>
 <td><p>This is the base of the altitude range.</p></td>
@@ -382,15 +384,15 @@ thickness.</p></td>
 <td><p>This is the ceiling of the altitude range. Regardless of the name, the ceiling can be lower
 than the base to have the effect upside down; lower altitude meaning less fog.</p></td>
 </tr>
-<tr class="row-even"><td><p>Haze Color</p></td>
-<td><p>Sets the color of the Hase.</p></td>
+<tr class="row-even"><td><p>Haze Colour</p></td>
+<td><p>Sets the colour of the haze.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Background Blend</p></td>
-<td><p>This controls how much of the skybox is visible through the Haze. Higher values showing
+<td><p>This controls how much of the skybox is visible through the haze. Higher values showing
 more skybox.</p></td>
 </tr>
 <tr class="row-even"><td><p>Glare</p></td>
-<td><p>Glare can be used to show an effect for the direction that the Key Light is coming from.
+<td><p>Glare can be used to show an effect for the direction that the key light is coming from.
 This is mainly useful for making a sun look especially bright.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Glare Color</p></td>
@@ -405,7 +407,7 @@ This is mainly useful for making a sun look especially bright.</p></td>
 <div class="section" id="bloom">
 <h3><a class="toc-backref" href="#id7">Bloom</a><a class="headerlink" href="#bloom" title="Permalink to this headline">¶</a></h3>
 <p>The bloom effect is used to make bright areas glow. This effect could be used to make streetlight at night appear like they are actually illuminating light.
-It take the following properties:</p>
+It has the following properties:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
