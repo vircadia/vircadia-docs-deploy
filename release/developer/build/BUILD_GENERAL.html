@@ -192,14 +192,14 @@
             
   <div class="section" id="general-build-information">
 <h1>General Build Information<a class="headerlink" href="#general-build-information" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on May 17, 2020</em></p>
+<p><em>Last Updated on June 27, 2020</em></p>
 <div class="section" id="os-specific-build-guides">
 <h2>OS Specific Build Guides<a class="headerlink" href="#os-specific-build-guides" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="BUILD_WIN.html"><span class="doc">Build Windows</span></a> - complete instructions for Windows.</p></li>
 <li><p><a class="reference internal" href="BUILD_LINUX.html"><span class="doc">Build Linux</span></a> - additional instructions for Linux.</p></li>
 <li><p><a class="reference internal" href="BUILD_OSX.html"><span class="doc">Build OSX</span></a> - additional instructions for OS X.</p></li>
-<li><p><a class="reference internal" href="BUILD_ANDROID.html"><span class="doc">Build Android</span></a> - additional instructions for Android</p></li>
+<li><p><a class="reference internal" href="BUILD_ANDROID.html"><span class="doc">Build Android</span></a> - additional instructions for Android.</p></li>
 </ul>
 </div>
 <div class="section" id="dependencies">
@@ -273,11 +273,11 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 <span class="nx">BUILD_NUMBER</span>
 
 <span class="c1">// The type of release.</span>
-<span class="nx">RELEASE_TYPE</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span>
-<span class="nx">RELEASE_BUILD</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span>
+<span class="nx">RELEASE_TYPE</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span><span class="o">|</span><span class="nx">DEV</span>
 
 <span class="c1">// TODO: What do these do?</span>
 <span class="nx">PRODUCTION_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
+<span class="nx">PR_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
 <span class="nx">STABLE_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
 
 <span class="c1">// TODO: What do these do?</span>

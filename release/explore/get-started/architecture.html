@@ -242,6 +242,47 @@
 <div class="section" id="assignment-clients">
 <h3>Assignment Clients<a class="headerlink" href="#assignment-clients" title="Permalink to this headline">¶</a></h3>
 <p>Assignment clients control and manage various aspects of a domain. They also communicate directly with the Interface clients connected to a domain. There are six types of assignment clients:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Assignment Client</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Avatar Mixer</p></td>
+<td><p>This mixer is in charge of your virtual presence in any domain. It keeps track of where you are,
+which avatar you’re wearing, and how you move around the domain. For example, it tracks how you
+move your head while wearing a Head Mounted Display (HMD).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Audio Mixer</p></td>
+<td><p>Mixes all sounds, whether it’s voice or environmental. And it does this not just for avatars,
+but also for all the entities in a domain. The Audio mixer can customize a stereo mix for you
+based on your position relative to the audio source.</p></td>
+</tr>
+<tr class="row-even"><td><p>Entity Server</p></td>
+<td><p>Tracks all entities and their properties in a domain, from their description and position, to
+any behaviors attached to them in a script. If an entity is modified, the change is communicated
+to the entity server, which in turn relays the information to all clients currently visiting the
+domain.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Asset Server</p></td>
+<td><p>Provides copies of the models, audio files, scripts, and other media used by the domain. It
+functions like a Web server, but using protocols tuned to Vircadia’s architecture.</p></td>
+</tr>
+<tr class="row-even"><td><p>Agent</p></td>
+<td><p>Executes user-written JavaScript programs. If you’ve written a script to get your avatar to clap,
+or create a bowling alley, the Agent will execute it. It can see entities, avatars, and send audio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Messages Mixer</p></td>
+<td><p>Provides communication between scripts running in different programs connected to the domain,
+which could be Interfaces or Agents.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sandbox manages all these components on the domain server, five dedicated assignment clients, and as many agent assignments clients as needed. However, it is possible to spread the assignment clients over multiple computers, and even to divide each function among a hierarchy of assignment components, which may be on different computers. For instance, multiple audio mixers could be used to mix the audio in different geographic regions of the domain.</p>
