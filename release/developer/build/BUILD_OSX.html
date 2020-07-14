@@ -127,7 +127,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Vircadia Docs</a>
+          <a href="../../home.html">Vircadia Docs</a>
         
       </nav>
 
@@ -163,7 +163,7 @@
 
   <ul class="wy-breadcrumbs">
     You are here: 
-      <li><a href="../../index.html"><i class="fa fa-home"></i></a> &raquo;</li>
+      <li><a href="../../home.html"><i class="fa fa-home"></i></a> &raquo;</li>
         
           <li><a href="../../developer.html">Developer</a> &raquo;</li>
         
@@ -192,12 +192,12 @@
             
   <div class="section" id="build-osx">
 <h1>Build OSX<a class="headerlink" href="#build-osx" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on April 30, 2019</em></p>
+<p><em>Last Updated on July 3, 2020</em></p>
 <p>Please read the <a class="reference external" href="BUILD">general build guide</a> for information on dependencies required for all platforms. Only macOS specific instructions are found in this document.</p>
 <div class="section" id="homebrew">
 <h2>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://brew.sh/">Homebrew</a> is an excellent package manager for macOS. It makes install of some Vircadia dependencies very simple.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">cmake</span> <span class="nx">openssl</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">cmake</span> <span class="nx">openssl</span> <span class="nx">npm</span>
 </pre></div>
 </div>
 </div>
@@ -205,13 +205,15 @@
 <h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h2>
 <p>Download an install Python 3.6.6 or higher from <a class="reference external" href="https://www.python.org/downloads/">here</a>.<br />Execute the <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Shell</span> <span class="pre">Profile.command</span></code> script that is provided with the installer.</p>
 </div>
+<div class="section" id="osx-sdk">
+<h2>OSX SDK<a class="headerlink" href="#osx-sdk" title="Permalink to this headline">¶</a></h2>
+<p>You will need the OSX SDK for building. The easiest way to get this is to install Xcode from the App Store.</p>
+</div>
 <div class="section" id="openssl">
 <h2>OpenSSL<a class="headerlink" href="#openssl" title="Permalink to this headline">¶</a></h2>
-<p>Assuming you’ve installed OpenSSL using the homebrew instructions above, you’ll need to set OPENSSL_ROOT_DIR so CMake can find your installations.<br />For OpenSSL installed via homebrew, set OPENSSL_ROOT_DIR:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l
-</pre></div>
-</div>
-<p>Note that this uses the version from the homebrew formula at the time of this writing, and the version in the path will likely change.</p>
+<p>Assuming you’ve installed OpenSSL using the homebrew instructions above, you’ll need to set OPENSSL_ROOT_DIR so CMake can find your installations.<br />For OpenSSL installed via homebrew, set OPENSSL_ROOT_DIR via
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">OPENSSL_ROOT_DIR=/usr/local/opt/openssl</span></code>
+or by appending <code class="docutils literal notranslate"><span class="pre">-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code></p>
 </div>
 <div class="section" id="xcode">
 <h2>Xcode<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
@@ -222,6 +224,10 @@
 <p>If <code class="docutils literal notranslate"><span class="pre">cmake</span></code> complains about Python 3 being missing, you may need to update your CMake binary with command <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">upgrade</span> <span class="pre">cmake</span></code>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
 <p>After running cmake, you will have the make files or Xcode project file necessary to build all of the components. Open the hifi.xcodeproj file, choose ALL_BUILD from the Product &gt; Scheme menu (or target drop down), and click Run.</p>
 <p>If the build completes successfully, you will have built targets for all components located in the <code class="docutils literal notranslate"><span class="pre">build/${target_name}/Debug</span></code> directories.</p>
+</div>
+<div class="section" id="make">
+<h2>make<a class="headerlink" href="#make" title="Permalink to this headline">¶</a></h2>
+<p>If you build with make rather than Xcode, you can append <code class="docutils literal notranslate"><span class="pre">-j4</span></code>for assigning more threads. The number indicates the number of threads, e.g. 4.</p>
 </div>
 </div>
 
@@ -258,6 +264,40 @@
 
   </div>
   
+  <div class="rst-versions shift-up" data-toggle="rst-versions" role="note" aria-label="versions">
+<!--    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> </span>
+      v: 
+      <span class="fa fa-caret-down"></span>
+    </span>  -->
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Languages</dt>
+        <dd>
+            <a href="https://docs.vircadia.dev/">en</a>
+            <a href="https://docs.vircadia.dev/de/">de</a>
+            <a href="https://docs.vircadia.dev/jp/">jp</a>
+        </dd>
+      </dl>
+<!--
+      <dl>
+        <dt>Downloads</dt>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="///projects//?fromdocs=">Project Home</a>
+          </dd>
+          <dd>
+            <a href="///builds//?fromdocs=">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+-->
+    </div>
+  </div>
 
   <script type="text/javascript">
       jQuery(function () {
