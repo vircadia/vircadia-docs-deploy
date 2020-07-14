@@ -1,0 +1,9 @@
+# Color Guidelines
+
+All UI/UX should follow the Material Design color specification as laid out [here](https://material.io/design/color/).
+
+The Vircadia colors are based off its primary logo variant:
+
+![Image](_images/vircadia-icon-128.png)
+
+![Image](_images/vircadia-logo-564.png)
