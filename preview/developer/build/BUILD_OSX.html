@@ -192,7 +192,7 @@
             
   <div class="section" id="build-osx">
 <h1>Build OSX<a class="headerlink" href="#build-osx" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on July 3, 2020</em></p>
+<p><em>Last Updated on July 13, 2020</em></p>
 <p>Please read the <a class="reference external" href="BUILD">general build guide</a> for information on dependencies required for all platforms. Only macOS specific instructions are found in this document.</p>
 <div class="section" id="homebrew">
 <h2>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
@@ -217,8 +217,10 @@ or by appending <code class="docutils literal notranslate"><span class="pre">-DO
 </div>
 <div class="section" id="xcode">
 <h2>Xcode<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
-<p>If Xcode is your editor of choice, you can ask CMake to generate Xcode project files instead of Unix Makefiles.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cmake</span> <span class="p">..</span> <span class="o">-</span><span class="nx">G</span> <span class="nx">Xcode</span>
+<p>If Xcode is your editor of choice, you can ask CMake to generate Xcode project files instead of Unix Makefiles. You will need to select the Xcode installation in the terminal first if you have not done so already.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+cmake .. -G Xcode
 </pre></div>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">cmake</span></code> complains about Python 3 being missing, you may need to update your CMake binary with command <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">upgrade</span> <span class="pre">cmake</span></code>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
@@ -264,6 +266,40 @@ or by appending <code class="docutils literal notranslate"><span class="pre">-DO
 
   </div>
   
+  <div class="rst-versions shift-up" data-toggle="rst-versions" role="note" aria-label="versions">
+<!--    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> </span>
+      v: 
+      <span class="fa fa-caret-down"></span>
+    </span>  -->
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Languages</dt>
+        <dd>
+            <a href="https://docs.vircadia.dev/">en</a>
+            <a href="https://docs.vircadia.dev/de/">de</a>
+            <a href="https://docs.vircadia.dev/jp/">jp</a>
+        </dd>
+      </dl>
+<!--
+      <dl>
+        <dt>Downloads</dt>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="///projects//?fromdocs=">Project Home</a>
+          </dd>
+          <dd>
+            <a href="///builds//?fromdocs=">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+-->
+    </div>
+  </div>
 
   <script type="text/javascript">
       jQuery(function () {
