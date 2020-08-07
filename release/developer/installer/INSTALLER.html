@@ -193,7 +193,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">install</span></code> target will copy the Vircadia targets and their dependencies to your <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>.<br />This variable is set by the <code class="docutils literal notranslate"><span class="pre">project(hifi)</span></code> command in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/hifi</span></code> and stored in <code class="docutils literal notranslate"><span class="pre">build/CMakeCache.txt</span></code></p>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
-<p>To produce an installer, run the <code class="docutils literal notranslate"><span class="pre">package</span></code> target.</p>
+<p>To produce an installer, run the <code class="docutils literal notranslate"><span class="pre">package</span></code> target. However you will want to follow the steps specific to your platform below.</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>To produce an executable installer on Windows, the following are required:</p>
@@ -260,7 +260,6 @@
 <li><p>Perform a clean cmake from a new terminal.</p></li>
 <li><p>Open the <code class="docutils literal notranslate"><span class="pre">vircadia.sln</span></code> solution with elevated (administrator) permissions on Visual Studio and select the <strong>Release</strong> configuration.</p></li>
 <li><p>Build the solution.</p></li>
-<li><p>Build CMakeTargets-&gt;INSTALL</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console-npm-install</span></code> (found under <strong>hidden/Server Console</strong>)</p></li>
 <li><p>Build <code class="docutils literal notranslate"><span class="pre">packaged-server-console</span></code> (found under <strong>Server Console</strong>)<br />This will add 2 folders to <code class="docutils literal notranslate"><span class="pre">build\server-console\</span></code> -<br /><code class="docutils literal notranslate"><span class="pre">server-console-win32-x64</span></code> and <code class="docutils literal notranslate"><span class="pre">x64</span></code></p></li>
 <li><p>Build CMakeTargets-&gt;PACKAGE<br />The installer is now available in <code class="docutils literal notranslate"><span class="pre">build\_CPack_Packages\win64\NSIS</span></code></p></li>
