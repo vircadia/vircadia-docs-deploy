@@ -192,7 +192,7 @@
             
   <div class="section" id="build-osx">
 <h1>Build OSX<a class="headerlink" href="#build-osx" title="Permalink to this headline">¶</a></h1>
-<p><em>Last Updated on July 13, 2020</em></p>
+<p><em>Last Updated on August 26, 2020</em></p>
 <p>Please read the <a class="reference external" href="BUILD">general build guide</a> for information on dependencies required for all platforms. Only macOS specific instructions are found in this document.</p>
 <div class="section" id="homebrew">
 <h2>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
@@ -207,7 +207,10 @@
 </div>
 <div class="section" id="osx-sdk">
 <h2>OSX SDK<a class="headerlink" href="#osx-sdk" title="Permalink to this headline">¶</a></h2>
-<p>You will need the OSX SDK for building. The easiest way to get this is to install Xcode from the App Store.</p>
+<p>You will need version <code class="docutils literal notranslate"><span class="pre">10.12</span></code> of the OSX SDK for building, otherwise you may have crashing or other unintended issues due to the deprecation of OpenGL on OSX. You can get that SDK from <a class="reference external" href="https://github.com/phracker/MacOSX-SDKs">here</a>. You must copy it in to your Xcode SDK directory, e.g.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>cp -rp ~/Downloads/MacOSX10.12.sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
+</pre></div>
+</div>
 </div>
 <div class="section" id="openssl">
 <h2>OpenSSL<a class="headerlink" href="#openssl" title="Permalink to this headline">¶</a></h2>
@@ -217,19 +220,31 @@ or by appending <code class="docutils literal notranslate"><span class="pre">-DO
 </div>
 <div class="section" id="xcode">
 <h2>Xcode<a class="headerlink" href="#xcode" title="Permalink to this headline">¶</a></h2>
-<p>If Xcode is your editor of choice, you can ask CMake to generate Xcode project files instead of Unix Makefiles. You will need to select the Xcode installation in the terminal first if you have not done so already.</p>
+<p>You can ask CMake to generate Xcode project files instead of Unix Makefiles using the <code class="docutils literal notranslate"><span class="pre">-G</span> <span class="pre">Xcode</span></code> parameter after CMake. You will need to select the Xcode installation in the terminal first if you have not done so already.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
-cmake .. -G Xcode
+cmake ../ -DCMAKE_OSX_SYSROOT=&quot;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk&quot; -DCMAKE_OSX_DEPLOYMENT_TARGET=10.12 -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOSX_SDK=10.12  ..
 </pre></div>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">cmake</span></code> complains about Python 3 being missing, you may need to update your CMake binary with command <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">upgrade</span> <span class="pre">cmake</span></code>, or by downloading and running the latest CMake installer, depending on how you originally instaled CMake</p>
-<p>After running cmake, you will have the make files or Xcode project file necessary to build all of the components. Open the hifi.xcodeproj file, choose ALL_BUILD from the Product &gt; Scheme menu (or target drop down), and click Run.</p>
+<p>After running CMake, you will have the make files or Xcode project file necessary to build all of the components. Open the hifi.xcodeproj file, choose ALL_BUILD from the Product &gt; Scheme menu (or target drop down), and click Run.</p>
 <p>If the build completes successfully, you will have built targets for all components located in the <code class="docutils literal notranslate"><span class="pre">build/${target_name}/Debug</span></code> directories.</p>
 </div>
 <div class="section" id="make">
 <h2>make<a class="headerlink" href="#make" title="Permalink to this headline">¶</a></h2>
-<p>If you build with make rather than Xcode, you can append <code class="docutils literal notranslate"><span class="pre">-j4</span></code>for assigning more threads. The number indicates the number of threads, e.g. 4.</p>
+<p>If you build with make rather than Xcode, you can append <code class="docutils literal notranslate"><span class="pre">-j4</span></code> for assigning more threads. The number indicates the number of threads, e.g. 4.</p>
+<p>To package the installation, you can simply run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">package</span></code> afterwards.</p>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>Problem:</strong> Running the scheme <code class="docutils literal notranslate"><span class="pre">interface.app</span></code> from Xcode causes a crash for Interface related to <code class="docutils literal notranslate"><span class="pre">libgl</span></code></p>
+<ol class="simple">
+<li><p><strong>Cause:</strong> The target <code class="docutils literal notranslate"><span class="pre">gl</span></code> generates a binary called <code class="docutils literal notranslate"><span class="pre">libgl</span></code>. A macOS <code class="docutils literal notranslate"><span class="pre">libGL.framework</span></code> item gets loaded instead by Xcode.</p></li>
+<li><p><strong>Solution:</strong> In the Xcode target settings for <code class="docutils literal notranslate"><span class="pre">libgl</span></code>, set the version to 1.0.0</p></li>
+</ol>
+</li>
+</ol>
 </div>
 </div>
 
