@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Alpha 2020.2.4 Asteria Release Notes &mdash; Vircadia Documentation</title>
+  <title>Alpha 2020.2.5 Asteria Release Notes &mdash; Vircadia Documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Alpha 2020.2.3 Asteria Release Notes" href="2020-2-3-Asteria.html" />
-    <link rel="prev" title="Alpha 2020.2.5 Asteria Release Notes" href="2020-2-5-Asteria.html" /> 
+    <link rel="next" title="Alpha 2020.2.4 Asteria Release Notes" href="2020-2-4-Asteria.html" />
+    <link rel="prev" title="Release Notes" href="../release-notes.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,8 +97,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../security.html">SECURITY</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../release-notes.html">RELEASE NOTES</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2020-2-5-Asteria.html">Alpha Release 2020.2.5 Asteria (09/06/20)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.4 Asteria (08/06/20)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Alpha Release 2020.2.5 Asteria (09/06/20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-2-4-Asteria.html">Alpha Release 2020.2.4 Asteria (08/06/20)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2020-2-3-Asteria.html">Alpha Release 2020.2.3 Asteria (07/15/20)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2020-2-2-Asteria.html">Alpha Release 2020.2.2 Asteria (06/26/20)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2020-2-1-Asteria.html">Alpha Release 2020.2.1 Asteria (06/11/20)</a></li>
@@ -169,14 +169,14 @@
         
           <li><a href="../release-notes.html">Release Notes</a> &raquo;</li>
         
-      <li>Alpha 2020.2.4 Asteria Release Notes</li>
+      <li>Alpha 2020.2.5 Asteria Release Notes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-4-Asteria.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-4-Asteria.md"> Edit on GitHub</a>
+              <a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-5-Asteria.md" class="fa fa-github"></a><a href="https://github.com/kasenvr/athena-docs-sphinx/blob/master/docs/source/release-notes/2020-2-5-Asteria.md"> Edit on GitHub</a>
             
           
         
@@ -190,44 +190,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="alpha-2020-2-4-asteria-release-notes">
-<h1>Alpha 2020.2.4 Asteria Release Notes<a class="headerlink" href="#alpha-2020-2-4-asteria-release-notes" title="Permalink to this headline">¶</a></h1>
-<p>This version of Vircadia is an update to 2020.2.3. It is compatible with the 2020.2.0-Asteria protocol. This version was released on August 6th, 2020.</p>
+  <div class="section" id="alpha-2020-2-5-asteria-release-notes">
+<h1>Alpha 2020.2.5 Asteria Release Notes<a class="headerlink" href="#alpha-2020-2-5-asteria-release-notes" title="Permalink to this headline">¶</a></h1>
+<p>This version of Vircadia is an update to 2020.2.4. It is compatible with the 2020.2.0-Asteria protocol. This version was released on September 6th, 2020.</p>
 <div class="section" id="interface-codename-athena">
 <h2>Interface (Codename Athena)<a class="headerlink" href="#interface-codename-athena" title="Permalink to this headline">¶</a></h2>
 <p>The numbers at the end of each item are the PR numbers in the Project Athena <a class="reference external" href="https://github.com/kasenvr/project-athena/">repo</a>.</p>
 <div class="section" id="general">
 <h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>API: <code class="docutils literal notranslate"><span class="pre">Window.getUserAgent</span></code> has been added to return the Interface’s user agent. (#520)</p></li>
-<li><p>App: The Inventory app v2.0.2 has been merged as an unpublished script, to be deployed in the More app. (#521)</p></li>
-<li><p>Brand: Updated strings, comments, and folders (especially on OSX) to Vircadia. (#524)</p></li>
-<li><p>UI: Fix bug where Snap app shows in screenshots occasionally. (#538)</p></li>
-<li><p>App: Fix bug where the avatar does not show when a recording is reloaded. (#539)</p></li>
-<li><p>Graphics: Fix bug where shapes with an alpha of 0.0 sometimes appear opaque. (#543)</p></li>
-<li><p>UI: Connection dialog now says “EXPLORE” instead of “GOTO”. (#544)</p></li>
-<li><p>Graphics: Fix bug where FBX models will only show vertex colors if more than one color is given. (#545)</p></li>
-<li><p>Avatar: Fix bug where Interface lags extensively when moving after startup due to a physics issue. (#547)</p></li>
-<li><p>UI: The graphics settings dialog now allows you to set the resolution scale to 2.0, up from 1.0. (#550)</p></li>
-<li><p>Graphics: Fix bug where <code class="docutils literal notranslate"><span class="pre">renderWithZones</span></code> doesn’t work after reloading content. (#561)</p></li>
-<li><p>Graphics: Fix bug where <code class="docutils literal notranslate"><span class="pre">renderWithZones</span></code> would not work when loading content from a JSON file. (#564)</p></li>
-<li><p>Application: Fix bug where the –url command line parameter would not work under some circumstances. (#574)</p></li>
-<li><p>App: The Chat app has a few updates. (#579)</p>
-<ul>
-<li><p>A notification has been added for when people enter or leave the domain.</p></li>
-<li><p>The main Chat window will open when you click on a chat message notification.</p></li>
-</ul>
-</li>
-<li><p>Security: You can now sign-in to OAuth2 enabled domains. (Alpha Feature) (#591)</p></li>
-<li><p>Graphics: The default “Automatic” maximum texture memory setting has been increased from 1GB to 2GB. (#594)</p></li>
-<li><p>UI: The graphics settings dialog now has a button in the toolbar for clear and easy access. (#595)</p></li>
+<li><p>Application: Improve performance of entity updates. (#276)</p></li>
+<li><p>Application: Enable resolving of relative URLs when importing entities with JSON. (#586, #672)</p></li>
+<li><p>App: Add incremental suffix to cloned entities’ names using the Create app. (#603)</p></li>
+<li><p>App: Update the <code class="docutils literal notranslate"><span class="pre">colorSpread</span></code> color-picker and other misc. fixes in the Create app. (#606)</p></li>
+<li><p>API: Add <code class="docutils literal notranslate"><span class="pre">About</span></code> JavaScript API to replace the now deprecated <code class="docutils literal notranslate"><span class="pre">HifiAbout</span></code> API. (#624)</p></li>
+<li><p>App: Fix freezing when opening the Avatar app when custom bookmarks are present that do not have thumbnails. (#631)</p></li>
+<li><p>UI &amp; Security: Improve the OAuth2 domain feature to not show domain login status or domain login menu item on domains that do not have the feature enabled. (#639)</p></li>
+<li><p>App: Add update notification message on Interface start if a new version is available. (#658)</p></li>
+<li><p>Graphics: Fix and extend glTF blendshapes support. (#671)</p></li>
 </ul>
 </div>
 <div class="section" id="miscellaneous">
 <h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Docs: Packaging docs are more accurate now with respect to the requirements on Windows. (#537)</p></li>
-<li><p>UX: The NSIS installer no longer defaults the options for the Sandbox (server-console) to start after install or start with Windows as true. (#596)</p></li>
+<li><p>Application: Code-signing has been re-enabled on Windows installers. (#303)</p></li>
+<li><p>Application: Improve the handling of C++ exceptions by Crashpad on Windows. (#441)</p></li>
+<li><p>App: Update the URLs to the default particle and image entities for the Create app. (#604)</p></li>
+<li><p>Docs: Update build docs to include parameters for building client and server only packages. (#652)</p></li>
+<li><p>Application &amp; Docs: Update the application folder icons for Vircadia on OSX; update build docs for OSX to be more up to date. (#653)</p></li>
 </ul>
 </div>
 </div>
@@ -237,34 +227,35 @@
 <div class="section" id="id1">
 <h3>General<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Security: Domains can now accept user logins via groups based on WordPress roles via OAuth2. (Alpha Feature) (#591)</p></li>
+<li><p>Server: Improve performance of entity updates. (#276)</p></li>
+<li><p>UX: New metadata fields added to improve domain details alongside the addition of an HTTP exporter that makes this data publicly available as JSON over HTTP if desired. (#465)</p></li>
+<li><p>UI: Updated text references from High Fidelity -&gt; Vircadia in the <code class="docutils literal notranslate"><span class="pre">Assignment</span></code> tab of the domain-server panel. (#641)</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="metaverse-server-codename-apollo">
-<h2>Metaverse Server (Codename Apollo)<a class="headerlink" href="#metaverse-server-codename-apollo" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="https://github.com/kasenvr/project-apollo">metaverse server</a> and <a class="reference external" href="https://github.com/kasenvr/project-apollo-dashboard">metaverse server interface</a> are progressing well. The metaverse server is currently being rewritten in TypeScript with Node.JS in order to improve its capabilities for the long term. As of now (8/6/2020) it is at feature parity with its original C# implementation.</p>
+<div class="section" id="metaverse-server-codename-iamus">
+<h2>Metaverse Server (Codename Iamus)<a class="headerlink" href="#metaverse-server-codename-iamus" title="Permalink to this headline">¶</a></h2>
+<p>The metaverse server has been renamed to <a class="reference external" href="https://github.com/kasenvr/iamus">Iamus</a>, known as Apollo’s son in Greek mythology. It is beginning active testing with the wider Vircadia community. The <a class="reference external" href="https://github.com/kasenvr/project-iamus-dashboard">metaverse server interface</a> is under continued development.</p>
 </div>
 <div class="section" id="vircadia-launcher-codename-pantheon">
 <h2>Vircadia Launcher (Codename Pantheon)<a class="headerlink" href="#vircadia-launcher-codename-pantheon" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/vircadia/pantheon-launcher">Vircadia’s launcher</a> is at version 0.0.1u. The launcher now runs the Interface as a separate process by default. Because of this, it now has greatly improved stability when Interface is launched with it. The drag and drop feature as well as crash reporting now also work correctly.</p>
+<p><a class="reference external" href="https://github.com/vircadia/pantheon-launcher">Vircadia’s launcher</a> has not had any updates since the last release (2020.2.4 Asteria).</p>
 </div>
 <div class="section" id="extra-applications">
 <h2>Extra Applications<a class="headerlink" href="#extra-applications" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="explore-app-interim-version">
-<h3>Explore App (Interim Version)<a class="headerlink" href="#explore-app-interim-version" title="Permalink to this headline">¶</a></h3>
-<p>The numbers at the end of each item are the PR numbers in the Decentralized GoTo <a class="reference external" href="https://github.com/kasenvr/Decentralized_GoTo_Experimental">repo</a>.</p>
+<div class="section" id="explore-app">
+<h3>Explore App<a class="headerlink" href="#explore-app" title="Permalink to this headline">¶</a></h3>
+<p>The numbers at the end of each item are the PR numbers in the Project Athena <a class="reference external" href="https://github.com/kasenvr/project-athena/">repo</a>.</p>
 <ul class="simple">
-<li><p>Nothing new to report!</p></li>
+<li><p>Nothing new to report, yet!</p></li>
 </ul>
 </div>
 <div class="section" id="community-apps">
 <h3>Community Apps<a class="headerlink" href="#community-apps" title="Permalink to this headline">¶</a></h3>
 <p>The numbers at the end of each item are the PR numbers in the Community Apps <a class="reference external" href="https://github.com/kasenvr/community-apps">repo</a>.</p>
 <ul class="simple">
-<li><p>Add the initial release of the Inventory app. (#21)</p></li>
+<li><p>Nothing new to report, yet!</p></li>
 </ul>
-<p>The Slider app now has proper syncing with multiple users when viewing a presenter’s screen. Work is still underway to improve its use before merging. The PR can be viewed <a class="reference external" href="https://github.com/kasenvr/project-athena/pull/541">here</a>.</p>
 </div>
 </div>
 <div class="section" id="documentation">
@@ -273,9 +264,7 @@
 <h3>User Docs<a class="headerlink" href="#user-docs" title="Permalink to this headline">¶</a></h3>
 <p>The numbers at the end of each item are the PR numbers in the Vircadia-Docs-Sphinx <a class="reference external" href="https://github.com/kasenvr/vircadia-docs-sphinx">repo</a>.</p>
 <ul class="simple">
-<li><p>Enable GitHub Actions support with auto deployment for the docs. (#67)</p></li>
-<li><p>Translation configuration fixed. (#68)</p></li>
-<li><p>Release notes for 2020.2.4 Asteria. (#71)</p></li>
+<li><p>Release notes for 2020.2.5 Asteria. (#76)</p></li>
 </ul>
 </div>
 <div class="section" id="api-docs">
@@ -283,7 +272,8 @@
 <p>The API docs are generated from the software source <a class="reference external" href="https://github.com/kasenvr/project-athena">repo</a>.
 The latest live deployment source can be viewed <a class="reference external" href="https://github.com/kasenvr/vircadia-api-docs">here</a>.</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">Window.getUserAgent</span></code> API call was created and documented. (#520)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Stats</span></code> API was updated to include two new properties. (#276)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">About</span></code> API was added to replace the deprecated <code class="docutils literal notranslate"><span class="pre">HifiAbout</span></code> API. (#624)</p></li>
 </ul>
 </div>
 </div>
@@ -297,10 +287,10 @@ The latest live deployment source can be viewed <a class="reference external" hr
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2020-2-3-Asteria.html" class="btn btn-neutral float-right" title="Alpha 2020.2.3 Asteria Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2020-2-4-Asteria.html" class="btn btn-neutral float-right" title="Alpha 2020.2.4 Asteria Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="2020-2-5-Asteria.html" class="btn btn-neutral float-left" title="Alpha 2020.2.5 Asteria Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../release-notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
