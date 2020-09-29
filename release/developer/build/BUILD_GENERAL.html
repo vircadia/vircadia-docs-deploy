@@ -275,6 +275,13 @@ However, those files can potentially get cleaned up by the OS, so in order to av
 <span class="c1">// The type of release.</span>
 <span class="nx">RELEASE_TYPE</span><span class="o">=</span><span class="nx">PRODUCTION</span><span class="o">|</span><span class="nx">PR</span><span class="o">|</span><span class="nx">DEV</span>
 
+<span class="c1">// The Interface will have a custom default home and startup location.</span>
+<span class="nx">INITIAL_STARTUP_LOCATION</span><span class="o">=</span><span class="nx">Location</span><span class="o">/</span><span class="nx">IP</span><span class="o">/</span><span class="nx">URL</span>
+
+<span class="c1">// Code-signing environment variables must be set during runtime of CMake AND globally when the signing takes place.</span>
+<span class="nx">HF_PFX_FILE</span><span class="o">=</span><span class="nx">Path</span> <span class="nx">to</span> <span class="nx">certificate</span>
+<span class="nx">HF_PFX_PASSPHRASE</span><span class="o">=</span><span class="nx">Passphrase</span> <span class="k">for</span> <span class="nx">certificate</span>
+
 <span class="c1">// Determine the build type</span>
 <span class="nx">PRODUCTION_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
 <span class="nx">PR_BUILD</span><span class="o">=</span><span class="mi">0</span><span class="o">|</span><span class="mi">1</span>
